@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load render_table from django_tables2 %}
+
+{% block content %}
+
+    <div class="row" id="department_mappings">
+        <div class="col-md-12 col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">CPT Codes Mappings</h4>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-outline-primary block btn-md" data-toggle="modal" data-target="#default">
+                        <i class="la la-plus"></i>New CPT Code Mapping
+                    </button>
+
+                </div>
+
+                <div align="right" style="padding-right: 50px">
+                    <a class="las la-file-excel la-3x" href="{% url 'download_cpt_codes_as_csv' %}" id="id_export_xls"></a>
+
+                    <a class="las la-upload la-3x" data-toggle="modal" data-target="#import"></a>
+
+                </div>
+
+                <div class="card-body">
+
+                    <div class="table-responsive">
+
+                        {% render_table cpt_code_mappings_table %}
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="form-group">
+            <!-- Modal -->
+            <div class="modal fade text-left" id="import" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel1">Upload CPT Codes Mapping</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                             <form method = "POST" action="{% url 'upload_cpt_codes' %}" enctype="multipart/form-data">
+
+                                {% csrf_token %}
+
+                                <table>
+
+                                    {% crispy cpt_code_mapping_import_form %}
+
+
+                                </table>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn grey btn-outline-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-outline-primary">Upload</button>
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="form-group">
+            <!-- Modal -->
+            <div class="modal fade text-left" id="default" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel1">New CPT Code Mapping</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+
+                            <form id="form_cpt_codes_mapping" method = "POST" action="{% url 'cpt_codes_page' %}">
+
+                                {% csrf_token %}
+
+                                <table>
+
+                                    {% crispy cpt_code_mapping_form %}
+
+
+                                </table>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn grey btn-outline-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-outline-primary">Save</button>
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script>
+
+        $(document).ready(function() {
+
+            jQuery('#file').trigger('click');
+
+
+            $(".btn_delete").on( "click", function( event ) {
+                var id = $(this).attr('id');
+
+                swal({
+                    title: "Are you sure you want to delete this mapping?",
+                    text: "This mapping will be removed permanently." ,
+                    icon: "warning",
+                    buttons: [
+                        'No, cancel it!',
+                        'Yes, I am sure!'
+                    ],
+                    dangerMode: true,
+                }).then(function(isConfirm) {
+
+                    var mapping_type = "cpt_codes_mappings";
+                    var url = '{% url "delete_mapping" %}';
+
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        data: {
+                            mapping_id: id, mapping_type: mapping_type,
+                            'csrfmiddlewaretoken': '{{ csrf_token }}'
+                        },
+                        success: function(data)
+                        {
+
+                            window.location.reload();
+
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                              swal({
+                                    title: 'Operation failed.',
+                                    icon: 'error'
+                                });
+
+                        }
+                    });
+
+                    e.preventDefault(); // avoid to execute the actual submit of the form.
+
+                });
+
+            });
+
+            $('.btn_update').on("click", function () {
+
+                var id = $(this).attr('id');
+
+
+                $("#popModal").load('{% url 'update_cpt_code' 123 %}'.replace('123',id), function() {
+                    $("#popModal").modal("show");
+                });
+
+            });
+
+        });
+
+
+
+    </script>
+
+{% endblock %}

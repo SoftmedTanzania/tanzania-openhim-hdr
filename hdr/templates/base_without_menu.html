@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Health Data Repository</title>
+
+    {%  load static %}
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
+    <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
+    <meta name="author" content="PIXINVENT">
+    <title>Health Data Repository</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static "app-assets/images/ico/favicon.ico" %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static "app-assets/vendors/css/vendors.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "app-assets/css/bootstrap.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "app-assets/css/bootstrap-extended.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "app-assets/css/colors.css" %}">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.8/themes/default/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="{% static "app-assets/css/components.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "app-assets/css/core/menu/menu-types/vertical-menu.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "app-assets/css/core/colors/palette-gradient.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "app-assets/css/pages/hospital.css" %}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.8/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static "assets/css/style.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/custom.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/jqtree.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "line-awesome/css/line-awesome.min.css" %}">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+
+
+</head>
+
+
+<!-- BEGIN: Header-->
+<body class="vertical-layout vertical-menu 2-columns   fixed-navbar" data-open="click" data-menu="vertical-menu" data-col="2-columns">
+
+<div class="app-content content">
+    <div class="content-wrapper">
+        <div class="content-header row mb-1">
+        </div>
+        <div class="content-body">
+
+
+            {% block content %}
+
+
+
+
+            {% endblock %}
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+<div class="sidenav-overlay"></div>
+<div class="drag-target"></div>
+
+<script src="{% static "app-assets/vendors/js/vendors.min.js" %}"></script>
+<script src="{% static "app-assets/js/core/app-menu.js" %}"></script>
+<script src="{% static "app-assets/js/core/app.js" %}"></script>
+<script src="{% static "app-assets/js/scripts/pages/appointment.js" %}"></script>
+{#<script src="{% static "app-assets/vendors/js/extensions/jquery.steps.min.js" %}"></script>#}
+<script src="{% static "app-assets/vendors/js/pickers/dateTime/moment-with-locales.min.js" %}"></script>
+<script src="{% static "app-assets/vendors/js/pickers/daterange/daterangepicker.js" %}"></script>
+<script src="{% static "app-assets/vendors/js/extensions/sweetalert.min.js" %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+<script src="{% static "js/tree.jquery.js" %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="{% static "app-assets/vendors/js/forms/toggle/bootstrap-checkbox.min.js" %}"></script>
+<script src="{% static "app-assets/vendors/js/forms/toggle/bootstrap-switch.min.js" %}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+
+    $(document).ready(function(){
+
+
+
+
+    });
+
+</script>
+
+
+{% block scripts %}
+
+
+
+{% endblock %}
+
+
+</body>
+</html>
