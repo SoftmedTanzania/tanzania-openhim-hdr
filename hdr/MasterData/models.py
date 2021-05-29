@@ -44,7 +44,7 @@ class Facility(models.Model):
     is_active = models.BooleanField(default=1)
 
     class Meta:
-        db_table = 'facility'
+        db_table = 'Facility'
         verbose_name_plural = "Facilities"
 
 
