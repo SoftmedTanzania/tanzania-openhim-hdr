@@ -50,8 +50,11 @@ humanize = "==0.5.1"
 idna = "==2.6"
 isort = "==4.3.21"
 jdcal = "==1.4"
-kombu = "==5.0.2"
 lazy-object-proxy = "==1.6.0"
+python-decouple = "*"
+xlwt = "*"
+psycopg2-binary = "*"
+python-dateutil = "*"
 
 [dev-packages]
 

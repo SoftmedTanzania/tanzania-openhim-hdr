@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from .tables import PayerMappingTable, ExemptionMappingTable, DepartmentMappingTable, WardMappingTable, \
     GenderMappingTable, ServiceProviderRankingMappingTable, PlaceODeathMappingTable, CPTCodeMappingTable
 from .models import PayerMapping, DepartmentMapping, ExemptionMapping, Ward,CPTCodesMapping, GenderMapping, \
@@ -109,7 +109,6 @@ def get_exemptions_page(request):
         RequestConfig(request, paginate={"per_page": 10}).configure(exemption_mappings_table)
         return render(request, 'MasterData/Features/Exemptions.html',{"exemption_mappings_table":exemption_mappings_table,
                                                                       "exemption_mapping_form":exemption_mapping_form})
-
 
 
 def update_exemption(request, item_pk):
@@ -369,41 +368,47 @@ def import_icd_10_codes(request):
         categories = x['category']
         sub_categories = x['subCategories']
 
-        # insert category
+        # # insert category
         instance_category = ICD10CodeCategory()
         instance_category.description = categories
         instance_category.save()
 
         for sub_category in sub_categories:
             sub_category_name = sub_category['subCategoryName']
-            icd_10 = sub_category['subSubCategories'][0]["subSubCategoryName"]
-            icd_10_code = sub_category['subSubCategories'][0]["subSubCategoryCode"]
-            icd_sub_code_array = sub_category['subSubCategories'][0]["icd10Codes"]
+            sub_sub_categories = sub_category['subSubCategories']
 
-            # insert sub category
+            # # insert sub category
             instance_sub_category = ICD10CodeSubCategory()
             instance_sub_category.description = sub_category_name
             instance_sub_category.icd_10_code_category_id = instance_category.id
             instance_sub_category.save()
 
-            # insert icd code
-            instance_icd_code = ICD10Code()
-            instance_icd_code.icd_10_code_sub_category_id =  instance_sub_category.id
-            instance_icd_code.icd10_code = icd_10_code
-            instance_icd_code.icd10_description = icd_10
-            instance_icd_code.save()
+            # loop through the sub sub categories
+            for sub_sub_category in sub_sub_categories:
+                icd_10 = sub_sub_category["subSubCategoryName"]
+                icd_10_code = sub_sub_category["subSubCategoryCode"]
+                icd_sub_code_array = sub_sub_category["icd10Codes"]
 
+                # # insert icd code
+                instance_icd_code = ICD10Code()
+                instance_icd_code.icd_10_code_sub_category_id =  instance_sub_category.id
+                instance_icd_code.icd10_code = icd_10_code
+                instance_icd_code.icd10_description = icd_10
+                instance_icd_code.save()
 
-            for y in icd_sub_code_array:
-                icd_10_sub_code = y["icd10Code"]
-                icd_10_sub_description = y["icd10Name"]
+                for y in icd_sub_code_array:
+                    icd_10_sub_code = y["icd10Code"]
+                    icd_10_sub_description = y["icd10Name"]
 
-                # insert icd sub code
-                instance_icd_sub_code = ICD10SubCode()
-                instance_icd_sub_code.icd10_code_id = instance_icd_code.id
-                instance_icd_sub_code.icd10_sub_code = icd_10_sub_code
-                instance_icd_sub_code.icd10_sub_code_description = icd_10_sub_description
-                instance_icd_sub_code.save()
+                    # # insert icd sub code
+                    instance_icd_sub_code = ICD10SubCode()
+                    instance_icd_sub_code.icd10_code_id = instance_icd_code.id
+                    instance_icd_sub_code.icd10_sub_code = icd_10_sub_code
+                    instance_icd_sub_code.icd10_sub_code_description = icd_10_sub_description
+                    instance_icd_sub_code.save()
+
+                return HttpResponse("Finished Uploading")
+
 
 
 

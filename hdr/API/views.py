@@ -94,7 +94,6 @@ class ServiceReceivedView(viewsets.ModelViewSet):
 
         return  status
 
-
     def list(self, request):
         queryset = ServiceReceivedItems.objects.all().order_by('-id')
         serializer = ServiceReceivedItemsSerializer(queryset, many=True)

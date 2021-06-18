@@ -13,7 +13,7 @@ class Actions(tables.Column):
                          ' btn-sm"><i class="la la-trash"></i>Delete</button> '
                          '<button id="%s" class="btn_update btn btn-primary'
                          ' btn-sm"><i class="la la-pencil"></i>Edit</button> '
-                         %  (escape(record.id),escape(record.id)))
+                         % (escape(record.id),escape(record.id)))
 
 
 class PayerMappingTable(tables.Table):

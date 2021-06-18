@@ -14,9 +14,9 @@ import xlwt
 from Core import forms as core_forms
 
 
-
 def get_login_page(request):
     return render(request, 'UserManagement/Auth/Login.html')
+
 
 def get_audit_report(request,item_pk):
     transaction_summary_lines = core_models.TransactionSummaryLine.objects.filter\
@@ -26,6 +26,7 @@ def get_audit_report(request,item_pk):
 
     return render(request,'UserManagement/Dashboard/AuditReport.html',{'item_pk':item_pk,
                                                                        'table_transactions':transaction_summary_lines_table})
+
 
 @login_required(login_url='/')
 def change_password(request):
@@ -94,7 +95,6 @@ def get_admin_page(request):
         return render(request, 'UserManagement/Auth/Login.html')
 
 
-
 @login_required(login_url='/')
 def set_changed_password(request):
 
@@ -114,6 +114,7 @@ def set_changed_password(request):
         else:
 
             return HttpResponse(status=401)
+
 
 def export_transaction_lines(request):
     if request.method == "POST":

@@ -1,4 +1,5 @@
 *.egg-info
+.env
 *.pot
 *.py[co]
 .tox/
