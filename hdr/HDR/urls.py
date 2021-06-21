@@ -27,5 +27,6 @@ urlpatterns = [
     path('api_', include('API.urls')),
     path('insert_icd_10', master_data_views.import_icd_10_codes, name='insert_icd_10'),
     path('save_payload_from_csv', core_tasks.save_payload_from_csv, name='save_payload_from_csv'),
+    # path('calculate_and_save_bed_occupancy_rate/', core_tasks.calculate_and_save_bed_occupancy_rate, name='calculate_and_save_bed_occupancy_rate')
 
 ]

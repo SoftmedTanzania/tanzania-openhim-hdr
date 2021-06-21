@@ -5,9 +5,10 @@ from Core import models as core_models
 from MasterData import models as master_data_models
 import os
 from django.http import HttpResponse
-import datetime
+from datetime import datetime, timedelta
 
 app = Celery()
+
 
 @app.task
 def save_payload_from_csv(request):
@@ -15,7 +16,7 @@ def save_payload_from_csv(request):
     i = 0
     for subdir, _, _ in os.walk(root_path):
         for file in os.listdir(subdir):
-            file_path = ""+root_path+"/"+file
+            file_path = "" + root_path + "/" + file
             with open(file_path, 'r') as fp:
                 lines = csv.reader(fp, delimiter=',')
 
@@ -66,7 +67,7 @@ def save_payload_from_csv(request):
                 for line in lines:
                     row = 0
 
-                    if row==0:
+                    if row == 0:
                         headers = line
                         row = row + 1
                     else:
@@ -175,13 +176,19 @@ def update_transaction_summary(transaction_id):
     transaction.total_failed -= 1
     transaction.save()
 
-@app.task
-def calculate_and_save_bed_occupancy_rate(bed_occupancy_id):
-    bed_occupancy = core_models.BedOccupancy.objects.filter(admission_date__gte = datetime.timedelta(7))
 
-    for x in bed_occupancy:
+# @app.task
+def calculate_and_save_bed_occupancy_rate(request):
+    date_week_ago = datetime.today() - timedelta(days=7)
+    bed_occupancy_items = core_models.BedOccupancyItems.objects.filter(admission_date__gte=date_week_ago.strftime("%Y-%m-%d"))
+
+    admission_date = date_week_ago.strftime("%Y-%m-%d")
+    discharge_date = datetime.now().strftime("%Y-%m-%d")
+
+    for x in bed_occupancy_items:
         facility_hfr_code = x.facility_hfr_code
-        bed_occupancy_items = core_models.BedOccupancyItems.objects.filter(bed_occupancy_id=bed_occupancy_id).order_by('admission_date')
+        bed_occupancy_items = core_models.BedOccupancyItems.objects.filter(bed_occupancy_id=
+                                                                           x.id).order_by('admission_date')
 
         if bed_occupancy_items is not None:
             for item in bed_occupancy_items:
@@ -189,22 +196,26 @@ def calculate_and_save_bed_occupancy_rate(bed_occupancy_id):
                                                                        facility__facility_hfr_code=facility_hfr_code).first()
 
                 # Get Patient admission period to add days to it
-                instance_patient = core_models.BedOccupancyReport.objects.filter(patient_id=item.patient_id, admission_date=item.admission_date)
+                instance_patient = core_models.BedOccupancyReport.objects.filter(patient_id=item.patient_id,
+                                                                                 admission_date=item.admission_date)
 
                 if instance_patient.count() == 0:
-                    get_patient_admission_discharge_period = core_models.BedOccupancyItems.objects.filter(patient_id=item.patient_id,admission_date = item.admission_date,
-                                                                                    discharge_date=item.discharge_date).first()
+                    get_patient_admission_discharge_period = core_models.BedOccupancyItems.objects.filter(
+                        patient_id=item.patient_id, admission_date=item.admission_date,
+                        discharge_date=item.discharge_date).first()
 
                     if get_patient_admission_discharge_period is None:
-                        get_patient_admission_period = core_models.BedOccupancyItems.objects.filter(patient_id=item.patient_id,
-                                                                                        admission_date=item.admission_date).first()
+                        get_patient_admission_period = core_models.BedOccupancyItems.objects.filter(
+                            patient_id=item.patient_id,
+                            admission_date=item.admission_date).first()
 
                         if get_patient_admission_period is not None:
                             admission_date = get_patient_admission_period.admission_date
                             discharge_date = bed_occupancy_items.last().admission_date
                         else:
-                            get_patient_discharge_period = core_models.BedOccupancyItems.objects.filter(patient_id=item.patient_id,
-                                                                                            discharge_date=item.discharge_date).first()
+                            get_patient_discharge_period = core_models.BedOccupancyItems.objects.filter(
+                                patient_id=item.patient_id,
+                                discharge_date=item.discharge_date).first()
                             if get_patient_discharge_period is not None:
                                 admission_date = bed_occupancy_items.first().admission_date
                                 discharge_date = get_patient_discharge_period.discharge_date
@@ -217,19 +228,18 @@ def calculate_and_save_bed_occupancy_rate(bed_occupancy_id):
                 try:
                     bed_occupancy_rate = 1 / int(instance_ward.number_of_beds) * 100
 
-                    create_bed_occupancy_report_record(discharge_date, admission_date, item, bed_occupancy_rate, facility_hfr_code)
+                    create_bed_occupancy_report_record(discharge_date, admission_date, item, bed_occupancy_rate,
+                                                       facility_hfr_code)
 
                 except Exception as e:
                     print(e)
 
 
 def create_bed_occupancy_report_record(discharge_date, admission_date, item, bed_occupancy_rate, facility_hfr_code):
-
     for x in range(int((discharge_date - admission_date).days)):
-
         instance_bed_occupancy_report = core_models.BedOccupancyReport()
         instance_bed_occupancy_report.patient_id = item.patient_id
-        instance_bed_occupancy_report.date = item.admission_date + datetime.timedelta(days=x)
+        instance_bed_occupancy_report.date = item.admission_date + timedelta(days=x)
         instance_bed_occupancy_report.admission_date = item.admission_date
         instance_bed_occupancy_report.ward_id = item.ward_id
         instance_bed_occupancy_report.ward_name = item.ward_name
