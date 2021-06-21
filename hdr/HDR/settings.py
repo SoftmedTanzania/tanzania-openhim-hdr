@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django_tables2',
     'celery',
+    'django_celery_beat',
 
 ]
 
@@ -89,7 +90,7 @@ CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers.DatabaseScheduler'
-CELERY_TIMEZONE = 'UTC'
+CELERY_TIMEZONE = 'Africa/Dar_es_Salaam'
 CELERY_ENABLE_UTC = True
 
 WSGI_APPLICATION = 'HDR.wsgi.application'
@@ -159,7 +160,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Dar_es_Salaam'
 
 USE_I18N = True
 
