@@ -55,6 +55,7 @@ python-decouple = "*"
 xlwt = "*"
 psycopg2-binary = "*"
 python-dateutil = "*"
+django-celery-beat = "*"
 
 [dev-packages]
 

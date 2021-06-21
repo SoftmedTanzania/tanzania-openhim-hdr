@@ -1,1 +1,0 @@
-$('.floating-label .custom-select, .floating-label .form-control').floatinglabel();

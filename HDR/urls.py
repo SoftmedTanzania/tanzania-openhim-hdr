@@ -21,11 +21,11 @@ from MasterData import views as master_data_views
 from Core import tasks as core_tasks
 
 urlpatterns = [
+
     path('', include('UserManagement.urls')),
     path('admin/', admin.site.urls),
     path('get_', include('MasterData.urls')),
     path('api_', include('API.urls')),
-    path('insert_icd_10', master_data_views.import_icd_10_codes, name='insert_icd_10'),
-    path('save_payload_from_csv', core_tasks.save_payload_from_csv, name='save_payload_from_csv')
+    path('insert_icd_10', master_data_views.import_icd_10_codes, name='insert_icd_10')
 
 ]
