@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load render_table from django_tables2 %}
+{% load crispy_forms_tags %}
+{% load humanize %}
+{% load static %}
+
+{% block content %}
+
+    <div class="app-content content">
+        <div class="content-wrapper">
+            <div class="content-header row mb-1">
+            </div>
+            <div class="content-body">
+                <section id="validation">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">User Management</h4>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        <ul class="list-inline mb-0">
+                                            <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                            <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="card-body dataTables_wrapper">
+                                                    <button type="button" id="btn_add_new_user" class="btn btn-success round width-200 buttonAnimation">
+                                                        <i class="la la-plus"></i>Add New User
+                                                    </button>
+
+
+                                                    <div id="table-list">
+
+                                                        <br />
+                                                        <label for="commodity">
+                                                            Search User:
+                                                        </label>
+                                                        <input type="text" id="search_commodity" class="search form-control round border-primary mb-1" placeholder="Type to Search Commodity..." />
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-12" id="table_commodities">
+
+                                    {% render_table table %}
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="{% static "app-assets/js/select2totree.js" %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+    <script>
+
+        $("#btn_add_new_user").on("click",function () {
+
+            $("#popModal").load('{% url 'create_new_user' %}', function() {
+                $("#popModal").modal("show");
+            });
+
+        })
+
+
+    </script>
+
+{% endblock %}

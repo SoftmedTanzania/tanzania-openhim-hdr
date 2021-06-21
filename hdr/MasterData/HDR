@@ -1,0 +1,15 @@
+server {
+    listen 8000;
+    server_name 139.162.149.249;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/danny/HDR;
+    }
+
+    location / {
+        include         uwsgi_params;
+        uwsgi_pass      unix:/run/uwsgi/HDR.sock;
+    }
+}
+
