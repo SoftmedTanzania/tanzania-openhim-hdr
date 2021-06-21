@@ -1,0 +1,40 @@
+{% extends 'base_component.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+    <!-- Modal -->
+    <div class="modal-lg modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header modal_header_bg_danger">
+                <h4 class="modal-title text-white" id="myModalLabel70">{{ header }}</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="form_new_commodity" method = "POST" action="{% url url item_pk %}">
+                <div class="modal-body">
+
+                    {% csrf_token %}
+
+                    <table>
+
+                        {% crispy form %}
+
+
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn grey btn-outline-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-outline-primary">Save changes</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+{% endblock %}

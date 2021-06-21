@@ -1,0 +1,166 @@
+{% extends 'base_component.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load render_table from django_tables2 %}
+
+{% block content %}
+
+    <div class="row" id="department_mappings">
+        <div class="col-md-12 col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Transaction Summary</h4>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-2">
+
+                        <h4 class="mb-3 text-primary" align="center">Transactions ID: {{ item_pk }}<i><b></b></i></h4>
+
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <h6>Transaction status:</h6>
+                        <select class="select_field_class" name="option" id="option">
+                            <option value=""></option>
+                            <option value="pass">Successful</option>
+                            <option value="fail">Failed</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <h6>*</h6>
+                        <button type="button" class="btn btn-primary round width-200 buttonAnimation" id="btn_filter" data-animation="pulse" data-toggle="modal" data-backdrop="static" data-target="#modalCategoryMapping">
+                            <i class="la la-download"></i> Filter records
+                        </button>
+
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <h6>Click below to download CSV file based on the selected filters</h6>
+                        <button type="button" id="btn_download" class="btn btn-outline-primary block btn-md" data-toggle="modal" data-target="#default">
+                            <i class="la la-download"></i>Download Payload
+                        </button>
+                    </div>
+
+
+                </div>
+
+                <div class="card-body">
+
+                    <div id="transaction_lines_table">
+                        <div class="table-responsive">
+
+                            {% render_table table_transactions %}
+
+                        </div>
+
+                        <div style="clear: both">
+                            <h4 id="id_count" style="float: left">Total Records: {{ table_transactions.rows|length }}</h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script>
+
+        $("#btn_filter").on("click", function () {
+
+            var status = $('.select_field_class').val().toString();
+            var id = {{ item_pk }};
+            var url = "{% url 'filter_transaction_lines' %}";
+
+            $("#dashboard_elements").empty();
+
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: {
+                    status: status,item_pk:id,
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                },
+
+                success: function (data) {
+
+
+                    $("#transaction_lines_table").html(data);
+
+                    $("#filter_spinner").hide();
+
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                    swal("Failed", "Failed to load Dashboard content.", "warning");
+
+                }
+            });
+
+
+        });
+
+
+        $("#btn_download").on( "click", function( event ) {
+            var id = {{ item_pk }};
+            var url = '{% url 'export_transaction_lines' %}';
+            var status = $('.select_field_class').val().toString();
+
+            var dateTimeNow = new Date($.now()).toString().match(/\d{2}:\d{2}:\d{2}/)[0];
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: {
+                    item_pk: id,status:status,
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                },
+                success: function(data)
+                {
+                    var uri = 'data:application/csv;charset=UTF-8,' + encodeURIComponent(data);
+
+                    var downloadLink = document.createElement("a");
+                    downloadLink.href = uri;
+                    downloadLink.download = "payload_"+dateTimeNow+".csv";
+
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+                    document.body.removeChild(downloadLink);
+
+
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                    swal({
+                        title: 'Operation failed.',
+                        icon: 'error'
+                    });
+
+                }
+            });
+
+            e.preventDefault(); // avoid to execute the actual submit of the form.
+
+        });
+
+
+        $('.select_field_class').select2({placeholder: "Select Transaction status", maximumSelectionSize: 100});
+
+    </script>
+
+{% endblock %}

@@ -1,0 +1,279 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load render_table from django_tables2 %}
+
+
+{% block content %}
+
+    <div class="row" id="department_mappings">
+        <div class="col-md-12 col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Transaction Summary</h4>
+                </div>
+
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-outline-primary block btn-md" data-toggle="modal" data-target="#default">
+                        <i class="la la-arrow-up"></i>Upload Payload
+                    </button>
+                </div>
+
+
+                <div class="card-body">
+
+                    <div class="table-responsive">
+
+                        {% render_table transaction_summary_table %}
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="form-group">
+            <!-- Modal -->
+            <div class="modal fade text-left" id="default" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel1">Upload Payload</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <form method = "POST" action="{% url 'upload_payload' %}" enctype="multipart/form-data">
+
+                                {% csrf_token %}
+
+                                <table>
+
+                                    {% crispy payload_form %}
+
+
+                                </table>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn grey btn-outline-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-outline-primary">Upload</button>
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="form-group">
+            <!-- Modal -->
+            <div class="modal fade text-left" id="view_more" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel1">Transaction Summary Lines</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+{% block scripts %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script>
+
+        jQuery.noConflict();
+        $(document).ready(function(){
+
+{#            jQuery('#file').trigger('click');#}
+
+            $(".btn_audit_report").on( "click", function( event ) {
+{#                var id = $(this).attr('id');#}
+
+                {#                $("#view_more").load('{% url 'get_transaction_summary_lines' 123 %}'.replace('123', parseInt(id)), function() {#}
+                {#                    $("#view_more").modal("show");#}
+                {#                });#}
+
+                var item = $(this).attr("id");
+                var url = '{% url 'get_audit_report' 12345 %}'.replace(/12345/, parseInt(item));
+
+                window.open(url, '_blank');
+
+            });
+
+
+            {#            $("#upload_payload").on( "click", function( event ) {#}
+            {##}
+            {#                var data = new FormData($('#fileForm').get(0));#}
+            {#                data.append('file', $('#file')[0].files);#}
+            {##}
+            {#                alert(data);#}
+            {##}
+            {##}
+            {#                swal({#}
+            {#                    title: "Are you sure you want to upload this file?",#}
+            {#                    text: "Upload payload to import records." ,#}
+            {#                    icon: "warning",#}
+            {#                    buttons: [#}
+            {#                        'No, cancel it!',#}
+            {#                        'Yes, I am sure!'#}
+            {#                    ],#}
+            {#                    dangerMode: true,#}
+            {#                }).then(function(isConfirm) {#}
+            {##}
+            {##}
+            {#                    var messageType = $("#option").val();#}
+            {#                    var url = '{% url "upload_payload" %}';#}
+            {##}
+            {#                    $.ajax({#}
+            {#                        type: "POST",#}
+            {#                        url: url,#}
+            {#                        data: {#}
+            {#                            messageType: messageType,data:data,#}
+            {#                            'csrfmiddlewaretoken': '{{ csrf_token }}'#}
+            {#                        },#}
+            {#                        success: function(data)#}
+            {#                        {#}
+            {##}
+            {#                            swal({#}
+            {#                                title: 'CSV file imported successfully',#}
+            {#                                icon: 'success'#}
+            {#                            })#}
+            {##}
+            {##}
+            {#                        },#}
+            {#                        error: function (XMLHttpRequest, textStatus, errorThrown) {#}
+            {##}
+            {#                            swal({#}
+            {#                                title: 'Operation failed.',#}
+            {#                                icon: 'error'#}
+            {#                            });#}
+            {##}
+            {#                        }#}
+            {#                    });#}
+            {##}
+            {#                    e.preventDefault(); // avoid to execute the actual submit of the form.#}
+            {##}
+            {#                });#}
+            {##}
+            {#            })#}
+
+            $(".btn_download").on( "click", function( event ) {
+                var id = $(this).attr('id');
+                var url = '{% url 'export_transaction_lines' %}';
+
+                var dateTimeNow = new Date($.now()).toString().match(/\d{2}:\d{2}:\d{2}/)[0];
+
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: {
+                        item_pk: id,status:"",
+                        'csrfmiddlewaretoken': '{{ csrf_token }}'
+                    },
+                    success: function(data)
+                    {
+                        var uri = 'data:application/csv;charset=UTF-8,' + encodeURIComponent(data);
+
+                        var downloadLink = document.createElement("a");
+                        downloadLink.href = uri;
+                        downloadLink.download = "payload_transaction_"+id+"_"+dateTimeNow+".csv";
+
+                        document.body.appendChild(downloadLink);
+                        downloadLink.click();
+                        document.body.removeChild(downloadLink);
+
+
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                        swal({
+                            title: 'Operation failed.',
+                            icon: 'error'
+                        });
+
+                    }
+                });
+
+                e.preventDefault(); // avoid to execute the actual submit of the form.
+
+            });
+
+        });
+
+        function downloadExcel(fileName, tableId){
+
+            let dataType = 'application/vnd.ms-excel';
+            let extension = '.xls';
+            let filename = fileName;
+
+            let base64 = function(s) {
+                return window.btoa(unescape(encodeURIComponent(s)))
+            };
+
+            let template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>';
+            let render = function(template, content) {
+                return template.replace(/{(\w+)}/g, function(m, p) { return content[p]; });
+            };
+
+            let tableElement = document.getElementById(''+tableId+'');
+
+            let tableExcel = render(template, {
+                worksheet: filename,
+                table: tableElement.innerHTML
+            });
+
+            filename = filename + extension;
+
+            if (navigator.msSaveOrOpenBlob)
+            {
+                let blob = new Blob(
+                        [ '\ufeff', tableExcel ],
+                        { type: dataType }
+                );
+
+                navigator.msSaveOrOpenBlob(blob, filename);
+            } else {
+                let downloadLink = document.createElement("a");
+
+                document.body.appendChild(downloadLink);
+
+                downloadLink.href = 'data:' + dataType + ';base64,' + base64(tableExcel);
+
+                downloadLink.download = filename;
+
+                downloadLink.click();
+            }
+        }
+
+        $('.select_field_class').select2( { placeholder: "Select Message type", maximumSelectionSize: 100  } );
+
+    </script>
+
+
+
+{% endblock %}
