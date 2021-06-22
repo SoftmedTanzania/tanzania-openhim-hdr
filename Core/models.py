@@ -8,7 +8,7 @@ def upload_image(self, filename):
 
 class ServiceReceived(models.Model):
     def __str__(self):
-        return '%d' %self.id
+        return '%d' % self.id
 
     org_name = models.CharField(max_length=255)
     facility_hfr_code = models.CharField(max_length=255)

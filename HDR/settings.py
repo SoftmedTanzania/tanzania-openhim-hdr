@@ -83,6 +83,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'HDR.urls'
 
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
 # Celery related settings
 CELERY_BROKER_URL = 'amqp://localhost:5672'
 # CELERY_RESULT_BACKEND = 'django-db'
