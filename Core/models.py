@@ -22,7 +22,7 @@ class ServiceReceivedItems(models.Model):
     def __str__(self):
         return '%d' % self.id
 
-    service_received = models.ForeignKey(ServiceReceived, on_delete=models.CASCADE, null=True, blank=True)
+    service_received = models.ForeignKey(ServiceReceived, on_delete=models.DO_NOTHING, null=True, blank=True)
     department_name = models.CharField(max_length=255)
     department_id = models.CharField(max_length=255)
     patient_id = models.CharField(max_length=255)
@@ -55,7 +55,7 @@ class DeathByDiseaseCaseAtFacilityItems(models.Model):
     def __str__(self):
         return '%d' % self.id
 
-    death_by_disease_case_at_facility = models.ForeignKey(DeathByDiseaseCaseAtFacility, on_delete=models.CASCADE, null=True, blank=True)
+    death_by_disease_case_at_facility = models.ForeignKey(DeathByDiseaseCaseAtFacility, on_delete=models.DO_NOTHING, null=True, blank=True)
     ward_name = models.CharField(max_length=255)
     ward_id = models.CharField(max_length=255)
     patient_id = models.CharField(max_length=255)
@@ -85,7 +85,7 @@ class DeathByDiseaseCaseNotAtFacilityItems(models.Model):
     def __str__(self):
         return '%d' %self.id
 
-    death_by_disease_case_not_at_facility = models.ForeignKey(DeathByDiseaseCaseNotAtFacility, on_delete=models.CASCADE, null=True, blank=True)
+    death_by_disease_case_not_at_facility = models.ForeignKey(DeathByDiseaseCaseNotAtFacility, on_delete=models.DO_NOTHING, null=True, blank=True)
     place_of_death_id = models.CharField(max_length=255)
     gender = models.CharField(max_length=50)
     date_of_birth = models.DateField()
@@ -114,7 +114,7 @@ class BedOccupancyItems(models.Model):
     def __str__(self):
         return '%d' %self.id
 
-    bed_occupancy = models.ForeignKey(BedOccupancy, on_delete=models.CASCADE, null=True, blank=True)
+    bed_occupancy = models.ForeignKey(BedOccupancy, on_delete=models.DO_NOTHING, null=True, blank=True)
     patient_id = models.CharField(max_length=255)
     admission_date = models.DateField()
     discharge_date = models.DateField()
@@ -158,7 +158,7 @@ class RevenueReceivedItems(models.Model):
     def __str__(self):
         return '%d' %self.id
 
-    revenue_received = models.ForeignKey(RevenueReceived, on_delete=models.CASCADE, null=True, blank=True)
+    revenue_received = models.ForeignKey(RevenueReceived, on_delete=models.DO_NOTHING, null=True, blank=True)
     system_trans_id = models.CharField(max_length=100)
     transaction_date = models.DateField()
     patient_id = models.CharField(max_length=255)
@@ -205,7 +205,7 @@ class FieldValidationMapping(models.Model):
         (BedOccupancy, 'BEDOCC'),
     )
 
-    validation_rule = models.ForeignKey(ValidationRule, on_delete=models.CASCADE, null=True, blank=True)
+    validation_rule = models.ForeignKey(ValidationRule, on_delete=models.DO_NOTHING, null=True, blank=True)
     message_type = models.CharField(max_length=100, choices=MESSAGE_TYPE_CHOICES)
     field = models.CharField(max_length=255)
 
@@ -277,7 +277,7 @@ class TransactionSummaryLine(models.Model):
     def __str__(self):
         return '%d' %self.id
 
-    transaction = models.ForeignKey(TransactionSummary, on_delete=models.CASCADE, null=True, blank=True)
+    transaction = models.ForeignKey(TransactionSummary, on_delete=models.DO_NOTHING, null=True, blank=True)
     payload_object = models.TextField()
     transaction_status = models.BooleanField(default=0)
     error_message = models.TextField()

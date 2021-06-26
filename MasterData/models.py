@@ -16,7 +16,7 @@ class Region(models.Model):
     def __str__(self):
         return '%s' % self.description
 
-    zone = models.ForeignKey(Zone, on_delete=models.CASCADE, null=True, blank=True)
+    zone = models.ForeignKey(Zone, on_delete=models.DO_NOTHING, null=True, blank=True)
     description = models.CharField(max_length=255)
 
     class Meta:
@@ -27,7 +27,7 @@ class DistrictCouncil(models.Model):
     def __str__(self):
         return '%s' % self.description
 
-    region = models.ForeignKey(Region, on_delete=models.CASCADE, null=True, blank=True)
+    region = models.ForeignKey(Region, on_delete=models.DO_NOTHING, null=True, blank=True)
     description = models.CharField(max_length=255)
 
     class Meta:
@@ -38,7 +38,7 @@ class Facility(models.Model):
     def __str__(self):
         return '%s' % self.description
 
-    district_council = models.ForeignKey(DistrictCouncil, on_delete=models.CASCADE, null=True, blank=True)
+    district_council = models.ForeignKey(DistrictCouncil, on_delete=models.DO_NOTHING, null=True, blank=True)
     description = models.CharField(max_length=255)
     facility_hfr_code = models.CharField(max_length=255)
     is_active = models.BooleanField(default=1)
@@ -62,7 +62,7 @@ class PayerMapping(models.Model):
     def __str__(self):
         return '%d' %self.id
 
-    payer = models.ForeignKey(Payer, on_delete=models.CASCADE, null=True, blank=True)
+    payer = models.ForeignKey(Payer, on_delete=models.DO_NOTHING, null=True, blank=True)
     local_payer_id = models.CharField(max_length=255)
     local_payer_description = models.CharField(max_length=255)
     facility = models.ForeignKey(Facility, on_delete=models.CASCADE, null=True, blank=True)
@@ -85,7 +85,7 @@ class ExemptionMapping(models.Model):
     def __str__(self):
         return '%d' %self.id
 
-    exemption = models.ForeignKey(Exemption, on_delete=models.CASCADE, null=True, blank=True)
+    exemption = models.ForeignKey(Exemption, on_delete=models.DO_NOTHING, null=True, blank=True)
     local_exemption_id = models.CharField(max_length=255)
     local_exemption_description = models.CharField(max_length=255)
     facility = models.ForeignKey(Facility, on_delete=models.CASCADE, null=True, blank=True)
@@ -108,7 +108,7 @@ class DepartmentMapping(models.Model):
     def __str__(self):
         return '%d' % self.id
 
-    department = models.ForeignKey(Department, on_delete=models.CASCADE, null=True, blank=True)
+    department = models.ForeignKey(Department, on_delete=models.DO_NOTHING, null=True, blank=True)
     local_department_id = models.CharField(max_length=255)
     local_department_description = models.CharField(max_length=255)
     facility = models.ForeignKey(Facility, on_delete=models.CASCADE, null=True, blank=True)
@@ -125,7 +125,7 @@ class Ward(models.Model):
     local_ward_id = models.CharField(max_length=100)
     local_ward_description = models.CharField(max_length=255)
     number_of_beds = models.IntegerField()
-    department = models.ForeignKey(Department, on_delete=models.CASCADE, null=True, blank=True)
+    department = models.ForeignKey(Department, on_delete=models.DO_NOTHING, null=True, blank=True)
     facility = models.ForeignKey(Facility, on_delete=models.CASCADE, null=True, blank=True)
 
     class Meta:
@@ -146,7 +146,7 @@ class GenderMapping(models.Model):
     def __str__(self):
         return '%d' %self.id
 
-    gender = models.ForeignKey(Gender, on_delete=models.CASCADE, null=True, blank=True)
+    gender = models.ForeignKey(Gender, on_delete=models.DO_NOTHING, null=True, blank=True)
     local_gender_description = models.CharField(max_length=50)
     facility = models.ForeignKey(Facility, on_delete=models.CASCADE, null=True, blank=True)
 
@@ -169,7 +169,7 @@ class ICD10CodeSubCategory(models.Model):
     def __str__(self):
         return '%s' % self.description
 
-    icd_10_code_category = models.ForeignKey(ICD10CodeCategory, on_delete=models.CASCADE, null=True, blank=True)
+    icd_10_code_category = models.ForeignKey(ICD10CodeCategory, on_delete=models.DO_NOTHING, null=True, blank=True)
     description = models.CharField(max_length=255)
 
     class Meta:
@@ -181,7 +181,7 @@ class ICD10Code(models.Model):
     def __str__(self):
         return '%s' %self.icd10_description
 
-    icd_10_code_sub_category = models.ForeignKey(ICD10CodeSubCategory, on_delete=models.CASCADE, null=True, blank=True)
+    icd_10_code_sub_category = models.ForeignKey(ICD10CodeSubCategory, on_delete=models.DO_NOTHING, null=True, blank=True)
     icd10_code = models.CharField(max_length=255)
     icd10_description = models.CharField(max_length=255)
 
@@ -193,7 +193,7 @@ class ICD10SubCode(models.Model):
     def __str__(self):
         return '%d' %self.id
 
-    icd10_code = models.ForeignKey(ICD10Code, on_delete=models.CASCADE, null=True, blank=True)
+    icd10_code = models.ForeignKey(ICD10Code, on_delete=models.DO_NOTHING, null=True, blank=True)
     icd10_sub_code = models.CharField(max_length=255)
     icd10_sub_code_description = models.CharField(max_length=255)
 
@@ -217,7 +217,7 @@ class CPTCodeSubCategory(models.Model):
     def __str__(self):
         return '%d' % self.id
 
-    cpt_code_category = models.ForeignKey(CPTCodeCategory, on_delete=models.CASCADE, null=True, blank=True)
+    cpt_code_category = models.ForeignKey(CPTCodeCategory, on_delete=models.DO_NOTHING, null=True, blank=True)
     description = models.CharField(max_length=255)
 
     class Meta:
@@ -229,7 +229,7 @@ class CPTCode(models.Model):
     def __str__(self):
         return '%s' %self.cpt_code
 
-    cpt_code_sub_category = models.ForeignKey(CPTCodeSubCategory, on_delete=models.CASCADE, null=True, blank=True)
+    cpt_code_sub_category = models.ForeignKey(CPTCodeSubCategory, on_delete=models.DO_NOTHING, null=True, blank=True)
     cpt_code = models.CharField(max_length=255)
     cpt_description = models.CharField(max_length=255)
 
@@ -251,7 +251,7 @@ class ServiceProviderRankingMapping(models.Model):
     def __str__(self):
         return '%d' %self.id
 
-    service_provider_ranking = models.ForeignKey(ServiceProviderRanking, on_delete=models.CASCADE, null=True, blank=True)
+    service_provider_ranking = models.ForeignKey(ServiceProviderRanking, on_delete=models.DO_NOTHING, null=True, blank=True)
     local_service_provider_ranking_id = models.CharField(max_length=255)
     local_service_provider_ranking_description = models.CharField(max_length=255)
     facility = models.ForeignKey(Facility, on_delete=models.CASCADE, null=True, blank=True)
@@ -275,7 +275,7 @@ class PlaceOfDeathMapping(models.Model):
     def __str__(self):
         return '%d' %self.id
 
-    place_of_death = models.ForeignKey(PlaceOfDeath, on_delete=models.CASCADE, null=True, blank=True)
+    place_of_death = models.ForeignKey(PlaceOfDeath, on_delete=models.DO_NOTHING, null=True, blank=True)
     local_place_of_death_id = models.CharField(max_length=255)
     local_place_of_death_description = models.CharField(max_length=255)
     facility = models.ForeignKey(Facility, on_delete=models.CASCADE, null=True, blank=True)
@@ -288,9 +288,9 @@ class CPTCodesMapping(models.Model):
     def __str__(self):
         return '%d' %self.id
 
-    cpt_code = models.ForeignKey(CPTCode, on_delete=models.CASCADE, null=True, blank=True)
+    cpt_code = models.ForeignKey(CPTCode, on_delete=models.DO_NOTHING, null=True, blank=True)
     local_code = models.CharField(max_length=255)
-    facility = models.ForeignKey(Facility, on_delete=models.CASCADE, null=True, blank=True)
+    facility = models.ForeignKey(Facility, on_delete=models.DO_NOTHING, null=True, blank=True)
 
     class Meta:
         db_table = "CPTCodesMappings"
