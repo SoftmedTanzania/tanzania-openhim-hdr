@@ -62,7 +62,7 @@
                 <ul class="nav navbar-nav float-right">
 
                     <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"><span class="mr-1 user-name text-bold-700"> {{ user }}</span></a>
-                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" id="change_password"><i class="ft-user"></i>Change Password</a>
+                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" id="change_password" href="{%  url "change_password" %}"><i class="ft-user"></i>Change Password</a>
                             <div class="dropdown-divider"></div><a class="dropdown-item" href="{% url 'logout' %}" id="id_logout"><i class="ft-power"></i> Logout</a>
                             <div class="dropdown-divider"></div><a class="dropdown-item"><i></i><p style="color:red"> Access Level : {{ user.profile.facility }}</p></a>
                         </div>
