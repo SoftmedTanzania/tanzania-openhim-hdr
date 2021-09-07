@@ -23,7 +23,6 @@ class TransactionSummaryView(viewsets.ModelViewSet):
 
 
 class ServiceReceivedView(viewsets.ModelViewSet):
-
     queryset = ServiceReceived.objects.all()
     serializer_class = IncomingServicesReceivedSerializer
     permission_classes = (IsAuthenticated,)
@@ -36,6 +35,7 @@ class ServiceReceivedView(viewsets.ModelViewSet):
             serializer = self.get_serializer(data=request.data)
 
         if serializer.is_valid():
+            print("serializer is valid")
             if validators.validate_received_payload(dict(serializer.data)) is False:
                 response = {"message": "Failed", "status": status.HTTP_400_BAD_REQUEST}
                 return Response(response, status=status.HTTP_400_BAD_REQUEST)
@@ -47,6 +47,8 @@ class ServiceReceivedView(viewsets.ModelViewSet):
 
                 return Response(response, headers=headers)
         else:
+            print(serializer.errors)
+            print("serializer is not valid")
             return Response(
                 serializer.errors,
                 status=status.HTTP_400_BAD_REQUEST
@@ -55,6 +57,7 @@ class ServiceReceivedView(viewsets.ModelViewSet):
     def perform_create(self, request, serializer):
 
         # validate payload
+        print("here now")
         instance_service_received = ServiceReceived()
 
         instance_service_received.org_name = serializer.data["orgName"]

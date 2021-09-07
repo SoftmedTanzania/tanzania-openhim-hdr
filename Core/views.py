@@ -8,6 +8,7 @@ from MasterData import models as master_data_models
 from django.core.files.storage import FileSystemStorage
 from UserManagement import tables as user_management_tables
 from django_tables2 import RequestConfig
+from API import validators as validators
 
 
 # Create your views here.
@@ -183,25 +184,34 @@ def save_cpt_code_entries(file_path, facility_id, facility_hfr_code):
     fp.close()
 
 
-def regenerate_services_received_json_payload(request,lines, message_type):
+def regenerate_services_received_json_payload(request,lines):
     data_items_array = []
     instance = master_data_models.Facility.objects.get(id=request.user.profile.facility_id)
     facility_name = instance.description
     facility_hfr_code = instance.facility_hfr_code
 
-    for line in lines:
-        json_object = {"deptName": line[0], "deptId": line[1],
-                       "patId": line[2],
-                       "gender": line[3],
-                       "dob": line[4],
-                       "medSvcCode": line[5],
-                       "icd10Code": line[6],
-                       "serviceDate": line[7],
-                       "serviceProviderRankingId": line[8],
-                       "visitType": line[9]
-                       }
+    message_type = ""
 
-        data_items_array.append(json_object)
+    row = 0
+
+    for line in lines:
+        message_type = line[2]
+
+        if row > 0:
+            json_object = {"deptName": line[5], "deptId": line[6],
+                           "patId": line[7],
+                           "gender": line[8],
+                           "dob": line[9],
+                           "medSvcCode": line[10],
+                           "icd10Code": line[11],
+                           "serviceDate": line[12],
+                           "serviceProviderRankingId": line[13],
+                           "visitType": line[14]
+                           }
+
+            data_items_array.append(json_object)
+
+        row +=1
 
     parent_object = {
         "messageType": "" + message_type + "",
@@ -212,7 +222,7 @@ def regenerate_services_received_json_payload(request,lines, message_type):
 
     final_array = json.dumps(parent_object)
 
-    print(final_array)
+    # print(final_array)
 
     return final_array
 

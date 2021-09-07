@@ -104,7 +104,6 @@ def validate_received_payload(data):
                 validation_rule_failed += 1
                 error_message.append(raised_error)
 
-
             # Check if it is a future date. Will return True if future date
             try:
                 if rule_name == "check_if_future_date":
@@ -124,7 +123,6 @@ def validate_received_payload(data):
                 transaction_status = False
                 validation_rule_failed += 1
                 error_message.append(raised_error)
-
 
             # Check if it is a past date. Will return True if past date
             try:
