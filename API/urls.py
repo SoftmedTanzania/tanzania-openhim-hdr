@@ -10,6 +10,8 @@ router.register('death_by_disease_cases_at_facility', views.DeathByDiseaseCaseAt
 router.register('death_by_disease_cases_not_at_facility', views.DeathByDiseaseCaseNotAtFacilityView)
 router.register('bed_occupancy', views.BedOccupancyView)
 router.register('revenue_received', views.RevenueReceivedView)
+router.register('icd10', views.ICD10View)
+router.register('cpt', views.CPTCodeView)
 
 
 urlpatterns = [

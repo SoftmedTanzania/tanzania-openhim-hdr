@@ -1,6 +1,6 @@
 from django import forms
 from API import validators as validators
-from .models import PayloadUpload
+from ValidationManagement.models import PayloadUpload
 
 class PayloadImportForm(forms.ModelForm):
 

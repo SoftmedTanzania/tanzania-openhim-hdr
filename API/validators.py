@@ -1,6 +1,6 @@
 from datetime import datetime
 from dateutil.parser import parse
-from Core.models import FieldValidationMapping, ValidationRule, TransactionSummary, TransactionSummaryLine, PayloadThreshold
+from ValidationManagement.models import FieldValidationMapping, ValidationRule, TransactionSummary, TransactionSummaryLine, PayloadThreshold
 import json
 
 

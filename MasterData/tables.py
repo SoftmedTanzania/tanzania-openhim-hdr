@@ -1,5 +1,7 @@
 import django_tables2 as tables
 from MasterData import models as master_data_models
+from MappingsManagement import models as mappings_management_models
+from TerminologyServicesManagement import models as terminology_management_services_models
 from django.utils.safestring import mark_safe
 from django.utils.html import escape
 import itertools
@@ -21,7 +23,7 @@ class PayerMappingTable(tables.Table):
     counter = tables.Column(empty_values=(), orderable=False)
 
     class Meta:
-        model = master_data_models.PayerMapping
+        model = mappings_management_models.PayerMapping
         template_name = "django_tables2/bootstrap.html"
         fields = ('counter','payer','local_payer_id','local_payer_description' )
         row_attrs = {
@@ -39,7 +41,7 @@ class ExemptionMappingTable(tables.Table):
     counter = tables.Column(empty_values=(), orderable=False)
 
     class Meta:
-        model = master_data_models.ExemptionMapping
+        model = mappings_management_models.ExemptionMapping
         template_name = "django_tables2/bootstrap.html"
         fields = ('counter','exemption','local_exemption_id','local_exemption_description' )
         row_attrs = {
@@ -56,7 +58,7 @@ class DepartmentMappingTable(tables.Table):
     counter = tables.Column(empty_values=(), orderable=False)
 
     class Meta:
-        model = master_data_models.DepartmentMapping
+        model = mappings_management_models.DepartmentMapping
         template_name = "django_tables2/bootstrap.html"
         fields = ('counter','department','local_department_id','local_department_description' )
         row_attrs = {
@@ -92,7 +94,7 @@ class GenderMappingTable(tables.Table):
     counter = tables.Column(empty_values=(), orderable=False)
 
     class Meta:
-        model = master_data_models.GenderMapping
+        model = mappings_management_models.GenderMapping
         template_name = "django_tables2/bootstrap.html"
         fields = ('counter','gender','local_gender_description' )
         row_attrs = {
@@ -109,7 +111,7 @@ class ServiceProviderRankingMappingTable(tables.Table):
     counter = tables.Column(empty_values=(), orderable=False)
 
     class Meta:
-        model = master_data_models.ServiceProviderRankingMapping
+        model = mappings_management_models.ServiceProviderRankingMapping
         template_name = "django_tables2/bootstrap.html"
         fields = ('counter','service_provider_ranking', 'local_service_provider_ranking_id','local_service_provider_ranking_description')
         row_attrs = {
@@ -126,7 +128,7 @@ class PlaceODeathMappingTable(tables.Table):
     counter = tables.Column(empty_values=(), orderable=False)
 
     class Meta:
-        model = master_data_models.PlaceOfDeathMapping
+        model = mappings_management_models.PlaceOfDeathMapping
         template_name = "django_tables2/bootstrap.html"
         fields = ('counter','place_of_death', 'local_place_of_death_id','local_place_of_death_description')
         row_attrs = {
@@ -144,7 +146,7 @@ class CPTCodeMappingTable(tables.Table):
     counter = tables.Column(empty_values=(), orderable=False)
 
     class Meta:
-        model = master_data_models.CPTCodesMapping
+        model = terminology_management_services_models.CPTCodesMapping
         template_name = "django_tables2/bootstrap.html"
         fields = ('counter','cpt_code', 'cpt_code__cpt_description','local_code')
         row_attrs = {

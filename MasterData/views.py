@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect, HttpResponse
 from .tables import PayerMappingTable, ExemptionMappingTable, DepartmentMappingTable, WardMappingTable, \
     GenderMappingTable, ServiceProviderRankingMappingTable, PlaceODeathMappingTable, CPTCodeMappingTable
-from .models import PayerMapping, DepartmentMapping, ExemptionMapping, Ward,CPTCodesMapping, GenderMapping, \
-    ServiceProviderRankingMapping, PlaceOfDeathMapping, ICD10CodeCategory, ICD10CodeSubCategory, ICD10Code, ICD10SubCode,CPTCode
+from .models import Ward
 from .forms import DepartmentMappingForm, ExemptionMappingForm, PayerMappingForm, WardMappingForm, GenderMappingForm, \
     ServiceProviderRankingMappingForm, PlaceODeathMappingForm, CPTCodesMappingForm
 from django_tables2 import RequestConfig
 from Core import forms as core_forms
+from MappingsManagement import models as mappings_management_models
+from TerminologyServicesManagement import models as terminology_management_services_models
+
 import json
 
 
@@ -20,7 +22,7 @@ def get_departments_page(request):
             return redirect(request.META['HTTP_REFERER'])
     else:
         facility = request.user.profile.facility
-        department_mappings = DepartmentMapping.objects.filter(facility=facility)
+        department_mappings = mappings_management_models.DepartmentMapping.objects.filter(facility=facility)
         department_mappings_table = DepartmentMappingTable(department_mappings)
         department_mapping_form = DepartmentMappingForm(initial={'facility': request.user.profile.facility})
         RequestConfig(request, paginate={"per_page": 10}).configure(department_mappings_table)
@@ -29,7 +31,7 @@ def get_departments_page(request):
 
 
 def update_department(request, item_pk):
-    instance_department = DepartmentMapping.objects.get(id=item_pk)
+    instance_department = mappings_management_models.DepartmentMapping.objects.get(id=item_pk)
     form = DepartmentMappingForm(instance=instance_department)
 
     if request.method == "POST":
@@ -60,7 +62,7 @@ def get_cpt_codes_page(request):
             return redirect(request.META['HTTP_REFERER'])
     else:
         facility = request.user.profile.facility
-        cpt_code_mappings = CPTCodesMapping.objects.filter(facility=facility)
+        cpt_code_mappings = terminology_management_services_models.CPTCodesMapping.objects.filter(facility=facility)
         cpt_code_mappings_table = CPTCodeMappingTable(cpt_code_mappings)
         cpt_code_mapping_form = CPTCodesMappingForm(initial={'facility': request.user.profile.facility})
         cpt_code_mapping_import_form = core_forms.CPTCodeMappingImportForm()
@@ -72,7 +74,7 @@ def get_cpt_codes_page(request):
 
 
 def update_cpt_code(request, item_pk):
-    instance_cpt_code = CPTCodesMapping.objects.get(id=item_pk)
+    instance_cpt_code = terminology_management_services_models.CPTCodesMapping.objects.get(id=item_pk)
     form = CPTCodesMappingForm(instance=instance_cpt_code)
 
     if request.method == "POST":
@@ -103,7 +105,7 @@ def get_exemptions_page(request):
             return redirect(request.META['HTTP_REFERER'])
     else:
         facility = request.user.profile.facility
-        exemption_mappings = ExemptionMapping.objects.filter(facility=facility)
+        exemption_mappings = mappings_management_models.ExemptionMapping.objects.filter(facility=facility)
         exemption_mappings_table = ExemptionMappingTable(exemption_mappings)
         exemption_mapping_form = ExemptionMappingForm(initial={'facility': request.user.profile.facility})
         RequestConfig(request, paginate={"per_page": 10}).configure(exemption_mappings_table)
@@ -112,7 +114,7 @@ def get_exemptions_page(request):
 
 
 def update_exemption(request, item_pk):
-    instance_exemption = ExemptionMapping.objects.get(id=item_pk)
+    instance_exemption = mappings_management_models.ExemptionMapping.objects.get(id=item_pk)
     form = ExemptionMappingForm(instance=instance_exemption)
 
     if request.method == "POST":
@@ -143,7 +145,7 @@ def get_payers_page(request):
             return redirect(request.META['HTTP_REFERER'])
     else:
         facility = request.user.profile.facility
-        payer_mappings = PayerMapping.objects.filter(facility=facility)
+        payer_mappings = mappings_management_models.PayerMapping.objects.filter(facility=facility)
         payer_mappings_table = PayerMappingTable(payer_mappings)
         payer_mapping_form = PayerMappingForm(initial={'facility': request.user.profile.facility})
         RequestConfig(request, paginate={"per_page": 10}).configure(payer_mappings_table)
@@ -152,7 +154,7 @@ def get_payers_page(request):
 
 
 def update_payer(request, item_pk):
-    instance_payer = PayerMapping.objects.get(id=item_pk)
+    instance_payer = mappings_management_models.PayerMapping.objects.get(id=item_pk)
     form = PayerMappingForm(instance=instance_payer)
 
     if request.method == "POST":
@@ -223,7 +225,7 @@ def get_gender_page(request):
             return redirect(request.META['HTTP_REFERER'])
     else:
         facility = request.user.profile.facility
-        gender_mappings = GenderMapping.objects.filter(facility=facility)
+        gender_mappings = mappings_management_models.GenderMapping.objects.filter(facility=facility)
         gender_mappings_table = GenderMappingTable(gender_mappings)
         gender_mapping_form = GenderMappingForm(initial={'facility': request.user.profile.facility})
         RequestConfig(request, paginate={"per_page": 10}).configure(gender_mappings_table)
@@ -232,7 +234,7 @@ def get_gender_page(request):
 
 
 def update_gender(request, item_pk):
-    instance_gender = GenderMapping.objects.get(id=item_pk)
+    instance_gender = mappings_management_models.GenderMapping.objects.get(id=item_pk)
     form = GenderMappingForm(instance=instance_gender)
 
     if request.method == "POST":
@@ -263,7 +265,7 @@ def get_service_provider_rankings_page(request):
             return redirect(request.META['HTTP_REFERER'])
     else:
         facility = request.user.profile.facility
-        service_provider_ranking_mappings = ServiceProviderRankingMapping.objects.filter(facility=facility)
+        service_provider_ranking_mappings = mappings_management_models.ServiceProviderRankingMapping.objects.filter(facility=facility)
         service_provider_ranking_mappings_table = ServiceProviderRankingMappingTable(service_provider_ranking_mappings)
         service_provider_ranking_mapping_mapping_form = ServiceProviderRankingMappingForm(initial={'facility': request.user.profile.facility})
         RequestConfig(request, paginate={"per_page": 10}).configure(service_provider_ranking_mappings_table)
@@ -273,7 +275,7 @@ def get_service_provider_rankings_page(request):
 
 
 def update_service_provider_ranking(request, item_pk):
-    instance_server_provider_ranking = ServiceProviderRankingMapping.objects.get(id=item_pk)
+    instance_server_provider_ranking = mappings_management_models.ServiceProviderRankingMapping.objects.get(id=item_pk)
     form = ServiceProviderRankingMappingForm(instance=instance_server_provider_ranking)
 
     if request.method == "POST":
@@ -304,7 +306,7 @@ def get_places_of_death_page(request):
             return redirect(request.META['HTTP_REFERER'])
     else:
         facility = request.user.profile.facility
-        place_of_death_mappings = PlaceOfDeathMapping.objects.filter(facility=facility)
+        place_of_death_mappings = mappings_management_models.PlaceOfDeathMapping.objects.filter(facility=facility)
         place_of_death_mappings_table = PlaceODeathMappingTable(place_of_death_mappings)
         place_of_death_mapping_form = PlaceODeathMappingForm(initial={'facility': request.user.profile.facility})
         RequestConfig(request, paginate={"per_page": 10}).configure(place_of_death_mappings_table)
@@ -314,7 +316,7 @@ def get_places_of_death_page(request):
 
 
 def update_place_of_death(request, item_pk):
-    instance_place_of_death = ServiceProviderRankingMapping.objects.get(id=item_pk)
+    instance_place_of_death = mappings_management_models.ServiceProviderRankingMapping.objects.get(id=item_pk)
     form = ServiceProviderRankingMappingForm(instance=instance_place_of_death)
 
     if request.method == "POST":
@@ -341,21 +343,21 @@ def delete_mapping(request):
         mapping_type = request.POST["mapping_type"]
 
         if mapping_type == "departments":
-            DepartmentMapping.objects.get(id=mapping_id).delete()
+            mappings_management_models.DepartmentMapping.objects.get(id=mapping_id).delete()
         elif mapping_type == "exemptions":
-            ExemptionMapping.objects.get(id=mapping_id).delete()
+            mappings_management_models.ExemptionMapping.objects.get(id=mapping_id).delete()
         elif mapping_type == "payers":
-            PayerMapping.objects.get(id=mapping_id).delete()
+            mappings_management_models.PayerMapping.objects.get(id=mapping_id).delete()
         elif mapping_type == "wards":
             Ward.objects.get(id=mapping_id).delete()
         elif mapping_type == "gender":
-            GenderMapping.objects.get(id=mapping_id).delete()
+            mappings_management_models.GenderMapping.objects.get(id=mapping_id).delete()
         elif mapping_type == "places_of_death":
-            PlaceOfDeathMapping.objects.get(id=mapping_id).delete()
+            mappings_management_models.PlaceOfDeathMapping.objects.get(id=mapping_id).delete()
         elif mapping_type == "rankings":
-            ServiceProviderRankingMapping.objects.get(id=mapping_id).delete()
+            mappings_management_models.ServiceProviderRankingMapping.objects.get(id=mapping_id).delete()
         elif mapping_type == "cpt_codes_mappings":
-            CPTCodesMapping.objects.get(id=mapping_id).delete()
+            mappings_management_models.CPTCodesMapping.objects.get(id=mapping_id).delete()
 
     return redirect(request.META['HTTP_REFERER'])
 
@@ -369,7 +371,7 @@ def import_icd_10_codes(request):
         sub_categories = x['subCategories']
 
         # # insert category
-        instance_category = ICD10CodeCategory()
+        instance_category = terminology_management_services_models.ICD10CodeCategory()
         instance_category.description = categories
         instance_category.save()
 
@@ -378,7 +380,7 @@ def import_icd_10_codes(request):
             sub_sub_categories = sub_category['subSubCategories']
 
             # # insert sub category
-            instance_sub_category = ICD10CodeSubCategory()
+            instance_sub_category = terminology_management_services_models.ICD10CodeSubCategory()
             instance_sub_category.description = sub_category_name
             instance_sub_category.icd_10_code_category_id = instance_category.id
             instance_sub_category.save()
@@ -390,7 +392,7 @@ def import_icd_10_codes(request):
                 icd_sub_code_array = sub_sub_category["icd10Codes"]
 
                 # # insert icd code
-                instance_icd_code = ICD10Code()
+                instance_icd_code = terminology_management_services_models.ICD10Code()
                 instance_icd_code.icd_10_code_sub_category_id =  instance_sub_category.id
                 instance_icd_code.icd10_code = icd_10_code
                 instance_icd_code.icd10_description = icd_10
@@ -401,7 +403,7 @@ def import_icd_10_codes(request):
                     icd_10_sub_description = y["icd10Name"]
 
                     # # insert icd sub code
-                    instance_icd_sub_code = ICD10SubCode()
+                    instance_icd_sub_code = terminology_management_services_models.ICD10SubCode()
                     instance_icd_sub_code.icd10_code_id = instance_icd_code.id
                     instance_icd_sub_code.icd10_sub_code = icd_10_sub_code
                     instance_icd_sub_code.icd10_sub_code_description = icd_10_sub_description

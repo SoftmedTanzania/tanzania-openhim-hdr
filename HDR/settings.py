@@ -47,6 +47,10 @@ INSTALLED_APPS = [
     'UserManagement',
     'MasterData',
     'Core',
+    'DHIS',
+    'TerminologyServicesManagement',
+    'ValidationManagement',
+    'MappingsManagement',
 
     # APi specific apps
     'rest_framework',

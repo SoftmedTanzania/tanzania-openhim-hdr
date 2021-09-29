@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
 from UserManagement import models as user_management_models
+from ValidationManagement import models as validation_management_models
 from Core import models as core_models
+from TerminologyServicesManagement import models as terminology_services_management
 from rest_framework import serializers
 
 
@@ -31,7 +33,7 @@ class TokenSerializer(serializers.ModelSerializer):
 class TransactionSummarySerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = core_models.TransactionSummary
+        model = validation_management_models.TransactionSummary
         fields = '__all__'
 
 
@@ -202,6 +204,55 @@ class IncomingRevenueReceivedSerializer(serializers.Serializer):
     items = IncomingRevenueReceivedItemsSerializer(many=True, read_only=False)
 
 
+class ICD10SubCodeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = terminology_services_management.ICD10SubCode
+        fields = ('id','icd10_sub_code', 'icd10_sub_code_description')
 
 
+class ICD10CodeSerializer(serializers.ModelSerializer):
+    sub_code =  ICD10SubCodeSerializer(many=True, read_only=False)
 
+    class Meta:
+        model = terminology_services_management.ICD10Code
+        fields = ('id','icd10_code', 'icd10_description', 'sub_code')
+
+
+class ICD10CodeSubCategorySerializer(serializers.ModelSerializer):
+    code = ICD10CodeSerializer(many=True, read_only=False)
+
+    class Meta:
+        model = terminology_services_management.ICD10CodeSubCategory
+        fields = ['id', 'description','icd10_code_category','code']
+
+
+class ICD10CodeCategorySerializer(serializers.ModelSerializer):
+    sub_category = ICD10CodeSubCategorySerializer(many=True, read_only=False)
+
+    class Meta:
+        model = terminology_services_management.ICD10CodeCategory
+        fields = ('id', 'description', 'sub_category')
+
+
+class CPTCodeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = terminology_services_management.CPTCode
+        fields = ('id','cpt_code','cpt_description')
+
+
+class CPTCodeSubCategorySerializer(serializers.ModelSerializer):
+    code = CPTCodeSerializer(many=True, read_only=False)
+
+    class Meta:
+        model = terminology_services_management.CPTCodeSubCategory
+        fields = ('id','description', 'code')
+
+
+class CPTCodeCategorySerializer(serializers.ModelSerializer):
+    sub_category = CPTCodeSubCategorySerializer(many=True, read_only=False)
+
+    class Meta:
+        model = terminology_services_management.CPTCodeCategory
+        fields = ('id', 'description', 'sub_category')

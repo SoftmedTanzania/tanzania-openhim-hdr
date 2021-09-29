@@ -5,21 +5,21 @@ from .serializers import TransactionSummarySerializer, IncomingDeathByDiseaseCas
     DeathByDiseaseCaseAtFacilityItemsSerializer, \
     DeathByDiseaseCaseNotAtFacilityItemsSerializer, RevenueReceivedItemsSerializer,BedOccupancyItemsSerializer, \
     ServiceReceivedItemsSerializer, IncomingDeathByDiseaseCaseNotAtTheFacilitySerializer, \
-    IncomingServicesReceivedSerializer, IncomingBedOccupancySerializer, IncomingRevenueReceivedSerializer
-from Core.models import TransactionSummary, RevenueReceived, DeathByDiseaseCaseAtFacility, \
-    DeathByDiseaseCaseNotAtFacility,ServiceReceived, BedOccupancy,BedOccupancyReport, RevenueReceivedItems, ServiceReceivedItems, \
+    IncomingServicesReceivedSerializer, IncomingBedOccupancySerializer, IncomingRevenueReceivedSerializer, \
+    ICD10CodeCategorySerializer, CPTCodeCategorySerializer
+from Core.models import RevenueReceived, DeathByDiseaseCaseAtFacility, \
+    DeathByDiseaseCaseNotAtFacility,ServiceReceived, BedOccupancy, RevenueReceivedItems, ServiceReceivedItems, \
     DeathByDiseaseCaseAtFacilityItems, DeathByDiseaseCaseNotAtFacilityItems, BedOccupancyItems
-import datetime
-from MasterData import models as master_data_models
-import json
 from API import validators as validators
+from ValidationManagement import models as validation_management_models
+from TerminologyServicesManagement import models as terminology_services_management
 
 
 # Create your views here.
 class TransactionSummaryView(viewsets.ModelViewSet):
-    queryset = TransactionSummary.objects.all()
+    queryset = validation_management_models.TransactionSummary.objects.all()
     serializer_class = TransactionSummarySerializer
-    permission_classes = ()
+    permission_classes = (IsAuthenticated, )
 
 
 class ServiceReceivedView(viewsets.ModelViewSet):
@@ -376,3 +376,15 @@ class BedOccupancyView(viewsets.ModelViewSet):
         queryset = BedOccupancyItems.objects.all().order_by('-id')
         serializer = BedOccupancyItemsSerializer(queryset, many=True)
         return Response(serializer.data)
+
+
+class ICD10View(viewsets.ModelViewSet):
+    queryset = terminology_services_management.ICD10CodeCategory.objects.all()
+    serializer_class = ICD10CodeCategorySerializer
+    permission_classes = ()
+
+
+class CPTCodeView(viewsets.ModelViewSet):
+    queryset = terminology_services_management.CPTCodeCategory.objects.all()
+    serializer_class = CPTCodeCategorySerializer
+    permission_classes = ()

@@ -1,5 +1,5 @@
 import django_tables2 as tables
-from Core import models as core_models
+from ValidationManagement import models as validation_management_models
 from django.utils.safestring import mark_safe
 from django.utils.html import escape
 import itertools
@@ -37,7 +37,7 @@ class TransactionSummaryTable(tables.Table):
     )
 
     class Meta:
-        model = core_models.TransactionSummary
+        model = validation_management_models.TransactionSummary
         template_name = "django_tables2/bootstrap.html"
         fields = ('counter','id','transaction_date_time','message_type','total_passed', 'total_failed','threshold')
         row_attrs = {
@@ -58,7 +58,7 @@ class TransactionSummaryLineTable(tables.Table):
     transaction = tables.Column(verbose_name='Transaction ID')
 
     class Meta:
-        model = core_models.TransactionSummaryLine
+        model = validation_management_models.TransactionSummaryLine
         template_name = "django_tables2/bootstrap.html"
         fields = ('counter','transaction','id', 'payload_object', 'transaction_status', 'error_message')
         row_attrs = {

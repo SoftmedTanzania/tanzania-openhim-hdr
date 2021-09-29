@@ -1,6 +1,6 @@
 import csv
 import json
-from .models import TransactionSummaryLine, TransactionSummary
+from ValidationManagement import models as validation_management_models
 from django.http import HttpResponse
 from .forms import PayloadImportForm, CPTCodeMappingImportForm
 from django.shortcuts import render, redirect
@@ -8,7 +8,6 @@ from MasterData import models as master_data_models
 from django.core.files.storage import FileSystemStorage
 from UserManagement import tables as user_management_tables
 from django_tables2 import RequestConfig
-from API import validators as validators
 
 
 # Create your views here.
@@ -18,15 +17,15 @@ def convert_to_csv(request):
         transaction_id = request.POST["item_pk"]
         status = request.POST["status"]
 
-        transaction_lines = TransactionSummaryLine.objects.filter(transaction_id = transaction_id)
-        transaction = TransactionSummary.objects.get(id=transaction_id)
+        transaction_lines = validation_management_models.TransactionSummaryLine.objects.filter(transaction_id = transaction_id)
+        transaction = validation_management_models.TransactionSummary.objects.get(id=transaction_id)
         message_type = transaction.message_type
         facility_hfr_code = transaction.facility_hfr_code
 
         instance_facility = master_data_models.Facility.objects.filter(facility_hfr_code = facility_hfr_code).first()
         org_name = instance_facility.description
 
-        model_fields = TransactionSummaryLine._meta.fields + TransactionSummaryLine._meta.many_to_many
+        model_fields = validation_management_models.TransactionSummaryLine._meta.fields + validation_management_models.TransactionSummaryLine._meta.many_to_many
         field_names = [field.name for field in model_fields]
 
         response = HttpResponse(content_type='text/csv')
@@ -39,12 +38,12 @@ def convert_to_csv(request):
         json_object = transaction_lines.first().payload_object
 
         if status == "":
-            transaction_lines_payload = TransactionSummaryLine.objects.filter(transaction_id = transaction_id)
+            transaction_lines_payload = validation_management_models.TransactionSummaryLine.objects.filter(transaction_id = transaction_id)
         else:
             if status == "fail":
-                transaction_lines_payload = TransactionSummaryLine.objects.filter(transaction_id=transaction_id, transaction_status = 0 )
+                transaction_lines_payload = validation_management_models.TransactionSummaryLine.objects.filter(transaction_id=transaction_id, transaction_status = 0 )
             else:
-                transaction_lines_payload = TransactionSummaryLine.objects.filter(transaction_id=transaction_id,
+                transaction_lines_payload = validation_management_models.TransactionSummaryLine.objects.filter(transaction_id=transaction_id,
                                                                                   transaction_status=1)
 
         jsonObject = json.loads(json_object)
@@ -95,9 +94,9 @@ def filter_transaction_lines(request):
         transaction_id = request.POST["item_pk"]
 
         if status == "pass":
-            transaction_lines = TransactionSummaryLine.objects.filter(transaction_id = transaction_id, transaction_status = 1)
+            transaction_lines = validation_management_models.TransactionSummaryLine.objects.filter(transaction_id = transaction_id, transaction_status = 1)
         else:
-            transaction_lines = TransactionSummaryLine.objects.filter(transaction_id=transaction_id,
+            transaction_lines = validation_management_models.TransactionSummaryLine.objects.filter(transaction_id=transaction_id,
                                                                       transaction_status=0)
 
         transaction_summary_lines_table = user_management_tables.TransactionSummaryLineTable(transaction_lines)
