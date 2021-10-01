@@ -13,7 +13,7 @@ from Core import views as core_views
 app = Celery()
 
 
-# @app.task
+@app.task
 def save_payload_from_csv(request):
     root_path = "uploads"
     i = 0
