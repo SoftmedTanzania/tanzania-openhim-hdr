@@ -138,16 +138,14 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
 
     json_data = json.dumps(item)
 
-    print(json_data)
-    print(him_new_icd_url)
 
     if created:
-        response = requests.post(him_new_icd_url,auth=(him_username, him_password),data=json_data, headers={'User-Agent': 'XY'})
+        response = requests.post(him_new_icd_url,auth=(him_username, him_password),data=json_data,
+                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
         print(response)
     else:
-        response = requests.post(him_update_icd_url, auth=(him_username, him_password),data=json_data, headers={'User-Agent': 'XY'})
-        print(response)
-        print(response.content)
+        response = requests.post(him_update_icd_url, auth=(him_username, him_password),data=json_data,
+                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
 
 
 @receiver(post_save, sender=ICD10CodeSubCategory)
@@ -178,10 +176,12 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
 
 
     if created:
-        response = requests.post(him_new_icd_url,auth=(him_username, him_password),data=json_data,headers={'User-Agent': 'XY'})
+        response = requests.post(him_new_icd_url,auth=(him_username, him_password),data=json_data,
+                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
         print(response)
     else:
-        response = requests.post(him_update_icd_url, auth=(him_username, him_password),data=json_data, headers={'User-Agent': 'XY'})
+        response = requests.post(him_update_icd_url, auth=(him_username, him_password),data=json_data,
+                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
         print(response)
 
 
@@ -218,10 +218,12 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
 
 
     if created:
-        response = requests.post(him_new_icd_url,auth=(him_username, him_password),data=json_data,headers={'User-Agent': 'XY'})
+        response = requests.post(him_new_icd_url,auth=(him_username, him_password),data=json_data,
+                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
         print(response)
     else:
-        response = requests.post(him_update_icd_url, auth=(him_username, him_password),data=json_data, headers={'User-Agent': 'XY'})
+        response = requests.post(him_update_icd_url, auth=(him_username, him_password),data=json_data,
+                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
         print(response)
 
 
@@ -260,10 +262,12 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
 
 
     if created:
-        response = requests.post(him_new_icd_url,auth=(him_username, him_password),data=json_data,headers={'User-Agent': 'XY'})
+        response = requests.post(him_new_icd_url,auth=(him_username, him_password),data=json_data,
+                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
         print(response)
     else:
-        response = requests.post(him_update_icd_url, auth=(him_username, him_password),data=json_data, headers={'User-Agent': 'XY'})
+        response = requests.post(him_update_icd_url, auth=(him_username, him_password),data=json_data,
+                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
         print(response)
 
 
@@ -288,11 +292,12 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
     print(json_data)
 
     if created:
-        response = requests.post(him_new_cpt_url, auth=(him_username, him_password),data=json_data, headers={'User-Agent': 'XY'})
+        response = requests.post(him_new_cpt_url, auth=(him_username, him_password),data=json_data,
+                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
         print(response)
     else:
         response = requests.post(him_update_cpt_url, auth=(him_username, him_password), data=json_data,
-                                 headers={'User-Agent': 'XY'})
+                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
         print(response)
 
 
@@ -321,11 +326,11 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
 
     if created:
         response = requests.post(him_new_cpt_url, auth=(him_username, him_password), data=json_data,
-                                 headers={'User-Agent': 'XY'})
+                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
         print(response)
     else:
         response = requests.post(him_update_cpt_url, auth=(him_username, him_password), data=json_data,
-                                 headers={'User-Agent': 'XY'})
+                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
         print(response)
 
 
@@ -357,9 +362,10 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
     print(json_data)
 
     if created:
-        response = requests.post(him_new_cpt_url, auth=(him_username, him_password),data=json_data, headers={'User-Agent': 'XY'})
+        response = requests.post(him_new_cpt_url, auth=(him_username, him_password),data=json_data,
+                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
         print(response)
     else:
         response = requests.post(him_update_cpt_url, auth=(him_username, him_password), data=json_data,
-                                 headers={'User-Agent': 'XY'})
+                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
         print(response)
