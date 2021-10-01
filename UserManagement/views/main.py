@@ -9,6 +9,7 @@ from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from ..tables import TransactionSummaryTable, TransactionSummaryLineTable
 from Core import models as core_models
+from ValidationManagement import models as validation_management_models
 from django_tables2 import RequestConfig
 import xlwt
 from Core import forms as core_forms
@@ -19,7 +20,7 @@ def get_login_page(request):
 
 
 def get_audit_report(request,item_pk):
-    transaction_summary_lines = core_models.TransactionSummaryLine.objects.filter\
+    transaction_summary_lines = validation_management_models.TransactionSummaryLine.objects.filter\
         (transaction_id=item_pk).order_by('-id')
     transaction_summary_lines_table = TransactionSummaryLineTable(transaction_summary_lines)
     RequestConfig(request, paginate={"per_page": 15}).configure(transaction_summary_lines_table)
@@ -72,7 +73,7 @@ def authenticate_user(request):
             elif user.is_staff:
                 login(request, user)
                 facility = request.user.profile.facility
-                transaction_summary = core_models.TransactionSummary.objects.filter(
+                transaction_summary = validation_management_models.TransactionSummary.objects.filter(
                     facility_hfr_code=facility.facility_hfr_code).order_by('-transaction_date_time')
                 transaction_summary_table = TransactionSummaryTable(transaction_summary)
                 RequestConfig(request, paginate={"per_page": 10}).configure(transaction_summary_table)
@@ -140,7 +141,7 @@ def export_transaction_lines(request):
         # Sheet body, remaining rows
         font_style = xlwt.XFStyle()
 
-        transaction_lines = core_models.TransactionSummaryLine.objects.filter(transaction_id = transaction_id)
+        transaction_lines = validation_management_models.TransactionSummaryLine.objects.filter(transaction_id = transaction_id)
 
         for row in transaction_lines:
             column_names = tuple(row)
@@ -156,7 +157,7 @@ def export_transaction_lines(request):
 def get_dashboard(request):
     form = core_forms.PayloadImportForm()
     facility = request.user.profile.facility
-    transaction_summary = core_models.TransactionSummary.objects.filter(facility_hfr_code=facility.facility_hfr_code).order_by('-transaction_date_time')
+    transaction_summary = validation_management_models.TransactionSummary.objects.filter(facility_hfr_code=facility.facility_hfr_code).order_by('-transaction_date_time')
     transaction_summary_table = TransactionSummaryTable(transaction_summary)
     RequestConfig(request, paginate={"per_page": 10}).configure(transaction_summary_table)
 
@@ -165,7 +166,7 @@ def get_dashboard(request):
 
 
 def get_transaction_summary_lines(request,item_pk):
-    transaction_summary_lines = core_models.TransactionSummaryLine.objects.filter\
+    transaction_summary_lines = validation_management_models.TransactionSummaryLine.objects.filter\
         (transaction_id=item_pk).order_by('-id')
     transaction_summary_lines_table = TransactionSummaryLineTable(transaction_summary_lines)
     RequestConfig(request, paginate={"per_page": 10}).configure(transaction_summary_lines_table)
