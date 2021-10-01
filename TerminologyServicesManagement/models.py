@@ -3,6 +3,18 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from MasterData import models as master_data_models
 import json
+from decouple import config
+import requests
+
+
+him_new_icd_url = config('HIM_NEW_ICD_URL')
+him_update_icd_url = config('HIM_UPDATE_ICD_URL')
+
+him_new_cpt_url = config('HIM_NEW_CPT_URL')
+him_update_cpt_url = config('HIM_UPDATE_CPT_URL')
+
+him_username = config('HIM_USERNAME')
+him_password = config('HIM_PASSWORD')
 
 
 # Create your models here.
@@ -104,6 +116,115 @@ class CPTCodesMapping(models.Model):
         db_table = "CPTCodesMappings"
 
 
+# ICD1O Backend events
+@receiver(post_save, sender=ICD10CodeCategory)
+def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
+
+    icd10_category_id = instance.id
+    icd10_category_description = instance.description
+
+    item = {
+        "icd10_code_category_id": icd10_category_id,
+        "icd10_category_description": icd10_category_description,
+        "icd10_sub_category_id": "",
+        "icd10_sub_category_description": "",
+        "icd10_id": "",
+        "icd10_code": "",
+        "icd10_description": "",
+        "icd10_sub_code_id": "",
+        "icd10_sub_code": "",
+        "icd10_sub_code_description": ""
+    }
+
+    json_data = json.dumps(item)
+
+    print(json_data)
+    print(him_new_icd_url)
+
+    if created:
+        response = requests.post(him_new_icd_url,auth=(him_username, him_password),data=json_data, headers={'User-Agent': 'XY'})
+        print(response)
+    else:
+        response = requests.post(him_update_icd_url, auth=(him_username, him_password),data=json_data, headers={'User-Agent': 'XY'})
+        print(response)
+        print(response.content)
+
+
+@receiver(post_save, sender=ICD10CodeSubCategory)
+def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
+    icd10_sub_category_id = instance.id
+    icd10_sub_category_description = instance.description
+    icd10_category_id = instance.icd10_code_category_id
+
+    icd10_category = ICD10CodeCategory.objects.get(id=icd10_category_id)
+    icd10_category_description = icd10_category.description
+
+    item = {
+        "icd10_code_category_id": icd10_category_id,
+        "icd10_category_description": icd10_category_description,
+        "icd10_sub_category_id": icd10_sub_category_id,
+        "icd10_sub_category_description": icd10_sub_category_description,
+        "icd10_id": "",
+        "icd10_code": "",
+        "icd10_description": "",
+        "icd10_sub_code_id": "",
+        "icd10_sub_code": "",
+        "icd10_sub_code_description": ""
+    }
+
+    json_data = json.dumps(item)
+
+    print(json_data)
+
+
+    if created:
+        response = requests.post(him_new_icd_url,auth=(him_username, him_password),data=json_data,headers={'User-Agent': 'XY'})
+        print(response)
+    else:
+        response = requests.post(him_update_icd_url, auth=(him_username, him_password),data=json_data, headers={'User-Agent': 'XY'})
+        print(response)
+
+
+@receiver(post_save, sender=ICD10Code)
+def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
+    icd10_code_id = instance.id
+    icd10_code = instance.icd10_code
+    icd10_code_description = instance.icd10_description
+
+    icd10_sub_category = ICD10CodeSubCategory.objects.get(id=instance.icd10_code_sub_category_id)
+    icd10_sub_category_id= instance.icd10_code_sub_category_id
+    icd10_sub_category_description = icd10_sub_category.description
+
+    icd10_category_id = icd10_sub_category.icd10_code_category_id
+    icd10_category = ICD10CodeCategory.objects.get(id=icd10_category_id)
+    icd10_category_description = icd10_category.description
+
+    item = {
+        "icd10_code_category_id": icd10_category_id,
+        "icd10_category_description": icd10_category_description,
+        "icd10_sub_category_id": icd10_sub_category_id,
+        "icd10_sub_category_description": icd10_sub_category_description,
+        "icd10_id": icd10_code_id,
+        "icd10_code": icd10_code,
+        "icd10_description": icd10_code_description,
+        "icd10_sub_code_id": "",
+        "icd10_sub_code": "",
+        "icd10_sub_code_description": ""
+    }
+
+    json_data = json.dumps(item)
+
+    print(json_data)
+
+
+    if created:
+        response = requests.post(him_new_icd_url,auth=(him_username, him_password),data=json_data,headers={'User-Agent': 'XY'})
+        print(response)
+    else:
+        response = requests.post(him_update_icd_url, auth=(him_username, him_password),data=json_data, headers={'User-Agent': 'XY'})
+        print(response)
+
+
 @receiver(post_save, sender=ICD10SubCode)
 def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
     icd10_code_id = instance.icd10_code_id
@@ -120,26 +241,92 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
     icd10_category = ICD10CodeCategory.objects.get(id=icd10_category_id)
     icd10_category_description = icd10_category.description
 
-    object = {
+    item = {
+        "icd10_code_category_id": icd10_category_id,
         "icd10_category_description": icd10_category_description,
+        "icd10_sub_category_id": icd10_sub_category_id,
         "icd10_sub_category_description": icd10_sub_category_description,
+        "icd10_id": icd10_code_id,
         "icd10_code": icd10_diagnoses_code,
         "icd10_description": icd10_description,
-        "icd10_sub_code_id":instance.icd10_sub_code,
+        "icd10_sub_code_id":instance.id,
+        "icd10_sub_code":instance.icd10_sub_code,
         "icd10_sub_code_description": instance.icd10_sub_code_description
     }
 
-    json_data = json.dumps(object)
+    json_data = json.dumps(item)
 
     print(json_data)
 
 
     if created:
-        pass
-        # send new record to emr via him
+        response = requests.post(him_new_icd_url,auth=(him_username, him_password),data=json_data,headers={'User-Agent': 'XY'})
+        print(response)
     else:
-        # this is an update
-        print("updated instance is", instance)
+        response = requests.post(him_update_icd_url, auth=(him_username, him_password),data=json_data, headers={'User-Agent': 'XY'})
+        print(response)
+
+
+# CPT Backend events
+@receiver(post_save, sender=CPTCodeCategory)
+def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
+    cpt_code_category_id = instance.id
+    cpt_code_category_description = instance.description
+
+    item = {
+        "cpt_category_code_id": cpt_code_category_id,
+        "cpt_code_category_description": cpt_code_category_description,
+        "cpt_code_sub_category_id": "",
+        "cpt_code_sub_category_description": "",
+        "cpt_code_id": "",
+        "cpt_code": "",
+        "cpt_description": "",
+    }
+
+    json_data = json.dumps(item)
+
+    print(json_data)
+
+    if created:
+        response = requests.post(him_new_cpt_url, auth=(him_username, him_password),data=json_data, headers={'User-Agent': 'XY'})
+        print(response)
+    else:
+        response = requests.post(him_update_cpt_url, auth=(him_username, him_password), data=json_data,
+                                 headers={'User-Agent': 'XY'})
+        print(response)
+
+
+@receiver(post_save, sender=CPTCodeSubCategory)
+def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
+    cpt_code_sub_category_id = instance.id
+    cpt_code_sub_category_description = instance.description
+    cpt_code_category_id = instance.cpt_code_category_id
+
+    cpt_code_category = CPTCodeCategory.objects.get(id=cpt_code_category_id)
+    cpt_code_category_description = cpt_code_category.description
+
+    item = {
+        "cpt_category_code_id": cpt_code_category_id,
+        "cpt_code_category_description": cpt_code_category_description,
+        "cpt_code_sub_category_id": cpt_code_sub_category_id,
+        "cpt_code_sub_category_description": cpt_code_sub_category_description,
+        "cpt_code_id": "",
+        "cpt_code": "",
+        "cpt_description": "",
+    }
+
+    json_data = json.dumps(item)
+
+    print(json_data)
+
+    if created:
+        response = requests.post(him_new_cpt_url, auth=(him_username, him_password), data=json_data,
+                                 headers={'User-Agent': 'XY'})
+        print(response)
+    else:
+        response = requests.post(him_update_cpt_url, auth=(him_username, him_password), data=json_data,
+                                 headers={'User-Agent': 'XY'})
+        print(response)
 
 
 @receiver(post_save, sender=CPTCode)
@@ -155,21 +342,24 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
     cpt_code_category = CPTCodeCategory.objects.get(id=cpt_code_category_id)
     cpt_code_category_description = cpt_code_category.description
 
-    object = {
+    item = {
+        "cpt_category_code_id": cpt_code_category_id,
         "cpt_code_category_description": cpt_code_category_description,
+        "cpt_code_sub_category_id": cpt_code_sub_category_id,
         "cpt_code_sub_category_description": cpt_code_sub_category_description,
+        "cpt_code_id": instance.id,
+        "cpt_code": cpt_code,
         "cpt_description": cpt_description,
-        "cpt_code": cpt_code
     }
 
-    json_data = json.dumps(object)
+    json_data = json.dumps(item)
 
     print(json_data)
 
     if created:
-        new_cpt_code = instance
-        print(new_cpt_code)
-        # send new record to emr via him
+        response = requests.post(him_new_cpt_url, auth=(him_username, him_password),data=json_data, headers={'User-Agent': 'XY'})
+        print(response)
     else:
-        # this is an update
-        print("updated instance is", instance)
+        response = requests.post(him_update_cpt_url, auth=(him_username, him_password), data=json_data,
+                                 headers={'User-Agent': 'XY'})
+        print(response)
