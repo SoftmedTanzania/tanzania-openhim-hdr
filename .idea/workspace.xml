@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/payload_transaction_1457_19_54_10.csv__2021-10-02 16:03:15.991345_in.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/tasks.py" afterPath="$PROJECT_DIR$/Core/tasks.py" />
     </list>
@@ -27,10 +26,13 @@
       <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Core/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#11122#11305#0" expanded="false" />
+                <element signature="e#11374#14791#0" expanded="false" />
+                <element signature="e#14915#15595#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -49,7 +51,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UserManagement/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="225">
               <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -61,7 +63,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
+            <state relative-caret-position="615">
               <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
               <folding>
                 <element signature="e#511#3646#0" expanded="false" />
@@ -70,6 +72,36 @@
                 <element signature="e#5675#6523#0" expanded="false" />
                 <element signature="e#6600#7452#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HDR/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1395">
+              <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,7 +119,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ValidationManagement/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
+            <state relative-caret-position="1605">
               <caret line="127" column="6" selection-start-line="127" selection-start-column="6" selection-end-line="127" selection-end-column="6" />
               <folding>
                 <element signature="e#3112#3523#0" expanded="false" />
@@ -98,80 +130,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="247" column="15" selection-start-line="247" selection-start-column="15" selection-end-line="247" selection-end-column="15" />
-              <folding>
-                <element signature="e#398#575#0" expanded="false" />
-                <element signature="e#477#575#0" expanded="false" />
-                <element signature="e#640#820#0" expanded="false" />
-                <element signature="e#722#820#0" expanded="false" />
-                <element signature="e#879#1119#0" expanded="false" />
-                <element signature="e#987#1119#0" expanded="false" />
-                <element signature="e#1192#1294#0" expanded="false" />
-                <element signature="e#1212#1294#0" expanded="false" />
-                <element signature="e#1369#1652#0" expanded="false" />
-                <element signature="e#1389#1652#0" expanded="false" />
-                <element signature="e#1448#1650#0" expanded="false" />
-                <element signature="e#1721#1906#0" expanded="false" />
-                <element signature="e#1813#1906#0" expanded="false" />
-                <element signature="e#1983#2621#0" expanded="false" />
-                <element signature="e#2694#2936#0" expanded="false" />
-                <element signature="e#3024#3267#0" expanded="false" />
-                <element signature="e#3044#3267#0" expanded="false" />
-                <element signature="e#3116#3266#0" expanded="false" />
-                <element signature="e#3349#3562#0" expanded="false" />
-                <element signature="e#3454#3562#0" expanded="false" />
-                <element signature="e#3655#4070#0" expanded="false" />
-                <element signature="e#4158#4416#0" expanded="false" />
-                <element signature="e#4507#4694#0" expanded="false" />
-                <element signature="e#4527#4694#0" expanded="false" />
-                <element signature="e#4779#4998#0" expanded="false" />
-                <element signature="e#4887#4998#0" expanded="false" />
-                <element signature="e#5094#5467#0" expanded="false" />
-                <element signature="e#5558#5819#0" expanded="false" />
-                <element signature="e#5891#6052#0" expanded="false" />
-                <element signature="e#5911#6052#0" expanded="false" />
-                <element signature="e#6118#6299#0" expanded="false" />
-                <element signature="e#6207#6299#0" expanded="false" />
-                <element signature="e#6373#6638#0" expanded="false" />
-                <element signature="e#6707#6946#0" expanded="false" />
-                <element signature="e#7021#7327#0" expanded="false" />
-                <element signature="e#7041#7327#0" expanded="false" />
-                <element signature="e#7100#7326#0" expanded="false" />
-                <element signature="e#7396#7583#0" expanded="false" />
-                <element signature="e#7488#7583#0" expanded="false" />
-                <element signature="e#7660#8390#0" expanded="false" />
-                <element signature="e#8462#8704#0" expanded="false" />
-                <element signature="e#8771#8914#0" expanded="false" />
-                <element signature="e#8791#8914#0" expanded="false" />
-                <element signature="e#8977#9184#0" expanded="false" />
-                <element signature="e#9065#9184#0" expanded="false" />
-                <element signature="e#9338#9466#0" expanded="false" />
-                <element signature="e#9830#9930#0" expanded="false" />
-                <element signature="e#10253#10460#0" expanded="false" />
-                <element signature="e#10350#10460#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-196">
+            <state relative-caret-position="4500">
               <caret line="314" column="12" selection-start-line="314" selection-start-column="12" selection-end-line="314" selection-end-column="12" />
               <folding />
             </state>
@@ -230,11 +192,11 @@
         <option value="$PROJECT_DIR$/API/urls.py" />
         <option value="$PROJECT_DIR$/API/serializers.py" />
         <option value="$PROJECT_DIR$/API/tests.py" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/UserManagement/views/main.py" />
         <option value="$PROJECT_DIR$/UserManagement/tables.py" />
         <option value="$PROJECT_DIR$/TerminologyServicesManagement/models.py" />
         <option value="$PROJECT_DIR$/Core/views.py" />
+        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/Core/tasks.py" />
       </list>
     </option>
@@ -317,6 +279,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="UserManagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -662,7 +638,7 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="14" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -884,13 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -905,27 +874,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HDR/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1395">
-          <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="15" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pipfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -933,7 +885,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -941,9 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -951,9 +899,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -961,37 +906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
           <caret line="184" column="23" selection-start-line="184" selection-start-column="23" selection-end-line="184" selection-end-column="23" />
-          <folding>
-            <element signature="e#561#779#0" expanded="false" />
-            <element signature="e#588#617#0" expanded="false" />
-            <element signature="e#695#779#0" expanded="false" />
-            <element signature="e#828#1199#0" expanded="false" />
-            <element signature="e#855#885#0" expanded="false" />
-            <element signature="e#1106#1199#0" expanded="false" />
-            <element signature="e#1237#1640#0" expanded="false" />
-            <element signature="e#1264#1299#0" expanded="false" />
-            <element signature="e#1575#1640#0" expanded="false" />
-            <element signature="e#1681#2067#0" expanded="false" />
-            <element signature="e#1708#1728#0" expanded="false" />
-            <element signature="e#1996#2067#0" expanded="false" />
-            <element signature="e#2111#2316#0" expanded="false" />
-            <element signature="e#2138#2158#0" expanded="false" />
-            <element signature="e#2236#2316#0" expanded="false" />
-            <element signature="e#2363#2717#0" expanded="false" />
-            <element signature="e#2390#2411#0" expanded="false" />
-            <element signature="e#2628#2717#0" expanded="false" />
-            <element signature="e#2753#3129#0" expanded="false" />
-            <element signature="e#2780#2806#0" expanded="false" />
-            <element signature="e#3074#3129#0" expanded="false" />
-            <element signature="e#3173#3571#0" expanded="false" />
-            <element signature="e#3200#3221#0" expanded="false" />
-            <element signature="e#3539#3568#0" expanded="false" />
-            <element signature="e#3719#4699#0" expanded="false" />
-            <element signature="e#3817#4213#0" expanded="false" />
-            <element signature="e#5125#5568#0" expanded="false" />
-            <element signature="e#11156#11513#0" expanded="false" />
-            <element signature="e#12695#13080#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -999,7 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="12" column="22" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1063,7 +976,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-196">
+        <state relative-caret-position="4500">
           <caret line="314" column="12" selection-start-line="314" selection-start-column="12" selection-end-line="314" selection-end-column="12" />
           <folding />
         </state>
@@ -1071,7 +984,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/UserManagement/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="225">
           <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -1089,7 +1002,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ValidationManagement/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
+        <state relative-caret-position="1605">
           <caret line="127" column="6" selection-start-line="127" selection-start-column="6" selection-end-line="127" selection-end-column="6" />
           <folding>
             <element signature="e#3112#3523#0" expanded="false" />
@@ -1109,7 +1022,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Core/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
+        <state relative-caret-position="615">
           <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
           <folding>
             <element signature="e#511#3646#0" expanded="false" />
@@ -1125,16 +1038,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-371">
           <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HDR/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Core/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#11122#11305#0" expanded="false" />
+            <element signature="e#11374#14791#0" expanded="false" />
+            <element signature="e#14915#15595#0" expanded="false" />
           </folding>
         </state>
       </provider>
