@@ -194,8 +194,8 @@ def regenerate_services_received_json_payload(request,lines):
 
     for line in lines:
         message_type = line[2]
-        facility_name = line[3]
-        facility_hfr_code = line[4]
+        facility_name = line[4]
+        facility_hfr_code = line[3]
 
         if row > 0:
             json_object = {"deptName": line[5], "deptId": line[6],
