@@ -177,7 +177,7 @@ def save_payload_from_csv(request):
 
                         fp.close()
 
-        return HttpResponse(".")
+    return HttpResponse(".")
 
 
 def update_transaction_summary(transaction_id):
