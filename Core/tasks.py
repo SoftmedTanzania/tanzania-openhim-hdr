@@ -17,7 +17,7 @@ app = Celery()
 @app.task
 def save_payload_from_csv():
     print("the task is executed")
-    root_path = "home/danford/uploads"
+    root_path = "/home/danford/HDR/uploads"
     i = 0
     for subdir, _, _ in os.walk(root_path):
         for file in os.listdir(subdir):
@@ -177,7 +177,7 @@ def save_payload_from_csv():
 
                         fp.close()
 
-    return HttpResponse(".")
+    # return HttpResponse(".")
 
 
 def update_transaction_summary(transaction_id):
