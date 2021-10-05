@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/test-csv.csv__2021-10-05 13:09:19.918558_in.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/tasks.py" afterPath="$PROJECT_DIR$/Core/tasks.py" />
     </list>
@@ -26,13 +27,13 @@
       <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Core/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#11122#11305#0" expanded="false" />
-                <element signature="e#11374#14791#0" expanded="false" />
-                <element signature="e#14915#15595#0" expanded="false" />
+                <element signature="e#11135#11318#0" expanded="false" />
+                <element signature="e#11387#14804#0" expanded="false" />
+                <element signature="e#14928#15608#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1067,13 +1068,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Core/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#11122#11305#0" expanded="false" />
-            <element signature="e#11374#14791#0" expanded="false" />
-            <element signature="e#14915#15595#0" expanded="false" />
+            <element signature="e#11135#11318#0" expanded="false" />
+            <element signature="e#11387#14804#0" expanded="false" />
+            <element signature="e#14928#15608#0" expanded="false" />
           </folding>
         </state>
       </provider>
