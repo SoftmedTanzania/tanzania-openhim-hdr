@@ -108,7 +108,7 @@ def save_payload_from_csv(request):
                                     instance_service_received_items.save()
 
                                     # Update transactions
-                                    update_transaction_summary(transaction_id)
+                                    # update_transaction_summary(transaction_id)
 
                                 elif message_type == "DDC":
                                     instance_death_by_disease_case_items = core_models.DeathByDiseaseCaseAtFacility()
@@ -122,7 +122,6 @@ def save_payload_from_csv(request):
                                     instance_death_by_disease_case_items.date_death_occurred = line[10]
                                     instance_death_by_disease_case_items.save()
 
-                                    update_transaction_summary(transaction_id)
 
                                 elif message_type == "DDCOUT":
                                     instance_death_by_disease_case_items_not_at_facility = core_models.DeathByDiseaseCaseNotAtFacilityItems()
@@ -136,7 +135,6 @@ def save_payload_from_csv(request):
                                     instance_death_by_disease_case_items_not_at_facility.death_id = line[9]
                                     instance_death_by_disease_case_items_not_at_facility.save()
 
-                                    update_transaction_summary(transaction_id)
 
                                 elif message_type == "BEDOCC":
                                     instance_bed_occupancy_items = core_models.BedOccupancyItems()
@@ -149,7 +147,6 @@ def save_payload_from_csv(request):
                                     instance_bed_occupancy_items.ward_id = line[4]
                                     instance_bed_occupancy_items.save()
 
-                                    update_transaction_summary(transaction_id)
 
                                 elif message_type == "REV":
                                     instance_revenue_received_items = core_models.RevenueReceivedItems()
@@ -167,8 +164,6 @@ def save_payload_from_csv(request):
                                     instance_revenue_received_items.waived_amount = line[13]
                                     instance_revenue_received_items.service_provider_ranking_id = line[14]
                                     instance_revenue_received_items.save()
-
-                                    update_transaction_summary(transaction_id)
 
                                 else:
                                     return False

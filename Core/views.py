@@ -185,7 +185,7 @@ def save_cpt_code_entries(file_path, facility_id, facility_hfr_code):
 
 def regenerate_services_received_json_payload(request,lines):
     data_items_array = []
-    # instance = master_data_models.Facility.objects.get(id=request.user.profile.facility_id)
+
     facility_name = ""
     facility_hfr_code = ""
     message_type = ""
