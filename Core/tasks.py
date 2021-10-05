@@ -177,8 +177,6 @@ def save_payload_from_csv():
 
                         fp.close()
 
-    # return HttpResponse(".")
-
 
 def update_transaction_summary(transaction_id):
     transaction = validation_management_models.TransactionSummary.objects.get(id=transaction_id)
@@ -188,7 +186,7 @@ def update_transaction_summary(transaction_id):
 
 
 @app.task
-def calculate_and_save_bed_occupancy_rate(request):
+def calculate_and_save_bed_occupancy_rate():
     date_week_ago = datetime.today() - timedelta(days=60)
     bed_occupancy_items = core_models.BedOccupancyItems.objects.filter(admission_date__gte=date_week_ago.strftime("%Y-%m-%d"))
 
