@@ -9,13 +9,14 @@ from django.http import HttpResponse
 from datetime import datetime, timedelta
 from pathlib import Path
 from Core import views as core_views
+from ValidationManagement import models as validation_management_models
 
 app = Celery()
 
 
 @app.task
 def save_payload_from_csv(request):
-    # root_path = "uploads"
+    # root_path = "/uploads"
     root_path = "/home/danford/HDR/uploads"
     i = 0
     for subdir, _, _ in os.walk(root_path):
@@ -185,7 +186,7 @@ def save_payload_from_csv(request):
 
 
 def update_transaction_summary(transaction_id):
-    transaction = core_models.TransactionSummary.objects.get(id=transaction_id)
+    transaction = validation_management_models.TransactionSummary.objects.get(id=transaction_id)
     transaction.total_passed += 1
     transaction.total_failed -= 1
     transaction.save()
