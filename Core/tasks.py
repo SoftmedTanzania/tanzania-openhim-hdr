@@ -28,7 +28,7 @@ def save_payload_from_csv():
                 with open(file_path, 'r') as fp:
                     lines = csv.reader(fp, delimiter=',')
 
-                    imported_payload = core_views.regenerate_services_received_json_payload(request, lines)
+                    imported_payload = core_views.regenerate_services_received_json_payload(lines)
 
                     if validators.validate_received_payload(json.loads(imported_payload)) is False:
                         print("validation failed")

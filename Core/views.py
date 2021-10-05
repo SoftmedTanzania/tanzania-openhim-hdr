@@ -183,7 +183,7 @@ def save_cpt_code_entries(file_path, facility_id, facility_hfr_code):
     fp.close()
 
 
-def regenerate_services_received_json_payload(request,lines):
+def regenerate_services_received_json_payload(lines):
     data_items_array = []
 
     facility_name = ""
