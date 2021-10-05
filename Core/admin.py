@@ -1,7 +1,8 @@
 from django.contrib import admin
 from .models import ServiceReceived, ServiceReceivedItems, DeathByDiseaseCaseAtFacility, DeathByDiseaseCaseAtFacilityItems, \
     DeathByDiseaseCaseNotAtFacility, DeathByDiseaseCaseNotAtFacilityItems, BedOccupancy, BedOccupancyItems, \
-    RevenueReceived, RevenueReceivedItems
+    RevenueReceived, RevenueReceivedItems, BedOccupancyReport
+from UserManagement import models as user_management_models
 from django.contrib.admin import helpers
 
 # Register your models here.
@@ -60,6 +61,10 @@ class RevenueReceivedItemsAdmin(admin.ModelAdmin):
     search_fields = ['payer_id', ]
 
 
+class BedOccupancyReportAdmin(admin.ModelAdmin):
+    list_display = ('id','bed_occupancy', 'facility_hfr_code','patient_id', 'ward_id', 'ward_name', 'admission_date', 'date')
+
+
 admin.site.register(ServiceReceived, ServiceReceivedAdmin)
 admin.site.register(ServiceReceivedItems, ServiceReceivedItemsAdmin)
 admin.site.register(DeathByDiseaseCaseAtFacility, DeathByDiseaseCaseAtFacilityAdmin)
@@ -70,4 +75,5 @@ admin.site.register(BedOccupancy, BedOccupancyAdmin)
 admin.site.register(BedOccupancyItems, BedOccupancyItemsAdmin)
 admin.site.register(RevenueReceived, RevenueReceivedAdmin)
 admin.site.register(RevenueReceivedItems, RevenueReceivedItemsAdmin)
+admin.site.register(BedOccupancyReport, BedOccupancyReportAdmin)
 
