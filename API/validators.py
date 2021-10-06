@@ -4,44 +4,35 @@ from ValidationManagement.models import FieldValidationMapping, ValidationRule, 
 import json
 
 
-# Custom Validators
-def convert_date_formats(date):
-    for date_format in ('%Y-%m-%d', '%Y%m%d', '%d.%m.%Y', '%d/%m/%Y', '%Y.%m.%d'):
-        try:
-            date = datetime.strptime(date, date_format).strftime('%Y-%m-%d')
-            return date
-        except ValueError:
-            pass
-
-
-def check_if_future_date(date):
+# Validation Rules
+def check_if_not_future_date(date):
     formatted_date = convert_date_formats(date)
     now = datetime.now().date()
 
     if formatted_date > now:
-        return True
-    else:
         return False
+    else:
+        return True
 
 
-def check_if_past_date(date):
+def check_if_not_past_date(date):
     formatted_date = convert_date_formats(date)
     now = datetime.now().date()
 
     if formatted_date < now:
-        return True
-    else:
         return False
+    else:
+        return True
 
 
-def check_if_present_date(date):
+def check_if_not_present_date(date):
     formatted_date = convert_date_formats(date)
     now = datetime.now().date()
 
     if formatted_date == now:
-        return True
-    else:
         return False
+    else:
+        return True
 
 
 def check_if_valid_date(date):
@@ -52,6 +43,38 @@ def check_if_valid_date(date):
         except:
             return False
     return False
+
+
+def check_if_not_null_value(value):
+    try:
+        if value is None:
+            return False
+        else:
+            return True
+    except NameError:
+        return False
+
+
+def check_if_not_blank_value(value):
+    if value == "":
+        return False
+    elif value is None:
+        return True
+    elif value.strip():
+        return True
+    else:
+        return True
+
+
+
+# Extended Functions
+def convert_date_formats(date):
+    for date_format in ('%Y-%m-%d', '%Y%m%d', '%d.%m.%Y', '%d/%m/%Y', '%Y.%m.%d','%Y/%m/%d'):
+        try:
+            date = datetime.strptime(date, date_format).strftime('%Y-%m-%d')
+            return datetime.strptime(date, '%Y-%m-%d').date()
+        except ValueError:
+            pass
 
 
 def validate_received_payload(data):
@@ -77,7 +100,6 @@ def validate_received_payload(data):
     instance_message_type = PayloadThreshold.objects.filter(payload_code=message_type).first()
 
     allowed_threshold = instance_message_type.percentage_threshold
-
 
     for val in data_items:
         rules = FieldValidationMapping.objects.filter(message_type=message_type)
@@ -106,14 +128,14 @@ def validate_received_payload(data):
 
             # Check if it is a future date. Will return True if future date
             try:
-                if rule_name == "check_if_future_date":
-                    response = check_if_future_date(val[field])
+                if rule_name == "check_if_not_future_date":
+                    response = check_if_not_future_date(val[field])
 
                     if response is True:
                         transaction_status = True
                     else:
                         raised_error = "Field " + field + " with value of " + val[
-                            field] + " seems to be a present date"
+                            field] + " seems to be a future date"
                         transaction_status = False
                         validation_rule_failed += 1
                         error_message.append(raised_error)
@@ -126,14 +148,14 @@ def validate_received_payload(data):
 
             # Check if it is a past date. Will return True if past date
             try:
-                if rule_name == "check_if_past_date":
-                    response = check_if_past_date(val[field])
+                if rule_name == "check_if_not_past_date":
+                    response = check_if_not_past_date(val[field])
 
                     if response is True:
                         transaction_status = True
                     else:
                         raised_error = "Date Field " + field + " with value of " + val[
-                            field] + " seems to be a present date"
+                            field] + " seems to be a past date"
                         transaction_status = False
                         validation_rule_failed += 1
                         error_message.append(raised_error)
@@ -146,14 +168,14 @@ def validate_received_payload(data):
 
             # Check if it is a present date. Will return True if present date
             try:
-                if rule_name == "check_if_present_date":
-                    response = check_if_present_date(val[field])
+                if rule_name == "check_if_not_present_date":
+                    response = check_if_not_present_date(val[field])
 
                     if response is True:
                         transaction_status = True
                     else:
                         raised_error = "Date Field " + field + " with value of " + val[
-                            field] + " seems to be a present date"
+                            field] + " seems to be a present date."
                         transaction_status = False
                         validation_rule_failed += 1
                         error_message.append(raised_error)
@@ -179,6 +201,46 @@ def validate_received_payload(data):
                         error_message.append(raised_error)
             except (NameError, TypeError, RuntimeError, KeyError, ValueError):
                 raised_error = "Date Field " + field + " with value of " + val[
+                    field] + " is invalid."
+                transaction_status = False
+                validation_rule_failed += 1
+                error_message.append(raised_error)
+
+            # Check if not null value
+            try:
+                if rule_name == "check_if_not_null_value":
+                    response = check_if_not_null_value(val[field])
+
+                    if response is True:
+                        transaction_status = True
+                    else:
+                        raised_error = "Field " + field + " with value of " + val[
+                            field] + " cannot be null"
+                        transaction_status = False
+                        validation_rule_failed += 1
+                        error_message.append(raised_error)
+            except (NameError, TypeError, RuntimeError, KeyError, ValueError):
+                raised_error = "Field " + field + " with value of " + val[
+                    field] + " is invalid."
+                transaction_status = False
+                validation_rule_failed += 1
+                error_message.append(raised_error)
+
+            # Check if not blank value
+            try:
+                if rule_name == "check_if_not_blank_value":
+                    response = check_if_not_blank_value(val[field])
+
+                    if response is True:
+                        transaction_status = True
+                    else:
+                        raised_error = "Field " + field + " with value of " + val[
+                            field] + " cannot be blank"
+                        transaction_status = False
+                        validation_rule_failed += 1
+                        error_message.append(raised_error)
+            except (NameError, TypeError, RuntimeError, KeyError, ValueError):
+                raised_error = "Field " + field + " with value of " + val[
                     field] + " is invalid."
                 transaction_status = False
                 validation_rule_failed += 1
@@ -222,7 +284,7 @@ def validate_received_payload(data):
     # transaction_status = False
 
     if False in total_payload_transactions_status_array and calculated_threshold >= allowed_threshold:
-         transaction_status = True
+        transaction_status = True
     elif False in total_payload_transactions_status_array and calculated_threshold < allowed_threshold:
         transaction_status = False
     else:

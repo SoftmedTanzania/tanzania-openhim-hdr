@@ -29,8 +29,8 @@ class ValidationRuleAdmin(admin.ModelAdmin):
     list_display = ('id','description','rule_name')
     search_fields = ['description',]
 
-    def has_delete_permission(self, request, obj=None):
-        return False
+    # def has_delete_permission(self, request, obj=None):
+    #     return False
 
 
 admin.site.register(TransactionSummary, TransactionSummaryAdmin)
