@@ -375,6 +375,8 @@ def import_icd_10_codes(request):
         instance_category.description = categories
         instance_category.save()
 
+        print("category name is:", categories)
+
         for sub_category in sub_categories:
             sub_category_name = sub_category['subCategoryName']
             sub_sub_categories = sub_category['subSubCategories']
@@ -384,6 +386,8 @@ def import_icd_10_codes(request):
             instance_sub_category.description = sub_category_name
             instance_sub_category.category_id = instance_category.id
             instance_sub_category.save()
+
+            print("sub category name is:", sub_category_name)
 
             # loop through the sub sub categories
             for sub_sub_category in sub_sub_categories:
@@ -398,6 +402,8 @@ def import_icd_10_codes(request):
                 instance_icd_code.description = icd_10
                 instance_icd_code.save()
 
+                print("code description is ", icd_10)
+
                 for y in icd_sub_code_array:
                     icd_10_sub_code = y["icd10Code"]
                     icd_10_sub_description = y["icd10Name"]
@@ -409,7 +415,14 @@ def import_icd_10_codes(request):
                     instance_icd_sub_code.description = icd_10_sub_description
                     instance_icd_sub_code.save()
 
-                return HttpResponse("Finished Uploading")
+                    print("sub code is ", icd_10_sub_code)
+                    print("sub code description is ", icd_10_sub_description)
+
+
+    return HttpResponse("Finished Uploading")
+
+
+
 
 
 
