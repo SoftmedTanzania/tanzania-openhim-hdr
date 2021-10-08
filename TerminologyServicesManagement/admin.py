@@ -10,7 +10,17 @@ class ICD10CategoryAdmin(admin.ModelAdmin):
 
 
 class ICD10SubCategoryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'icd10_code_category','description')
+    list_display = ('id', 'category','description')
+    search_fields = ['description', ]
+
+
+class ICD10CodeAdmin(admin.ModelAdmin):
+    list_display = ('id', 'sub_category','code','description')
+    search_fields = ['description', ]
+
+
+class ICD10SubCodeAdmin(admin.ModelAdmin):
+    list_display = ('id', 'code', 'sub_code', 'description')
     search_fields = ['description', ]
 
 
@@ -20,29 +30,20 @@ class CPTCategoryAdmin(admin.ModelAdmin):
 
 
 class CPTSubCategoryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'cpt_code_category','description')
+    list_display = ('id', 'category','description')
     search_fields = ['description', ]
 
 
 class CPTCodeAdmin(admin.ModelAdmin):
-    list_display = ('cpt_code_sub_category','cpt_code', 'cpt_description')
-    search_fields = ['cpt_description', ]
+    list_display = ('id','sub_category','code', 'description')
+    search_fields = ['description', ]
 
-
-class ICD10SubCodeMappingAdmin(admin.ModelAdmin):
-    list_display = ('icd10_code', 'icd10_sub_code', 'icd10_sub_code_description')
-    search_fields = ['icd10_sub_code_description', ]
-
-
-class ICD10MappingAdmin(admin.ModelAdmin):
-    list_display = ('icd10_code_sub_category', 'icd10_code', 'icd10_description')
-    search_fields = ['icd10_description', ]
 
 
 admin.site.register(ICD10CodeCategory, ICD10CategoryAdmin)
 admin.site.register(ICD10CodeSubCategory, ICD10SubCategoryAdmin)
-admin.site.register(ICD10Code, ICD10MappingAdmin)
-admin.site.register(ICD10SubCode, ICD10SubCodeMappingAdmin),
+admin.site.register(ICD10Code, ICD10CodeAdmin)
+admin.site.register(ICD10SubCode, ICD10SubCodeAdmin)
 admin.site.register(CPTCodeCategory, CPTCategoryAdmin)
 admin.site.register(CPTCodeSubCategory, CPTSubCategoryAdmin)
 admin.site.register(CPTCode, CPTCodeAdmin)

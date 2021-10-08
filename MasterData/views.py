@@ -382,7 +382,7 @@ def import_icd_10_codes(request):
             # # insert sub category
             instance_sub_category = terminology_management_services_models.ICD10CodeSubCategory()
             instance_sub_category.description = sub_category_name
-            instance_sub_category.icd_10_code_category_id = instance_category.id
+            instance_sub_category.category_id = instance_category.id
             instance_sub_category.save()
 
             # loop through the sub sub categories
@@ -393,9 +393,9 @@ def import_icd_10_codes(request):
 
                 # # insert icd code
                 instance_icd_code = terminology_management_services_models.ICD10Code()
-                instance_icd_code.icd_10_code_sub_category_id =  instance_sub_category.id
-                instance_icd_code.icd10_code = icd_10_code
-                instance_icd_code.icd10_description = icd_10
+                instance_icd_code.sub_category_id =  instance_sub_category.id
+                instance_icd_code.code = icd_10_code
+                instance_icd_code.description = icd_10
                 instance_icd_code.save()
 
                 for y in icd_sub_code_array:
@@ -404,9 +404,9 @@ def import_icd_10_codes(request):
 
                     # # insert icd sub code
                     instance_icd_sub_code = terminology_management_services_models.ICD10SubCode()
-                    instance_icd_sub_code.icd10_code_id = instance_icd_code.id
-                    instance_icd_sub_code.icd10_sub_code = icd_10_sub_code
-                    instance_icd_sub_code.icd10_sub_code_description = icd_10_sub_description
+                    instance_icd_sub_code.code_id = instance_icd_code.id
+                    instance_icd_sub_code.sub_code = icd_10_sub_code
+                    instance_icd_sub_code.description = icd_10_sub_description
                     instance_icd_sub_code.save()
 
                 return HttpResponse("Finished Uploading")
