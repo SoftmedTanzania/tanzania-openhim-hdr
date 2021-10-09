@@ -10,6 +10,7 @@ from MappingsManagement import models as mappings_management_models
 from TerminologyServicesManagement import models as terminology_management_services_models
 
 import json
+import csv
 
 
 def get_departments_page(request):
@@ -418,6 +419,39 @@ def import_icd_10_codes(request):
                     print("sub code is ", icd_10_sub_code)
                     print("sub code description is ", icd_10_sub_description)
 
+
+def import_cpt_codes(request):
+    with open('cpt.csv', 'r') as fp:
+        lines = csv.reader(fp, delimiter=',')
+
+        for line in lines:
+            code = line[0]
+            description = line[1]
+
+            if code == "CATEGORY":
+                instance_category = terminology_management_services_models.CPTCodeCategory()
+                instance_category.description = description
+                instance_category.save()
+
+            elif code == "SUBCATEGORY":
+                last_category = terminology_management_services_models.CPTCodeCategory.objects.latest('id')
+                last_category_id = last_category.id
+                print(last_category_id)
+
+                instance_sub_category = terminology_management_services_models.CPTCodeSubCategory()
+                instance_sub_category.category_id = last_category_id
+                instance_sub_category.description = description
+                instance_sub_category.save()
+
+            else:
+                last_sub_category = terminology_management_services_models.CPTCodeSubCategory.objects.latest('id')
+                last_sub_category_id = last_sub_category.id
+
+                instance_code = terminology_management_services_models.CPTCode()
+                instance_code.sub_category_id = last_sub_category_id
+                instance_code.code = code
+                instance_code.description = description
+                instance_code.save()
 
     return HttpResponse("Finished Uploading")
 
