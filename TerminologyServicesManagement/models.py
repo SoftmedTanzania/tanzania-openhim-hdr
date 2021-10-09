@@ -310,8 +310,8 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
             "icd10_code": icd10_diagnoses_code,
             "icd10_description": icd10_description,
             "icd10_sub_code_id": instance.id,
-            "icd10_sub_code": instance.icd10_sub_code,
-            "icd10_sub_code_description": instance.icd10_sub_code_description,
+            "icd10_sub_code": instance.sub_code,
+            "icd10_sub_code_description": instance.description,
             "status": "U"
         }
 
@@ -323,7 +323,7 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
 
 # CPT Backend events
 @receiver(post_save, sender=CPTCodeCategory)
-def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
+def send_new_or_updated_cpt_code(sender, instance, created, **kwargs):
     cpt_code_category_id = instance.id
     cpt_code_category_description = instance.description
 
@@ -362,7 +362,7 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
 
 
 @receiver(post_save, sender=CPTCodeSubCategory)
-def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
+def send_new_or_updated_cpt_code(sender, instance, created, **kwargs):
     cpt_code_sub_category_id = instance.id
     cpt_code_sub_category_description = instance.description
     cpt_code_category_id = instance.category_id
@@ -405,7 +405,7 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
 
 
 @receiver(post_save, sender=CPTCode)
-def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
+def send_new_or_updated_cpt_code(sender, instance, created, **kwargs):
     cpt_code_sub_category_id = instance.sub_category_id
     cpt_code = instance.code
     cpt_description = instance.description
