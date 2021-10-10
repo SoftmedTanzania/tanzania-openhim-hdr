@@ -8,6 +8,7 @@ from MasterData import models as master_data_models
 from django.core.files.storage import FileSystemStorage
 from UserManagement import tables as user_management_tables
 from django_tables2 import RequestConfig
+from TerminologyServicesManagement import models as terminology_services_management_models
 
 
 # Create your views here.
@@ -106,7 +107,7 @@ def filter_transaction_lines(request):
 
 
 def download_cpt_codes_as_csv(request):
-    queryset = master_data_models.CPTCode.objects.all()
+    queryset = terminology_services_management_models.CPTCode.objects.all()
     opts = queryset.model._meta
     model = queryset.model
     response = HttpResponse(content_type='text/csv')
@@ -160,7 +161,7 @@ def upload_cpt_codes(request):
 def save_cpt_code_entries(file_path, facility_id, facility_hfr_code):
     # Delete all previous mappings
 
-    instance_previous_mappings = master_data_models.CPTCodesMapping.objects.filter(facility_id=facility_id)
+    instance_previous_mappings = terminology_services_management_models.CPTCodesMapping.objects.filter(facility_id=facility_id)
     instance_previous_mappings.delete()
 
     with open(file_path, 'r') as fp:
@@ -172,7 +173,7 @@ def save_cpt_code_entries(file_path, facility_id, facility_hfr_code):
                     headers = line
                     row = row + 1
                 else:
-                    instance_cpt_code_mappings = master_data_models.CPTCodesMapping()
+                    instance_cpt_code_mappings = terminology_services_management_models.CPTCodesMapping()
                     instance_cpt_code_mappings.cpt_code_id = line[0]
                     instance_cpt_code_mappings.local_code = line[4]
                     instance_cpt_code_mappings.facility_id = facility_id

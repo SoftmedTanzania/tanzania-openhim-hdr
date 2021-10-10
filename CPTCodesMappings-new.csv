@@ -1,0 +1,2641 @@
+id,sub_category,code,description,code
+4491,173,99241,New consultation with a Clinical Officer / Dental Therapist,99241
+4492,173,99211,Follow up consultation with a Clinical Officer / Dental Therapist,99211
+4493,173,99242,New consultation with an Assistant Medical Officer / Assistant Dental Officer,99242
+4494,173,99212,Follow up consultation with an Assistant Medical Officer / Assistant Dental Officer,99212
+4495,173,99243,New consultation with a Medical Officer / Dental Officer,99243
+4496,173,99213,Follow up consultation with a Medical Officer / Dental Officer,99213
+4497,173,99244,New consultation with a Medical Specialist / Dental Specialist,99244
+4498,173,99214,Follow up consultation with a Medical Specialist / Dental Specialist,99214
+4499,173,99245,New consultation with a Super Specialist,99245
+4500,173,99215,Follow up consultation with a Super Specialist,99215
+4501,173,99382,"New consultation therapist with diploma(physiotherapy, occupational therapy,  speech therapy)",99382
+4502,173,97169,"Follow up Consultation therapist with diploma(physiotherapy, occupational therapy,  speech therapy)",97169
+4503,173,99383,"New consultation therapist with degree(physiotherapy, occupational therapy,  speech therapy)",99383
+4504,173,99386,"Follow up Consultation therapist/psychology with degree(physiotherapy,  occupational therapy, speech therapy)",99386
+4505,173,99387,"New consultation therapist/psychology specialist (physiotherapy, occupational  therapy, speech therapy)",99387
+4506,173,99429,"Follow up consultation therapist specialist (physiotherapy, occupational therapy,  speech therapy)",99429
+4507,173,97802,New consultation Nutritionist,97802
+4508,173,97803,Follow up consultation Nutritionist,97803
+4509,173,99205,Registration (new file) for a new patient,99205
+4510,173,99251,Consultation for observation,99251
+4511,174,99252,Cross consultation within and between hospital(s),99252
+4512,174,99253,Panel consultation within the same discipline (panel with at least three doctors),99253
+4513,174,99254,Panel multidisciplinary consultation (panel with at least three doctors),99254
+4514,174,99255,Consultation with a multidisciplinary panel plus administrators,99255
+4515,175,99217,High Dependent Unit (HDU),99217
+4516,175,99218,VIP room,99218
+4517,175,99219,IPPM or Private Room (grade one),99219
+4518,175,99220,General ward,99220
+4519,175,99234,ICU-CCU ward,99234
+4520,175,99235,Rehabilitation ward,99235
+4521,175,99236,Isolated or high risk ward,99236
+4522,176,99341,New patient home visit with a Clinical Officer/ Clinical Physiotherapist / Occupational Therapist,99341
+4523,176,99347,Follow up patient home visit with a Clinical Officer/ Clinical Physiotherapist/ Occupational Therapist,99347
+4524,176,99342,New patient home visit with an Assistant Medical Officer (AMO),99342
+4525,176,99348,Follow up patient home visit with an Assistant Medical Officer (AMO),99348
+4526,176,99343,New patient home visit with a General Practitioner (GP/MD)/ Physiotherapy Officer/ Occupational Therapy officer,99343
+4527,176,99349,Follow up patient home visit with a General Practitioner (GP/MD)/ Physiotherapy Officer/ Occupational Therapy officer,99349
+4528,176,99344,New patient home visit with a Specialist/ Specialist Physiotherapist,99344
+4529,176,99350,Follow up patient home visit with a Specialist/ Specialist Physiotherapist,99350
+4530,176,99345,New patient home visit with a Super Specialist,99345
+4531,176,99334,Follow up patient home visit with a Super Specialist,99334
+4532,176,99339,"New patient home visit with other cardres (nurses, pharmacist, social worker, etc.)",99339
+4533,176,99340,"Follow up patient home visit with other cardres (nurses, pharmacist, social worker, etc.)",99340
+4534,177,99304,Nursing services at the Outpatient Department (OPD),99304
+4535,177,99305,Nursing care at the general ward,99305
+4536,177,99306,Nursing services at the Emergency Department (EMD),99306
+4537,177,99307,Nursing care at the ICU and CCU,99307
+4538,177,99308,Nursing care at the High Dependent Unit (HDU),99308
+4539,177,99309,Nursing care at the VIP,99309
+4540,177,99310,Nursing care at the IPPM or private room (grade one),99310
+4541,177,99315,Nursing care at the rehabilitation ward,99315
+4542,177,99316,Nursing care at the isolated or high risk ward,99316
+4543,178,99082,Parking services,99082
+4544,178,99497,Medical Nutritional Therapy (Oral / Parenteral / Enteral),99497
+4545,178,99281,Ambulance services,99281
+4546,178,97804,Food Services,97804
+4547,179,98966,"Telephone assessment and management service, 5-10 minutes of medical discussion",98966
+4548,179,98967,"Telephone assessment and management service,11-20 minutes of medical discussion",98967
+4549,179,98968,"Telephone assessment and management service,21-30 minutes of medical discussion",98968
+4550,180,99381,Provider Initiating Testing and Counseling (PITC) children below 09 years,99381
+4551,180,99384,Provider Initiating Testing and Counseling (PITC) adolescent,99384
+4552,180,99385,Provider Initiating Testing and Counseling (PITC) adult,99385
+4553,180,99406,Counseling,99406
+4554,181,90476,Inactivated Poliovirus Vaccine (IPV),90476
+4555,181,90585,Baccile Calmette Guerin (BCG ) Vaccine,90585
+4556,181,90621,Meningococcus Vaccine,90621
+4557,181,90649,Human Papilloma Virus (HPV) Vaccine,90649
+4558,181,90670,Pneumococcal Vaccine (PCV-13),90670
+4559,181,90675,Rabies Virus Vaccine,90675
+4560,181,90680,Rotavirus Vaccine,90680
+4561,181,90696,"Diphtheria, Tetanus Toxoids, Acellular Pertussis, Haemophilus Influenzae Type B, Hepatitis B (DPT+Hepb+Hib) Vaccine",90696
+4562,181,90707,"Measles, Mumps, and Rubella (MMR) Vaccine",90707
+4563,181,90713,Poliovirus Vaccine-Oral (OPV),90713
+4564,181,90714,Tetanus And Diphtheria Toxoids (TT) Vaccine,90714
+4565,181,90717,Yellow Fever Vaccine,90717
+4566,181,90739,Hepatitis B Virus (HBV) Vaccine,90739
+4567,181,90471,Unspecified Vaccination Procedures E.g. New Vaccine,90471
+4568,182,84311,Adenosine Deaminase (ADA) – Serum,84311
+4569,182,82040,Albumin,82040
+4570,182,84182,Albumin/Globulin Ratio,84182
+4571,182,84075,Alkaline Phosphatase (ALP) Serum,84075
+4572,182,84460,Alanine Aminotransferaseor (ALT) / Serum Glutamic Pyruvate Transaminase (SGPT),84460
+4573,182,82150,Amylase,82150
+4574,182,84450,Aspartate Aminotransferase (AST) / Serum Glutamic Oxaloacetic Transaminase (SGOT),84450
+4575,182,84702,Beta - Human Chorionic Gonadotropin (β-HCG) - Serum,84702
+4576,182,82248,Bilirubin Direct,82248
+4577,182,82247,Bilirubin Total,82247
+4578,182,86140,C-Reactive Protein (CRP),86140
+4579,182,82310,Calcium - Serum/Post Dialysis Calcium,82310
+4580,182,82435,Chloride – Serum,82435
+4581,182,82436,Chloride-Urine,82436
+4582,182,82465,Cholesterol (Total),82465
+4583,182,82550,Creatine Kinase (CK- MB),82550
+4584,182,82565,Creatinine/Post Dialysis Creatinine,82565
+4585,182,82945,"Glucose Level on Body Fluids (CSF Ascitic, Peritonial, Pleural, Pericadial, Synovial)",82945
+4586,182,84157,"Protein Level on Body Fluids (CSF, Ascitic, Peritonial, Pleural)",84157
+4587,182,85397,D-Dimer,85397
+4588,182,82728,Ferritin,82728
+4589,182,82746,Folic Acid Level (Folate),82746
+4590,182,82977,Gamma - Glutamyltransferase (GGT),82977
+4591,182,82947,Fasting/Random Blood Glucose (FBG/RBG),82947
+4592,182,83036,Glycosylated Haemoglobin (HbA1c),83036
+4593,182,83718,High Density Lipoprotein (HDL),83718
+4594,182,83540,Iron (Fe),83540
+4595,182,83550,Iron Saturation (% Saturation),83550
+4596,182,83615,Lactate Dehydrogenase (LDH),83615
+4597,182,83721,Low Density Lipoprotein (LDL),83721
+4598,182,83735,Magnesium,83735
+4599,182,84100,Phosphorus/Post Dialysis Phosphorus,84100
+4600,182,84132,Potassium/Post Dialysis Potassium,84132
+4601,182,84156,Protein in Urine,84156
+4602,182,83690,Lipase Serum,83690
+4603,182,84165,Protein Electrophoresis Serum,84165
+4604,182,82607,Vitamin B-12 (Cyanocobalamin),82607
+4605,182,84295,Sodium/Post Dialysis Sodium,84295
+4606,182,84432,Thyroglobulin Antibodies (Tg Ab),84432
+4607,182,84466,Transferrin,84466
+4608,182,84478,Triglycerides,84478
+4609,182,84484,Troponin-I,84484
+4610,182,84560,Uric Acid,84560
+4611,182,80202,Vancomycin Level,80202
+4612,182,82652,"Vitamin D-25 (Dihydroxyvitamin D, 1, 25)",82652
+4613,182,83719,Very Low Density Lipoprotein (VLDL),83719
+4614,182,82570,24Hr Creatinine Urine,82570
+4615,182,84133,24Hr Potassium Urine,84133
+4616,182,84300,24Hr Sodium Urine,84300
+4617,182,84181,Globulin,84181
+4618,182,82374,Carbondioxide Serum,82374
+4619,182,82951,Oral Glucose Tolerance Test (OGTT),82951
+4620,182,84066,Acid Phosphotase Serum,84066
+4621,182,82803,Blood Gas Panel,82803
+4622,182,80375,Urine Drug Screening (UDS ),80375
+4623,182,80299,Quantitation of Therapeutic Drugs,80299
+4624,182,80197,Tacrolimus Level,80197
+4625,182,80195,Sirolimus Level,80195
+4626,182,80169,Everolimus Level,80169
+4627,183,82105,Alpha Feto Protein (AFP),82105
+4628,183,83880,Brain Natriuretic Peptide (BNP),83880
+4629,183,86304,Cancer Antigen - 125 (CA - 125),86304
+4630,183,82378,Carcinoembryonic Antigen (CEA),82378
+4631,183,82530,Cortisol,82530
+4632,183,80158,Cyclosporine Level,80158
+4633,183,82670,Estradiol Level,82670
+4634,183,83001,Follicle Stimulating Hormone (FSH),83001
+4635,183,83003,Growth Hormone (GH),83003
+4636,183,82784,Immunoglobulin A (IgA ),82784
+4637,183,86001,Immunoglobulin G (IgG),86001
+4638,183,86005,Immunoglobulin E for Allergic Substance (IgE),86005
+4639,183,83525,Insulin,83525
+4640,183,83002,Luteinizing Hormone (LH),83002
+4641,183,84144,Progesterone,84144
+4642,183,84146,Prolactin,84146
+4643,183,84153,Prostate Specific Antigen (PSA) Measurement,84153
+4644,183,84152,Prostate Specific Antigen (PSA) Level,84152
+4645,183,84681,C – Peptide,84681
+4646,183,84402,Testosterone,84402
+4647,183,86812,Immunoglobulin M (IgM),86812
+4648,183,86807,Complement Dependent Cytotoxicity Compatibility ( CDCC),86807
+4649,183,81371,Human Leukocyte Antigen Typing (HLA Typing),81371
+4650,183,88182,Flowcytometry Lymphocyte Crossmatch,88182
+4651,183,86316,Tumor Markers Analysis ( Others ),86316
+4652,183,86829,Donor Specific Antibody (DSA) to HLA Antigen,86829
+4653,183,86830,Panel Reactiveantibody Screening HLA Class I & Ii,86830
+4654,184,86060,Anti Streptolysin O Titre (ASOT),86060
+4655,184,86039,Autoimmune Antibodies (dsDNA),86039
+4656,184,86622,Brucella Abortus Antigen (Ag),86622
+4657,184,87147,Chlamydia (ELISA),87147
+4658,184,86644,Cytomegalovirus Antibody test (CMC-IgG),86644
+4659,184,86645,Cytomegalovirus Antibody test (CMV-IgM),86645
+4660,184,86664,Epstein Barr Virus IgG – Serum,86664
+4661,184,86663,Epstein Barr Virus IgM- Serum,86663
+4662,184,86705,Hepatitis B Core Igm Antibody (HBcAb),86705
+4663,184,86709,Hepatitis A Antibody (IgM ),86709
+4664,184,86707,Hepatitis B Envelope Antibody (HBeAb),86707
+4665,184,87350,Hepatitis B Envelope Antigen (HBeAg),87350
+4666,184,86706,Hepatitis B Surface Antibody (HBsAb),86706
+4667,184,87340,Hepatitis B Surface Antigen (HBsAg),87340
+4668,184,86803,Hepatitis C Antibody (HCVAb),86803
+4669,184,86695,Herpes Simplex Virus - Type 1(HSV-1) IgG & IgM,86695
+4670,184,86696,Herpes Simplex Virus - Type 2(HSV-2) IgG & IgM,86696
+4671,184,86689,HIV 1 & 2 Antibodies (ELISA),86689
+4672,184,87338,Helicobacter Pylori (H.pylori) Antigen test,87338
+5045,205,54650,Orchidopexy,54650
+4673,184,86677,Helicobacter Pylori (H.pylori) Antibody test,86677
+4674,184,81025,Urine for pregnancy test (UPT),81025
+4675,184,86757,Proteus abortus antibody test (Rapid),86757
+4676,184,86430,Rheumatoid Factor (RF) Qualitative,86430
+4677,184,86592,"Syphilis screening Test (VDRL, RPR or SD Bioline)",86592
+4678,184,86762,Rubella Antibody Test (IgG /IgM),86762
+4679,184,86777,Toxoplasma Antibody Test (IgG),86777
+4680,184,86778,Toxoplasma Antibody Test (IgM),86778
+4681,184,86780,Treponema Pallidum Haemagglutination Test (TPHA/TPPA),86780
+4682,184,86768,Widal Test,86768
+4683,184,84480,Tri - Iodothyronine Hormone (T3),84480
+4684,184,84437,Thyroxine Hormone (T4),84437
+4685,184,84155,Total Protein Serum,84155
+4686,184,84443,Thyroid Stimulating Hormone (TSH),84443
+4687,184,84520,Urea Nitrogen (Bun)/Post Dialysis Urea Nitrogen (BUN),84520
+4688,184,86021,Anti Neutrophil Cystoplasmic Antibodies (ANCA-C),86021
+4689,184,86406,Cryptococcal Antigen (CrAg),86406
+4690,184,86790,"Antibody Test for Influenza Virus, Rift Valley Fever, Chikungunya Virus, Zika Virus, Dengue Virus,Ebola Virus",86790
+4691,184,86431,Rheumatoid Factor (RF) Quantitative,86431
+4692,184,82024,Adenocorticotropic Hormone (ACTH),82024
+4693,184,86704,Hepatitis B Core Antibody (HBcAb),86704
+4694,184,82164,Angiotensin I,82164
+4695,184,82163,Angiotensin II,82163
+4696,184,82671,Oestrogen,82671
+4697,184,86703,HIV 1& 2 Antibody Rapid Test,86703
+4698,184,86708,Hepatitis A Antibody,86708
+4699,184,86022,Anti-Neutrophil Cystoplasmic Antibody(ANCA-P),86022
+4700,184,86225,Anti-Nuclear Antibody (ANA),86225
+4701,184,86403,Brucella Antibody Test (IgG)/ (IgM),86403
+4702,184,86828,Toxoplasma Antigen Test,86828
+4703,185,85025,Full Blood Picture (FBP) / Complete Blood Count (CBC),85025
+4704,185,85097,Bone Marrow Smear Interpretation,85097
+4705,185,86360,CD3/CD4/CD8 T Cell Count,86360
+4706,185,85651,Erythrocyte Sedimentation Rate (ESR),85651
+4707,185,85230,Factor VII,85230
+4708,185,85247,Factor VII,85247
+4709,185,85384,Fibrinogen,85384
+4710,185,82955,Glucose - 6 Phosphatase Dehydrogenase(G-6PGD),82955
+4711,185,83026,Haemoglobin (Hb),83026
+4712,185,82664,Haemoglobin Electropheresis + Sickling Test,82664
+4713,185,86235,Lupus Erythromatous Cell (LE Cell).,86235
+4714,185,85705,Partial Thromboplastin Time (PTT),85705
+4715,185,85060,Peripheral Blood Smear (PBS),85060
+4716,185,81206,Philadelphia Chromosome,81206
+4717,185,85049,"Platelet Count, Automated Test",85049
+4718,185,85210,Prothrombin Time (PT),85210
+4719,185,85660,Sickling Test,85660
+4720,185,85002,Bleeding Time,85002
+4721,185,85732,Activated Partial Thrombin Time (APTT),85732
+4722,185,85045,Reticulocyte Count,85045
+4723,186,86900,Blood Group Typing (ABO) and Blood Typing for Rhesus (D) Antigen,86900
+4724,186,86850,Red Blood Cells Antibodies Identification,86850
+4725,186,86920,Compatability Testing (Cross Matching) for Blood Transfusion,86920
+4726,186,86885,Coombs Test (Direct),86885
+4727,186,86940,Haemolysin Test,86940
+4728,186,86880,Coombs Test (Indirect),86880
+4729,186,86985,Preparation of Blood Product,86985
+4730,187,87070,"Body Fluids for Culture and Sensitivity (Cerebrospinal Fluids, Pleural,Ascitic, Peritoneal, Pericardial, Synovial Etc.)",87070
+4731,187,87040,Blood for Culture and Sensitivity,87040
+4732,187,87220,Skin Scraping for KOH,87220
+4733,187,87205,Gram Stain,87205
+4734,187,87206,Wet Preparation for Microorganisms and Cells,87206
+4735,187,87207,"Special Stain (Indian Ink, Nigrosin)",87207
+4736,187,87181,Quantitative Antimicrobial Susceptibility Testing,87181
+4737,187,87800,"Genital Swabs for Culture and Sensitivity (High Vaginal Swab, Urethral, Vaginal, Endo - Cervical Swabs)",87800
+4738,187,87076,"Ear Swab, Nasal Swab, Throat Swab and Eye Swab for Culture and Sensitivity",87076
+4739,187,Code,Service Description,Code
+4740,187,87075,Pus Swab for Culture and Sensitivity,87075
+4741,187,87101,"Scraping for Fungi Culture (Skin, Hair or Nail)",87101
+4742,187,87077,Sputum for Culture and Sensitivity,87077
+4743,187,87045,Stool for Culture and Sensitivity,87045
+4744,187,87088,Urine for Culture and Sensitivity,87088
+4745,187,81099,Urine Dipstick,81099
+4746,187,87046,Rectal Swab Culture and Sensitivity,87046
+4747,188,87015,Staining of Mycobacteria Species (ZN or Auramine Stains),87015
+4748,188,87190,Mycobacteria Liquid Culture and Drug Susceptibility Testing,87190
+4749,188,87550,"Genotypic Method for Mycobacteria (Xpert® MTB/Rif, LPA, etc.)",87550
+4750,188,87116,Mycobacteria Solid Culture and Drug Susceptibility Testing,87116
+4751,188,87560,Genotypic Methods for Detecting Non Tuberculous Mycobacteria (NTM),87560
+4752,188,87561,Genotypic Drug Susceptibility Testing for NTM,87561
+4753,189,87177,Blood Smear for Malaria Parasites (BS),87177
+4754,189,86750,Malaria Rapid Diagnostic Test (MRDT),86750
+4755,189,87209,"Special Stain for Parasites (Microfilaria, Leshmania, Trypanosoma etc.)",87209
+4756,189,82272,Stool for Occult Blood,82272
+4757,189,82274,Stool Analysis,82274
+4758,189,81005,Urine Analysis,81005
+4759,189,83883,Urine Bence Jones Protein,83883
+4760,189,88184,Ham Test for Paroxysmal Nocturnal Hemoglobinuria (PNH),88184
+4761,189,87210,Knot Technique for Microfilaria,87210
+4762,189,81015,Urine Analysis (Microscope),81015
+4763,190,88342,Immunohistochemistry (IHC),88342
+4764,190,88323,"Tissue Biopsy Processing, Interpretation and Report",88323
+4765,190,88314,"Frozen Preparation of Specimen, Interpretation and Report",88314
+4766,190,88313,"Special Stained Tissue Specimen Slides, Interpretation and Report",88313
+4767,190,88302,"Tissue Block Staining, Interpretation and Report",88302
+4768,190,88304,Specimen Slides Interpretation and Report,88304
+4769,190,88106,Cytology of Body Fluids,88106
+4770,190,88364,Bone Marrow Aspirate Cytology,88364
+4771,190,88173,Fine Needle Aspiration Cytology (FNAC),88173
+4772,190,88141,Pap Smear,88141
+4773,190,89322,Seminal Fluid Analysis (Cytology),89322
+4774,190,88104,Sputum Cytology,88104
+4775,190,88120,Urine Cytology,88120
+4776,190,88371,Immunocytochemistry,88371
+4777,191,88000,Autopsy without Histology,88000
+4778,191,88020,Autopsy with Histology,88020
+4779,191,88040,"Autopsy with Ancillary Studies (Microbiology, Chemistry/Toxicology,Genetic Etc",88040
+4780,191,88045,Preservation of Dead Body,88045
+4781,191,88005,Embalming,88005
+4782,191,88099,Washing and Decoration of Dead Body,88099
+4783,191,88125,Forensic (Investigation) Examination of Specimen,88125
+4784,192,89320,Semen Analysis,89320
+4785,193,87515,Hepatitis B Viral Load,87515
+4786,193,87389,HIV 1/2 Viral Load,87389
+4787,193,87534,PCR- Based Test(Others) test,87534
+4788,193,87149,PCR-Based Assays for Micro Organisms Identification,87149
+4789,193,87522,Hepatitis C Viral Load,87522
+4790,193,87150,"Identification of Organisms by Genetic Analysis (HBV,HCV,CMV, Polyoma)",87150
+4791,193,87185,Genotypic Antimicrobial Susceptibility Testing for Bacteria (PCR-Based),87185
+4792,193,87153,Genome Sequencing Methods,87153
+4793,193,87490,Chlamydia PCR,87490
+4794,194,71010,X-Ray Chest-PA,71010
+4795,194,70100,X-Ray Mandible,70100
+4796,194,70130,X-Ray Mastoid-Bilateral,70130
+4797,194,70140,X-Ray Facial Bones/Orbits,70140
+4798,194,70160,X-Ray Nasal Bone,70160
+4799,194,70190,X-Ray Skull,70190
+4800,194,70210,X-Ray Paranasal Sinuses,70210
+4801,194,70250,X-Ray Skull Studies-Ap And Lateral,70250
+4802,194,70330,Plain X-ray Temporal Mandibular Joints (TMJ),70330
+4803,194,71020,X-Ray Chest-Pa And Lateral,71020
+4804,194,71111,X-Ray Ribs,71111
+4805,194,71120,X-Ray Sternum,71120
+4806,194,72050,X-Ray Cervical Spine,72050
+4807,194,72052,X-Ray Cervical Spine-Oblique,72052
+4808,194,72070,X-Ray Thoracic Spine-Ap And Lateral,72070
+4809,194,72074,X-Ray Thoracic Spine-Oblique,72074
+4810,194,72082,X-Ray Total Spine,72082
+4811,194,72100,X-Ray Lumbosacral Ap & Lateral,72100
+4812,194,72110,X-Ray Lumbar Spine-Oblique,72110
+4813,194,72170,X-Ray Pelvis,72170
+4814,194,73000,X-Ray Clavicle,73000
+4815,194,73010,X-Ray Scapula,73010
+4816,194,73030,X-Ray Shoulder,73030
+4817,194,73060,X-Ray Humerus,73060
+4818,194,73070,X-Ray Elbow,73070
+4819,194,73090,X-Ray Forearm (Radius/Ulna),73090
+4820,194,73100,X-Ray Wrist,73100
+4821,194,73130,X-Ray Hand,73130
+4822,194,73140,X-Ray Finger,73140
+4823,194,73501,X-Ray Pelvis and Femur (Pediatric),73501
+4824,194,73502,X-Ray Hip,73502
+4825,194,73552,X-Ray Femur,73552
+4826,194,73562,X-Ray Knee-AP and Lateral,73562
+4827,194,73564,X-Ray Both Knees,73564
+4828,194,73590,X-ray leg (Tibia/fibula),73590
+4829,194,73610,X-Ray Ankle,73610
+4830,194,73620,X-Ray Foot,73620
+4831,194,73650,X-Ray Calcaneum,73650
+4832,194,73660,X-Ray Toe,73660
+4833,194,74020,X-Ray Abdomen-Supine/Erect,74020
+4834,194,74241,X-Ray Abdomen-KUB,74241
+4835,194,76140,X-Ray /Fluoroscopic Report,76140
+4836,194,77065,Mammography of Single Breast,77065
+4837,194,77076,X-Ray Skeletal Survey,77076
+4838,194,72072,X-Ray Lumbar Spine,72072
+4839,194,72080,X-Ray Thoraco- Lumbar Spine,72080
+4840,194,73110,X-Ray Wrist Joint,73110
+4841,194,73522,X-Ray Hip Joint,73522
+4842,194,73551,X-RAY Femur (Thigh),73551
+4843,194,73560,X-Ray Knee Joint,73560
+4844,194,73600,X-Ray Ankle Joint,73600
+4845,194,74000,X-Ray Abdomen,74000
+4846,194,73565,X-Ray Knee Weight Bearings,73565
+4847,194,72114,X-Ray Lumbar Spine/ Extension and Flexion,72114
+4848,194,77075,X-Ray Survey of Forearm or Wrist Bone Density,77075
+4849,194,77066,Mammography of Both Breasts,77066
+4850,195,76700,Ultrasound Abdominal,76700
+4851,195,76641,Ultrasound Breast,76641
+4852,195,76506,Ultrasound Cranial,76506
+4853,195,76770,Ultrasound KUB,76770
+4854,195,76815,Ultrasound Obstetric,76815
+4855,195,76856,Ultrasound Pelvis,76856
+4856,195,76775,Ultrasound Renal,76775
+4857,195,76870,Ultrasound Scrotum,76870
+4858,195,76536,Ultrasound Head and Neck / Thyroid,76536
+4859,195,93971,Ultrasound Vascular Doppler,93971
+4860,195,93880,Doppler Ultrasound of Head and Neck,93880
+4861,195,93922,Doppler ultrasound of upper limbs,93922
+4862,195,93923,Doppler Ultrasound of Lower Limbs,93923
+4863,195,93975,Dopller Ultrasound of Abdomen/Pelvis/Scrotum,93975
+4864,195,93976,Dopller Ultrasound of Abdomen/Pelvis/Scrotum(Limited),93976
+4865,195,93980,Penile Doppler,93980
+4866,195,93990,Ultrasound Doppler Dialysis Access/Fistula Assessment,93990
+4867,195,76820,Ultrasound of Fetal Umbilical Artery Flow Rate,76820
+4868,195,76821,Ultrasound of Fetal Brain Artery,76821
+4869,195,76825,Ultrasound of Fetal Heart Blood Flow,76825
+4870,195,76873,Ultrasound of Prostate,76873
+4871,195,76881,Ultrasound of Leg,76881
+4872,195,76882,Ultrasound of Arm,76882
+4873,195,76812,Follow-up Obstetrics Ultrasound,76812
+4874,195,76830,Transvaginal Ultrasound (TVS),76830
+4875,195,76872,Transrectal Ultrasound (TRS),76872
+4876,195,76705,Ultrasound Abdominal Emergency,76705
+4877,195,76965,Ultrasound Follow-up Study,76965
+4878,195,93886,Transcranial Doppler Ultrasound(TCD),93886
+4879,195,76604,Ultrasound of Chest,76604
+4880,196,36005,Angio/Venogram,36005
+4881,196,51610,Antegrade / Retrograde Urethrography,51610
+4882,196,74249,Barium Follow Through,74249
+4883,196,74270,Barium Enema,74270
+4884,196,74246,Barium Meal - Single Contrast,74246
+4885,196,74230,Barium Swallow,74230
+4886,196,75984,Fistulogram,75984
+4887,196,58340,Hysterosalpingogram (HSG),58340
+4888,196,74400,Intra-Venous Urethrography (IVU),74400
+4889,196,51600,Micturating Cystourethrography (MCUG),51600
+4890,196,62284,Myelography,62284
+4891,196,74420,Retrograde Pyelography,74420
+4892,196,70380,Sialography,70380
+4893,196,76080,Sinography,76080
+4894,196,74251,Small Bowel Enema,74251
+4895,196,74430,Cystourethrography,74430
+4896,196,74485,Ureterogram,74485
+4897,196,74283,Barium Enema - Double Contrast,74283
+4898,196,78261,Barium Meal - Double Contrast,78261
+4899,197,74150,CT Scan Abdomen,74150
+4900,197,74176,CT Scan Abdomen Plus Pelvic,74176
+4901,197,72125,CT Scan Cervical Spine,72125
+4902,197,71250,CT Scan Chest/ Hrct,71250
+4903,197,77013,CT Scan Guided Ablation,77013
+4904,197,70450,CT Scan Head/ Brain,70450
+4905,197,72131,CT Scan Lumbo-Sacral Spine,72131
+4906,197,72192,CT Scan Pelvis,72192
+4907,197,70486,CT Scan Paranasal Sinuses (Pns),70486
+4908,197,76497,CT Scan Report,76497
+4909,197,70480,CT Scan Temporal Bone,70480
+4910,197,72128,CT Scan Thoratic Spine,72128
+4911,197,73700,CT Scan Knee,73700
+4912,197,72126,CT Scan Cervical Spine with Contrast,72126
+4913,197,71275,CT Scan of Blood Vessels in Chest with Contrast,71275
+4914,197,70496,CT Scan of Blood Vessel of Head with Contrast,70496
+4915,197,74174,CT Scan of Abdominal and Pelvic Blood Vessels with Contrast,74174
+4916,197,74175,CT Scan of Abdominal Blood Vessels with Contrast,74175
+4917,197,73706,CT Scan of Lower Leg Blood Vessels with Contrast,73706
+4918,197,73206,CT Scan of Arm Blood Vessels with Contrast,73206
+4919,197,70498,CT Scan of Neck Blood Vessels with Contrast,70498
+4920,197,75574,CT Scan of Heart Blood Vessels and Grafts with Contrast Dye,75574
+4921,197,75572,CT Scan of Heart Structure with Contrast (Coronary Angiography),75572
+4922,197,77012,CT Scan Guided Biopsy,77012
+4923,198,74181,MRI Abdomen/KUB,74181
+4924,198,74182,MRI Abdomen with Contrast,74182
+4925,198,73721,"MRI Lower Extremity Joints Left/Right - Hip, Knee, Ankle",73721
+4926,198,73224,"MRI Anthrogram Lower Extremity Joints Left/Right - Hip, Knee, Ankle",73224
+4927,198,73223,"MRI Lower Extremity Joints Left/Right with Contrast - Hip, Knee, Ankle",73223
+4928,198,72195,"MRI Pelvis (Male/Female)-Testis, Penis, Uterus, Bladder, Prostate, Fistula",72195
+4929,198,70551,MRI Brain,70551
+4930,198,77059,MRI Breast,77059
+4931,198,77058,MRI Breast Implant Evaluation,77058
+4932,198,72141,MRI Cervical Spine,72141
+4933,198,71550,MRI Chest,71550
+4934,198,73718,"MRI Lower Extremity Left / Right (Thigh, Leg, Foot)",73718
+4935,198,73719,"MRI Lower Extremity Left / Right (Thigh, Leg, Foot) with Contrast",73719
+4936,198,73218,"MRI Upper Extremity Left / Right (Arm, Fore Arm, Hand)",73218
+4937,198,73219,"MRI Upper Extremity Left / Right (Arm, Fore Arm, Hand) with Contrast",73219
+4938,198,75557,MRI Heart Morphology,75557
+4939,198,76390,Magnetic Resonance Cholangiopancreatography (MRCP),76390
+4940,198,70540,MRI Neck,70540
+4941,198,72196,MRI Pelvis with Contrast,72196
+4942,198,73222,"MRI Arm Joint with Contrast (Right/Left) - Shoulder, Elbow, Wrist",73222
+4943,198,73221,"MRI Arm Joint (Right/Left) - Shoulder, Elbow, Wrist",73221
+4944,198,74183,MRI Small Bowel (MRI Enteroclysis),74183
+4945,198,72146,MRI Thoracic Spine,72146
+4946,198,77021,MRI Guided Biopsy,77021
+4947,198,72156,MRI Brachial Plexus,72156
+4948,199,72159,MRA Spinal Canal Blood Vessel,72159
+4949,199,72198,MRA of Pelvic Blood Vessel,72198
+4950,199,70544,MRA Scan of Head Blood Vessels Before and after Contrast,70544
+4951,199,70545,MRA SCAN of Head Blood Vessels with Contrast,70545
+4952,199,70546,MRA Scan of Head Blood Vessels Before and after Contrast,70546
+4953,199,70547,MRA Scan of Neck Blood Vessels,70547
+4954,199,70548,MRA Scan of Neck Blood Vessels with Contrast,70548
+4955,199,73725,MRA / MRV Scan of Leg Blood Vessel,73725
+4956,199,73225,MRA / MRV Scan of Arm Blood Vessel,73225
+4957,199,74185,MRA / MRV Scan of Blood Vessels of Abdomen,74185
+4958,199,75565,MRA Coronary (Heart Vessels),75565
+4959,200,76940,Ultrasound Guided for Needle Insertion,76940
+4960,200,76942,Ultrasound Guided for Chorionic Villus Sampling,76942
+4961,200,76941,Ultrasound Guided FNAC,76941
+4962,200,76945,Ultrasound Guided for Amniocentensis,76945
+4963,200,76946,Ultrasound Guided IVF (In Vitro Fertilization),76946
+4964,200,76948,Ultrasound Guided Radiation Therapy,76948
+4965,200,76970,Ultrasound Guided for Endoscopy,76970
+4966,200,76975,Ultrasonic Guidance during Surgery,76975
+4967,200,76998,Ultrasound of Bone Density Measurement,76998
+4968,200,76977,Ultrasound Guided Pericardiocentesis,76977
+4969,200,76930,Ultrasonic Guidance for Biopsy of Heart Wall,76930
+4970,200,76932,Ultrasound Guidance for Repair of Blood Vessel,76932
+4971,201,50382,Percutaneous Imaging Ureterostomy (Removal and Replacement),50382
+4972,201,50384,Percutaneous Imaging Ureteric Stent Removal,50384
+4973,201,50385,Removal And Replacement of Indwelling Stent in Urinary Duct (Ureter) Including  Radiological Supervision and Interpretation,50385
+4974,201,50386,Imaging Guided Removal of Ureteric Stent,50386
+4975,201,50387,Imaging Guided Replacement of Ureteric Stenting,50387
+4976,201,50389,Imaging Guided Ureteronephrostomy Tube Removal,50389
+4977,201,50430,Injection Procedure for X-Ray Imaging of Kidney and Urinary Duct (Ureter) using  Imaging Guidance including Radiological Supervision and Interpretation,50430
+4978,201,50431,Injection Procedure for X-Ray Imaging of Kidney and Urinary Duct (Ureter) using  Imaging Guidance including Radiological Supervision and Interpretation,50431
+4979,201,50432,Percutaneous Imaging Guided Nephrostomy Catheter Placement,50432
+4980,201,50433,Percutaneous Imaging Guided Ureteronephrostomy Catheter Placement,50433
+4981,201,50434,Percutaneous Imaging Guided Conversion of Nephrostomy Catheter to  Nephroureteral Catheter,50434
+4982,201,50435,Percutaneous Replacement Nephrostomy Tube,50435
+4983,201,50606,Biopsy of Urinary Duct Using Imaging Guidance with Radiological Supervision and Interpretation,50606
+4984,201,50693,Percutaneous Ureteric Stenting,50693
+4985,201,50705,Occlusion of Urinary Duct (Ureter) using Imaging Guidance With Radiological Supervision And Interpretation,50705
+4986,201,50706,Ureteric Ablation,50706
+4987,202,59070,Abdominal Infusion of Normal Saline into Fetal Amniotic SAC using Ultrasound Guidance,59070
+4988,202,59072,Fetal Umbilical Cord Occlusion using Ultrasound Guidance,59072
+4989,202,59074,Ultrasound Guided Amniocentesis,59074
+4990,202,59076,Insertion of Drainage Catheter into Fetal Chest using Ultrasound Guidance,59076
+4991,202,58345,Fallopian Tube Recannalisation,58345
+4992,203,61645,Percutaneous Floroscopic Thromboembolectomy,61645
+4993,203,61650,Transcatheter Floroscopic Thromboembolectomy,61650
+4994,203,61651,Transcatheter Imaging Thromboembolectomy,61651
+4995,204,47531,Injection of Bile Duct for X-Ray Imaging Procedure Accessed through the Skin using Imaging Guidance Including Radiological Supervision and Interpretation,47531
+4996,204,47532,Injection of Bile Duct for X-Ray Imaging Procedure Accessed through the Skin using Imaging Guidance including Radiological Supervision and Interpretation,47532
+4997,204,47533,"Placement of Drainage Catheter of Biliary Duct, Accessed through the Skin with Imaging including Radiological Supervision and Interpretation",47533
+4998,204,47534,"Placement of Drainage Catheter of Biliary Duct, Accessed through the Skin with Imaging including Radiological Supervision and Interpretation",47534
+4999,204,47535,Conversion of External Biliary Drainage Catheter to Internal-External Biliary Drainage Catheter Accessed through the Skin using Imaging Guidance with Study of Bile Ducts and Radiological Supervision and Interpretation,47535
+5000,204,47536,Replacement of Liver Duct Drainage Catheter Accessed through the Skin with Imaging and Radiological Supervision and Interpretation,47536
+5001,204,47537,"Removal of Biliary Drainage Catheter, Accessed through the Skin using Imaging Guidance and Radiological Supervision and Interpretation",47537
+5002,204,47538,"Placement of Stent of Biliary Duct, Accessed through the Skin with Imaging including Radiological Supervision and Interpretation",47538
+5003,204,47539,"Placement of Stent of Biliary Duct, Accessed Through the Skin with Imaging including Radiological Supervision and Interpretation",47539
+5004,204,47540,"Placement of Stent and Drainage Catheter of Biliary Duct, Accessed through the Skin with Imaging including Radiological Supervision and Interpretation",47540
+5005,204,47541,"Placement of Access Device into Biliary Tract, Accessed through the Skin with Imaging including Radiological Supervision and Interpretation",47541
+5006,204,47542,Balloon Dilation of Bile Duct Accessed through the Skin using Imaging Guidance including Radiological Supervision and Interpretation,47542
+5007,204,47543,Biopsy of Bile Duct or Liver Duct Accessed through the Skin using Imaging Guidance with Radiological Supervision and Interpretation,47543
+5008,204,47544,"Removal of Biliary Duct or Gallbladder Stone, Accessed through the Skin using Imaging Guidance and Radiological Supervision and Interpretation",47544
+5009,205,51715,Augmentation Cystoplasty,51715
+5010,205,54324,Epispadias Repair,54324
+5011,205,54326,Hypospadias Repair,54326
+5012,205,50650,Partial Cystectomy,50650
+5013,205,54437,Repair of Fractured Penis,54437
+5014,205,54300,Straightening Procedure of the Penis,54300
+5015,205,55530,Varicocoelectomy,55530
+5016,205,55520,Removal of Spermatic Cord Growth,55520
+5017,205,55550,Tying of Spermatic Veins using an Endoscope,55550
+5018,205,51596,Total Cystectomy + Urinary Diversion,51596
+5019,205,51050,Cystolithotomy/ Vesicostomy,51050
+5020,205,50220,Nephrectomy,50220
+5021,205,50240,Partial NEPHRECTOMY,50240
+5022,205,54120,Partial Penoctomy,54120
+5023,205,50605,Pyeloplasty - PUJ,50605
+5024,205,50060,Nephrolithotomy,50060
+5025,205,50100,Repositioning of Abnormal Kidney Blood Vessels,50100
+5026,205,50120,Exploration of Kidney,50120
+5027,205,50125,Incision and Drainage of Kidney IE Abcess,50125
+5028,205,51102,Supra Pubic Cystostomy(SPC),51102
+5029,205,51597,Total Cystectomy & Urinary Diversion,51597
+5030,205,54125,Total Penectomy/Bilateral Inguinal LN Dissection,54125
+5031,205,50610,Ureterolithotomy,50610
+5032,205,53410,Urethroplasty,53410
+5033,205,51530,Urinary Bladder Diverticulectomy,51530
+5034,205,54150,Circumsion (Phymosis & Paraphymosis),54150
+5035,205,52005,Cystoscopy & Ureteric Catheterization,52005
+5036,205,54380,Glansplasty,54380
+5037,205,55040,Hydrocelectomy,55040
+5038,205,53020,Meatotomy /Perineal Urethrotomy,53020
+5039,205,55842,Open Prostatectomy,55842
+5040,205,54535,Orchidectomy,54535
+5041,205,54522,Partial Orchidectomy,54522
+5042,205,54560,Testicular Exploration,54560
+5043,205,54680,Transplantation of One or Both Testicles to Thigh,54680
+5044,205,54690,Removal of One or Both Testicles using an Endoscope,54690
+5046,205,54430,Priapism Operation(Shunting),54430
+5047,205,55180,Scrotoplasty,55180
+5048,205,52234,Transurethral Resection of Bladder Tumour,52234
+5049,205,52601,Transurethral Resection of Prostate,52601
+5050,205,50780,Ureteric Re-Implantation,50780
+5051,205,52007,Cystoscopy Biopsy + EUA,52007
+5052,205,53400,Direct Vision Urethrotomy,53400
+5053,205,50075,Pyelolithotomy,50075
+5054,205,52351,Ureteroscopy,52351
+5055,205,52281,Urethral Bouging,52281
+5056,205,54520,Bilateral Subcapsular Orchidectomy,54520
+5057,205,52276,Optical Urethrotomy (OTIS),52276
+5058,205,55700,Prostatic Trucut Biopsy,55700
+5059,205,52332,Renoscopy,52332
+5060,205,54500,Testicular Biopsy,54500
+5061,205,51702,Urethral Catheterization,51702
+5062,205,52000,Urethrocystoscopy,52000
+5063,205,55250,Vascectomy,55250
+5064,205,53445,Transurethral Resection or Incision of Bladder Nec,53445
+5065,205,55175,Scrotoplasty,55175
+5066,205,52270,Direct Visual Urethrotomy (DVU),52270
+5067,205,50590,Eswl Session for Renal Stones(electro Shock Wave Lithotripsy),50590
+5068,205,50575,DJ Stent Different Sizes with Guide Wire,50575
+5069,205,52310,DJ Stent Removal,52310
+5070,205,50574,Kidney Biopsy,50574
+5071,205,52201,Cystoscopy + EUA + Biopsy,52201
+5072,205,54505,Testicular Biopsy,54505
+5073,205,58951,Pelvic Exenteration,58951
+5074,205,54161,Circumscission (adult),54161
+5075,205,43320,Anti Reflux Surgery,43320
+5076,205,19301,Breast Lumpectomy (Malignant),19301
+5077,205,31623,Bronchoscopy See/ORL,31623
+5078,205,46280,Fissurectomy,46280
+5079,205,46200,Fistulectomy,46200
+5080,205,32320,Lung Decortication,32320
+5081,205,32480,Lung Lobectomy,32480
+5082,205,39010,Mediasternotomy Surgery,39010
+5083,205,19307,Modified Radical Mastectomy,19307
+5084,205,43107,Oesophagectomy,43107
+5085,205,32220,Pleurectomy,32220
+5086,205,32650,Pleurodesis,32650
+5087,205,32440,Pneumonectomy,32440
+5088,205,19306,Radical Mastectomy,19306
+5089,205,21600,Rib Resection,21600
+5090,205,32900,Rib Excision,32900
+5091,205,19303,Simple Mastectomy,19303
+5092,205,97597,Surgical Debriment Under G/A,97597
+5093,205,32601,Thoracoscopy for Mediastinal Tumors,32601
+5094,205,32096,Thoracotomy Achalasia of Oesophagus,32096
+5095,205,32097,Thoracotomy Decortication,32097
+5096,205,60220,Thyroid Lobectomy,60220
+5097,205,60212,Subtotal Thyroidectomy,60212
+5098,205,60240,Total Thyroidectomy,60240
+5099,205,47600,Cholecystectomy,47600
+5100,205,47610,Cholecystectomy & CBD Exploration,47610
+5101,205,43264,Choledocotomy,43264
+5102,205,47425,Duct Calculi Removal,47425
+5103,205,47010,Incision & Drainage of Liver Abscess (Open),47010
+5104,205,47120,Lobectomy (Liver),47120
+5105,205,44950,Appendicectomy,44950
+5106,205,49900,Suture of Postsurgical Abdominal Wall Opening,49900
+5107,205,44625,Colostomy Closure- Laparatomy,44625
+5108,205,44626,Colostomy Closure-Non Laparatomy,44626
+5109,205,44340,Colostomy Revision,44340
+5110,205,39599,Hernia Repair - Diaphragmatic,39599
+5111,205,49540,Hernia Repair - Epigastric/Umbilical,49540
+5112,205,49505,Hernia Repair - Inguinal/Fermoral,49505
+5113,205,49595,Herniotomy,49595
+5114,205,49565,Incisional Hernia Repair,49565
+5115,205,49568,Hernioplasty,49568
+5116,205,43840,Laparotomy Intestinal Obstruction,43840
+5117,205,44602,Laparotomy Perforation of Viscera,44602
+5118,205,47350,Liver Trauma Surgical Repair,47350
+5119,205,49020,"Drainage of Abdominal Abscess or Infection, Open Procedure",49020
+5120,205,38100,Splenectomy,38100
+5121,205,38115,Repair of Ruptured Spleen,38115
+5122,205,38129,Laparoscopic Splenectomy,38129
+5123,205,15830,Abdominal Dermolipectomy,15830
+5124,205,44320,Colostomy Defunctioning,44320
+5125,205,43810,Gastrojejunostomy,43810
+5126,205,44140,Hemicolectomy,44140
+5127,205,15877,Liposuction (Major),15877
+5128,205,19112,Michrodochotomy,19112
+5129,205,15650,Plastic Surgery - SSG & FLAP,15650
+5130,205,37181,Portal Systemic Shunt Procedure,37181
+5131,205,45300,Proctoscopy Eua Biopsy (Rigid),45300
+5132,205,44345,PSARP,44345
+5133,205,45121,Pull Through Surgery (Procedures),45121
+5134,205,19318,Reduction Mammoplasty,19318
+5135,205,48150,Resection - Whipples Procedure,48150
+5136,205,43244,Stripping of Oesophageal Varices / Band Ligation,43244
+5137,205,26560,Syndactyl Release / Separation,26560
+5138,205,60521,Thymectomy,60521
+5139,205,43314,Tracheal Oesophaeal Fistula Closure,43314
+5140,205,15750,Varicose Vein Surgery + Skin Grafting,15750
+5141,205,45110,Abdominal Perineal Resection(Rectum Operations),45110
+5142,205,45111,Anterior Resection(Rectum Operations),45111
+5143,205,47721,Cholecysto - Jejunostomy,47721
+5144,205,43635,Drainage/Antrectomy,43635
+5145,205,11404,Wide Major Excision,11404
+5146,205,43633,Gastrectomy Plus Bypass,43633
+5147,205,43620,Gastrectomy-Total,43620
+5148,205,43999,Gastrostomy,43999
+5149,205,41130,Partial Glossectomy,41130
+5150,205,46221,Haemorrhoidectomy (Band Ligation),46221
+5151,205,46255,Haemorrhoidectomy (Open),46255
+5152,205,46947,Haemorrhoidectomy (Stappler),46947
+5153,205,44147,Laparotomy for Colon Resection,44147
+5154,205,44620,Laparotomy for Colostomy/Closure,44620
+5155,205,47001,Needle Biopsy of Liver,47001
+5156,205,47362,Re-Exploration of Liver Wound with Removal of Packing,47362
+5157,205,45910,Anal Dilatation,45910
+5158,205,45990,Diagnostic Examination of Anus and Rectum under Anesthesia,45990
+5159,205,48500,Pancreatic-Cyst Drainage,48500
+5160,205,48140,Pancreatic-Partial Resection,48140
+5161,205,43520,Pyloromyotomy,43520
+5162,205,43640,Truncal / Selective Vagotomy & Gastrojejunal Anastomos,43640
+5163,205,43641,Vagotomy & Bypass Procedure,43641
+5164,205,26123,Contracture Release Major,26123
+5165,205,21931,Lipoma Excision Under G/A,21931
+5166,205,15111,Major Skin Grafting,15111
+5167,205,14302,Rotation Flap Operation,14302
+5168,205,11426,Wide Major Excision,11426
+5169,205,57289,Cystocele Repair,57289
+5170,205,57268,Enterocele Repair,57268
+5171,205,19125,Breast Lumpectomy,19125
+5172,205,19361,Mammoplasty,19361
+5173,205,60280,Thyroglossal Cyst/Fistula Excision,60280
+5174,205,60252,Thyroid Total Thyroidectomy,60252
+5175,205,31660,Bronchoscopic Ablative Therapy,31660
+5176,205,31622,"Bronchoscopy, Biopsy & Brush Cytology",31622
+5177,205,45331,Colonoscopy With Biopsy,45331
+5178,205,17250,Cauterazation,17250
+5179,205,43237,Endoscopic Uss,43237
+5180,205,43260,ERCP,43260
+5181,205,43262,ERCP And Sphicterotomy,43262
+5182,205,43274,ERCP And Stenting,43274
+5183,205,43266,Esophageal Stenting,43266
+5184,205,43233,OGD (Oesophagogastroduodenoscopy),43233
+5185,205,43246,Percutaneous Endoscopic Gastrotomy (PEG),43246
+5186,205,43250,Polypectomy,43250
+5187,205,46600,Proctoscopy,46600
+5188,205,27339,Lipoma/Cyst Excison,27339
+5189,205,21014,Lipoma Cyst Polyp Excision,21014
+5190,205,43197,Oesophagoscopy Rigid/Flexible,43197
+5191,205,32609,Pleural Biopsy,32609
+5192,205,32554,Pleural TAP,32554
+5193,205,20101,Wound Exploration,20101
+5194,205,47015,Liver Abscess Aspiration,47015
+5195,205,47000,Perctaneous Liver Biopsy,47000
+5196,205,46040,Incision & Drainage-Ischial Rectal Abscess,46040
+5197,205,11100,Skin Biopsy,11100
+5198,205,36425,Venous Cutting Down,36425
+5199,205,15852,Major Wound Dressing under G/A,15852
+5200,205,45900,Anal Dilatation,45900
+5201,205,46220,Cauterization (Electrical),46220
+5202,205,45378,Colonoscopy (Flexible),45378
+5203,205,43259,Endoscopic Us,43259
+5204,205,43235,Enteroscopy,43235
+5205,205,43261,ERCP + Sphicterotomy,43261
+5206,205,74330,ERCP + Stenting,74330
+5207,205,43450,Esophageal Dilatation,43450
+5208,205,43212,Esophageal Stenting,43212
+5209,205,43202,Oesophageal Biopsy,43202
+5210,205,43231,Oesophagoscopy,43231
+5211,205,43239,"Osophagus, Gastric and Deodenal with Biopsy",43239
+5212,205,43243,"Osophagus, Gastric and Deodenal with Sclerotherapy",43243
+5213,205,45100,Rectal Biopsy,45100
+5214,205,36470,Sclerotherapy,36470
+5215,205,26587,Extradigit Amputation - Minor,26587
+5216,205,11424,Wide Minor Excision,11424
+5217,205,10040,Acne Scar Removal,10040
+5218,205,10061,Incision and Drainage of Pyomyositis,10061
+5219,205,11730,Removing Ingrowing Nail,11730
+5220,205,15839,Kelloid Excision,15839
+5221,205,27385,Repair of Muscle,27385
+5222,205,15150,Minor Skin Grafting,15150
+5223,205,15783,Slit Skin Smear,15783
+5224,205,11006,Sloughectomy,11006
+5225,205,15851,Stitch Sinus Exploration,15851
+5226,205,16025,Minor Wound Dressing,16025
+5227,205,60500,Parathyroidectomy,60500
+5228,205,49321,Laparoscopy(with Necessary Biopsies) - Nissen Fundoplication,49321
+5229,205,44615,Laparoscopy (with Necessary Biopsies) - Adhesion/ Bowel Obstruction,44615
+5230,205,49652,Laparoscopic Femoral Hernia Repair,49652
+5231,205,44212,Laparoscopic Assisted Colectomy,44212
+5232,205,43325,Laparoscopic Heller Myotomy for Achalasia,43325
+5233,205,51820,Laparoscopic Repair of Urinary Bladder,51820
+5234,205,39561,Laparoscopic Diaphragmatic Injury Repair,39561
+5235,205,49329,Laparoscopic Repair of Visceral Injuries (stomach / Large& Small Bowel),49329
+5236,205,32659,Laparoscopic Pericardial Window,32659
+5237,205,45126,Abdominal Perineal Resection,45126
+5238,205,37140,Portal Systemic Shunt Procedure,37140
+5239,205,63173,Lumboperitoneal Shunt,63173
+5240,205,43305,Tracheal Oesophaeal Fistula Closure,43305
+5241,205,43335,Laparoscopy (with Necessary Biopsies) - Cholecystectomy,43335
+5242,205,62143,Hernia Repair - Diaphragmatic,62143
+5243,205,32124,Lung Decortication,32124
+5244,205,60520,Thymomectomy,60520
+5245,205,49580,Herniotomy (paediatric),49580
+5246,205,48510,Pancreatic or Cyst Drainage (cystogastrostomy),48510
+5247,205,44970,Laparoscopy (with Necessary Biopsies) - Appendectomy,44970
+5248,205,37761,Varicose Vein Stripping (low),37761
+5249,205,62096,Open Chest Drainage (chest Window),62096
+5250,205,49654,Hernia Repair - Incisional,49654
+5251,205,60650,Laparoscopy (with Necessary Biopsies) - Diagnostic,60650
+5252,205,44955,Appendicectomy,44955
+5253,205,27591,Femur Transfemoral Amputation,27591
+5254,205,45505,Rectocele Repair,45505
+5255,205,27884,Tibia Transtibial Amputation,27884
+5256,205,49002,Burst Abdomen- Repair,49002
+5257,205,25295,Keloid Excission-major,25295
+5258,205,43220,Esophagoscopy & Dilatation,43220
+5259,205,45020,Incision & Drainage - Ischio Rectal Abscess,45020
+5260,205,43100,Colonoscopy (flexible/rigid) without Biopsy,43100
+5261,205,43200,Endoscopic Biopsy,43200
+5262,205,32169,Pleural Biopsy,32169
+5263,205,27336,Lipoma Excision (minor),27336
+5264,205,46270,Fistulectomy,46270
+5265,205,45305,"Proctoscopy, Eua, Biopsy (rigid Scope)",45305
+5266,205,31295,Antral Wash Out,31295
+5267,205,49082,Laparotomy (peritonitis),49082
+5268,205,20005,Simple Abscess Incision & Drainage,20005
+5269,205,28060,Plantar Fasciotomy Open - Foot,28060
+5270,205,28008,Plantar Fasciotomy Percutaneous - Foot,28008
+5271,205,17000,"Cryotherapy (e.g Eye,skin,cervix)",17000
+5272,205,31625,Bronchoscopy- Biopsy & Brush Cytology (fibre Optic),31625
+5273,205,58960,Laparatomy,58960
+5274,205,19120,Breast Lumpectomy (BENIGN),19120
+5275,205,32551,Tube Thoracostomy,32551
+5276,206,88160,Via-Visual Inspection with Acetic Acid,88160
+5277,206,58661,Bilateral Salphingo Ophorectomy,58661
+5278,206,58671,Blocking of Uterine Tubes By Device using an Endoscope,58671
+5279,206,57720,Cervical Tear Repair Extensive,57720
+5280,206,59121,Ectopic Pregnancy - Laparotomy & Salphingectomy,59121
+5281,206,58353,Endometrial Ablation,58353
+5282,206,57500,Eua And Wedge Biopsy-Cervical,57500
+5283,206,58662,Excission of Endometrial Implants,58662
+5284,206,58555,Hysterescopy,58555
+5285,206,51570,Laparatomy (Cystectomy),51570
+5286,206,58400,Laparatomy (Manchester Forthergil Repair),58400
+5287,206,58940,Laparatomy (Ovarain Tumor),58940
+5288,206,45000,Laparatomy (Pelvic Abscess),45000
+5289,206,57288,Laparatomy (Stress Incontinence Surgery),57288
+5290,206,57250,Laparatomy Perineorrhaphy,57250
+5291,206,58570,Laparoscopic Hysterectomy,58570
+5292,206,58145,Myomectomy (Laparoscopic),58145
+5293,206,57510,Leep Procedure,57510
+5294,206,58140,Myomectomy,58140
+5295,206,58670,Ovarian Drill,58670
+5296,206,57282,Perrineoplasty,57282
+5297,206,58150,Subtotal & Total Abdominal Hysterectomy,58150
+5298,206,58760,Tubal Anastomosis (Re-Anastomosis),58760
+5299,206,58673,Tuboplasty,58673
+5300,206,51900,Vvf Repair,51900
+5301,206,58410,Ventrosuspension Operations (Stameys Etc),58410
+5302,206,58954,Warthem Hysterectomy,58954
+5303,206,58615,Bilateral Tubal Ligation (BTL),58615
+5304,206,59514,Caesarean Section,59514
+5305,206,58611,Caesarean Section + BTL,58611
+5306,206,10060,Incision & Drainage,10060
+5307,206,58300,Insertion and Removal of LUCD,58300
+5308,206,59870,Sunction Curratage for Molar Pregnancy,59870
+5309,206,16030,Major Wound Dressing under G/A,16030
+5310,206,56440,Bartholins Abscess-Mursupialisation,56440
+5311,206,59320,Cervical Circlage-Shrodikar,59320
+5312,206,57000,Colpotomy,57000
+5313,206,57520,Cone Biopsy,57520
+5314,206,58120,Diagnostic Curretage-D and C,58120
+5315,206,59840,Dilatation And Curratage(D&C),59840
+5316,206,59812,Evacuation,59812
+5317,206,11983,Insertion And Removal Implanon,11983
+5318,206,57452,Colposcopy,57452
+5319,206,59820,Manual Vacum Aspiration,59820
+5320,206,58558,Polypectomy-Cervical,58558
+5321,206,56630,Simple Vulvectomy,56630
+5322,206,58260,Vagina Hysterectomy,58260
+5323,206,59300,Vaginal Repair,59300
+5324,206,58285,Wartheim Hysterectomy,58285
+5325,206,59160,Retained Placenta Removal,59160
+5326,206,57265,Enterocele Repair,57265
+5327,206,60540,Laparotomy for Other Conditions,60540
+5328,206,49000,Explorative Laparatomy,49000
+5329,206,58925,Ovarian Cystectomy,58925
+5330,206,58210,Radical Hysterectomy,58210
+5331,206,57300,RVF Repair,57300
+5332,206,57461,CONE Biopsy,57461
+5333,206,56810,Perineoraphy,56810
+5334,206,58578,Laparascopy,58578
+5335,206,58579,Hysteroscopy,58579
+5336,206,59409,Normal Delivery,59409
+5337,206,56442,Hymenectomy,56442
+5338,206,19100,Core Needle biopsy,19100
+5339,207,65810,Anterior Chamber Washout,65810
+5340,207,66984,Cataract Surgery with IOL Insertion,66984
+5341,207,66920,Cataract Surgery Without IOL Insertion,66920
+5342,207,66820,Posterior Capsulotomy,66820
+5343,207,66825,Repositioning of Lens Prosthesis,66825
+5344,207,66840,Lens Washout,66840
+5345,207,66983,Phaeco-Emulsification Surgery with Foldable Lens,66983
+5346,207,66930,Lensectomy,66930
+5347,207,66985,Secondary Intra Ocular Lens Insertion,66985
+5348,207,66680,Iris Repair,66680
+5349,207,66986,Intra Ocular Lens Exchange,66986
+5350,208,65426,Pterygium Excision,65426
+5351,208,68399,Conjuctival Flap,68399
+5352,208,68200,Subconjunctiva Injection,68200
+5353,208,68320,Conjunctiva Repair,68320
+5354,208,65273,Conjuctival Graft,65273
+5355,208,68325,Conjuctival Mass Excision,68325
+5356,208,68130,Scleral Growth Excision,68130
+5357,208,65400,Corneal Mass Excision,65400
+5358,208,65410,Corneal Biopsy,65410
+5359,208,65430,Corneal Scrapping,65430
+5360,208,65210,Corneal/Scleral F.B. Removal,65210
+5361,208,65756,Transplant of Outer Layer of Corneal Tissue,65756
+5362,208,65757,Preparation of Corneal Tissue for Transplant,65757
+5363,208,65760,Removal and Reshaping of Corneal Tissue,65760
+5364,208,65767,Transplantation of Donor Corneal Tissue,65767
+5365,208,65770,Placement of Tube with Optical Power to Cornea,65770
+5366,208,65771,Incisions in Cornea to Correct Refraction Error,65771
+5367,208,65772,Incisions to Cornea to Correct Astigmatism,65772
+5368,208,65775,Excision of Corneal Tissue to Correct Astigmatism,65775
+5369,208,65778,Free Amniotic Membrane Graft,65778
+5370,208,65779,Sutured Amniotic Membrane Graft,65779
+5371,208,65781,Cornea Stem Cell Transplantation,65781
+5372,208,65785,Corneal Ring Implantation,65785
+5373,208,65710,Corneal Graft,65710
+5374,208,65280,Corneal/Scleral Repair,65280
+5375,208,0402T,Collagen Cross Linking Treatment of Disease of Cornea,0402T
+5376,208,65101,Enucleation,65101
+5377,208,65103,Enucleation and Ocular Implant Placement,65103
+5378,208,65091,Evisceration,65091
+5379,208,65093,Evisceration and Ocular Implant Placement,65093
+5380,208,65150,Ocular Implant Revision,65150
+5381,208,65175,Ocular Implant Removal,65175
+5382,208,65110,Exenteration,65110
+5383,208,67299,Orbitotomy,67299
+5384,208,67415,Orbital Contents Fine Needle Aspiration,67415
+5385,208,67500,Retro Bulbar Injection,67500
+5386,208,67505,Retro Bulbar Alcohol Injection,67505
+5387,208,67570,Optic Nerve Decompression,67570
+5388,208,68810,Probing,68810
+5389,208,68500,Lacrimal Gland Excision,68500
+5390,208,68505,Lacrimal Gland Partial Excision,68505
+5391,208,68510,Lacrimal Gland Biopsy,68510
+5392,208,68520,Tear SAC Excision,68520
+5393,208,68525,Tear SAC Biopsy,68525
+5394,208,68530,Tear Passages Foreign Body Removal,68530
+5395,208,68540,Tear Sac Mass Excision,68540
+5396,208,68700,Tear Duct Reconstruction,68700
+5397,208,68801,Tear Drainage Dilatation,68801
+5398,208,68815,Probing with Stent/Tube Insertion,68815
+5399,208,68816,Probing with Balloon Catheter Dilatation,68816
+5400,208,67875,Tarsorhaphy,67875
+5401,208,68720,Dacryorrhinosistomy,68720
+5402,208,68760,Duct Opening Repair,68760
+5403,208,68761,Puncto Plug,68761
+5404,208,68770,Tear Drainage Closure,68770
+5405,208,68020,Demoid Cyst Excision (Eye),68020
+5406,208,67924,Lid Rotation - TRP,67924
+5407,208,67250,Scleral Defect Repair,67250
+5408,208,67255,Scleral Repair with Graft,67255
+5409,208,67901,Ptosis Surgery,67901
+5410,208,67906,Brow Suspension,67906
+5411,208,67900,Repair of Brow Paralysis,67900
+5412,208,67902,Repair of Upper Eyelid Muscle to Correct Drooping or Paralysis,67902
+5413,208,67903,Shortening or Advancement of Upper Eyelid Muscle to Correct Drooping or Paralysis,67903
+5414,208,67904,Repair of Tendon of Upper Eyelid,67904
+5415,208,67908,"Removal of Tissue, Muscle, and Membrane to Correct Eyelid Drooping or Paralysis",67908
+5416,208,67909,Procedure to Reduce Overcorrection of Drooping or Paralyzed Upper Eyelid,67909
+5417,208,67825,Electrolysis,67825
+5418,208,67700,Eye Lid Abscess I&D,67700
+5419,208,67710,Eye Lid Sutures Removal,67710
+5420,208,67715,Canthotomy,67715
+5421,208,67800,Eyelid Mass Excision,67800
+5422,208,67801,Multiple Same Eye Lid Masses Excision,67801
+5423,208,67808,Eye Lid Mass Excision Under GA,67808
+5424,208,67810,Eye Lid Biopsy,67810
+5425,208,67820,Epilation,67820
+5426,208,67916,Ectropion Repair,67916
+5427,208,67923,ENTROPION REPAIR,67923
+5428,208,67930,Lid Margin Laceration Repair,67930
+5429,208,67938,Foreign Body Removal of the Eye Lid,67938
+5430,208,67971,Eye Lid Reconstruction with Graft,67971
+5431,208,15820,Removal of Excessive Skin of Lower Eyelid,15820
+5432,208,15821,Removal of Excessive Skin of Lower Eyelid and Fat Around Eye,15821
+5433,208,15822,Removal of Excessive Skin of Upper Eyelid,15822
+5434,208,15823,Removal of Excessive Skin and Fat of Upper Eyelid,15823
+5435,208,67320,Strabismus Surgery,67320
+5436,208,67311,Realignment of The Eye With Repair of One Horizontal Eye Muscle,67311
+5437,208,67312,Realignment of The Eye With Repair of Two Horizontal Eye Muscles,67312
+5438,208,67314,Realignment of The Eye With Repair of One Vertical Muscle,67314
+5439,208,67316,Realignment of The Eye With Repair of Two or more Vertical Muscles,67316
+5440,208,67331,Traumatic Strabismus Correction Surgery,67331
+5441,208,67332,Realignment of Eye Having Scarring or Restrictive Muscle Movement,67332
+5442,208,67334,Posterior Fixation Strabismus Surgery,67334
+5443,208,67335,Strabismus Surgery with Adjustable Sutures,67335
+5444,208,67340,Strabismus Surgery with Repair of Detached Muscle,67340
+5445,208,92060,Orthoptic Assesment,92060
+5446,208,92065,Orthoptic Exercises,92065
+5447,208,65820,Goniotomy,65820
+5448,208,66170,Trabeculectomy,66170
+5449,208,66180,Glaucoma Surgery With Graft,66180
+5450,208,66184,Glaucoma Shunt Revision,66184
+5451,208,66500,Iridectomy,66500
+5452,208,65850,Glaucoma Valve Implantation,65850
+5453,208,66761,Laser Iridotomy,66761
+5454,208,66630,Iridotomy,66630
+5455,208,66174,Trabeculotomy,66174
+5456,208,66155,Trab/ Trab,66155
+5457,208,0449T,Insertion of Aqueous Fluid Drainage Device into Eye,0449T
+5458,208,67141,Cryotherapy,67141
+5459,208,66821,Laser Capsulectomy,66821
+5460,208,65855,Laser Trabeculoplasty,65855
+5461,208,66710,Laser Capsulotomy,66710
+5462,208,66711,Destruction of Tissue Encircling Lens using an Endoscope,66711
+5463,208,66720,Destruction of Tissue Encircling Lens,66720
+5464,208,66740,Destruction of Tissue of Eyelid Border,66740
+5465,208,66770,Destruction of Growth of Iris using Laser,66770
+5466,208,67228,Pan Retinal Photocoagulation (PRP),67228
+5467,208,92071,Fitting of Contact Lens for Treatment of Ocular Surface Disease,92071
+5468,208,92072,Fitting of Contact Lens for Management of Corneal Degeneration,92072
+5469,208,92136,Keratometry,92136
+5470,208,92275,Electro-Retinogram (ERG),92275
+5471,208,76516,A Scan,76516
+5472,208,76512,B Scan,76512
+5473,208,92018,EYE-EUA,92018
+5474,208,92250,Fundus Photograph,92250
+5475,208,92081,Visual Field Analysis,92081
+5476,208,92004,Low Vision Assessment,92004
+5477,208,92025,Cornea Topography,92025
+5478,208,0198T,Measurement of Eye Intra Ocular Pressure,0198T
+5479,208,67041,Removal of Membrane From the Retina,67041
+5480,208,67042,"Removal of Membrane From the Retina, Pars Plana Approach",67042
+5481,208,67101,"Repair of Detached Retina, 1 or more Sessions",67101
+5482,208,67107,Repair of Detached Retina and Drainage of Eye Fluid Between Lens And Retina,67107
+5483,208,67110,Repair of Detached Retina by Injection of Air or Gas,67110
+5484,208,67113,Repair of Detached Retina and Drainage of Eye Fluid Between Lens And Retina,67113
+5485,208,67115,Release of Retinal Encircling Material,67115
+5486,208,67120,Removal of Implant Material from outside the Eye,67120
+5487,208,67121,Removal of Implant Material from inside the Eye,67121
+5488,208,67145,"Preventive Retinal Detachment Treatment by Heat or Laser, 1 or more Sessions",67145
+5489,208,67208,"Destruction of Retinal Growth by Heat or Freezing, 1 or more Sessions",67208
+5490,208,67218,"Destruction of Retinal Growth with Implantation of Radiation Source, 1 or more Sessions",67218
+5491,208,67220,"Destruction of Vascular Growth Between Retina and Sclera, 1 or more Sessions",67220
+5492,208,67221,Destruction of Vascular Growth Between Retina and Sclera,67221
+5493,208,67225,"Destruction of Vascular Growth Between Retina and Sclera, at single Session",67225
+5494,208,67227,"Destruction of Leaking Retinal Blood Vessels, 1 or more Sessions",67227
+5495,208,67229,"Laser Destruction or Freezing of Extensive Leaking Retinal Blood Vessels, Preterm Infant, 1 or more Sessions",67229
+5496,208,67005,Anterior Vitrectomy,67005
+5497,208,67015,Vitrectomy,67015
+5498,208,67025,Injection of Synthetic Eye Fluid,67025
+5499,208,67027,Implantation of Eye Drug Delivery System,67027
+5500,208,67028,Intra Vitreal Injection,67028
+5501,209,92553,Audiometry-Spec Investigation,92553
+5502,209,43194,Oesophagus FB Removal,43194
+5503,209,11005,Sloughectomy (G/A or Without G/A),11005
+5504,209,11440,Head and Neck Tumo Excision and Flap Econstruction,11440
+5505,209,69632,Ossiculoplasty,69632
+5506,209,42890,Palatopharyngotomy Plus Tuomor Excision,42890
+5507,209,92538,Vestibular Test,92538
+5508,209,30300,Removal of Foreign Body in Nose,30300
+5509,209,D7260,Oral Antral Fistula Repair,D7260
+5510,209,42665,Tying Salivary Gland Duct,42665
+5511,209,31600,Tracheostomy,31600
+5512,209,42835,Adenoidectomy/Adenotomy,42835
+5513,209,42820,Adenotonsilectomy,42820
+5514,209,31561,Arytenoidectomy,31561
+5515,209,31032,Bilateral/Unilateral Cald Wel Luc,31032
+5516,209,42810,Brachial Cyst/ Fistula Excision,42810
+5517,209,38720,Cervical Node Excision,38720
+5518,209,31360,Cordectomy,31360
+5519,209,31535,Direct Laryngoscopy & Biopsy,31535
+5520,209,31237,Direct Nasopharyingoscopy & Biopsy,31237
+5521,209,42815,Excision of Branchial Fistulla,42815
+5522,209,69140,Excision of Osteoma of External Auditory Canal,69140
+5523,209,42140,Excision of Soft Palate Tumour,42140
+5524,209,31780,Excision Subglottic Stenosis,31780
+5525,209,31201,External Ethmoidectomy,31201
+5526,209,31255,Functional Endoscope Sinus Surgery (Fess),31255
+5527,209,31382,Hemi Laryngectomy,31382
+5528,209,31256,Intra Nasal Antrostomy,31256
+5529,209,31587,Laryngeal Fissure,31587
+5530,209,30117,Lateral Rhinotomy,30117
+5531,209,38500,Lymph Node Biopsy,38500
+5532,209,31599,Micro Laryngeal Surgery (Mls),31599
+5533,209,42953,Tracheosophageal Excision,42953
+5534,209,69502,Mastoidectomy,69502
+5535,209,31575,Micro Laryngoscopy & Biopsy,31575
+5536,209,31541,Microlaryngeal Surgery,31541
+5537,209,69642,Modified Radical Mastoidectomy,69642
+5538,209,69436,Myringotomy & Tube,69436
+5539,209,69433,Incision of Eardrum with Insertion of Eardrum Tube Under Local or Topical Anesthesia,69433
+5540,209,30110,Nasal Polypectomy,30110
+5541,209,38724,Radical Neck Dissection,38724
+5542,209,42892,Parapharyngeal Tumor Excision,42892
+5543,209,42410,Superficial Parotidectomy,42410
+5544,209,69511,Radical Mastoidectomy,69511
+5545,209,30310,Foreign Body Removal Nose Under GA,30310
+5546,209,30630,Septoplasty,30630
+5547,209,69660,Stapedectomy,69660
+5548,209,42415,Superficial Parotidectomy,42415
+5549,209,31367,Supralotic Laryngectomy,31367
+5550,209,31611,Surgical Speech Fistula Reconstruction,31611
+5551,209,42826,Tonsillectomy,42826
+5552,209,31365,Total Laryngectomy,31365
+5553,209,31230,Total Maxillectomy Plus Orbital Exanteration,31230
+5554,209,30930,Turbinate Repair/Resection,30930
+5555,209,30130,Turbinectomy,30130
+5556,209,69644,Tympano Mastoidectomy,69644
+5557,209,69610,Tympanoplast I-IV,69610
+5558,209,42145,Uvuto Palatopharyngotomy,42145
+5559,209,31375,Vertical Hemilaryngectomy,31375
+5560,209,31637,Bronchoscopic Stenting,31637
+5561,209,21044,Hemimandibulectomy,21044
+5562,209,21032,Hemimaxillectomy,21032
+5563,209,21025,Total Mandibulectomy,21025
+5564,209,D7560,Caldwel Luc Procedure,D7560
+5565,209,21501,Incision & Drainage of Abscess,21501
+5566,209,20100,Surgical Toilet & Sulture,20100
+5567,209,31000,Antral Wash Out Bilateral,31000
+5568,209,31002,Antral Wash Out Unilateral,31002
+5569,209,42804,Nasopharynx Biopsy Under LA,42804
+5570,209,30100,Nose Biopsy Under LA,30100
+5571,209,40808,Oralpharynx Biopsy Under LA,40808
+5572,209,30903,Cautarization (Varices) Bilateral,30903
+5573,209,30901,Cautarization (Varices) Unilateral,30901
+5574,209,92551,Free Field Audiometry,92551
+5575,209,92590,Hearing Aid Trial,92590
+5576,209,D7240,Impaction Removal-Complicated,D7240
+5577,209,69554,Kelloidectomy (Ear) L. A. Bilateral/Unilateral,69554
+5578,209,92550,Tympanometry,92550
+5579,209,69209,Removal of Ear Wax(Endoscopy Suction/Washing),69209
+5580,209,31231,Diagnostic Nasal Endoscopy,31231
+5581,209,31525,Diagnostic Rigid Laryngoscopy,31525
+5582,209,12056,Earlobe Repair,12056
+5583,209,31233,Endoscopic Suction Clearance Nose,31233
+5584,209,92511,Fibre Optic Nasal Laryngoscope,92511
+5585,209,69200,Removal of Foreign Body Ear,69200
+5586,209,69210,Wax Removal,69210
+5587,209,69220,Tympano Mastoidectomy,69220
+5588,209,31370,Vertical Hemilaryngectomy,31370
+5589,209,69799,Stapedectomy,69799
+5590,209,24410,Superficial Parotidectomy,24410
+5591,209,15828,Branchial Fistula Excision,15828
+5592,209,31770,Balloon Bronchoplasty,31770
+5593,209,42808,Brochoscopy foreign body removal,42808
+5594,209,30540,Choanal atresia release,30540
+5595,209,31020,Sinusectomy,31020
+5596,209,D7920,PLASTIC SURGICAL PROCEDURE,D7920
+5597,209,14040,Plastic Surgery (10 Sq Centimeters or Less),14040
+5598,209,42426,Total Parotidectomy,42426
+5599,209,42440,Submandibular Salivary Gland Excision,42440
+5600,209,42450,Sublingual Savary Gland Excision,42450
+5601,209,42600,Closure of Abnormal Salivary Gland Drainage Tract,42600
+5602,209,11446,Keloid Excision,11446
+5603,209,96372,Keloid Infitration,96372
+5604,209,99024,Suture Removal,99024
+5605,209,42180,Uvular Repair / Hamostasis,42180
+5606,209,31511,Removal of Foreign Body from Voice Box using an Endoscope,31511
+5607,210,D7650,Zygomatic Arch Fracture (Open Reduction),D7650
+5608,210,D7660,Zygomatic Arch Fracture (Closed Reduction),D7660
+5609,210,D7680,Zygomatic Arch Fracture (Complicated),D7680
+5610,210,D7999,Tissue Biopsy (ORAL Unspecified),D7999
+5611,210,D7286,Tissue Biopsy (Oral Tissue Incision),D7286
+5612,210,D7955,Cleft Lip & Palate Repair,D7955
+5613,210,D7840,Condylectomy Unilateral,D7840
+5614,210,D7899,Temporomandibular Joint Dysfunction Therapy,D7899
+5615,210,D7991,Coronoidectomy,D7991
+5616,210,D7450,Dental Cystectomy,D7450
+5617,210,D7461,Dental Tumour Excission,D7461
+5618,210,41140,Glossectomy,41140
+5619,210,41115,Glossectomy (including floor of Mouth),41115
+5620,210,41116,Tumor Excision (at floor of the Mouth),41116
+5621,210,41120,Hemiglossectomy,41120
+5622,210,41135,Hemiglossectomy (including Lymph Nodes),41135
+5623,210,41114,Tumor Excision (at floor of the Mouth),41114
+5624,210,41145,Total Glossectomy (including its Lymph Nodes),41145
+5625,210,41150,Glossectomy (including Bone),41150
+5626,210,41153,Radical Glossectomy,41153
+5627,210,11444,Kelloidectomy,11444
+5628,210,21046,Mandibular Excision,21046
+5629,210,21462,Open Reduction At Angle of Mandible,21462
+5630,210,21465,Open Reduction At Body of Mandible,21465
+5631,210,D7946,Open Reduction Lefort I,D7946
+5632,210,D7947,Lefort I (Maxilla - Segmented),D7947
+5633,210,D7948,Open Reduction Lefort II,D7948
+5634,210,D7949,Open Reduction Lefort III,D7949
+5635,210,D7261,Oral Antral Communication Repair,D7261
+5636,210,42330,Salivary Duct Stone Removal,42330
+5637,210,42420,Total Parotidectomy,42420
+5638,210,42505,Plastic Repair of Salivary Duct,42505
+5639,210,42507,Plastic Repair of Salivary Duct(Major Salivary Gland Ducts Bilateraly),42507
+5640,210,42509,Plastic Repair of Salivary Duct (with Gland Excision),42509
+5641,210,42510,Plastic Repair of Salivary Duct (with Tying Duct Bilateraly),42510
+5642,210,42550,Injection of Dye for X-Ray of Salivary Glands,42550
+5643,210,42650,Insertion of Probe for Salivary Gland Duct Dilation,42650
+5644,210,42660,Salivary Gland Duct Dilation,42660
+5645,210,42699,Salivary Gland or Duct Procedure,42699
+5646,210,51999,Transurethral Resection/Incision of Bladder Neck,51999
+5647,210,D7451,Tumour Enucleation,D7451
+5648,210,D7460,Tumour Enucleation (Lesion Diameter up to 1.25 Cm),D7460
+5649,210,21048,Partial Maxillectomy,21048
+5650,210,21930,Lipoma Excision Minor,21930
+5651,210,D6245,Acrylic Bridge,D6245
+5652,210,D2949,Additional Filling,D2949
+5653,210,D7670,Alveolar Bone Fracture,D7670
+5654,210,D7671,"Alveolus - Open Reduction, Splinting of Teeth",D7671
+5655,210,D7771,Alveolus - Closed Reduction Splinting of Teeth,D7771
+5656,210,D2140,Amalgam Filling One Surface,D2140
+5657,210,D2150,Amalgam Filling-Two or more Surface,D2150
+5658,210,D2160,Amalgam Filling-Three Surface,D2160
+5659,210,D2161,Amalgam Filling-Four or more Surface,D2161
+5660,210,D3410,Apicectomy,D3410
+5661,210,D3421,Apicoectomy - Bicuspid (First Root),D3421
+5662,210,D3425,Apicoectomy - Molar (First Root),D3425
+5663,210,D3426,Apicoectomy (Each Additional Root),D3426
+5664,210,21454,Archwire Change,21454
+5665,210,D0270,Bitewing View,D0270
+5666,210,D0272,Bitewings - Two Radiographic Images,D0272
+5667,210,D0273,Bitewings - Three Radiographic Images,D0273
+5668,210,D0274,Bitewings - Four Radiographic Images,D0274
+5669,210,D0277,Vertical Bitewings - 7 to 8 Radiographic Images,D0277
+5670,210,41872,Arresting Bleeding Socket,41872
+5671,210,41874,Dry / Infected Socket Irrigation,41874
+5672,210,41899,Rotational Flap,41899
+5673,210,D2710,Bridge Construction Per Unit with Composite,D2710
+5674,210,D2712,Crown - ¾ Resin-Based Composite (Indirect),D2712
+5675,210,31636,Bronchoschopic Stenting using an Endoscope,31636
+5676,210,40650,Cleft Lip (Repair),40650
+5677,210,40652,Cleft Lip (Repair) Half of Lip,40652
+5678,210,40654,Cleftl Lip (Repair) Over Half of Lip,40654
+5679,210,40700,Plastic Repair (One Side of the Nose or Lip),40700
+5680,210,40701,Plastic Repair (Bilateraly of The Nose or Lip),40701
+5681,210,40702,Plastic Repair (Bilatery Nose or Lip),40702
+5682,210,40720,Plastic Repair ( Nasal And Lip),40720
+5683,210,40799,Lip Procedure,40799
+5684,210,42200,Cleft Palate Repair,42200
+5685,210,42205,Repair of Defect of Roof of Mouth,42205
+5686,210,42220,Lengthening of Roof of Mouth,42220
+5687,210,42227,Lengthening of Roof of Mouth using Mucous Membrane Flap,42227
+5688,210,D7250,Complicated Extraction,D7250
+5689,210,D7251,Coronectomy – Intentional Partial Tooth Removal,D7251
+5690,210,D2330,Composite Filling,D2330
+5691,210,D2332,"Composite Filling (Three Surfaces, Anterior)",D2332
+5692,210,D2335,Composite Filling (more than Four Surfaces ),D2335
+5693,210,D2390,Crown (Made of Composite) Anterior,D2390
+5694,210,D2391,Crown (Made of Composite One Surface) Posterior,D2391
+5695,210,D2392,Crown (Made of Composite Two Surfaces)Posterior,D2392
+5696,210,D2393,Crown (Made of Composite Three Surfaces) Posterior,D2393
+5697,210,D2394,Crown (Made Composite Four or more Surface) Posterior,D2394
+5698,210,21050,Condylectomy Bilateral,21050
+5699,210,21431,Craniomaxillary Fixation,21431
+5700,210,21432,Craniomaxillary Fixation (Insertion of Hardware),21432
+5701,210,21390,Craniomaxillary Fixation (Involving Broken Eye Socket Bone with Implant),21390
+5702,210,21401,Craniomaxillary Fixation (Closed Reduction involving Eye Socket Bone ),21401
+5703,210,D6010,Dental Inplant,D6010
+5704,210,D6011,Second Stage Implant Surgery,D6011
+5705,210,D6012,Surgical Placement of Interim Implant Body for Transitional Prosthesis: Endosteal Implant,D6012
+5706,210,D6013,Surgical Placement of Mini Implant,D6013
+5707,210,D6040,Surgical Placement: Eposteal Implant,D6040
+5708,210,D6050,Surgical Placement: Transosteal Implant,D6050
+5709,210,D6100,Implant Removal,D6100
+5710,210,D6101,Debridement of a Peri-Implant Defect,D6101
+5711,210,D6102,Debridement and Osseous Contouring of a Peri-Implant Defect,D6102
+5712,210,D6103,Bone Graft for Repair of Peri-Implant Defect – Does not include Flap Entry and Closure,D6103
+5713,210,D6104,Bone Graft at Time of Implant Placement,D6104
+5714,210,70300,X-Ray Periapical View,70300
+5715,210,70310,"X-Ray of Teeth, Less than Full Mouth",70310
+5716,210,70320,"X-Ray of Teeth, Full Mouth",70320
+5717,210,D5610,Repair Resin Denture Base,D5610
+5718,210,D5620,Repair Cast Framework,D5620
+5719,210,D5630,Repair or Replace Broken Clasp (Per Tooth),D5630
+5720,210,D5640,Replace Broken Teeth ( Per Tooth),D5640
+5721,210,D5650,Add Tooth to Existing Partial Denture,D5650
+5722,210,D5660,Add Clasp to Existing Partial Denture (Per Tooth),D5660
+5723,210,D5670,Replace all Teeth and Acrylic on Cast Metal Framework (Maxillary),D5670
+5724,210,D5671,Replace all Teeth and Acrylic on Cast Metal Framework (Mandibular),D5671
+5725,210,D5213,Maxillary Partial Denture,D5213
+5726,210,D5214,Mandibular Partial Denture,D5214
+5727,210,D5221,Immediate Maxillary Partial Denture,D5221
+5728,210,D5222,Immediate Mandibular Partial Denture,D5222
+5729,210,D5110,Complete Denture (Maxillary),D5110
+5730,210,D5120,Complete Denture (Mandibular),D5120
+5731,210,D5130,Immediate Complete Denture (Maxillary),D5130
+5732,210,D5140,Immediate Complete Denture (Mandibular),D5140
+5733,210,D2331,Diastema Closure,D2331
+5734,210,D1510,Diesterma Formation,D1510
+5735,210,D1515,Space Maintainer (Fixed - Bilateral),D1515
+5736,210,D1520,Space Maintainer (Removable - Unilateral),D1520
+5737,210,D1525,Space Maintainer ( Removable - Bilateral),D1525
+5738,210,D5212,Direct Composite Bridge,D5212
+5739,210,D6205,Pontic (Indirect Resin Based Composite),D6205
+5740,210,D6710,Retainer Crown (Indirect Resin Based Composite),D6710
+5741,210,D6549,Resin Retainer (for Resin Bonded Fixed Prosthesis),D6549
+5742,210,D7220,Tooth Extraction (Complex),D7220
+5743,210,D7230,Removal of Impacted Tooth ( Partially Bony),D7230
+5744,210,D7241,"Removal of Impacted Tooth -(Completely Bony, with Unusual Surgical Complications)",D7241
+5745,210,41823,Dry Socket,41823
+5746,210,D1206,Floride Vanish Application,D1206
+5747,210,D1208,Topical Application of Fluoride -(Excluding Varnish),D1208
+5748,210,D3230,Endodontic Treatment Anterior,D3230
+5749,210,D3310,"Endodontic Therapy (Anterior Tooth, Excluding Final Restoration)",D3310
+5750,210,D3240,Endodontic Treatment Molar,D3240
+5751,210,D3330,"Endodontic Therapy, Molar (Excluding Final Restoration)",D3330
+5752,210,D3320,Endodontic Treatment Premolar,D3320
+5753,210,D3331,Treatment of Root Canal Obstruction (Non-Surgical Access),D3331
+5754,210,D3332,"Incomplete Endodontic Therapy (Inoperable, Unrestorable or Fractured Tooth)",D3332
+5755,210,D3333,Internal Root Repair of Perforation Defects,D3333
+5756,210,D7140,Tooth Extraction Permanent,D7140
+5757,210,D7111,Tooth Extraction Decidous,D7111
+5758,210,D2950,Tooth Filling with Pin Additional-Anterior,D2950
+5759,210,D2951,Tooth Filling with Pin Additional-Posterior,D2951
+5760,210,D2952,Crown and Bridge,D2952
+5761,210,D8030,Limited Orthodontic Treatment of The Adolescent Dentition,D8030
+5762,210,D8050,Interceptive Orthodontic Treatment of the Primary Dentition,D8050
+5763,210,D8070,Comprehensive Orthodontic Treatment of the Transitional Dentition,D8070
+5764,210,D8080,Comprehensive Orthodontic Treatment of the Adolescent Dentition,D8080
+5765,210,D8090,Comprehensive Orthodontic Treatment of the Adult Dentition,D8090
+5766,210,D8220,Fixed Appliance Therapy,D8220
+5767,210,D8660,Pre-Orthodontic Treatment Examination to Monitor Growth and Development,D8660
+5768,210,D8680,"Orthodontic Retention (Removal of Appliances, Construction and Placement of Retainer(S))",D8680
+5769,210,D8681,Removable Orthodontic Retainer Adjustment,D8681
+5770,210,D8690,Orthodontic Treatment (Alternative Billing to A Contract Fee),D8690
+5771,210,D8691,Repair of Orthodontic Appliance,D8691
+5772,210,D8692,Replacement of Lost or Broken Retainer,D8692
+5773,210,D8693,Re-Cement or Re-Bond Fixed Retainer,D8693
+5774,210,D8694,Repair of Fixed Retainers (Includes Reattachment),D8694
+5775,210,D7971,Flapectomy (Dental),D7971
+5776,210,D4210,Gingivectomy,D4210
+5777,210,D4211,Gingivectomy or Gingivoplasty (Tooth Bounded Spaces Per Quadrant),D4211
+5778,210,D4212,"Gingivectomy or Gingivoplasty (To Allow Access for Restorative Procedure, Per Tooth)",D4212
+5779,210,D4230,Anatomical Crown Exposure (Four or more Contiguous Teeth Per Quadrant),D4230
+5780,210,D4231,Anatomical Crown Exposure ( One to Three Teeth Per Quadrant),D4231
+5781,210,D4240,"Gingival Flap Procedure (including Root Planning , Four or more Contiguous Teeth or Tooth Bounded Spaces Per Quadrant)",D4240
+5782,210,D4241,"Gingival Flap Procedure (Including Root Planning, One to Three Contiguous Teeth or Tooth Bounded Spaces Per Quadrant)",D4241
+5783,210,D2940,Glass Ionomer Filling,D2940
+5784,210,D2920,Re-Cement or Re-Bond Crown,D2920
+5785,210,21244,Reconstruction of Lower Jaw Bone With Insertion of Bone Plate,21244
+5786,210,21245,Partial Repair of Lower Jaw or Cheek Bone With Implant,21245
+5787,210,21248,Partial Reconstruction of Lower Jaw or Cheek Bone with Insertion of Implant,21248
+5788,210,21070,Removal of Diseased or Fractured Portion of Lower Jaw Bone,21070
+5789,210,21034,Removal of Malignant Growth of Upper Jaw or Cheek Bone,21034
+5790,210,D5931,"Obturator Prosthesis, Surgical",D5931
+5791,210,41800,I & D (Dental Abcess),41800
+5792,210,D7510,Incision and Drainage of Abscess (Intraoral Soft Tissue),D7510
+5793,210,D7511,Incision and Drainage of Abscess (Intraoral includes Drainage of Multiple Fascial Spaces),D7511
+5794,210,D7520,Incision and Drainage of Abscess (Extraoral Soft Tissue),D7520
+5795,210,D7521,Incision and Drainage of Abscess (Extraoral Soft Tissue includes Drainage of Multiple Fascial Spaces),D7521
+5796,210,21076,Impression & Model Cast,21076
+5797,210,21077,Impression and Preparation of Eye Socket Prosthesis,21077
+5798,210,21079,Impression and Custom Preparation of Temporary Oral Prosthesis,21079
+5799,210,21080,Impression and Custom Preparation of Permanent Oral Prosthesis,21080
+5800,210,21081,Impression and Custom Preparation of Lower Jaw Bone Prosthesis,21081
+5801,210,21082,Impression and Custom Preparation of Prosthesis for Roof of Mouth Enlargement,21082
+5802,210,21083,Impression and Custom Preparation of Roof of Mouth Prosthesis,21083
+5803,210,21084,Impression and Custom Preparation of Speech Aid Prosthesis,21084
+5804,210,21453,Closed Treatment of Broken Jaw Bone with Insertion of Hardware or Oral Splint,21453
+5805,210,21461,Open Treatment of Broken Jaw Bone,21461
+5806,210,11200,Ligature Change,11200
+5807,210,D7921,Mandibular Grafting,D7921
+5808,210,D7950,Mandible or Maxilla Gaft (Autogenous or Nonautogenous),D7950
+5809,210,D7295,Mandible or Maxilla Graft (Harvest of Bone),D7295
+5810,210,D7953,Mandible or Maxilla Graft (Bone Replacement Graft for Ridge Preservation),D7953
+5811,210,D4265,Biologic Materials to Aid in Soft and Osseous Tissue Regeneration,D4265
+5812,210,20969,Placement of skin and Bone Flap with Microvascular Connection,20969
+5813,210,21049,Maxillectomy (External Removal of Upper Jaw Bone Growth or Cyst),21049
+5814,210,D0240,Oclusal View,D0240
+5815,210,D7630,Open Reduction Fracture Mandible,D7630
+5816,210,D7858,Open Reduction Tmj,D7858
+5817,210,D7852,Disc Repair,D7852
+5818,210,D7854,Synovectomy,D7854
+5819,210,D7856,Myotomy,D7856
+5820,210,D7860,Arthrotomy,D7860
+5821,210,D7865,Arthroplasty,D7865
+5822,210,D7870,Arthrocentesis,D7870
+5823,210,D7871,Non-Arthroscopic Lysis and Lavage,D7871
+5824,210,D7872,"Arthroscopy - Diagnosis, with or without Biopsy",D7872
+5825,210,D7750,Open Reduction Zygomatic,D7750
+5826,210,D8010,Orthodontic Appliance Fixing Per Jaw,D8010
+5827,210,D8020,Orthodontic Treatment (Adult Dentition),D8020
+5828,210,D1110,Teeth Polishing,D1110
+5829,210,D1120,Prophylaxis - Child,D1120
+5830,210,D3220,Pulpotomy,D3220
+5831,210,D3221,Pulpotomy (Primary and Permanent Teeth),D3221
+5832,210,D3222,Partial Pulpotomy for Apexogenesis (Permanent Tooth with incomplete Root Development),D3222
+5833,210,D7820,Reduction of TMJ Manual,D7820
+5834,210,D7830,Manipulation of TMJ Under Anesthesia,D7830
+5835,210,D5225,Removable Acrylic Partial Denture Single Tooth,D5225
+5836,210,D5226,"Mandibular Partial Denture (Flexible Base including any Clasps, Rests and Teeth)",D5226
+5837,210,D8670,Removable Orthodontic Activation,D8670
+5838,210,D8999,Unspecified Orthodontic Procedure,D8999
+5839,210,D8210,Removable Orthodontic Appliance (with / without Expansion),D8210
+5840,210,D8040,Orthodontic Treatment (Adult Dentition),D8040
+5841,210,D7940,Osteoplasty (For Orthognathic Deformities),D7940
+5842,210,D7941,Osteotomy (Mandibular Rami),D7941
+5843,210,D7943,Osteotomy (Mandibular Rami with Bone Graft; Includes Obtaining the Graft),D7943
+5844,210,D7944,Osteotomy (Segmented or Subapical),D7944
+5845,210,D7945,Osteotomy ( Body of Mandible),D7945
+5944,211,33422,Open Mitral Valvotomy,33422
+5846,210,D8060,Interceptive Orthodontic Treatment of the Transitional Dentition,D8060
+5847,210,D5520,Repair of Denture,D5520
+5848,210,D5710,Rebase Complete Maxillary Denture,D5710
+5849,210,D5711,Rebase Complete Mandibular Denture,D5711
+5850,210,D5720,Rebase Maxillary Partial Denture,D5720
+5851,210,D5721,Rebase Mandibular Partial Denture,D5721
+5852,210,D5730,Reline Complete Maxillary Denture (Chairside),D5730
+5853,210,D5731,Reline Complete Mandibular Denture (Chairside),D5731
+5854,210,D5740,Reline Maxillary Partial Denture (Chairside),D5740
+5855,210,D5741,Reline Mandibular Partial Denture (Chairside),D5741
+5856,210,D5750,Reline Complete Maxillary Denture (Laboratory),D5750
+5857,210,D5751,Reline Complete Mandibular Denture (Laboratory),D5751
+5858,210,D5760,Reline Maxillary Partial Denture (Laboratory),D5760
+5859,210,D5761,Reline Mandibular Partial Denture (Laboratory),D5761
+5860,210,D5410,Adjust Complete Denture (Maxillary),D5410
+5861,210,D5411,Adjust Complete Denture ( Mandibular),D5411
+5862,210,D5421,Adjust Partial Denture (Maxillary),D5421
+5863,210,D5422,Adjust Partial Denture ( Mandibular),D5422
+5864,210,D4341,Scalling and Root Planning The Whole Mouth,D4341
+5865,210,D4342,Periodontal Scaling and Root Planning (One to Three Teeth Per Quadrant),D4342
+5866,210,D4346,Scaling and Root Planning (For Generalized Moderate or Severe Gingival Inflammation),D4346
+5867,210,D7550,Sequestrectomy,D7550
+5868,210,89220,Sputum Induction (Procedure),89220
+5869,210,D7910,Suturing,D7910
+5870,210,D7911,Suture (Complicated up to 5 Cm),D7911
+5871,210,D7912,"Suture (Complicated ,Greater than 5 Cm)",D7912
+5872,210,D7270,Teeth Splinting with Composite,D7270
+5873,210,D7272,Tooth Transplantation (Includes Re-Implantation from one site to another and Splinting and/or Stabilization),D7272
+5874,210,D2941,Temporary Filling,D2941
+5875,210,41010,Tongue Tie Release,41010
+5876,210,D2960,Veneer Direct,D2960
+5877,210,D7411,Wide Excisional ( Benign Lesion Greater than 1.25 Cm),D7411
+5878,210,D7412,"Wide Excisional (Benign Lesion, Complicated)",D7412
+5879,210,D7413,Wide Excisional (Malignant Lesion up to 1.25 Cm),D7413
+5880,210,D7414,Wide Excisional (Malignant Lesion Greater than 1.25 Cm),D7414
+5881,210,D7465,Dental Laser Treament,D7465
+5882,210,D0330,X-RAY Orthopantomograph (OPG),D0330
+5883,210,21497,Intermaxillary Fixation (Wiring of Jaw or Oral Splint to Teeth),21497
+5884,210,41512,Tongue Stitching,41512
+5885,210,21030,Total Maxillectomy,21030
+5886,210,21038,Partial Maxillectomy,21038
+5887,210,D7740,Intermaxillary Fixation,D7740
+5888,210,41825,Apicectomy,41825
+5889,210,21480,TMJ Reduction,21480
+5890,210,41251,Tongue and Stitch/Repair,41251
+5891,210,90951,Acute Peritoneal Dialysis,90951
+5892,210,38220,Bone Marrow Aspiration Biopsy (Procedure),38220
+5893,210,36823,Chemotherapy Delivery (Periphery Line),36823
+5894,210,36455,Exchange Blood Transfusion,36455
+5895,210,36680,Intraossius Puncture,36680
+5896,210,62270,Diagnostic Lumbar Puncture,62270
+5897,210,92002,Medical Examination for Students Enrolling In Coll,92002
+5898,210,96900,Phototherapy,96900
+5899,210,90947,Renal Dialysis Per Session,90947
+5900,210,90945,Renal-Haemodialysis Catheterization,90945
+5901,210,99199,Renal-Medical Report,99199
+5902,210,36576,Resuturing of Temporary Catheter,36576
+5903,210,36416,Venous Puncture,36416
+5904,211,33010,Open Pericardiocentesis,33010
+5905,211,33015,Closed Pericardiocentesis,33015
+5906,211,33025,Pericardiectomy,33025
+5907,211,33031,Pericardiectomy with CPB,33031
+5908,211,33050,Pericardium Tumor Excision,33050
+5909,211,33120,Pericardium Tumor Excision on CPB,33120
+5910,211,33141,Laser Cardiac Therapy,33141
+5911,211,33202,Open Biventricular Pacing,33202
+5912,211,33203,Biventricular Pacing Insertion,33203
+5913,211,33204,Biventricular Device,33204
+5914,211,33210,Temporary Pacermaker Insertion,33210
+5915,211,33212,Insertion of High Power Device,33212
+5916,211,33215,Reposition of Pacemaker,33215
+5917,211,33216,Permanent Pacemaker Insertion,33216
+5918,211,33218,D/Chamber Pacemaker,33218
+5919,211,33222,Relocation of Pacemaker Skin Pocket,33222
+5920,211,33227,Removal and Replacement of Single Lead Pacemaker,33227
+5921,211,33228,Removal and Replacement of Dual Lead Pacemaker,33228
+5922,211,33236,Removal of Permanent Pacemaker.,33236
+5923,211,33243,Removal of Defibrilator Electrode,33243
+5924,211,33251,Maze Procedure,33251
+5925,211,33254,Atrial Reduction,33254
+5926,211,33300,Cardiac Repair,33300
+5927,211,33305,Cardiac Repair on CPB,33305
+5928,211,33310,Cardiac Clot Removal,33310
+5929,211,33320,Main Vascular Repair,33320
+5930,211,33322,Main Vascular Repair on CPB,33322
+5931,211,33330,Bental's With Aortic Valve Replacement,33330
+5932,211,33335,Valve Sparing Bental's,33335
+5933,211,33361,Transcatheter Aortic Valve Replacement (TAVR),33361
+5934,211,33420,Transcatheter Mitral Valvuloplast,33420
+5935,211,33362,Aortic Valve Replacement,33362
+5936,211,33390,Aortic Valve Repair on CPB,33390
+5937,211,33391,Avr With Aortic Root Enlargement,33391
+5938,211,33405,Bio-Synthetic Aortic Valve Replacement on CPB,33405
+5939,211,33412,Mitral Annuloplasty And Replacement,33412
+5940,211,33413,Aortic/Pulmonary Outlet Obstruction Release,33413
+5941,211,33414,Left Ventricular Outlet Tractobstruction Release,33414
+5942,211,33416,Left Ventriculotomy,33416
+5943,211,33417,Aortic Valve Repair,33417
+5945,211,33425,Mitral Valve Repair with CPB,33425
+5946,211,33426,Bio-Synthetic Mitral Valve Replacement on CPB,33426
+5947,211,33430,Mitral Valve Replacement,33430
+5948,211,33460,Tricuspid Valve Annuloplasty on CPB,33460
+5949,211,33463,Tricuspid Valve Annuloplasty,33463
+5950,211,33464,Tricuspid Valve Ring Annuloplasty on CPB,33464
+5951,211,33465,Tricuspid Valve Replacement on CPB,33465
+5952,211,33468,Tricuspid Valve Repositioning,33468
+5953,211,33470,Closed Pulmonary Valvotomy,33470
+5954,211,33474,Open Tricuspid Valvotomy,33474
+5955,211,33475,Pulmonary Valve Replacement,33475
+5956,211,33476,Double Valve Replacement,33476
+5957,211,33477,Pulmonary Valve Replacement,33477
+5958,211,33478,Right Ventricular Outlet Tract Obstruction Release,33478
+5959,211,33496,Re- Do Mechanical Valve Replacement,33496
+5960,211,33500,Coronary Artery Reimplantation on CPB,33500
+5961,211,33502,Repair of Coronaryartery Anomaly,33502
+5962,211,33503,Coronary Artery Bypass Graft (Anomaly),33503
+5963,211,33504,Transection of Pulmonary Artery,33504
+5964,211,33505,Repair of Sinus of Valsalva Fistula,33505
+5965,211,33507,Coronary Artery Osteoplasty,33507
+5966,211,33510,Single Vessel Coronary Artery Bypass Surgery,33510
+5967,211,33511,Two Vessel Coronary Artery Bypass Surgery,33511
+5968,211,33512,Tripple Vessel Coronary Artery Bypass Surgery,33512
+5969,211,33514,Tripple Vessel Coronary Artery Bypass Surgery without CPB,33514
+5970,211,33530,Reopening Cardiac Surgery- 1month,33530
+5971,212,33600,Tricuspid Valve Cleft Repair,33600
+5972,212,33602,Valve Leaflets Reconstruction,33602
+5973,212,33606,Damas - Kaye Stansel Procedure,33606
+5974,212,33620,Rt And Lt Pulmonary Artery Banding,33620
+5975,212,33621,Asd Closure With Device,33621
+5976,212,33622,Complex Intracardiac Repair,33622
+5977,212,33641,"ASD Closure, Open",33641
+5978,212,33645,ASD Closure + Roofing of SVC,33645
+5979,212,33647,VSD And ASD Closure,33647
+5980,212,33675,Multiple VSD Closure,33675
+5981,212,33676,VSD or ASD Closure- Device,33676
+5982,212,33681,"VSD Closure, Open",33681
+5983,212,33690,Banding Pulmonary Artery,33690
+5984,212,33692,Complete Tof Repair,33692
+5985,212,33724,Tapvc Repair,33724
+5986,212,33755,Waterston Procedure,33755
+5987,212,33762,Blalock - Taussig Shunt (Bt Shunt),33762
+5988,212,33764,Modified Blalock - Taussig Shunt (Modified BT Shunt),33764
+5989,212,33766,Glenn Procedure,33766
+5990,212,33768,Removal of Congenital Extra Vena Cava,33768
+5991,212,33783,VSD Closure and Arterial Switch,33783
+5992,212,33788,Pumonary Artery Conduit(Truncus),33788
+5993,212,33820,"Pda Closure, Open",33820
+5994,212,33822,Pda Device Closure,33822
+5995,212,33930,Cardio-Pulmonary Harvest,33930
+5996,212,33935,Cardio-Pulmonary Transplant,33935
+5997,212,33940,Preoperative Cardiac Preservation,33940
+5998,212,33945,Cardiac Transplant,33945
+5999,212,33952,Insertion of Extracorporeal Membrane Oxygenation (ECMO),33952
+6000,212,33953,Extracorporeal Membrane Oxygenation (ECMO),33953
+6001,212,33967,Insertion of Intra-Aortic Balloon Assist Device,33967
+6002,212,33968,Removal of Intra-Aortic Balloon Assist Device,33968
+6003,213,34101,Embolectomy Great Artery on CPD,34101
+6004,213,34111,Embolectomy Great Artery,34111
+6005,213,34151,Embolectomy Arterial Peripheral,34151
+6006,213,34401,Embolectomy In Peripheral Veins,34401
+6007,213,34421,Embolectomy In Vena Cava,34421
+6008,213,34471,Embolectomy In Neck Vein,34471
+6009,213,34490,Embolectomy Underarm And Upper Chest Vein,34490
+6010,213,34502,Reconstruction of Vena Cava,34502
+6011,213,34520,Venous Stripping,34520
+6012,213,34800,Abdominal Aortic Aneurysm Repair with Prosthesis on CPD,34800
+6013,213,34802,Abdominal Aortic Aneurysm Repair without Prosthesis,34802
+6014,213,34813,Vasclar Surgery with Prosthesis - Thigh,34813
+6015,213,34820,Vasclar Surgery without Prosthesis - Thigh,34820
+6016,213,34821,Thoracic Aortic Aneurysm Stenting,34821
+6017,213,34825,Abdominal or Femoral Vascular Aneurysm Stenting,34825
+6018,213,34826,Abdominal Aortic Aneurysm Repair with Prosthesis,34826
+6019,213,34839,Aortic Baloon Therapy,34839
+6020,213,34900,Femoral Graft Placement,34900
+6021,213,35583,Peripheral Vascular Bypass Graft,35583
+6022,213,35901,Infected Graft Revision- Peripheral,35901
+6023,213,35907,Infected Graft Revision- Open Procedure,35907
+6024,213,36000,Venous Cannulation,36000
+6025,213,36002,Embolization,36002
+6026,213,36479,Laser Vascular Therapy,36479
+6027,213,36555,Central Venous Line,36555
+6028,213,36590,Removal of Peripheral Venous Catheter,36590
+6029,213,36569,Permanent Vascular Catheterazation,36569
+6030,213,36640,Arterial Line Insertion,36640
+6031,213,36818,Arteriovenous Fistular,36818
+6032,213,37200,Transcatheter Biopsy of Blood Vessel,37200
+6033,213,37237,Peripheral Vascular Stent Insertion,37237
+6034,213,37605,Major Vascular Ligation,37605
+6035,213,37607,Peripheral Arterio Venous Ligation,37607
+6036,213,37609,Vascular Biopsy and Ligation,37609
+6037,213,37722,Vascular Stripping,37722
+6038,213,37735,High Ligation and Stripping,37735
+6039,213,37765,Multiple Venoligation,37765
+6040,213,37780,Venoligation- Trauma,37780
+6041,213,37785,Venoligation- Varicose,37785
+6042,214,92920,Percutaneous Coronary Balloon Angioplasty,92920
+6043,214,92929,Percutaneous Coronary Stenting,92929
+6044,214,92941,Emergency Percutaneous Coronary Embolectomy and Stenting/Balloon,92941
+6045,214,92975,Intracoronary Thrombolytic Infusion with X-Ray,92975
+6046,214,92977,Intracoronary Thrombolytic Infusion,92977
+6047,214,92986,Percutaneous Aorta Valve Repair,92986
+6048,214,92987,Percutaneous Mitral Valve Repair,92987
+6049,214,92990,Percutaneous Pulmonary Valve Repair,92990
+6050,214,92998,Percutenous Pulmonary Artery Balloon,92998
+6051,214,93015,Stress Test/ Trademill Test,93015
+6052,214,93017,Drug Induced Stress ECG,93017
+6053,214,93224,Holter Monitor 48hr,93224
+6054,214,93228,Holter Monitor 24hr,93228
+6055,214,93272,Cardiac Monitor-24hr,93272
+6056,214,93297,Pacemaker Interrogation,93297
+6057,214,93299,CRDT Interrogation,93299
+6058,214,93306,Advanced/Detailed Echo,93306
+6059,214,93307,Echo Cardiogram,93307
+6060,214,93308,Echo Follow up,93308
+6061,214,93312,Trans Esophageal Echo,93312
+6062,214,93350,Stress Echo,93350
+6063,214,93530,Diagnostic Coronary Catheterization,93530
+6064,214,93784,Ambulatory Blood Pressure,93784
+6065,214,95885,EMG Standard,95885
+6066,215,61107,Subdural Tapping (Insertion of Brain Drainage Catheter or Fluid Pressure Recording or Monitoring Device),61107
+6067,215,61521,Brain Abcess,61521
+6068,215,61538,Burr Hole for Evacuation,61538
+6069,215,61540,Craniotomy for Posterior,61540
+6070,215,61590,Craniotomy for Olfactory,61590
+6071,215,61888,Craniotomy for Right Frontal,61888
+6072,215,61512,Craniotomy for Meningioma,61512
+6073,215,61510,Craniotomy for Tumour,61510
+6074,215,62000,Skull Elevation (Elevation of Depressed Skull Fracture),62000
+6075,215,61500,Skull Exostosis Excision (Removal of Brain Tumor or Other Skull Bone Lesion),61500
+6076,215,61546,Craniotomy for Pituitary (Incision of Forehead Bone for Excision of Pituitary Gland Tumor),61546
+6077,215,62252,Glomus Jugulare Tumour,62252
+6078,215,63704,Ant Fontenele Meningocele (Repair of (Less than 5 Centimeter) Spinal Cord Defect),63704
+6079,215,62005,Skull Elevation (Elevation of Depressed Skull Fractures),62005
+6080,215,62100,Naso Encephabulle Repair (Repair of Membrane Covering the Brain),62100
+6081,215,62120,Encephalocele Closure/Repair,62120
+6082,215,62141,Cranioplasty,62141
+6083,215,61548,Gastrectomy for Pituitary (Excision of Pituitary Gland Tumor),61548
+6084,215,62230,Revision VP Shunt (Replacement or Revision of Brain Fluid Drainage Shunt Valve or Catheter),62230
+6085,215,62256,Shunt Removal (Removal of Brain and Spinal Fluid Shunt System),62256
+6086,215,62225,VP Shunt and SBH Evacuation (Replacement or Irrigation of Brain Fluid Drainage Shunt Catheter),62225
+6087,215,61000,Subdural Tapping,61000
+6088,215,61108,Right Burr Holes for SDH,61108
+6089,215,61150,Brain Abcess,61150
+6090,215,61305,Craniotomy for Posterior,61305
+6091,215,61312,Subdural Haematoma,61312
+6092,215,61313,Craniotomy for Olfactory,61313
+6093,215,61154,Burr Hole and Haematoma,61154
+6094,215,61250,Burr Hole and Evacuation CSDH,61250
+6095,215,61314,Evaculation for Chronic,61314
+6096,215,61514,Ocipital Meningocele Excision,61514
+6097,215,61520,Olfactory Groove Mengioma,61520
+6098,215,61570,Craniotomy for Bullet / Foreign Body,61570
+6099,215,62010,Ds And Skull Elevation and EF,62010
+6100,215,62117,Encephaocele Repair,62117
+6101,215,62121,Ocipital Enephalocele Repair,62121
+6102,215,61575,"Transoral Approach Skullbase Bx,Tomor Excision",61575
+6103,215,61605,"Resection On Neoplastic,Vascular,Infectious Lesion Infratemporal Fossae",61605
+6104,215,61606,Infratemporal Fossa with Duroplasty/Grafting,61606
+6105,215,61609,Transection/Ligation Carotid Artery,61609
+6106,215,61612,Transection/Ligation Carotid Artery with Repair,61612
+6107,215,61613,"Obliteration of Carotid Aneurysm, AVN by Microscope",61613
+6108,215,61618,Secondary Repair of Dura for CSF Leaking,61618
+6109,215,61624,"Transcatheter Permanent Occlusion ,Embolization Intracranial",61624
+6110,215,61700,Aneurysmal Creeping Intracranial,61700
+6111,215,62201,ETV (Stereotactic Creation of Spinal Fluid Drainage Tract in the Brain using an Endoscope),62201
+6112,215,61698,Aneurysmal Cliping (Repair of Bulging of Blood Vessel (Aneurysm) in Brain),61698
+6113,215,62165,Removal of Pituitary Gland Tumor using an Endoscope,62165
+6114,216,22554,"ACDF (Fusion of Spine Bones with Removal of Disc at Upper Spinal Column, Anterior Approach)",22554
+6115,216,22612,Spinal Stabilization Trans,22612
+6116,216,22552,Anterior/ Posterior Cervical,22552
+6117,216,22845,C3-C4 Laminectomy Under C-Arm,22845
+6118,216,63075,Anterior Cervical Caging (Removal of Upper Spine Disc and Release of Spinal Cord and/or nerves),63075
+6119,216,22846,C4-C5 Coperctomy Cage and,22846
+6120,216,22847,C4-C5c5-C6 Ventral Fusion,22847
+6121,216,64634,Percutaneous Discectomy Cervical,64634
+6122,216,22851,Synthetic Caging Cervical,22851
+6123,217,22630,L2-L3 Caopectomy and,22630
+6124,217,22632,L4-L5 Fusion,22632
+6125,217,22840,Revision Transpedicular,22840
+6126,217,63017,Lumbar Canal Decompression,63017
+6127,217,63020,Lumbar Decompression,63020
+6128,217,63015,Discectomy L4-L5,63015
+6129,217,63045,Laminectomy L3-L5,63045
+6130,217,63046,Laminectomy L4-L5 Under C,63046
+6131,217,63047,Laminectomy T11-T12,63047
+6132,217,63048,Laminectomy T12-L1,63048
+6133,217,63056,DECOMPRESION L4-L5.L5-S1(Release of Lower Spinal Cord and/or Nerves),63056
+6134,217,63307,Retroperitoneal L2-L3,63307
+6135,217,63700,SB Closure,63700
+6136,217,63706,Revision Wound for SB Repair,63706
+6137,217,63702,SB Repair,63702
+6138,217,22849,Revision Instrument L4-L5,22849
+6139,217,22859,Carpectomy and Meshed Cage,22859
+6140,217,63030,Discectomy L4-L5/L5-S1,63030
+6141,217,63057,Fusion L3-S1 (Release of Middle or Lower Spinal Cord and/or Nerves),63057
+6142,217,63035,Disfraciculation LT Hip/Wide,63035
+6143,217,63050,Ilistrumented Fusion L5-S1,63050
+6144,217,64490,Lumber Facet Injection L4-L5,64490
+6145,217,22633,L4-L5 Fusion Under Image,22633
+6146,217,22634,L4-L5 And L5-S1 Epidural,22634
+6147,217,22800,L4-L5 Decompression Under C -Arm,22800
+6148,217,22812,L4-L5l5-S1 Decompresion,22812
+6149,217,22804,L5 Si Decompressive And,22804
+6150,217,22808,L5-S1 Facet Injection Under C,22808
+6151,217,22810,L5-Si Laminectomy,22810
+6152,217,22818,Laminectomy L3-L4,22818
+6153,217,22830,Laminectomy L2-L3 Under C,22830
+6154,217,,Laminectomy L3-L4 L5-S1,
+6155,217,62278,Percutaneous Discectomy Lumbar,62278
+6156,218,62311,Epidural Injection T12-L1,62311
+6157,218,63055,Thoracic Spine Stabilization (Release of Middle Spinal Cord and/or Nerves),63055
+6158,218,22842,Instrumentation T12-L4 Under C-Arm,22842
+6159,218,63086,T12-L1 Decompression And,63086
+6160,218,63087,T12-L1-L2l4 stabilization,63087
+6161,218,63088,T12-L1l2 Instrumentation,63088
+6162,218,63089,T2-T1 Fixation with Pedicle,63089
+6163,218,63276,Spinal Tumour Exicision And,63276
+6164,218,63064,T3 Decompression,63064
+6165,218,63085,T12 Decompression,63085
+6166,218,22802,Arthrodesis of 6 Vertebral SEG,22802
+6167,218,22819,Kyphectomy (Resection Vert SEG),22819
+6168,219,23040,Arthrotomy Shoulder,23040
+6169,219,23120,Bone Nibbling Clavicle,23120
+6170,219,23430,Repair-Biceps,23430
+6171,219,23655,Recurrent Shoulder,23655
+6172,219,23802,Arthrodesis-Shoulder Joint,23802
+6173,219,23900,Forequarter Amputation,23900
+6174,219,23935,Arthrolysis,23935
+6175,219,15101,Skin-Graft Shoulder,15101
+6176,219,23065,Biopsy Shoulder,23065
+6177,219,23330,Debridment Shoulder,23330
+6178,219,23921,Disarticulation-Shoulder,23921
+6179,219,24075,Tumour Excision,24075
+6180,219,24079,Tumour Debukling And Biopsy,24079
+6181,219,23540,Ac Joint Sublaxation,23540
+6182,219,23550,Orif Acj,23550
+6183,219,23500,Closed Treatment Clavicle,23500
+6184,219,23515,Orif Clavicle,23515
+6185,219,23570,Closed Treatment Scapula,23570
+6186,219,23585,ORIF Treatment Scapula,23585
+6187,219,23675,Closed Treatment of Shulder Dislocation,23675
+6188,219,23680,ORIF Shoulder Dislocation,23680
+6189,220,20200,Biopsy Elbow,20200
+6190,220,15736,Reverse Radial Flap Elbow,15736
+6191,220,24006,Gout Tophies Debridement,24006
+6192,220,24076,Elbow Joint Toilet-Bx,24076
+6193,220,24134,Sequstrectomy Humerus,24134
+6194,220,24341,Elbow Reconstruction,24341
+6195,220,24342,Repair-Triceps,24342
+6196,220,24345,Elbow Reconstruction,24345
+6197,220,24362,Reconstraction Elbow,24362
+6198,220,24400,Co Humerus,24400
+6199,220,24435,Revision ORIF Humerus,24435
+6200,220,24515,Dcp Humeerus,24515
+6201,220,24675,EF Trans Elbow,24675
+6202,220,24685,Plating Olecranon,24685
+6203,220,24800,Arthrodesis-Elbow Joint,24800
+6204,220,28341,Revision Surgery Right Elbow,28341
+6205,220,20550,Injection Bursa,20550
+6206,220,12006,SSG Arm,12006
+6207,220,24101,Excision Lateral Epicondyle,24101
+6208,220,24358,Lateral Epicondyle Excision Arthroscopically,24358
+6209,220,24359,Epicondyle Excision,24359
+6210,220,24360,Elbow Reconstrunction under C-Arm,24360
+6211,220,24579,T/Plate/Sign Nail Humerus,24579
+6212,220,24620,Closed Reduction Elbow,24620
+6213,220,24635,Open Reduction Elbow,24635
+6214,220,24640,Trans Elbow EF,24640
+6215,220,24900,Above Elbow Amputation,24900
+6216,220,24920,Disarticulation-Elbow / Amputation-through Arm,24920
+6217,221,11603,"Incisional Bx Forearm, Humerus, Shoulder",11603
+6218,221,20670,"Removal of K-Wire, Rush Rod, Screw, R/U, Humerus, Ankle, etc.",20670
+6219,221,20690,EF Radius / Ulna / Tibia,20690
+6220,221,20900,Bone Nibbling Radius / Tibia / Femur,20900
+6221,221,25275,Repair-Hand Extensor / Flexor Tendon,25275
+6222,221,25350,Co Distal Radius,25350
+6223,221,25415,Revision ORIF Radius,25415
+6224,221,25606,EF Extension Upper Limb,25606
+6225,221,25607,Volar Plate Redius,25607
+6226,221,25905,Amputation Forearm,25905
+6227,221,25924,Disarticulation-Wrist,25924
+6228,221,26055,Co and 1st and 2nd Proximal,26055
+6229,221,64718,Darach Procedure Ulna,64718
+6230,221,64719,Ulna Nerve Exploration,64719
+6231,221,11043,Debridement And EF,11043
+6232,221,24152,Bone Excision Radius,24152
+6233,221,24164,Excision Radial Head,24164
+6234,221,25111,Gandlion Excision Wrist,25111
+6235,221,25112,Granuloma Excision,25112
+6236,221,25320,Open Reduction Lunate,25320
+6237,221,25355,Co Radius,25355
+6238,221,25405,Decortication Radius,25405
+6239,221,25574,EF Radius / Ulna,25574
+6240,221,25600,Close Reduction MPI Open 1st,25600
+6241,221,29805,DX Shoulder Arthroscopically,29805
+6242,221,29824,Mumford Procedure,29824
+6243,221,29826,ACJ Decompresion by Endoscopy,29826
+6244,221,23470,HA Shoulder,23470
+6245,221,23472,TSA Total Shoulder Arthroplasty,23472
+6246,222,25635,Scaphoid Bone Reduction,25635
+6247,222,25800,Arthrodesis-Wrist Joint,25800
+6248,222,26350,Repair-Hand -Flexor (One / Two),26350
+6249,222,26548,Bilateral Vollar Plate Both,26548
+6250,222,26565,Corrective Osteatomy,26565
+6251,222,26850,Arthrodesis 1st MCP Joint,26850
+6252,222,26951,Flexor / Extensor Tendon Repair Hand,26951
+6253,222,25071,Excision Biopsy Hand,25071
+6254,222,25825,Lunate Excision,25825
+6255,222,27640,Exostosis Removal R/U,27640
+6256,222,64721,Bilateral Carpal Tunnel (Surgery),64721
+6257,223,20240,"Bone Biopsy Pelvis, Femur, Tibia, Humerus etc.",20240
+6258,223,20245,Biopsy Acetabular,20245
+6259,223,27030,Arthrotomy Hip,27030
+6260,223,27052,Synovectomy BX Hip,27052
+6261,223,27125,HA,27125
+6262,223,27130,Cemented THR,27130
+6263,223,27134,Revision Total Hip,27134
+6264,223,27158,Acetabular Re-Construction,27158
+6265,223,27215,Plating Ilium,27215
+6266,223,27218,Plating Si Joint,27218
+6267,223,27236,Revision HA,27236
+6268,223,27266,Revision Hip Reduction and K,27266
+6269,223,27275,Closed Reduction Total Hip,27275
+6270,223,27280,Arthrodesis-Hip,27280
+6271,223,27295,Hip Disarticularion,27295
+6272,223,27360,Saucerization Hip Joint/Femur/Tibia/Humerus/R-U,27360
+6273,223,27442,Total-Knee Replacement,27442
+6274,223,11101,Excision of Bone Hip,11101
+6275,223,15110,Skin Grafting,15110
+6276,223,27217,Plating Pubis Symphisis,27217
+6277,223,27227,Symphysis Plate Acetabular,27227
+6278,223,27235,Hip Srew Under C Arm,27235
+6279,223,27253,Open Reduction EF Hip,27253
+6280,223,27137,THA Revison Femoral Compnent,27137
+6281,223,27138,THA Revison Acetabular Component,27138
+6282,223,27132,Conversional HA to THA,27132
+6283,223,27299,Pemberton Osteotomy,27299
+6284,223,27258,ORIF Congenital / Developmental or Pathological Hip Dislocation(Tenotomy),27258
+6285,223,27175,Treatment of Slipped Growth Plate at Upper thigh Bone,27175
+6286,224,11605,Biops And Grafting Femur,11605
+6287,224,20270,Arthrotomy Knee,20270
+6288,224,20610,Skeletal-Traction,20610
+6289,224,20650,Skin-Traction,20650
+6290,224,20694,Cbp and Bone Graft,20694
+6291,224,20838,Revision Amputation AKA,20838
+6292,224,27422,Repair-Knee Medial/Lateral Colateral Ligament,27422
+6293,224,26605,Fracture Closed-Reduction,26605
+6294,224,27040,Synovial Biopsy Knee,27040
+6295,224,27245,"Revision Plate, Sign Nail, Shc/Angled Plate Femur",27245
+6296,224,27331,Arthrotomy of BX Knee,27331
+6297,224,27334,Synovectomy Knee Joint,27334
+6298,224,27345,Bakers Cyst Excision Knee,27345
+6299,224,27386,Quadriceps Tendon Repair,27386
+6300,224,27506,Antegrade / Retrograde Sign Nail Femur / Tibia / Humerus,27506
+6301,224,27507,Sign Nail Biopsy Femur,27507
+6302,224,27515,Condylar Butress Plate Femr,27515
+6303,224,27580,Arthrodesis- Knee/Ankle,27580
+6304,224,27590,Modular Transfemoral,27590
+6305,224,27964,Amputation Stump Femur,27964
+6306,224,28035,Posterior Release of (Release of Nerve Between Tissue and Bone of Foot),28035
+6307,224,29830,Diagnostics-Arthroscopy,29830
+6308,224,29850,Medial Collateal Ligament,29850
+6309,224,29873,Total Release-Knee,29873
+6310,224,29875,Arthroscopy Knee,29875
+6311,224,29882,Arthroscopy Reconstruction,29882
+6312,224,29887,Arthroscopy,29887
+6313,224,11045,Debridement,11045
+6314,224,15050,Skin Grafting Kneeand,15050
+6315,224,27244,DHS,27244
+6316,224,27248,Sign Nail Revision,27248
+6317,224,27310,Arthrotomy and Biopsy,27310
+6318,224,27420,Demedialiazation Patela,27420
+6319,224,27440,Total Knee Revision,27440
+6320,224,27445,Total Knee Replacement,27445
+6321,224,27450,Bilateral Co Both Femurs,27450
+6322,224,27508,ESIN Femur,27508
+6323,224,27511,Compression Screw Femur,27511
+6324,224,27513,"Co and Butress Plating, Pinning",27513
+6325,224,26520,Capsulloraphy Patella,26520
+6326,224,27524,TBW Patella,27524
+6327,224,27530,Trans Knee EF,27530
+6328,224,27598,Disarticulation-Knee,27598
+6329,224,27695,LCL Repair,27695
+6330,224,27724,Masquellete Technique,27724
+6331,224,27752,Fracture Closed-Reduction,27752
+6332,224,27758,Blade Plate CBP,27758
+6333,224,29880,Medial Meniscetomy,29880
+6334,224,29870,DX Arthroscopy,29870
+6335,224,29881,Arthroscipic meniscectomy / shaving,29881
+6336,224,29888,ACL Repair Arthroscopically,29888
+6337,224,29889,Pcl Repair Arthroscopically,29889
+6338,224,27418,Medialization of Patella (ORIF),27418
+6339,224,29877,Medialization of Patella (Arthroscopically ),29877
+6340,224,29999,MCL & ACL Repair Arthroscopically,29999
+6341,224,,,
+6342,225,11042,Skin Graft Leg,11042
+6343,225,15100,Soleus Flap Rotation,15100
+6344,225,13122,Biopsy Leg,13122
+6345,225,20201,Biopsy P/3Tibia and Trans,20201
+6346,225,20692,"Ankle, Knee Spanning SD/ EF T/F",20692
+6347,225,20693,"EF/Hoffman Revision/Adjustment/ Tibia/Fibula,Femur",20693
+6348,225,22853,Double Butress Plate,22853
+6349,225,27536,T Plateau Fracture Revision,27536
+6350,225,27610,Joint Toilet Ankle,27610
+6351,225,27620,Arthrotomy Ankle,27620
+6352,225,27635,Anterior Bone Block Excion,27635
+6353,225,27650,Achiles Tendon Repair,27650
+6354,225,27696,Ankle Reconstruction (Repair of Disruption of Both Collateral Ligaments of Ankle),27696
+6355,225,27700,Ankle Reconstraction,27700
+6356,225,27704,Angles Plate Removal,27704
+6357,225,27705,CO And EF Tibia,27705
+6358,225,27709,CO Tibia,27709
+6359,225,27722,Grafting Tibia,27722
+6360,225,27759,Bilateral Sign Nailing Tibia,27759
+6361,225,27825,Ex Fix T/F,27825
+6362,225,27827,Tibia Lengthening,27827
+6363,225,27860,Tripe Arthrodesis Ankle,27860
+6364,225,27870,Arthodresis Left Ankle,27870
+6365,225,27880,Modular Transtibial (BKA),27880
+6366,225,27882,Above Knee Amputation (AKA),27882
+6367,225,11047,Sequstrectomy Tibia,11047
+6368,225,11400,Excision Biopsy Tibia,11400
+6369,225,11442,Demoid Cyst Excision,11442
+6370,225,20680,Sign Nail Removal Tibia,20680
+6371,225,24925,Stump Closure Leg,24925
+6372,225,24930,Soft Tissue-Stamp Revision,24930
+6373,225,27535,Butress Tibia,27535
+6374,225,27599,Surgical Debridement Tibia,27599
+6375,225,27607,HTCO Tibia,27607
+6376,225,27826,Ex Fix Tibia,27826
+6377,225,27828,Butress Plate Distal,27828
+6378,225,27871,Decortication EF Tibia,27871
+6379,225,27888,Disarticulation - Ankle,27888
+6380,225,29906,Arthroscopiy of Ankle Joint,29906
+6381,225,29907,Debridemen of Ankle Arthroscopically,29907
+6382,226,26538,Traction Skeletal(Adult),26538
+6383,226,24538,Traction Skin (Children),24538
+6384,226,23600,Distal Humeral Fracture Pop (Adults),23600
+6385,226,29345,Above Knee Pop (Adult),29345
+6386,226,29065,Above/Below Elbow Pop (Adult/Children),29065
+6387,226,29325,Sarmieto Pop (Adults),29325
+6388,226,29085,Below Elbow Pop (Children),29085
+6389,226,29405,Below Knee Pop (Children/Adult),29405
+6390,226,29450,Club Foot Pop (Children),29450
+6391,226,29445,Contact/Cylinder Pop,29445
+6392,226,29305,Sarmieto Pop (Children),29305
+6393,227,11044,In Growing Nail Excision,11044
+6394,227,27605,ETA and Pmr,27605
+6395,227,27687,Bilateral PCT,27687
+6396,227,27805,Ankle Foot Orthosis,27805
+6397,227,27814,Open Reduction-Weber,27814
+6398,227,27823,Open Reduction-Weber,27823
+6399,227,28400,SD And Calcaneal and Pop,28400
+6400,227,28445,Reconstruction-Talus,28445
+6401,227,28645,Reconstruction-Calcaneum,28645
+6402,227,28715,Tripe Arthropdesis Foot,28715
+6403,227,28750,ARTHRODESIS OF MTPJ 2 and 3rd,28750
+6404,227,28820,Amputation Fore/Mid /Hind Foot,28820
+6405,227,28810,Disarticulation-Phallanges,28810
+6406,227,29058,Fibre Glass Free Casting Tape,29058
+6407,227,29899,Arthrodesis (Triple) Foot,29899
+6408,227,29905,Synovectomy-Arthrotomy,29905
+6409,227,32405,Trephene Needle Biopsy,32405
+6410,227,11300,Excisional Biopsy Foot,11300
+6411,227,26952,Poly Dactyl/Extra Digit Excision Foot,26952
+6412,227,27122,Modified Girdle Stone Right,27122
+6413,227,27606,ETA and Pmr-Clubfoot,27606
+6414,227,28262,BIL ETA/PMR,28262
+6415,227,28615,Orif-Calcaneum,28615
+6416,227,28730,Athrodesis First and Second,28730
+6417,228,90792,Psychiatric Diagnostic Evaluation,90792
+6418,228,90791,Psychological Assessment,90791
+6419,228,90832,"Individual Psychotherapy, 30mins",90832
+6420,228,90834,"Individual Psychotherapy, 45 Mins",90834
+6421,228,90837,"Individual Psychotherapy, 60 Mins",90837
+6422,228,90838,Psychotherapy,90838
+6423,228,90845,Psychoanalysis,90845
+6424,228,90840,Psychotherapy for Crisis,90840
+6425,228,90839,"Psychotherapy for Crisis, First 60 Minutes",90839
+6426,228,96101,Psychological Testing,96101
+6427,228,90846,Family/Couples psychotherapy,90846
+6428,228,90847,"Family psychotherapy including patient, 50 minutes",90847
+6429,228,90849,Multiple-Family Group Psychotherapy,90849
+6430,228,90865,Injection of Hypnotic Drug for Psychiatric Diagnosis or Therapy,90865
+6431,228,90875,"Biofeedback Training with Psychotherapy, 30 Minutes",90875
+6432,228,90876,"Biofeedback Training with Psychotherapy, 45 Minutes",90876
+6433,228,90853,Group Psychotherapy,90853
+6434,228,99510,Home Visit for Counseling,99510
+6435,228,90870,Electroconvulsive Therapy,90870
+6436,228,90885,Psychiatric Review,90885
+6437,228,90887,Explanation of Psychiatric Information,90887
+6438,228,90889,Psychiatric Report Preparation,90889
+6439,228,90899,Psychiatric Service or Procedure,90899
+6440,228,96118,Neuropsychological Testing,96118
+6441,228,96110,Developmental Screening,96110
+6442,228,96111,Developmental Testing,96111
+6443,228,96116,Neurobehaviour Assessment,96116
+6444,228,95812,EEG 1 Hour,95812
+6445,228,95813,EEG more than 1 Hour,95813
+6446,228,95816,EEG Awake and Drowsy,95816
+6447,228,95819,EEG Awake and Asleep,95819
+6448,228,95827,EEG Overnight,95827
+6449,229,57421,Biopsy of Vagina and Cervix using an Endoscope,57421
+6450,229,57454,Biopsy and Scraping of the Cervix using an Endoscope,57454
+6451,229,57455,Cone Biopsy of the Cervix and Vagina using an Endoscope,57455
+6452,229,57511,Cryotherapy (Cervix),57511
+6453,229,57460,Loop Electrosurgical Excision Procedure (LeEP),57460
+6454,230,88142,Cervical Cancer Screening (Pap Smear),88142
+6455,230,88143,Cervical Cancer Screening (VIA/VILI),88143
+6456,231,96411,Chemotherapy Administration and Supervision,96411
+6457,231,96405,"Intralesional Chemotherapy, up to and including 7 Lesions",96405
+6458,231,96406,"Intralesional Chemotherapy, more than 7 Lesions",96406
+6459,231,96402,Hormonal Anti-Neoplastic Chemotherapy Administration Beneath the Skin or into the Muscle,96402
+6460,231,96409,Bolus Intravenous Chemotherapy Infusion (Using Push Technique),96409
+6461,231,96413,Intravenous Chemotherapy Infusion up to 1 Hour,96413
+6462,231,96415,Intravenous Chemotherapy Infusion,96415
+6463,231,96521,Refilling and Maintenance of Portable Pumps.,96521
+6464,231,96416,Prolonged Chemotherapy Infusion into a Vein by Portable or Implanted Pump more than 8 Hours,96416
+6465,231,96417,Infusion of Different Chemotherapy Drug or Substance into a Vein up to 1 Hour,96417
+6466,231,96420,Bolus Intra-Arterial Chemotherapy Infusion (Using Push Technique),96420
+6467,231,96422,Infusion of Chemotherapy into an Artery up to 1 Hour,96422
+6468,231,96423,Intra-Arterial Chemotherapy Infusion,96423
+6469,231,96425,"Prolonged Chemotherapy Infusion into Artery by Portable or Implanted Pump, more",96425
+6470,231,96440,Intrapleural Chemotherapy (Chemotherapy Delivery into the Chest Cavity),96440
+6471,231,96446,Intraperitoneal Chemotherapy Infusion,96446
+6472,231,96450,Intrathecal Chemotherapy Administration,96450
+6473,232,77790,Supervision of Radiotherapy Delivery,77790
+6474,232,77401,Superficial Radiotherapy (EG Skin & Post Keloidectomy),77401
+6475,232,77280,Conventional Simulation (Simple),77280
+6476,232,77285,Conventional Simulation (Complex),77285
+6477,232,77290,CT Simulation Simple,77290
+6478,232,77293,CT Simulation Complex (With Management of Respiratory Movement),77293
+6479,232,77387,Image Guided Radiotherapy (IGRT) Delivery,77387
+6480,232,77299,Radiotherapy Planning 2D,77299
+6481,232,77295,Radiotherapy Planning 3d,77295
+6482,232,77301,Management of Modulation Radiotherapy (IMRT) Planning,77301
+6483,232,77386,Intensity Modulated Radiation Therapy (IMRT) Delivery,77386
+6484,232,77306,Curative Radiotherapy 2D,77306
+6485,232,77307,Palliative Radiotherapy 2D,77307
+6486,232,77316,Curative Radiotherapy 3D,77316
+6487,232,77317,Palliative Radiotherapy 3D,77317
+6488,232,77318,Extended Local/Hemi Body Radiotherapy ( LHB & UHB RT),77318
+6489,232,77331,Special Radiation Therapy Planning,77331
+6490,232,77417,Therapeutic Radiology Port Films,77417
+6491,232,77332,"Radiation Treatment Devices, Design and Construction (Moulding) in 2D",77332
+6492,232,77334,"Radiation Treatment Devices, Design and Construction (Moulding) in 3D",77334
+6493,232,77338,Design and Construction of Device for Radiation Therapy,77338
+6494,232,77300,Calculation of Radiotherapy Dose,77300
+6495,232,77469,Intraoperative Radiotherapy,77469
+6496,232,77371,"Radiotherapy Delivery, Steriotactic Radiosurgery, for Cranial Growth per Session",77371
+6497,232,77321,Radiation Therapy Total Body Port Plan,77321
+6498,232,77778,Prostate Brachytherapy,77778
+6499,232,57155,Uterine Brachytherapy (Insertion of a Device to Deliver Radiation Therapy to the Uterus),57155
+6500,232,57156,Vaginal Brachytherapy,57156
+6501,232,77770,High Dose Intracavitary Brachytherapy (ICT),77770
+6502,232,77385,Electron Treatment Delivery (Electron Therapy),77385
+6503,232,77520,Proton Treatment Delivery (Proton Therapy),77520
+6504,233,78315,Bone Scan,78315
+6505,233,78708,Renal Scan,78708
+6506,233,78707,Dimercaptosuccinic Acid Scan (Dmsa),78707
+6507,233,78454,Myocardial Perfusion Study,78454
+6508,233,78481,Muga/Erna Study (Single),78481
+6509,233,78483,Muga/Erna Study (Multiple),78483
+6510,233,78226,Disida Hepatobiliary Study,78226
+6511,233,78267,Merckels' Diverticulum Study,78267
+6512,233,38790,Lymphoscintigraphy,38790
+6513,233,38792,Sentinel Lymph Node,38792
+6514,233,78607,Cerebral Perfusion Study,78607
+6515,233,78608,Nuclear Medicine Study Brain with Metabolic Evaluation,78608
+6516,233,78609,Nuclear Medicine Study Brain with Blood Circulation Evaluation,78609
+6517,233,78071,Parathyroid Scintigraphy,78071
+6518,233,78072,Imaging of Parathyroid with CT and Nuclear Medicine Study,78072
+6519,233,78264,Milk Scan,78264
+6520,233,78012,Thyroid Scan,78012
+6521,233,78018,Iodine 131 Diagnostic Whole Body Scan (WBS),78018
+6522,233,79005,Iodine 131 Posttherapy Whole Body Scan (WBS),79005
+6523,233,78806,Galium 67 Scan,78806
+6524,233,78802,MIBG Scan,78802
+6525,233,78805,White Body Scan,78805
+6526,233,78701,Nuclear Medicine Study of Kidney With Assessment of Blood Flow,78701
+6527,233,78710,Nuclear Medicine Study of Kidney,78710
+6528,233,78725,Nuclear Medicine Kidney Function Study,78725
+6529,233,78730,Nuclear Medicine Study of Remaining Urine In Bladder,78730
+6530,233,78740,Nuclear Medicine Backwash of Urine Into Kidney,78740
+6531,233,78761,Nuclear Medicine Study of Testicles And Blood Vessel Flow,78761
+6532,233,78799,Nuclear Medicine Study of Urogenital Systems,78799
+6533,233,78800,Nuclear Medicine Study of Radioactive Material Distribution at Tumor Location,78800
+6534,233,78801,Nuclear Medicine Study of Radioactive Material Distribution at Multiple Tumor Locations,78801
+6535,233,78803,Nuclear Medicine Study of Radioactive Material Distribution,78803
+6536,233,78804,"Nuclear Medicine Study of Radioactive Material Distribution of Whole Body, Requiring 2 or more Days Imaging",78804
+6537,233,78808,Injection of Radioactive Contrast Material into a Vein for Non-Imaging Gamma Probe,78808
+6538,233,78811,Nuclear Medicine Study Limited Area,78811
+6539,233,78812,Nuclear Medicine Imaging from Skull Base to Mid-Thigh,78812
+6540,233,78813,Nuclear Medicine Imaging Whole Body,78813
+6541,233,78814,Nuclear Medicine Study with CT Imaging,78814
+6542,233,78815,Nuclear Medicine Study with CT Imaging Skull Base to Mid-Thigh,78815
+6543,233,78816,Nuclear Medicine Study with CT Imaging Whole Body,78816
+6544,234,57421,Biopsy of Vagina and Cervix using an Endoscope,57421
+6545,234,57454,Biopsy and Scraping of the Cervix using an Endoscope,57454
+6546,234,57455,Cone Biopsy of the Cervix and Vagina using an Endoscope,57455
+6547,234,57511,Cryotherapy (Cervix),57511
+6548,234,57460,Loop Electrosurgical Excision Procedure (LeEP),57460
+6549,235,88142,Cervical Cancer Screening (Pap Smear),88142
+6550,235,88143,Cervical Cancer Screening (VIA/VILI),88143
+6551,236,96411,Chemotherapy Administration and Supervision,96411
+6552,236,96405,"Intralesional Chemotherapy, up to and including 7 Lesions",96405
+6553,236,96406,"Intralesional Chemotherapy, more than 7 Lesions",96406
+6554,236,96402,Hormonal Anti-Neoplastic Chemotherapy Administration Beneath the Skin or into the Muscle,96402
+6555,236,96409,Bolus Intravenous Chemotherapy Infusion (Using Push Technique),96409
+6556,236,96413,Intravenous Chemotherapy Infusion up to 1 Hour,96413
+6557,236,96415,Intravenous Chemotherapy Infusion,96415
+6558,236,96521,Refilling and Maintenance of Portable Pumps.,96521
+6559,236,96416,Prolonged Chemotherapy Infusion into a Vein by Portable or Implanted Pump more than 8 Hours,96416
+6560,236,96417,Infusion of Different Chemotherapy Drug or Substance into a Vein up to 1 Hour,96417
+6561,236,96420,Bolus Intra-Arterial Chemotherapy Infusion (Using Push Technique),96420
+6562,236,96422,Infusion of Chemotherapy into an Artery up to 1 Hour,96422
+6563,236,96423,Intra-Arterial Chemotherapy Infusion,96423
+6564,236,96425,"Prolonged Chemotherapy Infusion into Artery by Portable or Implanted Pump, more",96425
+6565,236,CODE,SERVICE DESCRIPTION,CODE
+6566,236,,than 8 Hours,
+6567,236,96440,Intrapleural Chemotherapy (Chemotherapy Delivery into the Chest Cavity),96440
+6568,236,96446,Intraperitoneal Chemotherapy Infusion,96446
+6569,236,96450,Intrathecal Chemotherapy Administration,96450
+6570,237,77790,Supervision of Radiotherapy Delivery,77790
+6571,237,77401,Superficial Radiotherapy (EG Skin & Post Keloidectomy),77401
+6572,237,77280,Conventional Simulation (Simple),77280
+6573,237,77285,Conventional Simulation (Complex),77285
+6574,237,77290,CT Simulation Simple,77290
+6575,237,77293,CT Simulation Complex (With Management of Respiratory Movement),77293
+6576,237,77387,Image Guided Radiotherapy (IGRT) Delivery,77387
+6577,237,77299,Radiotherapy Planning 2D,77299
+6578,237,77295,Radiotherapy Planning 3d,77295
+6579,237,77301,Management of Modulation Radiotherapy (IMRT) Planning,77301
+6580,237,77386,Intensity Modulated Radiation Therapy (IMRT) Delivery,77386
+6581,237,77306,Curative Radiotherapy 2D,77306
+6582,237,77307,Palliative Radiotherapy 2D,77307
+6583,237,77316,Curative Radiotherapy 3D,77316
+6584,237,77317,Palliative Radiotherapy 3D,77317
+6585,237,77318,Extended Local/Hemi Body Radiotherapy ( LHB & UHB RT),77318
+6586,237,77331,Special Radiation Therapy Planning,77331
+6587,237,77417,Therapeutic Radiology Port Films,77417
+6588,237,77332,"Radiation Treatment Devices, Design and Construction (Moulding) in 2D",77332
+6589,237,77334,"Radiation Treatment Devices, Design and Construction (Moulding) in 3D",77334
+6590,237,77338,Design and Construction of Device for Radiation Therapy,77338
+6591,237,77300,Calculation of Radiotherapy Dose,77300
+6592,237,77469,Intraoperative Radiotherapy,77469
+6593,237,77371,"Radiotherapy Delivery, Steriotactic Radiosurgery, for Cranial Growth per Session",77371
+6594,237,77321,Radiation Therapy Total Body Port Plan,77321
+6595,237,77778,Prostate Brachytherapy,77778
+6596,237,57155,Uterine Brachytherapy (Insertion of a Device to Deliver Radiation Therapy to the Uterus),57155
+6597,237,57156,Vaginal Brachytherapy,57156
+6598,237,77770,High Dose Intracavitary Brachytherapy (ICT),77770
+6599,237,77385,Electron Treatment Delivery (Electron Therapy),77385
+6600,237,77520,Proton Treatment Delivery (Proton Therapy),77520
+6601,238,78315,Bone Scan,78315
+6602,238,78708,Renal Scan,78708
+6603,238,78707,Dimercaptosuccinic Acid Scan (Dmsa),78707
+6604,238,78454,Myocardial Perfusion Study,78454
+6605,238,78481,Muga/Erna Study (Single),78481
+6606,238,78483,Muga/Erna Study (Multiple),78483
+6607,238,78226,Disida Hepatobiliary Study,78226
+6608,238,78267,Merckels' Diverticulum Study,78267
+6609,238,38790,Lymphoscintigraphy,38790
+6610,238,38792,Sentinel Lymph Node,38792
+6611,238,78607,Cerebral Perfusion Study,78607
+6612,238,78608,Nuclear Medicine Study Brain with Metabolic Evaluation,78608
+6613,238,78609,Nuclear Medicine Study Brain with Blood Circulation Evaluation,78609
+6614,238,78071,Parathyroid Scintigraphy,78071
+6615,238,78072,Imaging of Parathyroid with CT and Nuclear Medicine Study,78072
+6616,238,78264,Milk Scan,78264
+6617,238,78012,Thyroid Scan,78012
+6618,238,78018,Iodine 131 Diagnostic Whole Body Scan (WBS),78018
+6619,238,79005,Iodine 131 Posttherapy Whole Body Scan (WBS),79005
+6620,238,78806,Galium 67 Scan,78806
+6621,238,78802,MIBG Scan,78802
+6622,238,78805,White Body Scan,78805
+6623,238,78701,Nuclear Medicine Study of Kidney With Assessment of Blood Flow,78701
+6624,238,78710,Nuclear Medicine Study of Kidney,78710
+6625,238,CODE,SERVICE DESCRIPTION,CODE
+6626,238,78725,Nuclear Medicine Kidney Function Study,78725
+6627,238,78730,Nuclear Medicine Study of Remaining Urine In Bladder,78730
+6628,238,78740,Nuclear Medicine Backwash of Urine Into Kidney,78740
+6629,238,78761,Nuclear Medicine Study of Testicles And Blood Vessel Flow,78761
+6630,238,78799,Nuclear Medicine Study of Urogenital Systems,78799
+6631,238,78800,Nuclear Medicine Study of Radioactive Material Distribution at Tumor Location,78800
+6632,238,78801,Nuclear Medicine Study of Radioactive Material Distribution at Multiple Tumor Locations,78801
+6633,238,78803,Nuclear Medicine Study of Radioactive Material Distribution,78803
+6634,238,78804,"Nuclear Medicine Study of Radioactive Material Distribution of Whole Body, Requiring 2 or more Days Imaging",78804
+6635,238,78808,Injection of Radioactive Contrast Material into a Vein for Non-Imaging Gamma Probe,78808
+6636,238,78811,Nuclear Medicine Study Limited Area,78811
+6637,238,78812,Nuclear Medicine Imaging from Skull Base to Mid-Thigh,78812
+6638,238,78813,Nuclear Medicine Imaging Whole Body,78813
+6639,238,78814,Nuclear Medicine Study with CT Imaging,78814
+6640,238,78815,Nuclear Medicine Study with CT Imaging Skull Base to Mid-Thigh,78815
+6641,238,78816,Nuclear Medicine Study with CT Imaging Whole Body,78816
+6642,239,97011,Cervical Traction,97011
+6643,239,97013,Lumbar Traction,97013
+6644,240,94668,Manual Chest Physiotherapy,94668
+6645,240,94620,Endurance Training,94620
+6646,240,94452,Lung Function Test,94452
+6647,240,94640,Airway Clearance Techniques / Breathing Exercises/Nebulization,94640
+6648,240,94667,Conventional Chest Physiotherapy,94667
+6649,240,94669,Mechanical Chest Physiotherapy,94669
+6650,240,94680,Spirometry Exercises,94680
+6651,240,94681,Positive Expiratory Pressure Therapy,94681
+6652,240,94645,Aerosol Therapy- Nebulizer / Steam Therapy,94645
+6653,240,32997,Therapeutic Postural Drainage,32997
+6654,240,31720,Suction of Secretions,31720
+6655,240,99503,Chest Physiotherapy Home Visit,99503
+6656,241,97010,Cold Therapy,97010
+6657,241,99401,Ice Therapy,99401
+6658,241,97034,Contrast Bath,97034
+6659,241,97018,Heat Therapy / Wax Bath Therapy,97018
+6660,242,97164,Medical Exercise Therapy - Therapeutic Equipments,97164
+6661,242,97110,Non Paralytic Exercise Therapy,97110
+6662,242,97161,Physiotherapy Follow up,97161
+6663,242,96004,Postural Correction,96004
+6664,242,97530,Postural Training,97530
+6665,242,29425,Ambulation with Below Knee Pop,29425
+6666,242,29355,Ambulation with Medical Aid,29355
+6667,242,96001,Video Taped Gait Analysis,96001
+6668,242,29440,Gait Training on Walker,29440
+6669,242,97116,Gait Training,97116
+6670,243,97026,Infra Red Radiation(IRR),97026
+6671,243,97024,Shortwave Diathermy(SWD),97024
+6672,243,97139,Microwave Physiotherapy,97139
+6673,243,97028,Ultra Violet Radiation(UV),97028
+6674,243,97035,Ultrasound Therapeutic,97035
+6675,243,20979,Therapeutic Ultrasound - Bone,20979
+6676,243,97032,Tens,97032
+6677,243,97140,Manual Therapy,97140
+6678,243,97124,Therapeutic Massage,97124
+6679,243,96002,Electromyography (EMG) Physiotherapy,96002
+6680,243,0278T,Interferential (Ift) Therapy,0278T
+6681,243,0101T,Shock Wave Therapy,0101T
+6682,243,97033,Iontophoresis,97033
+6683,243,90901,Biofeedback Training,90901
+6684,244,97761,Limb Orthotic Therapy,97761
+6685,244,97760,Fitting Mobility / Assistive Device,97760
+6686,244,29125,Non Moveable Splint (Fore Arm),29125
+6687,244,29505,Long Leg Splinting,29505
+6688,244,29515,Below Knee Splinting,29515
+6689,244,29530,Knee Strapping,29530
+6690,244,29540,Ankle/ Foot Strapping,29540
+6691,244,97542,Wheelchair Training - Physiotherapy,97542
+6692,245,97022,Whirlpool Therapy (Aquatic Therapy),97022
+6693,245,97113,Hydrotherapy,97113
+6694,245,97036,Hydrotherapy - Hubbard,97036
+6695,245,97016,Decongestive Physiotherapy,97016
+6696,246,97170,Sport Physiotherapy,97170
+6697,246,97171,Sport Physiotherapy - Review,97171
+6698,246,97172,Sport Physiotherapy - Evaluation,97172
+6699,246,97750,Physical Performance Test,97750
+6700,247,97162,Neurodevelopmental Therapy,97162
+6701,247,99391,Paediatric Physiotherapy -Neonates,99391
+6702,247,99392,Paediatric Physiotherapy - 1 - 4 Years,99392
+6703,247,99393,Paediatric Physiotherapy - 5 - 11 Years,99393
+6704,247,99394,Preventive Health Education - 12 - 17 Years,99394
+6705,248,99395,Preventive Health Education - 18 - 39 Years,99395
+6706,248,99396,Preventive Health Education - 40-64 Years,99396
+6707,248,99397,Geriatric Health Education - Above 65 Years,99397
+6708,248,99404,Preventive Physiotherapy Counseling,99404
+6709,248,99412,Therapeutic Health Education,99412
+6710,248,97150,Group Therapy,97150
+6711,248,,,
+6712,249,97811,Acupuncture,97811
+6713,249,97814,Acupuncture With Electrical Stimulation,97814
+6714,250,99091,Physiotherapeutic Report,99091
+6715,250,99600,Community Based Rehabilitation,99600
+6716,250,93797,Cardiac Rehabilitation,93797
+6717,250,0310T,Motor Function Mapping of Arm or Leg,0310T
+6718,250,97799,Exercise Therapy Paralytic Condition,97799
+6719,250,97112,Facial Paralysis Exercise,97112
+6720,250,97163,Neurofacilitation Therapy,97163
+6721,250,97039,Neuromuscular Rehabilitation,97039
+6722,250,0106T,Sensory Assessment - Deep Touch,0106T
+6723,250,0108T,Sensory Assessment - Cold Touch,0108T
+6724,250,0109T,Sensory Assessment - Heat Touch,0109T
+6725,250,0110T,Sensory Assessment - Superficial Touch,0110T
+6726,250,99450,Disability Assessment,99450
+6727,250,97537,Ergonomic Assessment,97537
+6728,250,95831,Muscle Strenght Grading - Limbs,95831
+6729,250,95832,Muscle Strenght Grading - Hand,95832
+6730,250,95833,Muscle Strength Grading - Body,95833
+6731,250,95851,Range of Motion / Rom Axial Skeleton,95851
+6732,250,95852,Range of Motion/ Rom Appendicular,95852
+6733,251,99455,Adaptive Skill Training,99455
+6734,251,0373T,Behavioral Modification Management,0373T
+6735,251,97532,Cognitive Skills,97532
+6736,251,99403,Functional Counseling,99403
+6737,251,97755,Hand Function Skills,97755
+6738,251,99336,Adl's Functional Skills Training,99336
+6739,251,97167,Rehabilitation Occupational Therapy,97167
+6740,251,99509,Productivity Activities,99509
+6741,251,90836,Psychosocial Intervention,90836
+6742,251,97168,Remedial Activities,97168
+6743,251,97535,Self Care Activities,97535
+6744,251,98960,Self Care Skills Training,98960
+6745,251,97533,Sensory Integration / Stimulation Training,97533
+6746,251,97165,Occupational Therapy Physical – Follow up,97165
+6747,251,92526,Dysphagia Management,92526
+6748,251,90882,Learning Difficult Management,90882
+6749,251,97166,Occupational Therapy at Rehabilitation Village,97166
+6750,251,99456,Occupational Therapy Working Area Visit,99456
+6751,251,98961,Closed Group Therapy,98961
+6752,251,98962,Open Group Therapy,98962
+6753,251,96127,Behavioral Assessment,96127
+6754,251,96152,Psychoeducation - Occupational Therapy,96152
+6755,251,0368T,Orientation On Protocol and Procedure,0368T
+6756,251,0369T,Re-Orientation On Protocol and Procedure,0369T
+6757,251,99402,Preventive Counseling,99402
+6758,251,97545,Activity Grading,97545
+6759,251,0371T,Family Psychoeducation,0371T
+6760,251,0372T,Behavioral Group Therapy,0372T
+6761,251,0374T,Behavioural Modification,0374T
+6762,252,29105,Splints - Static / Dynamic,29105
+6763,252,29126,Fore Arm Splint-Dynamic,29126
+6764,252,29130,Hand Splint-Static,29130
+6765,252,29131,Hand Splint-Dynamic,29131
+6766,253,92507,Speech And Language Intervention Therapy - Child / Adult,92507
+6767,253,92522,Phonological / Articulation Management,92522
+6768,253,92523,Speech and Language Comprehension Review,92523
+6769,253,92524,Voice Analysis,92524
+6770,253,92508,Speech and Language Group Therapy,92508
+6771,253,92605,Augmentative Alternative Communication Intervention,92605
+6772,253,92610,Swallowing Intervention Follow up,92610
+6773,253,96105,Expressive and Receptive Speech and Language Assessment,96105
+6774,253,92555,Auditory Assessment,92555
+6775,253,92556,Auditory and Speech Assessment,92556
+6776,253,92630,Auditory Verbal Therapy,92630
+6777,253,92633,Auditory Training,92633
+6778,254,99292,CPR-Resuscitation,99292
+6779,254,190,Anesthesia for procedure on facial bones or skull,190
+6780,254,192,Anesthesia for surgery of facial bones or skull,192
+6781,254,210,Anesthesia for procedure on brain,210
+6782,254,211,Anesthesia for procedure to remove blood collection in brain,211
+6783,254,212,Anesthesia for procedure to remove fluid in brain,212
+6784,254,214,Anesthesia for procedure to create holes in skull including X-ray imaging,214
+6785,254,215,Anesthesia for procedure to repair skull or skull fracture,215
+6786,254,216,Anesthesia for procedure on blood vessel in brain,216
+6787,254,218,Anesthesia for procedure on brain patient in sitting position,218
+6788,254,220,Anesthesia for procedure to drain brain and spinal cord fluid,220
+6789,254,222,Anesthesia for procedure on nerve in brain,222
+6790,254,300,Anesthesia for procedure on esophagus and neck,300
+6791,254,320,"Anesthesia for procedure on esophagus and neck, age 1 year or older",320
+6792,254,450,Anesthesia for procedure on collar bone and shoulder blade,450
+6793,254,454,Anesthesia for biopsy of collar bone,454
+6794,254,470,Anesthesia for partial removal of rib,470
+6795,254,472,Anesthesia for partial removal of rib and chest wall repair,472
+6796,254,474,Anesthesia for partial removal of rib and chest wall reconstruction,474
+6797,254,520,Anesthesia for closed procedure in chest,520
+6798,254,524,Anesthesia for closed drainage of lung fluid,524
+6799,254,532,Anesthesia for central vein access,532
+6800,254,600,Anesthesia for procedure on upper spine and spinal cord,600
+6801,254,604,"Anesthesia for procedure on spine and spinal cord, patient in sitting position",604
+6802,254,620,Anesthesia for procedure on middle spine and spinal cord,620
+6803,254,626,Anesthesia for procedure on middle spine and spinal cord with 1 lung ventilation,626
+6804,254,630,Anesthesia for procedure on lower spine,630
+6805,254,632,Anesthesia for removal of nerves in lower spine,632
+6806,254,635,Anesthesia for spinal tap,635
+6807,254,640,Anesthesia for closed manipulation of spine,640
+6808,254,670,Anesthesia for procedure on spine and spinal cord,670
+6809,254,700,Anesthesia for procedure on upper front abdominal wall,700
+6810,254,1112,Anesthesia for bone marrow aspiration and/or biopsy at pelvic bone,1112
+6811,254,1120,Anesthesia for procedure on pelvic bone,1120
+6812,254,1130,Anesthesia for application or revision of body cast,1130
+6813,254,1140,Anesthesia for amputation of leg including pelvic bone,1140
+6814,254,1150,Anesthesia for removal of pelvic bone tumor,1150
+6815,254,1160,Anesthesia for procedure on pubic bone or sacroiliac joint,1160
+6816,254,1170,Anesthesia for open procedure on pubic bone or sacroiliac joint,1170
+6817,254,1173,Anesthesia for open repair of pelvic fracture,1173
+6818,254,1180,Anesthesia for removal of external pelvic nerve,1180
+6819,254,1190,Anesthesia for removal of internal pelvic nerve,1190
+6820,254,1200,Anesthesia for closed procedure on hip joint,1200
+6821,254,1202,Anesthesia for procedure on hip joint using an endoscope,1202
+6822,254,1210,Anesthesia for open surgical procedure on hip joint,1210
+6823,254,1212,Anesthesia for open hip joint dislocation,1212
+6824,254,1214,Anesthesia for open total hip joint replacement,1214
+6825,254,1215,Anesthesia for open revision of total hip joint replacement,1215
+6826,254,1220,Anesthesia for closed procedure on upper two-thirds of thigh bone,1220
+6827,254,1230,Anesthesia for open procedure on upper two-thirds of thigh bone,1230
+6828,254,1232,Anesthesia for open amputation at upper two-thirds of thigh bone,1232
+6829,254,1234,Anesthesia for open removal of muscle or tissue at upper two-thirds of thigh bone,1234
+6830,254,1250,"Anesthesia for procedure on nerves, muscles, tendons, fascia, and bursae of upper leg",1250
+6831,254,1260,Anesthesia for procedure on veins of upper leg,1260
+6832,254,1270,Anesthesia for procedure on arteries of upper leg,1270
+6833,254,1320,"Anesthesia for procedure on nerves, muscles, tendons, fascia, and/or bursae of knee",1320
+6834,254,1340,Anesthesia for closed procedure on lower one-third of thigh bone,1340
+6835,254,1360,Anesthesia for open procedure on lower one-third of thigh bone,1360
+6836,254,1380,Anesthesia for closed procedure on knee joint,1380
+6837,254,1382,Anesthesia for diagnostic examination of knee joint using an endoscope,1382
+6838,254,1390,Anesthesia for closed procedure at kneecap and/or upper foreleg bones,1390
+6839,254,1392,Anesthesia for open procedure at kneecap and upper foreleg bones,1392
+6840,254,1400,Anesthesia for open or endoscopic procedure on knee including Popliteal Area,1400
+6841,254,1402,Anesthesia for open or endoscopic total knee joint replacement,1402
+6842,254,1404,Anesthesia for open or endoscopic procedure of dislocated knee,1404
+6843,254,1420,"Anesthesia for knee joint cast application, removal, or repair",1420
+6844,254,1462,"Anesthesia for closed procedure on lower leg, ankle, and foot",1462
+6845,254,1464,Anesthesia for procedure on ankle and/or foot using an endoscope,1464
+6846,254,1470,"Anesthesia for procedure on nerves, muscles, tendons, and fascia of lower leg, ankle, and foot",1470
+6847,254,1472,Anesthesia for procedure to repair calf muscle tendon,1472
+6848,254,1474,Anesthesia for procedure to repair calf muscle,1474
+6849,254,1480,"Anesthesia for open procedure on bones of lower leg, ankle and foot",1480
+6850,254,1482,Anesthesia for open amputation below the knee,1482
+6851,254,1484,"Anesthesia for open reconstruction of lower leg, ankle, and/or foot bone",1484
+6852,254,1486,Anesthesia for open total ankle joint replacement,1486
+6853,254,1490,"Anesthesia for lower leg cast application, removal, or repair",1490
+6854,254,1610,"Anesthesia for procedure on nerves, muscles, tendons, fascia, and bursae of shoulder and underarm",1610
+6855,254,1620,Anesthesia for closed procedure on upper arm bone and shoulder joint,1620
+6856,254,1622,Anesthesia for diagnostic examination of shoulder joint using an endoscope,1622
+6857,254,1630,Anesthesia for open or endoscopic procedure at upper arm and shoulder joint including,1630
+6858,254,1634,Anesthesia for open or endoscopic procedure of dislocated shoulder joint,1634
+6859,254,1636,"Anesthesia for open or endoscopic amputation of arm, shoulder blade, and collar bone",1636
+6860,254,1638,Anesthesia for open or endoscopic total shoulder joint replacement,1638
+6861,254,1680,"Anesthesia for cast application, removal or repair",1680
+6862,254,1682,"Anesthesia for shoulder spica cast application, removal or repair",1682
+6863,254,1710,"Anesthesia for procedure on nerves, muscles, tendons, fascia, and bursae of upper arm and elbow",1710
+6864,254,1712,Anesthesia for open incision of elbow to shoulder tendon,1712
+6865,254,1714,Anesthesia for repair of elbow to shoulder tendon,1714
+6866,254,1716,Anesthesia for suture of upper arm and elbow tendon to bone,1716
+6867,254,1730,Anesthesia for closed procedure on upper arm and elbow,1730
+6868,254,1732,Anesthesia for diagnostic examination of elbow joint using an endoscope,1732
+6869,254,1740,Anesthesia for open or endoscopic procedure on elbow,1740
+6870,254,1742,Anesthesia for open or endoscopic procedure at upper arm bone,1742
+6871,254,1744,Anesthesia for open or endoscopic repair of non-healed fracture of upper arm bone,1744
+6872,254,1756,Anesthesia for open or endoscopic surgical procedure on elbow,1756
+6873,254,1758,Anesthesia for open or endoscopic removal cyst or tumor of upper arm,1758
+6874,254,1760,Anesthesia for open or endoscopic total elbow joint replacement,1760
+6875,254,1770,Anesthesia for procedure on arteries of upper arm and elbow,1770
+6876,254,1810,"Anesthesia for procedure on nerves, muscles, tendons, fascia, and bursae of forearm, wrist, and hand",1810
+6877,254,1820,"Anesthesia for closed procedure on bones of forearm, wrist, or hand",1820
+6878,254,1829,Anesthesia for diagnostic examination of the wrist using an endoscope,1829
+6879,254,1830,"Anesthesia for open or endoscopic procedure on bones of forearm, wrist, or hand",1830
+6880,254,1832,Anesthesia for open or endoscopic total wrist joint replacement,1832
+6881,254,1860,"Anesthesia for forearm, wrist, or hand cast application, removal or repair",1860
+6882,254,1916,Anesthesia for diagnostic X-ray procedure on arteries or veins,1916
+6883,254,1924,Anesthesia for X-ray procedure on arteries,1924
+6884,254,1925,Anesthesia for X-ray procedure on neck or heart artery,1925
+6885,254,1926,"Anesthesia for X-ray procedure on artery in brain, heart, or major vessel of chest 
+(aorta)",1926
+6886,254,1930,Anesthesia for X-ray procedure on vein or lymph system,1930
+6887,254,1931,Anesthesia for X-ray procedure on liver vein,1931
+6888,254,1932,Anesthesia for X-ray procedure on chest or neck vein,1932
+6889,254,1933,Anesthesia for X-ray procedure on brain vein,1933
+6890,254,1935,Anesthesia for diagnostic X-ray procedure (accessed through the skin) on spine and spinal cord,1935
+6891,254,1936,Anesthesia for X-ray procedure (accessed through the skin) on spine and spinal cord,1936
+6892,254,1991,Anesthesia for nerve block and injection procedure,1991
+6893,254,1992,"Anesthesia for nerve block and injection procedure, prone position",1992
+6894,254,1996,Daily hospital management of continuous spinal drug administration,1996
+6895,254,1999,Anesthesia procedure,1999
+6896,254,31500,Intubation (Intravenous Anaesthesia) /LMA /Mask -- (Inhalational Anaesthesia) /Mechanical Ventilation,31500
+6897,254,62320,Epidural Anesthesia,62320
+6898,254,62273,Epidural Patch,62273
+6899,254,64400,"Injection of anesthetic agent, trigeminal nerve",64400
+6900,254,64402,"Injection of anesthetic agent, facial nerve",64402
+6901,254,64405,"Injection of anesthetic agent, greater occipital nerve",64405
+6902,254,64408,"Injection of anesthetic agent, cranial (vagus) nerve",64408
+6903,254,64410,"Injection of anesthetic agent, upper spine (phrenic) nerve",64410
+6904,254,64413,"Injection of anesthetic agent, neck nerve bundle",64413
+6905,254,64415,"Injection of anesthetic agent, brachial (arm) nerve bundle",64415
+6906,254,64416,"Injection by continuous infusion of anesthetic agent, brachial (arm) nerve bundle",64416
+6907,254,64417,Injection of anesthetic agent underarm (axillary) nerve,64417
+6908,254,64418,"Injection of anesthetic agent, collar bone nerve",64418
+6909,254,36556,Insertion of central venous catheter for infusion,36556
+6910,254,43753,NGT insertion,43753
+6911,254,76937,Intravenous placement USS Guided,76937
+6912,254,99152,Sedation without Respiratory support - Above 5yrs,99152
+6913,254,99151,Sedation without Respiratory support - Under 5yrs,99151
+6914,254,96366,IV Side Injection,96366
+6915,254,93503,Continuous invasive CVP monitoring,93503
+6916,254,96368,Continuous Drug infusions -Inotropes/Vasoactive drugs,96368
+6917,254,92960,Defibrilation/Elective Cardioversion / Electrocardioversion (Resursitative Defibrillation procedure),92960
+6918,254,94660,Non Invasive mechanical ventilation (CPAP),94660
+6919,254,36620,Continuous invasive Arterial Blood Pressure (ABP) monitoring,36620
+6920,254,530,Anesthesia for insertion of permanent heart pacemaker,530
+6921,254,534,Anesthesia for insertion or replace of pacing heart defibrillator,534
+6922,254,537,Anesthesia for procedure on heart to correct abnormal rhythm,537
+6923,254,539,Anesthesia for reconstruction of windpipe and lung airway,539
+6924,254,540,Anesthesia for procedure in chest,540
+6925,254,541,Anesthesia for procedure in chest with 1 lung ventilation,541
+6926,254,542,Anesthesia for removal of lung lining,542
+6927,254,546,Anesthesia for lung removal and chest wall repair,546
+6928,254,548,Anesthesia for procedure on windpipe and lung airway,548
+6929,254,550,Anesthesia for removal of breast bone tissue,550
+6930,254,560,Anesthesia for procedure on heart and great blood vessels,560
+6931,254,561,"Anesthesia for procedure on heart and great blood vessels on heart-lung machine, younger than 1 year of age",561
+6932,254,562,"Anesthesia for procedure on heart and great blood vessels on heart-lung machine, age 1 year or older, or re-operation more than 1 month after original procedure",562
+6933,254,563,Anesthesia for procedure on heart and great blood vessels on heart-lung machine,563
+6934,254,566,Anesthesia for heart artery bypass grafting,566
+6935,254,567,Anesthesia for heart artery bypass grafting on heart-lung machine,567
+6936,254,580,Anesthesia for heart or heart-lung transplant,580
+6937,254,882,Anesthesia for tying of major vein in lower abdomen,882
+6938,254,1272,Anesthesia for groin artery bypass graft and tying of upper leg artery,1272
+6939,254,1274,Anesthesia for removal of groin artery blood clot,1274
+6940,254,1430,Anesthesia for procedure on knee veins,1430
+6941,254,1432,Anesthesia for repair of abnormal artery-vein formation of knee,1432
+6942,254,1440,Anesthesia for procedure on knee arteries,1440
+6943,254,1442,Anesthesia for removal of blood clot in artery behind knee,1442
+6944,254,1444,Anesthesia for repair of bulging (aneurysm) defect in knee artery,1444
+6945,254,1500,Anesthesia for procedure on arteries of lower leg including bypass graft,1500
+6946,254,1502,Anesthesia for lower leg artery bypass graft or blood clot removal,1502
+6947,254,1520,Anesthesia for procedure on veins of lower leg,1520
+6948,254,1522,Anesthesia for removal of lower leg vein obstruction,1522
+6949,254,1650,Anesthesia for procedure on arteries of shoulder and underarm,1650
+6950,254,1652,Anesthesia for repair of bulging (aneurysm) defect in upper arm artery,1652
+6951,254,1654,Anesthesia for bypass graft in shoulder or underarm artery,1654
+6952,254,1656,Anesthesia for bypass graft from groin artery to shoulder or underarm artery,1656
+6953,254,1670,Anesthesia for procedure on veins of shoulder and underarm,1670
+6954,254,1772,Anesthesia for removal of blood clot from upper arm or elbow artery,1772
+6955,254,1780,Anesthesia for procedure on veins of upper arm and elbow,1780
+6956,254,1782,Anesthesia for suture of upper arm or elbow vein,1782
+6957,254,1840,"Anesthesia for procedure on arteries of forearm, wrist, and hand",1840
+6958,254,1842,"Anesthesia for removal of blood clot from forearm, wrist, or hand artery",1842
+6959,254,1844,Anesthesia for placement or revision of blood flow shunt,1844
+6960,254,1850,"Anesthesia for procedure on veins of forearm, wrist, and hand",1850
+6961,254,1852,"Anesthesia for suture of forearm, wrist, or hand vein",1852
+6962,254,1920,Anesthesia for procedure on heart vessels and chambers,1920
+6963,254,1922,Anesthesia for X-ray or radiation therapy,1922
+6964,254,100,Anesthesia for procedure on salivary gland with biopsy,100
+6965,254,102,Anesthesia for procedure to repair lip defect present at birth,102
+6966,254,103,Anesthesia for procedure on eyelid,103
+6967,254,104,Anesthesia for electric shock treatment,104
+6968,254,120,Anesthesia for biopsy of external middle and inner ear,120
+6969,254,124,Anesthesia for examination and biopsy of external middle and inner ear using an endoscope,124
+6970,254,126,Anesthesia for incision of ear drum,126
+6971,254,140,Anesthesia for procedure on eye,140
+6972,254,142,Anesthesia for lens surgery,142
+6973,254,144,Anesthesia for procedure on eye for corneal transplant,144
+6974,254,145,Anesthesia for retinal surgery,145
+6975,254,147,Anesthesia for procedure on eye for removal of iris,147
+6976,254,148,Anesthesia for eye examination using an endoscope,148
+6977,254,160,Anesthesia for procedure on nose and sinus,160
+6978,254,162,Anesthesia for surgery of nose and sinus,162
+6979,254,164,Anesthesia for soft tissue biopsy on nose and sinus,164
+6980,254,170,Anesthesia for procedure on mouth including biopsy,170
+6981,254,172,Anesthesia for procedure on mouth to repair palate deformity,172
+6982,254,174,Anesthesia for procedure on throat for removal of tumor,174
+6983,254,176,Anesthesia for surgery on mouth,176
+6984,254,322,Anesthesia for needle biopsy of thyroid,322
+6985,254,326,"Anesthesia for procedure on voice box and windpipe, children younger than 1 year of age",326
+6986,254,350,Anesthesia for procedure on major blood vessels of neck,350
+6987,254,352,Anesthesia for tying procedure on major blood vessels of neck,352
+6988,254,400,"Anesthesia for procedure on skin of arms, legs, or trunk",400
+6989,254,402,Anesthesia for breast reconstruction,402
+6990,254,404,Anesthesia for removal of breast,404
+6991,254,406,Anesthesia for removal of breast and lymph nodes,406
+6992,254,410,Anesthesia for procedure to correct abnormal heart rhythm,410
+6993,254,500,Anesthesia for procedure on esophagus,500
+6994,254,522,Anesthesia for closed needle biopsy of lung,522
+6995,254,528,Anesthesia for closed diagnostic examination of chest using an endoscope,528
+6996,254,529,Anesthesia for closed diagnostic examination of chest using an endoscope with 1 lung ventilation,529
+6997,254,625,Anesthesia for procedure on middle spine and spinal cord,625
+6998,254,702,Anesthesia for liver biopsy (accessed through the skin),702
+6999,254,730,Anesthesia for procedure on upper rear abdominal wall,730
+7000,254,740,Anesthesia for procedure on gastrointestinal tract using an endoscope,740
+7001,254,750,Anesthesia for procedure to repair upper abdominal hernia,750
+7002,254,752,Anesthesia for procedure to repair upper abdominal incisional hernia and/or wound opening,752
+7003,254,754,Anesthesia for procedure to repair upper abdominal hernia present at birth,754
+7004,254,756,Anesthesia for procedure to repair abdominal hernia,756
+7005,254,770,Anesthesia for procedure on major abdominal blood vessels,770
+7006,254,790,Anesthesia for procedure in upper abdomen including use of an endoscope,790
+7007,254,792,Anesthesia for partial removal of liver or management of bleeding including use of an endoscope,792
+7008,254,794,Anesthesia for removal of pancreas including use of an endoscope,794
+7009,254,796,Anesthesia for liver transplant recipient including use of an endoscope,796
+7010,254,797,Anesthesia for procedure on stomach for obesity including use of an endoscope,797
+7011,254,800,Anesthesia for procedure on lower front abdominal wall,800
+7012,254,802,Anesthesia for removal of excess tissue on lower abdominal wall,802
+7013,254,810,Anesthesia for procedure on lower intestine using an endoscope,810
+7014,254,820,Anesthesia for procedure on lower rear abdominal wall,820
+7015,254,830,Anesthesia for lower abdominal hernia repair,830
+7016,254,832,Anesthesia for middle or incisional abdominal hernia repair,832
+7017,254,834,"Anesthesia for lower abdominal hernia repair, child younger than 1 year of age",834
+7018,254,836,"Anesthesia for lower abdominal hernia repair, infants younger than 37 weeks gestational age at birth and younger than 50 weeks gestational age at time of surgery",836
+7019,254,840,Anesthesia for procedure in lower abdominal cavity including use of an endoscope,840
+7020,254,842,Anesthesia for removal of amniotic fluid in uterus including use of an endoscope,842
+7021,254,844,Anesthesia for procedure in lower abdominal cavity and rectum including use of an endoscope,844
+7022,254,846,Anesthesia for removal of uterus including use of an endoscope,846
+7023,254,848,Anesthesia for removal of pelvic organs including use of an endoscope,848
+7024,254,851,Anesthesia for tying or incision of fallopian tubes using an endoscope,851
+7025,254,860,Anesthesia for procedure in lower abdomen including urinary tract,860
+7026,254,862,Anesthesia for procedure on upper urinary duct (ureter) or removal of kidney for transplant,862
+7027,254,864,Anesthesia for removal of urinary bladder,864
+7028,254,865,Anesthesia for removal of prostate,865
+7029,254,866,Anesthesia for removal of adrenal gland,866
+7030,254,868,Anesthesia for kidney transplant,868
+7031,254,870,Anesthesia for removal of urinary bladder stone,870
+7032,254,872,Anesthesia for shock wave therapy for urinary system stones,872
+7033,254,873,Anesthesia for shock wave therapy for urinary system stones,873
+7034,254,880,Anesthesia for procedure on major lower abdominal wall blood vessels,880
+7035,254,902,Anesthesia for procedure on anus and rectum,902
+7036,254,904,Anesthesia for procedure on perineum,904
+7037,254,906,Anesthesia for removal of external female genitalia,906
+7038,254,908,Anesthesia for removal of prostate,908
+7039,254,910,Anesthesia for procedure on urinary system including use of an endoscope,910
+7040,254,912,Anesthesia for removal of urinary bladder tumors including use of an endoscope,912
+7041,254,914,Anesthesia for removal of prostate including use of an endoscope,914
+7042,254,916,Anesthesia for procedure to control urinary system bleeding including use of an endoscope,916
+7043,254,918,"Anesthesia for fragmenting, manipulation and/or removal of kidney stone including use of an endoscope",918
+7044,254,920,Anesthesia for procedure on male genitalia,920
+7045,254,921,Anesthesia for vasectomy,921
+7046,254,922,Anesthesia for procedure on male genitalia glands,922
+7047,254,924,Anesthesia for repair of undescended testicle,924
+7048,254,926,Anesthesia for removal of testicle through groin,926
+7049,254,928,Anesthesia for removal of testicle through abdomen,928
+7050,254,930,Anesthesia for relocation of undescended testicle into scrotum,930
+7051,254,932,Anesthesia for removal of penis,932
+7052,254,934,Anesthesia for removal of penis and lymph nodes on both sides of groin,934
+7053,254,936,Anesthesia for removal of penis and lymph nodes on both sides of groin,936
+7054,254,938,Anesthesia for insertion of penile prosthesis,938
+7055,254,940,"Anesthesia for vaginal biopsy of cervix, uterine lining, or external genitalia",940
+7056,254,942,Anesthesia for repair or removal of vagina and urinary procedure,942
+7057,254,944,Anesthesia for vaginal removal of uterus,944
+7058,254,948,Anesthesia for suture closure of cervix,948
+7059,254,950,Anesthesia for examination of cervix using an endoscope,950
+7060,254,952,Anesthesia for examination of uterus using an endoscope,952
+7061,254,1951,"Anesthesia for treatment of second and third-degree burn, less than 4% total body surface",1951
+7062,254,1952,"Anesthesia for treatment of second and third-degree burn, between 4% and 9% total body surface area",1952
+7063,254,1953,Anesthesia for treatment of second and third-degree burn,1953
+7064,254,1958,Anesthesia for procedure to turn the position of fetus in uterus,1958
+7065,254,1960,Anesthesia for vaginal delivery,1960
+7066,254,1961,Anesthesia for cesarean delivery,1961
+7067,254,1962,Anesthesia for procedure to remove uterus following delivery,1962
+7068,254,1963,Anesthesia for cesarean removal of uterus,1963
+7069,254,1965,Anesthesia for incomplete or missed abortion,1965
+7070,254,1966,Anesthesia for induced abortion,1966
+7071,254,1967,Anesthesia for labor during planned vaginal delivery,1967
+7072,254,1968,Anesthesia for cesarean delivery following labor,1968
+7073,254,1969,Anesthesia for cesarean removal of uterus following labor,1969
+7074,254,1990,Physiological support for harvesting of organs,1990
+7075,255,L5321,Trans Femoral Standard Prosthesis,L5321
+7076,255,L5311,Knee Disarticulation Standard Prosthesis,L5311
+7077,255,L5331,Hip Disarticilation Standard Prosthesis,L5331
+7078,255,L5301,TransTibial Standard Prosthesis,L5301
+7079,255,L5060,Syme Standard Prosthesis,L5060
+7080,255,L6210,Partial Foot Standard Prosthesis,L6210
+7081,255,L6150,Trans-humeral Standard Prosthesis,L6150
+7082,255,L6120,Trans-radial Standard Prosthesis,L6120
+7083,255,L6200,Elbow Disarticulation Standard Prosthesis,L6200
+7084,255,L6300,Shoulder Disarticulation Cosmetic Standard Prosthesis,L6300
+7085,255,L6055,Wrist Disarticulation Standard Prosthesis,L6055
+7086,255,L6020,Partial Hand Standard Prosthesis,L6020
+7087,256,L3010,(FO) Foot orthosis,L3010
+7088,256,L1945,Ankle Foot Orhosis Posterior Shell (adult) PTB,L1945
+7089,256,L1960,Ankle Foot Orthosia-Rigid -adult,L1960
+7090,256,L1961,Ankle Foot Orthosis rigid-child,L1961
+7091,256,L1970,Ankle Foot Orthosis with mechanical (hessing) joint- adult,L1970
+7092,256,L1971,Ankle Foot Orthosis with mechanical ankle joint- child,L1971
+7093,256,L2081,Hip Knee Ankle Foot Orthosis child,L2081
+7094,256,L2080,Hip Knee Ankle Foot Orthosis-adult,L2080
+7095,256,L3500,Inner sole compasation-adult (1 Pc),L3500
+7096,256,L3501,Inner sole compasation-child (1Pc),L3501
+7097,256,L1990,Knee Ankle Foot Orthosis without mechanical ankle joint,L1990
+7098,256,L1834,KO- Knee Orthosis (Rigid fabricated ),L1834
+7099,256,L1810,KO- Knee Orthosis with mechanical joint (fabricated),L1810
+7100,256,L3223,Orthopaedic boots (Adult),L3223
+7101,256,L3209,Orthopaedic boots (children),L3209
+7102,256,L3540,Orthopaedic Shoes with shortening compensation,L3540
+7103,256,L3140,SFAB,L3140
+7104,257,L2016,Ankle support (imported),L2016
+7105,257,L3003,Arch Support (Silicon) imported (1pair),L3003
+7106,257,L3010,Arch Support (Fabricated) 1pair,L3010
+7107,257,L0978,Axilla Crutch (1pc),L0978
+7108,257,L8120,"Compression stockings, below knee (1pc)",L8120
+7109,257,L4398,Drop foot splint (imported),L4398
+7110,257,L3930,finger Splint [adult],L3930
+7111,257,L3930,Finger Splint [child],L3930
+7112,257,L1800,"Knee brace, hinged",L1800
+7113,257,L1858,"Knee brace, hinged (premium)",L1858
+7114,257,L2800,Knee cap,L2800
+7115,257,L1830,Knee immobilizer,L1830
+7116,257,L0550,Lumber corset,L0550
+7117,257,L0140,Neck collar semi rigid (philadephia),L0140
+7118,257,L0120,Neck collar Soft,L0120
+7119,257,L2630,Pelvic binder,L2630
+7120,257,L1497,Rigid spinal corset- adolencent,L1497
+7121,257,L1499,Rigid spinal corset-adult,L1499
+7122,257,L1498,Rigid spinal corset-child,L1498
+7123,257,L3650,Shoulder abdution Bracee imported,L3650
+7124,257,L0974,Thoracolumber corset,L0974
+7125,257,L3100,Toe separator,L3100
+7126,257,L1070,Tringular arm sling,L1070
+7127,257,K0001,Wheelchair (imported),K0001
+7128,257,K0002,Wheelchair (locally made),K0002
+7129,257,L3908,Wrist support,L3908

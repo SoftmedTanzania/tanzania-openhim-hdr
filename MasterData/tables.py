@@ -148,7 +148,7 @@ class CPTCodeMappingTable(tables.Table):
     class Meta:
         model = terminology_management_services_models.CPTCodesMapping
         template_name = "django_tables2/bootstrap.html"
-        fields = ('counter','cpt_code', 'cpt_code__cpt_description','local_code')
+        fields = ('counter','cpt_code__code', 'cpt_code__description','local_code')
         row_attrs = {
             'data-id': lambda record: record.pk
         }
