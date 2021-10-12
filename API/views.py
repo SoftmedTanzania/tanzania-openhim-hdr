@@ -290,6 +290,7 @@ class RevenueReceivedView(viewsets.ModelViewSet):
                     instance_revenue_received_items.patient_id = val["patId"]
 
                 instance_revenue_received_items.gender = val["gender"]
+                instance_revenue_received_items.revenue_received_id = instance_revenue_received.id
                 instance_revenue_received_items.date_of_birth = validators.convert_date_formats(val["dob"])
                 instance_revenue_received_items.med_svc_code = val["medSvcCode"]
                 instance_revenue_received_items.payer_id = val["payerId"]
