@@ -217,6 +217,7 @@ class DeathByDiseaseCaseNotAtFacilityView(viewsets.ModelViewSet):
                 instance_death_by_disease_case_not_at_facility_items = DeathByDiseaseCaseNotAtFacilityItems()
 
                 instance_death_by_disease_case_not_at_facility_items.place_of_death_id = val["placeOfDeathId"]
+                instance_death_by_disease_case_not_at_facility_items.death_by_disease_case_not_at_facility_id=instance_death_by_disease_case_not_at_facility.id
                 instance_death_by_disease_case_not_at_facility_items.gender = val["gender"]
                 instance_death_by_disease_case_not_at_facility_items.date_of_birth = validators.convert_date_formats(val["dob"])
                 instance_death_by_disease_case_not_at_facility_items.icd_10_code = val["icd10Code"]
