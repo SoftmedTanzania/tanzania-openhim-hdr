@@ -305,7 +305,7 @@ class RevenueReceivedView(viewsets.ModelViewSet):
             except:
                 pass
 
-            return status
+        return status
 
     def list(self, request):
         queryset = RevenueReceivedItems.objects.all().order_by('-id')
