@@ -260,8 +260,11 @@ class CPTCodeCategorySerializer(serializers.ModelSerializer):
 
 
 class ClaimsSerializer(serializers.Serializer):
-
-    class Meta:
-        model = nhif_models.Claims
-        fields = ('id', 'claimed_amount', 'period', 'computed_amount', 'accepted_amount', 'loan_deductions',
-                  'other_deductions', 'paid_amount')
+    facilityHfrCode = serializers.CharField(max_length=255)
+    claimedAmount = serializers.DecimalField(max_digits=10, decimal_places=2)
+    period = serializers.CharField(max_length=255)
+    computedAmount = serializers.DecimalField(max_digits=10, decimal_places=2)
+    acceptedAmount = serializers.DecimalField(max_digits=10, decimal_places=2)
+    loanDeductions = serializers.DecimalField(max_digits=10, decimal_places=2)
+    otherDeductions = serializers.DecimalField(max_digits=10, decimal_places=2)
+    paidAmount = serializers.DecimalField(max_digits=10, decimal_places=2)

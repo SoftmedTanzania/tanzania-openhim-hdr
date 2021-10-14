@@ -396,4 +396,46 @@ class CPTCodeView(viewsets.ModelViewSet):
 class ClaimsView(viewsets.ModelViewSet):
     queryset = nhif_models.Claims.objects.all()
     serializer_class = ClaimsSerializer
-    permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated,)
+
+    def create(self, request):
+        data = request.data
+        if isinstance(data, list):
+            serializer = self.get_serializer(data=request.data, many=True)
+        else:
+            serializer = self.get_serializer(data=request.data)
+
+        if serializer.is_valid():
+            self.perform_create(request, serializer)
+
+            headers = self.get_success_headers(serializer.data)
+            response = {"message": "Success", "status": status.HTTP_200_OK}
+
+            return Response(response, headers=headers)
+        else:
+            return Response(
+                serializer.errors,
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+    def perform_create(self, request, serializer):
+        # validate payload
+        for val in serializer.data:
+            instance_claim = nhif_models.Claims()
+
+            instance_claim.facility_hfr_code = val["facilityHfrCode"]
+            instance_claim.claimed_amount = val["claimedAmount"]
+            instance_claim.period = val["period"]
+            instance_claim.computed_amount = val["computedAmount"]
+            instance_claim.accepted_amount = val["acceptedAmount"]
+            instance_claim.loan_deductions = val["loanDeductions"]
+            instance_claim.other_deductions = val["otherDeductions"]
+            instance_claim.paid_amount = val["paidAmount"]
+            instance_claim.save()
+
+        return status
+
+    def list(self, request):
+        queryset = nhif_models.Claims.objects.all().order_by('-id')
+        serializer = ClaimsSerializer(queryset, many=True)
+        return Response(serializer.data)
