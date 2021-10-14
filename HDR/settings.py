@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'django_tables2',
     'celery',
     'django_celery_beat',
+    'NHIF',
 
 ]
 

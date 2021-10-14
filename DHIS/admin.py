@@ -4,23 +4,12 @@ from DHIS import models as dhis_models
 
 # Register your models here.
 class OrganisationUnitAdmin(admin.ModelAdmin):
-    list_display = ('id', 'ward', 'organisation_unit_name','organisation_uid', 'facility')
-    autocomplete_fields = ["ward"]
+    list_display = ('id','organisation_unit_name','organisation_uid', 'facility')
     search_fields = ['organisation_unit_name']
 
 
-class AttributeOptionComboAdmin(admin.ModelAdmin):
-    list_display = ('id', 'attribute_option_combo_uid',)
-    search_fields = ['attribute_option_combo_uid']
-
-
-class DatasetAdmin(admin.ModelAdmin):
-    list_display = ('id', 'attribute_option_combo', 'dataset_name', 'dataset_uid')
-    search_fields = ['dataset_name']
-
-
 class DataElementAdmin(admin.ModelAdmin):
-    list_display = ('id', 'dataset','data_element_name','data_element_option', 'data_element_uid')
+    list_display = ('id','data_element_name', 'data_element_uid')
     search_fields = ['data_element_name']
 
 
@@ -35,8 +24,6 @@ class CategoryOptionComboDataElementMappingAdmin(admin.ModelAdmin):
 
 
 admin.site.register(dhis_models.OrganisationUnit, OrganisationUnitAdmin)
-admin.site.register(dhis_models.AttributeOptionCombo, AttributeOptionComboAdmin)
-admin.site.register(dhis_models.Dataset, DatasetAdmin)
 admin.site.register(dhis_models.DataElement, DataElementAdmin)
 admin.site.register(dhis_models.CategoryOptionCombo, CategoryOptionComboAdmin)
 admin.site.register(dhis_models.CategoryOptionComboDataElementMapping, CategoryOptionComboDataElementMappingAdmin)

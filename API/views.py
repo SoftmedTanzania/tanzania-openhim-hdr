@@ -6,13 +6,14 @@ from .serializers import TransactionSummarySerializer, IncomingDeathByDiseaseCas
     DeathByDiseaseCaseNotAtFacilityItemsSerializer, RevenueReceivedItemsSerializer,BedOccupancyItemsSerializer, \
     ServiceReceivedItemsSerializer, IncomingDeathByDiseaseCaseNotAtTheFacilitySerializer, \
     IncomingServicesReceivedSerializer, IncomingBedOccupancySerializer, IncomingRevenueReceivedSerializer, \
-    ICD10CodeCategorySerializer, CPTCodeCategorySerializer
+    ICD10CodeCategorySerializer, CPTCodeCategorySerializer, ClaimsSerializer
 from Core.models import RevenueReceived, DeathByDiseaseCaseAtFacility, \
     DeathByDiseaseCaseNotAtFacility,ServiceReceived, BedOccupancy, RevenueReceivedItems, ServiceReceivedItems, \
     DeathByDiseaseCaseAtFacilityItems, DeathByDiseaseCaseNotAtFacilityItems, BedOccupancyItems
 from API import validators as validators
 from ValidationManagement import models as validation_management_models
 from TerminologyServicesManagement import models as terminology_services_management
+from NHIF import models as nhif_models
 
 
 # Create your views here.
@@ -390,3 +391,9 @@ class CPTCodeView(viewsets.ModelViewSet):
     queryset = terminology_services_management.CPTCodeCategory.objects.all()
     serializer_class = CPTCodeCategorySerializer
     permission_classes = ()
+
+
+class ClaimsView(viewsets.ModelViewSet):
+    queryset = nhif_models.Claims.objects.all()
+    serializer_class = ClaimsSerializer
+    permission_classes = (IsAuthenticated, )

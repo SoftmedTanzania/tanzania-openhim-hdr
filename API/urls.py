@@ -12,6 +12,7 @@ router.register('bed_occupancy', views.BedOccupancyView)
 router.register('revenue_received', views.RevenueReceivedView)
 router.register('icd10', views.ICD10View)
 router.register('cpt', views.CPTCodeView)
+router.register('claims', views.ClaimsView)
 
 
 urlpatterns = [

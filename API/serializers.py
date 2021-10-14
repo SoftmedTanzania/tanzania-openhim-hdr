@@ -4,6 +4,7 @@ from ValidationManagement import models as validation_management_models
 from Core import models as core_models
 from TerminologyServicesManagement import models as terminology_services_management
 from rest_framework import serializers
+from NHIF import models as nhif_models
 
 
 class ProfileSerializer(serializers.ModelSerializer):
@@ -256,3 +257,11 @@ class CPTCodeCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = terminology_services_management.CPTCodeCategory
         fields = ('id', 'description', 'sub_category')
+
+
+class ClaimsSerializer(serializers.Serializer):
+
+    class Meta:
+        model = nhif_models.Claims
+        fields = ('id', 'claimed_amount', 'period', 'computed_amount', 'accepted_amount', 'loan_deductions',
+                  'other_deductions', 'paid_amount')
