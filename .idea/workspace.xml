@@ -24,15 +24,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="427" column="47" selection-start-line="427" selection-start-column="47" selection-end-line="427" selection-end-column="47" />
+            <state relative-caret-position="681">
+              <caret line="439" column="27" selection-start-line="439" selection-start-column="27" selection-end-line="439" selection-end-column="27" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
-                <element signature="e#14668#15588#0" expanded="false" />
-                <element signature="e#17241#17390#0" expanded="false" />
+                <element signature="e#14694#15614#0" expanded="false" />
+                <element signature="e#17267#17416#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -100,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="262" column="0" selection-start-line="262" selection-start-column="0" selection-end-line="269" selection-end-column="74" />
+            <state relative-caret-position="104">
+              <caret line="264" column="50" selection-start-line="264" selection-start-column="50" selection-end-line="264" selection-end-column="50" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -190,8 +190,8 @@
         <option value="$PROJECT_DIR$/DHIS/admin.py" />
         <option value="$PROJECT_DIR$/NHIF/models.py" />
         <option value="$PROJECT_DIR$/API/urls.py" />
-        <option value="$PROJECT_DIR$/API/serializers.py" />
         <option value="$PROJECT_DIR$/API/views.py" />
+        <option value="$PROJECT_DIR$/API/serializers.py" />
       </list>
     </option>
   </component>
@@ -967,24 +967,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/serializers.py">
+    <entry file="file://$PROJECT_DIR$/API/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="262" column="0" selection-start-line="262" selection-start-column="0" selection-end-line="269" selection-end-column="74" />
+        <state relative-caret-position="681">
+          <caret line="439" column="27" selection-start-line="439" selection-start-column="27" selection-end-line="439" selection-end-column="27" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#14694#15614#0" expanded="false" />
+            <element signature="e#17267#17416#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/views.py">
+    <entry file="file://$PROJECT_DIR$/API/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="427" column="47" selection-start-line="427" selection-start-column="47" selection-end-line="427" selection-end-column="47" />
+        <state relative-caret-position="104">
+          <caret line="264" column="50" selection-start-line="264" selection-start-column="50" selection-end-line="264" selection-end-column="50" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
-            <element signature="e#14668#15588#0" expanded="false" />
-            <element signature="e#17241#17390#0" expanded="false" />
           </folding>
         </state>
       </provider>

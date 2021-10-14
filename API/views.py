@@ -6,7 +6,7 @@ from .serializers import TransactionSummarySerializer, IncomingDeathByDiseaseCas
     DeathByDiseaseCaseNotAtFacilityItemsSerializer, RevenueReceivedItemsSerializer,BedOccupancyItemsSerializer, \
     ServiceReceivedItemsSerializer, IncomingDeathByDiseaseCaseNotAtTheFacilitySerializer, \
     IncomingServicesReceivedSerializer, IncomingBedOccupancySerializer, IncomingRevenueReceivedSerializer, \
-    ICD10CodeCategorySerializer, CPTCodeCategorySerializer, ClaimsSerializer
+    ICD10CodeCategorySerializer, CPTCodeCategorySerializer, ClaimsSerializer, IncomingClaimsSerializer
 from Core.models import RevenueReceived, DeathByDiseaseCaseAtFacility, \
     DeathByDiseaseCaseNotAtFacility,ServiceReceived, BedOccupancy, RevenueReceivedItems, ServiceReceivedItems, \
     DeathByDiseaseCaseAtFacilityItems, DeathByDiseaseCaseNotAtFacilityItems, BedOccupancyItems
@@ -395,7 +395,7 @@ class CPTCodeView(viewsets.ModelViewSet):
 
 class ClaimsView(viewsets.ModelViewSet):
     queryset = nhif_models.Claims.objects.all()
-    serializer_class = ClaimsSerializer
+    serializer_class = IncomingClaimsSerializer
     permission_classes = (IsAuthenticated,)
 
     def create(self, request):
