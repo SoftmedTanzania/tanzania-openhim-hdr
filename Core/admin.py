@@ -23,7 +23,7 @@ class DeathByDiseaseCaseAtFacilityAdmin(admin.ModelAdmin):
 
 
 class DeathByDiseaseCaseAtFacilityItemsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'death_by_disease_case_at_facility', 'ward_name','ward_id','patient_id', 'gender',
+    list_display = ('id', 'death_by_disease_case_at_facility', 'ward_name','ward_id','patient_id','first_name', 'middle_name','last_name','gender',
                     'date_of_birth','icd_10_code','date_death_occurred')
     search_fields = ['ward_name',]
 
