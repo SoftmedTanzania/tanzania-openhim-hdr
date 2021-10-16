@@ -8,11 +8,10 @@ from NHIF import models as nhif_models
 
 
 class ProfileSerializer(serializers.ModelSerializer):
-    birth_date = serializers.DateField(format="%d-%m-%Y")
 
     class Meta:
         model = user_management_models.Profile
-        fields = ('user','birth_date', 'location','reg_id')
+        fields = ('user','facility')
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
@@ -279,3 +278,8 @@ class ClaimsSerializer(serializers.ModelSerializer):
         model = nhif_models.Claims
         fields = ('id', 'claimed_amount', 'period', 'computed_amount', 'accepted_amount', 'loan_deductions',
                   'other_deductions', 'paid_amount')
+
+
+class UserLoginSerializer(serializers.Serializer):
+    username = serializers.CharField(max_length=255)
+    password = serializers.CharField(max_length=255)
