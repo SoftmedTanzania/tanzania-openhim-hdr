@@ -5,9 +5,16 @@ from Core import models as core_models
 from TerminologyServicesManagement import models as terminology_services_management
 from rest_framework import serializers
 from NHIF import models as nhif_models
+from MasterData import models as master_data_models
 
+class FacilitySerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = master_data_models.Facility
+        fields = "__all__"
 
 class ProfileSerializer(serializers.ModelSerializer):
+    facility = FacilitySerializer()
 
     class Meta:
         model = user_management_models.Profile
@@ -19,7 +26,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('id', 'first_name', 'last_name', 'username', 'password', 'profile')
+        fields = ('id', 'first_name', 'last_name', 'username', 'password','is_staff','is_superuser', 'profile')
 
 
 class TokenSerializer(serializers.ModelSerializer):

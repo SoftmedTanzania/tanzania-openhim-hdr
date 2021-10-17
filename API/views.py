@@ -444,38 +444,3 @@ class ClaimsView(viewsets.ModelViewSet):
         queryset = nhif_models.Claims.objects.all().order_by('-id')
         serializer = ClaimsSerializer(queryset, many=True)
         return Response(serializer.data)
-
-
-class authenticate_user(APIView):
-    serializer_class = UserLoginSerializer
-    permission_classes = (IsAuthenticated,)
-
-    @classmethod
-    def get_extra_actions(cls):
-        return []
-
-    def create(self,request):
-        data = request.data
-        if isinstance(data, list):
-            serializer = self.get_serializer(data=request.data, many=True)
-        else:
-            serializer = self.get_serializer(data=request.data)
-
-        if serializer.is_valid():
-            username = serializer['username']
-            password = serializer['password']
-
-            user = user_management_views.authenticate(request, username=username, password=password)
-
-
-            if user is not None and user.is_authenticated:
-                if user.is_active:
-                    response = {"message": "Success", "status": status.HTTP_200_OK}
-
-                else:
-                    response = {"message": "Success", "status": status.HTTP_403_FORBIDDEN}
-
-            else:
-                response = {"message": "Success", "status": status.HTTP_401_UNAUTHORIZED}
-
-            return Response(response)

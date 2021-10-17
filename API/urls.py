@@ -17,7 +17,6 @@ router.register('nhif_claims', views.ClaimsView)
 
 
 urlpatterns = [
-    path('', include(router.urls)),
-    path('authenticate', views.authenticate_user),
+    path('', include(router.urls))
 
 ]
