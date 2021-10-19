@@ -48,8 +48,6 @@ def convert_to_csv(request):
                                                                                   transaction_status=1)
 
         jsonObject = json.loads(json_object)
-        fields.append("ID")
-        fields.append("TransactionID")
         fields.append("messageType")
         fields.append("facilityHfrCode")
         fields.append("orgName")
@@ -66,8 +64,6 @@ def convert_to_csv(request):
             jsonObject = json.loads(json_object)
 
             # Add a column for the message type
-            values.append(row.id)
-            values.append(transaction_id)
             values.append(message_type)
             values.append(facility_hfr_code)
             values.append(org_name)
@@ -194,21 +190,57 @@ def regenerate_services_received_json_payload(lines):
     row = 0
 
     for line in lines:
-        message_type = line[2]
-        facility_name = line[4]
-        facility_hfr_code = line[3]
+        message_type = line[0]
+        facility_hfr_code = line[1]
+        facility_name = line[2]
+
+        json_object = ""
 
         if row > 0:
-            json_object = {"deptName": line[5], "deptId": line[6],
-                           "patId": line[7],
-                           "gender": line[8],
-                           "dob": line[9],
-                           "medSvcCode": line[10],
-                           "icd10Code": line[11],
-                           "serviceDate": line[12],
-                           "serviceProviderRankingId": line[13],
-                           "visitType": line[14]
-                           }
+            if message_type == "SVCREC":
+                json_object = {"deptName": line[3],
+                               "deptId": line[4],
+                               "patId": line[5],
+                               "gender": line[6],
+                               "dob": line[7],
+                               "medSvcCode": line[8],
+                               "icd10Code": line[9],
+                               "serviceDate": line[10],
+                               "serviceProviderRankingId": line[11],
+                               "visitType": line[12]
+                               }
+            elif message_type == "REV":
+                json_object = {"systemTransId": line[3],
+                               "transactionDate": line[4],
+                               "patId": line[5],
+                               "gender": line[6],
+                               "dob": line[7],
+                               "medSvcCode": line[8],
+                               "payerId": line[9],
+                               "exemptionCategoryId": line[10],
+                               "billedAmount": line[11],
+                               "waivedAmount": line[12],
+                               "serviceProviderRankingId": line[13]
+                               }
+            elif message_type == "DDC":
+                json_object = {"wardId": line[3],
+                               "wardName": line[4],
+                               "patId": line[5],
+                               "firstName": line[6],
+                               "middleName": line[7],
+                               "lastName": line[8],
+                               "icd10Code": line[9],
+                               "gender": line[10],
+                               "dob": line[11],
+                               "dateDeathOccurred": line[12]
+                               }
+            elif message_type == "BEDOCC":
+                json_object = {"wardId": line[3],
+                               "wardName": line[4],
+                               "patId": line[5],
+                               "admissionDate": line[6],
+                               "dischargeDate": line[7]
+                               }
 
             data_items_array.append(json_object)
 
