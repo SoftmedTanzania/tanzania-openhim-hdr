@@ -82,9 +82,6 @@ def save_payload_from_csv(request):
                                 headers = line
                                 row = row + 1
                             else:
-                                # create a dictionary of student details
-                                transaction_id = line[1]
-
                                 new_line_details = {}
                                 for i in range(len(headers)):
                                     new_line_details[headers[i]] = line[i]
