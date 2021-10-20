@@ -15,13 +15,15 @@ app = Celery()
 
 
 @app.task
-def save_payload_from_csv(request):
+def save_payload_from_csv():
     root_path = "uploads"
     i = 0
     for subdir, _, _ in os.walk(root_path):
         for file in os.listdir(subdir):
+            print("for function here")
             file_path = "" + root_path + "/" + file
             with open(file_path, 'r') as fp:
+                print("open file here")
                 lines = csv.reader(fp, delimiter=',')
 
                 imported_payload = core_views.regenerate_services_received_json_payload(lines)
@@ -170,10 +172,11 @@ def save_payload_from_csv(request):
 
                         row = row + 1
 
+                    fp.close()
                     os.remove(file_path)
                     i = 0
 
-                    fp.close()
+
 
 
 def update_transaction_summary(transaction_id):
