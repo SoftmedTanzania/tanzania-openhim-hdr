@@ -190,7 +190,6 @@ def regenerate_services_received_json_payload(lines):
     row = 0
 
     for line in lines:
-        print(line)
         message_type = str(line[0]).upper()
         facility_name = line[1]
         facility_hfr_code = line[2]
