@@ -69,7 +69,7 @@ def check_if_not_blank_value(value):
 
 # Extended Functions
 def convert_date_formats(date):
-    for date_format in ('%Y-%m-%d', '%Y%m%d', '%d.%m.%Y', '%d/%m/%Y', '%Y.%m.%d','%Y/%m/%d'):
+    for date_format in ('%Y-%m-%d', '%Y%m%d', '%d.%m.%Y', '%d/%m/%Y', '%Y.%m.%d','%Y/%m/%d', '%d-%m-%Y', '%dd-%mm-%yy'):
         try:
             date = datetime.strptime(date, date_format).strftime('%Y-%m-%d')
             return datetime.strptime(date, '%Y-%m-%d').date()
