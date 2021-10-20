@@ -49,8 +49,8 @@ def convert_to_csv(request):
 
         jsonObject = json.loads(json_object)
         fields.append("messageType")
-        fields.append("facilityHfrCode")
         fields.append("orgName")
+        fields.append("facilityHfrCode")
 
         for key in jsonObject:
             fields.append(key)
@@ -65,8 +65,8 @@ def convert_to_csv(request):
 
             # Add a column for the message type
             values.append(message_type)
-            values.append(facility_hfr_code)
             values.append(org_name)
+            values.append(facility_hfr_code)
 
             for key in jsonObject:
                 value = jsonObject[key]
@@ -190,9 +190,10 @@ def regenerate_services_received_json_payload(lines):
     row = 0
 
     for line in lines:
+        print(line)
         message_type = str(line[0]).upper()
-        facility_hfr_code = line[1]
-        facility_name = line[2]
+        facility_name = line[1]
+        facility_hfr_code = line[2]
 
         json_object = ""
 
