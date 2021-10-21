@@ -120,7 +120,7 @@ class BedOccupancyItems(models.Model):
     bed_occupancy = models.ForeignKey(BedOccupancy, on_delete=models.DO_NOTHING, null=True, blank=True)
     patient_id = models.CharField(max_length=255)
     admission_date = models.DateField()
-    discharge_date = models.DateField()
+    discharge_date = models.DateField(null=True, blank=True)
     ward_name = models.CharField(max_length=255)
     ward_id = models.CharField(max_length=255)
 

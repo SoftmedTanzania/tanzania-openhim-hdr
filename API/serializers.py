@@ -167,7 +167,7 @@ class IncomingBedOccupancyItemsSerializer(serializers.Serializer):
     wardName = serializers.CharField(max_length=255)
     patId = serializers.CharField(max_length=255)
     admissionDate = serializers.CharField(max_length=255)
-    dischargeDate = serializers.CharField(max_length=255)
+    dischargeDate = serializers.CharField(max_length=255, allow_null=True, allow_blank=True)
 
 
 class IncomingBedOccupancySerializer(serializers.Serializer):
