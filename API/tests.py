@@ -86,6 +86,8 @@ class ValidatorsTestCase(TestCase):
         date_format_3 = "2020.01.01"
         date_format_4 = "2020/01/01"
         date_format_5 = "01.01.2020"
+        date_format_6 = ""
+        date_format_7 = "01-01-2020"
 
         date = datetime.strptime("2020-01-01", "%Y-%m-%d").date()
 
@@ -94,12 +96,16 @@ class ValidatorsTestCase(TestCase):
         date_3 = validators.convert_date_formats(date_format_3)
         date_4 = validators.convert_date_formats(date_format_4)
         date_5 = validators.convert_date_formats(date_format_5)
+        date_6 = validators.convert_date_formats(date_format_6)
+        date_7 = validators.convert_date_formats(date_format_7)
 
         self.assertEqual(date_1, date)
         self.assertEqual(date_2, date)
         self.assertEqual(date_3, date)
         self.assertEqual(date_4, date)
         self.assertEqual(date_5, date)
+        self.assertEqual(date_6, None)
+        self.assertEqual(date_7, date)
 
     def test_calculate_threshold(self):
         self.assertEqual(validators.calculate_threshold(0,10), 100)
