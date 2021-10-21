@@ -104,7 +104,7 @@ class ValidatorsTestCase(TestCase):
         self.assertEqual(date_3, date)
         self.assertEqual(date_4, date)
         self.assertEqual(date_5, date)
-        self.assertEqual(date_6, None)
+        self.assertEqual(date_6, "")
         self.assertEqual(date_7, date)
 
     def test_calculate_threshold(self):
