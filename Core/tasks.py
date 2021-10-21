@@ -15,7 +15,7 @@ app = Celery()
 
 
 @app.task
-def save_payload_from_csv(request):
+def save_payload_from_csv():
     root_path = "uploads"
     i = 0
     for subdir, _, _ in os.walk(root_path):
