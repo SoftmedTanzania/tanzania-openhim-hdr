@@ -15,7 +15,7 @@ app = Celery()
 
 
 @app.task
-def save_payload_from_csv():
+def save_payload_from_csv(request):
     root_path = "uploads"
     i = 0
     for subdir, _, _ in os.walk(root_path):
@@ -29,6 +29,7 @@ def save_payload_from_csv():
                 imported_payload = core_views.regenerate_services_received_json_payload(lines)
 
                 if validators.validate_received_payload(json.loads(imported_payload)) is False:
+                    os.remove(file_path)
                     print("validation failed")
                 else:
                     print("validation successful")
@@ -116,9 +117,9 @@ def save_payload_from_csv():
                                 instance_death_by_disease_case_items.first_name = line[6]
                                 instance_death_by_disease_case_items.middle_name = line[7]
                                 instance_death_by_disease_case_items.last_name = line[8]
-                                instance_death_by_disease_case_items.icd_10_code = line[9]
-                                instance_death_by_disease_case_items.gender = line[10]
-                                instance_death_by_disease_case_items.date_of_birth = line[11]
+                                instance_death_by_disease_case_items.gender = line[9]
+                                instance_death_by_disease_case_items.date_of_birth = line[10]
+                                instance_death_by_disease_case_items.icd_10_code = line[11]
                                 instance_death_by_disease_case_items.date_death_occurred = line[12]
                                 instance_death_by_disease_case_items.save()
 
@@ -134,7 +135,6 @@ def save_payload_from_csv():
                                 instance_death_by_disease_case_items_not_at_facility.date_death_occurred = line[7]
                                 instance_death_by_disease_case_items_not_at_facility.death_id = line[8]
                                 instance_death_by_disease_case_items_not_at_facility.save()
-
 
                             elif message_type == "BEDOCC":
                                 last_bed_occupancy = core_models.BedOccupancy.objects.all().last()
@@ -172,9 +172,10 @@ def save_payload_from_csv():
 
                         row = row + 1
 
-                    fp.close()
                     os.remove(file_path)
+
                     i = 0
+                fp.close()
 
 
 
