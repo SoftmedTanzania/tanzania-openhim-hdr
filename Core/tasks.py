@@ -14,16 +14,18 @@ from ValidationManagement import models as validation_management_models
 app = Celery()
 
 
-@app.task
+@app.task(time_limit=10000)
 def save_payload_from_csv():
+    print("function was called")
     root_path = "uploads"
     i = 0
     for subdir, _, _ in os.walk(root_path):
+        print("subdir was called")
         for file in os.listdir(subdir):
-            print("for function here")
+            print("function was called")
             file_path = "" + root_path + "/" + file
             with open(file_path, 'r') as fp:
-                print("open file here")
+                print("open file path was called")
                 lines = csv.reader(fp, delimiter=',')
 
                 imported_payload = core_views.regenerate_services_received_json_payload(lines)
@@ -176,8 +178,6 @@ def save_payload_from_csv():
 
                     i = 0
                 fp.close()
-    return True
-
 
 
 
