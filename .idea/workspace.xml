@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/tasks.py" afterPath="$PROJECT_DIR$/Core/tasks.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,34 +64,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Core/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="24" selection-end-column="40" />
+            <state relative-caret-position="240">
+              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#1342#4014#0" expanded="false" />
-                <element signature="e#1676#2055#0" expanded="false" />
-                <element signature="e#2142#2602#0" expanded="false" />
-                <element signature="e#2692#3153#0" expanded="false" />
-                <element signature="e#3243#3594#0" expanded="false" />
-                <element signature="e#3681#3982#0" expanded="false" />
-                <element signature="e#4079#11040#0" expanded="false" />
-                <element signature="e#4579#6014#0" expanded="false" />
-                <element signature="e#6104#7422#0" expanded="false" />
-                <element signature="e#7515#8649#0" expanded="false" />
-                <element signature="e#8742#9489#0" expanded="false" />
-                <element signature="e#9579#10921#0" expanded="false" />
-                <element signature="e#11192#11375#0" expanded="false" />
-                <element signature="e#11437#14854#0" expanded="false" />
-                <element signature="e#14978#15658#0" expanded="false" />
+                <element signature="e#1347#4019#0" expanded="false" />
+                <element signature="e#1681#2060#0" expanded="false" />
+                <element signature="e#2147#2607#0" expanded="false" />
+                <element signature="e#2697#3158#0" expanded="false" />
+                <element signature="e#3248#3599#0" expanded="false" />
+                <element signature="e#3686#3987#0" expanded="false" />
+                <element signature="e#4084#11045#0" expanded="false" />
+                <element signature="e#4584#6019#0" expanded="false" />
+                <element signature="e#6109#7427#0" expanded="false" />
+                <element signature="e#7520#8654#0" expanded="false" />
+                <element signature="e#8747#9494#0" expanded="false" />
+                <element signature="e#9584#10926#0" expanded="false" />
+                <element signature="e#11197#11380#0" expanded="false" />
+                <element signature="e#11442#14859#0" expanded="false" />
+                <element signature="e#14983#15663#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HDR/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
@@ -1055,36 +1056,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="24" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#1342#4014#0" expanded="false" />
-            <element signature="e#1676#2055#0" expanded="false" />
-            <element signature="e#2142#2602#0" expanded="false" />
-            <element signature="e#2692#3153#0" expanded="false" />
-            <element signature="e#3243#3594#0" expanded="false" />
-            <element signature="e#3681#3982#0" expanded="false" />
-            <element signature="e#4079#11040#0" expanded="false" />
-            <element signature="e#4579#6014#0" expanded="false" />
-            <element signature="e#6104#7422#0" expanded="false" />
-            <element signature="e#7515#8649#0" expanded="false" />
-            <element signature="e#8742#9489#0" expanded="false" />
-            <element signature="e#9579#10921#0" expanded="false" />
-            <element signature="e#11192#11375#0" expanded="false" />
-            <element signature="e#11437#14854#0" expanded="false" />
-            <element signature="e#14978#15658#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HDR/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#1347#4019#0" expanded="false" />
+            <element signature="e#1681#2060#0" expanded="false" />
+            <element signature="e#2147#2607#0" expanded="false" />
+            <element signature="e#2697#3158#0" expanded="false" />
+            <element signature="e#3248#3599#0" expanded="false" />
+            <element signature="e#3686#3987#0" expanded="false" />
+            <element signature="e#4084#11045#0" expanded="false" />
+            <element signature="e#4584#6019#0" expanded="false" />
+            <element signature="e#6109#7427#0" expanded="false" />
+            <element signature="e#7520#8654#0" expanded="false" />
+            <element signature="e#8747#9494#0" expanded="false" />
+            <element signature="e#9584#10926#0" expanded="false" />
+            <element signature="e#11197#11380#0" expanded="false" />
+            <element signature="e#11442#14859#0" expanded="false" />
+            <element signature="e#14983#15663#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
