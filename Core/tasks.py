@@ -176,6 +176,7 @@ def save_payload_from_csv():
 
                     i = 0
                 fp.close()
+    return True
 
 
 
