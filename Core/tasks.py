@@ -14,7 +14,7 @@ from ValidationManagement import models as validation_management_models
 app = Celery()
 
 
-@app.task(time_limit=10000, acks_late=True)
+@app.task(bind=True, default_retry_delay=30, max_retries=3, soft_time_limit=10000)
 def save_payload_from_csv():
     print("function was called")
     root_path = "uploads"
