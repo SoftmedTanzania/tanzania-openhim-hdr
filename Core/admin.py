@@ -7,18 +7,18 @@ from django.contrib.admin import helpers
 
 # Register your models here.
 class ServiceReceivedAdmin(admin.ModelAdmin):
-    list_display = ('id', 'org_name', 'facility_hfr_code')
+    list_display = ('id','transaction_id', 'org_name', 'facility_hfr_code')
     search_fields = ['org_name', ]
 
 
 class ServiceReceivedItemsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'service_received', 'department_name','department_id', 'patient_id','gender',
+    list_display = ('id','service_received', 'department_name','department_id', 'patient_id','gender',
                     'date_of_birth','med_svc_code','icd_10_code','service_date','service_provider_ranking_id','visit_type')
     search_fields = ['service_received', ]
 
 
 class DeathByDiseaseCaseAtFacilityAdmin(admin.ModelAdmin):
-    list_display = ('id', 'org_name', 'facility_hfr_code')
+    list_display = ('id', 'transaction_id','org_name', 'facility_hfr_code')
     search_fields = ['org_name', ]
 
 
@@ -29,7 +29,7 @@ class DeathByDiseaseCaseAtFacilityItemsAdmin(admin.ModelAdmin):
 
 
 class DeathByDiseaseCaseNotAtFacilityAdmin(admin.ModelAdmin):
-    list_display = ('id', 'org_name', 'facility_hfr_code')
+    list_display = ('id', 'transaction_id','org_name', 'facility_hfr_code')
     search_fields = ['org_name', ]
 
 
@@ -40,7 +40,7 @@ class DeathByDiseaseCaseNotAtFacilityItemsAdmin(admin.ModelAdmin):
 
 
 class BedOccupancyAdmin(admin.ModelAdmin):
-    list_display = ('id', 'org_name', 'facility_hfr_code')
+    list_display = ('id','transaction_id' ,'org_name', 'facility_hfr_code')
     search_fields = ['org_name', ]
 
 
@@ -50,7 +50,7 @@ class BedOccupancyItemsAdmin(admin.ModelAdmin):
 
 
 class RevenueReceivedAdmin(admin.ModelAdmin):
-    list_display = ('id', 'org_name', 'facility_hfr_code')
+    list_display = ('id','transaction_id', 'org_name', 'facility_hfr_code')
     search_fields = ['org_name', ]
 
 

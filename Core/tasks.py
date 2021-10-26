@@ -15,7 +15,7 @@ app = Celery()
 
 
 @app.task()
-def save_payload_from_csv():
+def save_payload_from_csv(request):
     print("function was called")
     root_path = "uploads"
     i = 0
@@ -30,7 +30,11 @@ def save_payload_from_csv():
 
                 imported_payload = core_views.regenerate_services_received_json_payload(lines)
 
-                if validators.validate_received_payload(json.loads(imported_payload)) is False:
+                result = validators.validate_received_payload(json.loads(imported_payload))
+                transaction_status = result["transaction_status"]
+                transaction_id = result["transaction_id"]
+
+                if transaction_status is False:
                     os.remove(file_path)
                     print("validation failed")
                 else:
@@ -44,6 +48,7 @@ def save_payload_from_csv():
                             # Service received parents lines
                             if message_type == "SVCREC":
                                 instance_service_received = core_models.ServiceReceived()
+                                instance_service_received.transaction_id = transaction_id
                                 instance_service_received.org_name = facility_name
                                 instance_service_received.facility_hfr_code = facility_hfr_code
                                 instance_service_received.save()
@@ -51,6 +56,7 @@ def save_payload_from_csv():
                                 # Death by Facility in facility parent lines
                             if message_type == "DDC":
                                 instance_death_by_disease_case_at_facility = core_models.DeathByDiseaseCaseAtFacility()
+                                instance_death_by_disease_case_at_facility.transaction_id = transaction_id
                                 instance_death_by_disease_case_at_facility.org_name = facility_name
                                 instance_death_by_disease_case_at_facility.facility_hfr_code = facility_hfr_code
                                 instance_death_by_disease_case_at_facility.save()
@@ -58,12 +64,14 @@ def save_payload_from_csv():
                                 # Death by Disease Case Out of Faciity lines
                             if message_type == "DDCOUT":
                                 instance_death_by_disease_case_not_at_facility = core_models.DeathByDiseaseCaseNotAtFacility()
+                                instance_death_by_disease_case_not_at_facility.transaction_id = transaction_id
                                 instance_death_by_disease_case_not_at_facility.org_name = facility_name
                                 instance_death_by_disease_case_not_at_facility.facility_hfr_code = facility_hfr_code
                                 instance_death_by_disease_case_not_at_facility.save()
                                 # Bed Occupany parent lines
                             if message_type == "BEDOCC":
                                 instance_bed_occupancy = core_models.BedOccupancy()
+                                instance_bed_occupancy.transaction_id = transaction_id
                                 instance_bed_occupancy.org_name = facility_name
                                 instance_bed_occupancy.facility_hfr_code = facility_hfr_code
                                 instance_bed_occupancy.save()
@@ -71,6 +79,7 @@ def save_payload_from_csv():
                                 # Revenue received parent lines
                             if message_type == "REV":
                                 instance_revenue_received = core_models.RevenueReceived()
+                                instance_revenue_received.transaction_id = transaction_id
                                 instance_revenue_received.org_name = facility_name
                                 instance_revenue_received.facility_hfr_code = facility_hfr_code
                                 instance_revenue_received.save()

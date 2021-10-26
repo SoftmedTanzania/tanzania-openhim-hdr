@@ -13,11 +13,13 @@ urlpatterns = [
     path('accounts/login/', main.change_password, name='login_required_page'),
     path('logout', main.logout_view, name='logout'),
     path('get_audit_report/<int:item_pk>/', main.get_audit_report, name='get_audit_report'),
+    path('get_remove_transaction/<int:item_pk>/', main.remove_transaction, name='get_remove_transaction'),
     path('change_password', main.change_password, name='change_password'),
     path('export_transaction_lines', core_views.convert_to_csv, name='export_transaction_lines'),
     path('upload_payload', core_views.upload_payload, name='upload_payload'),
     path('upload_cpt_codes', core_views.upload_cpt_codes, name='upload_cpt_codes'),
     path('download_cpt_codes_as_csv', core_views.download_cpt_codes_as_csv, name='download_cpt_codes_as_csv'),
     path('filter_transaction_lines', core_views.filter_transaction_lines, name='filter_transaction_lines'),
+
 
 ]

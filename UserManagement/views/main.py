@@ -13,14 +13,15 @@ from ValidationManagement import models as validation_management_models
 from django_tables2 import RequestConfig
 import xlwt
 from Core import forms as core_forms
-
+from datetime import datetime, timedelta
+import json
 
 def get_login_page(request):
     return render(request, 'UserManagement/Auth/Login.html')
 
 
 def get_audit_report(request,item_pk):
-    transaction_summary_lines = validation_management_models.TransactionSummaryLine.objects.filter\
+    transaction_summary_lines = validation_management_models.TransactionSummaryLine.objects.filter \
         (transaction_id=item_pk).order_by('-id')
     transaction_summary_lines_table = TransactionSummaryLineTable(transaction_summary_lines)
     RequestConfig(request, paginate={"per_page": 15}).configure(transaction_summary_lines_table)
@@ -117,6 +118,35 @@ def set_changed_password(request):
             return HttpResponse(status=401)
 
 
+def remove_transaction(request,item_pk):
+    transaction_id = item_pk
+    print(transaction_id)
+
+    transaction = validation_management_models.TransactionSummary.objects.get(id=transaction_id)
+
+    if transaction is not None:
+        transaction.is_active = False
+        transaction.save()
+        return HttpResponse(status=200)
+    else:
+        return HttpResponse(status=400)
+
+
+def disable_payload_items():
+    disabled_transaction = validation_management_models.TransactionSummary.objects.filter(is_active=False,
+                                                                transaction_date_time__gte=timedelta(days=-7)).order_by('-id')
+
+    for transaction in disabled_transaction:
+        transaction_lines = validation_management_models.TransactionSummaryLine.objects.filter(transaction_id = transaction.id)
+
+        for transaction_line in transaction_lines:
+            payload = transaction_line.payload
+
+            json_payload = json.dumps(payload)
+
+            item_id = payload[""]
+
+
 def export_transaction_lines(request):
     if request.method == "POST":
         transaction_id = request.POST["item_pk"]
@@ -157,7 +187,7 @@ def export_transaction_lines(request):
 def get_dashboard(request):
     form = core_forms.PayloadImportForm()
     facility = request.user.profile.facility
-    transaction_summary = validation_management_models.TransactionSummary.objects.filter(facility_hfr_code=facility.facility_hfr_code).order_by('-transaction_date_time')
+    transaction_summary = validation_management_models.TransactionSummary.objects.filter(facility_hfr_code=facility.facility_hfr_code, is_active=True).order_by('-transaction_date_time')
     transaction_summary_table = TransactionSummaryTable(transaction_summary)
     RequestConfig(request, paginate={"per_page": 10}).configure(transaction_summary_table)
 
@@ -166,7 +196,7 @@ def get_dashboard(request):
 
 
 def get_transaction_summary_lines(request,item_pk):
-    transaction_summary_lines = validation_management_models.TransactionSummaryLine.objects.filter\
+    transaction_summary_lines = validation_management_models.TransactionSummaryLine.objects.filter \
         (transaction_id=item_pk).order_by('-id')
     transaction_summary_lines_table = TransactionSummaryLineTable(transaction_summary_lines)
     RequestConfig(request, paginate={"per_page": 10}).configure(transaction_summary_lines_table)

@@ -39,11 +39,15 @@ class ServiceReceivedView(viewsets.ModelViewSet):
 
         if serializer.is_valid():
             print("serializer is valid")
-            if validators.validate_received_payload(dict(serializer.data)) is False:
+            result = validators.validate_received_payload(dict(serializer.data))
+            transaction_status = result["transaction_status"]
+            transaction_id = result["transaction_id"]
+
+            if transaction_status is False:
                 response = {"message": "Failed", "status": status.HTTP_400_BAD_REQUEST}
                 return Response(response, status=status.HTTP_400_BAD_REQUEST)
             else:
-                self.perform_create(request, serializer)
+                self.perform_create(request, serializer, transaction_id)
 
                 headers = self.get_success_headers(serializer.data)
                 response = {"message": "Success", "status": status.HTTP_200_OK}
@@ -57,12 +61,12 @@ class ServiceReceivedView(viewsets.ModelViewSet):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-    def perform_create(self, request, serializer):
+    def perform_create(self, request, serializer, transaction_id):
 
         # validate payload
-        print("here now")
         instance_service_received = ServiceReceived()
 
+        instance_service_received.transaction_id = transaction_id
         instance_service_received.org_name = serializer.data["orgName"]
         instance_service_received.facility_hfr_code = serializer.data["facilityHfrCode"]
         instance_service_received.save()
@@ -119,11 +123,16 @@ class DeathByDiseaseCaseAtFacilityView(viewsets.ModelViewSet):
             serializer = self.get_serializer(data=request.data)
 
         if serializer.is_valid():
-            if validators.validate_received_payload(dict(serializer.data)) is False:
+            result = validators.validate_received_payload(dict(serializer.data))
+            transaction_status = result["transaction_status"]
+            transaction_id = result["transaction_id"]
+
+
+            if transaction_status is False:
                 response = {"message": "Failed", "status": status.HTTP_400_BAD_REQUEST}
                 return Response(response, status=status.HTTP_400_BAD_REQUEST)
             else:
-                self.perform_create(request, serializer)
+                self.perform_create(request, serializer, transaction_id)
 
                 headers = self.get_success_headers(serializer.data)
                 response = {"message": "Success", "status": status.HTTP_200_OK}
@@ -135,11 +144,12 @@ class DeathByDiseaseCaseAtFacilityView(viewsets.ModelViewSet):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-    def perform_create(self, request, serializer):
+    def perform_create(self, request, serializer, transaction_id):
 
         # validate payload
         instance_death_by_disease_case_at_facility = DeathByDiseaseCaseAtFacility()
 
+        instance_death_by_disease_case_at_facility.transaction_id = transaction_id
         instance_death_by_disease_case_at_facility.org_name = serializer.data["orgName"]
         instance_death_by_disease_case_at_facility.facility_hfr_code = serializer.data["facilityHfrCode"]
         instance_death_by_disease_case_at_facility.save()
@@ -191,12 +201,16 @@ class DeathByDiseaseCaseNotAtFacilityView(viewsets.ModelViewSet):
             serializer = self.get_serializer(data=request.data)
 
         if serializer.is_valid():
-            if validators.validate_received_payload(dict(serializer.data)) is False:
+            result = validators.validate_received_payload(dict(serializer.data))
+            transaction_status = result["transaction_status"]
+            transaction_id = result["transaction_id"]
+
+            if transaction_status is False:
 
                 response = {"message": "Failed", "status": status.HTTP_400_BAD_REQUEST}
                 return Response(response, status=status.HTTP_400_BAD_REQUEST)
             else:
-                self.perform_create(request, serializer)
+                self.perform_create(request, serializer, transaction_id)
 
                 headers = self.get_success_headers(serializer.data)
                 response = {"message": "Success", "status": status.HTTP_200_OK}
@@ -208,10 +222,11 @@ class DeathByDiseaseCaseNotAtFacilityView(viewsets.ModelViewSet):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-    def perform_create(self, request, serializer):
+    def perform_create(self, request, serializer, transaction_id):
         # validate payload
         instance_death_by_disease_case_not_at_facility = DeathByDiseaseCaseNotAtFacility()
 
+        instance_death_by_disease_case_not_at_facility.transaction_id = transaction_id
         instance_death_by_disease_case_not_at_facility.org_name = serializer.data["orgName"]
         instance_death_by_disease_case_not_at_facility.facility_hfr_code = serializer.data["facilityHfrCode"]
         instance_death_by_disease_case_not_at_facility.save()
@@ -257,12 +272,16 @@ class RevenueReceivedView(viewsets.ModelViewSet):
             serializer = self.get_serializer(data=request.data)
 
         if serializer.is_valid():
-            if validators.validate_received_payload(dict(serializer.data)) is False:
+            result = validators.validate_received_payload(dict(serializer.data))
+            transaction_status = result["transaction_status"]
+            transaction_id = result["transaction_id"]
+
+            if transaction_status is False:
 
                 response = {"message": "Failed", "status": status.HTTP_400_BAD_REQUEST}
                 return Response(response, status=status.HTTP_400_BAD_REQUEST)
             else:
-                self.perform_create(request, serializer)
+                self.perform_create(request, serializer, transaction_id)
 
                 headers = self.get_success_headers(serializer.data)
                 response = {"message": "Success", "status": status.HTTP_200_OK}
@@ -274,10 +293,11 @@ class RevenueReceivedView(viewsets.ModelViewSet):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-    def perform_create(self, request, serializer):
+    def perform_create(self, request, serializer, transaction_id):
         # validate payload
         instance_revenue_received = RevenueReceived()
 
+        instance_revenue_received.transaction_id = transaction_id
         instance_revenue_received.org_name = serializer.data["orgName"]
         instance_revenue_received.facility_hfr_code = serializer.data["facilityHfrCode"]
         instance_revenue_received.save()
@@ -333,11 +353,15 @@ class BedOccupancyView(viewsets.ModelViewSet):
             serializer = self.get_serializer(data=request.data)
 
         if serializer.is_valid():
-            if validators.validate_received_payload(dict(serializer.data)) is False:
+            result = validators.validate_received_payload(dict(serializer.data))
+            transaction_status = result["transaction_status"]
+            transaction_id = result["transaction_id"]
+
+            if transaction_status is False:
                 response = {"message": "Failed", "status": status.HTTP_400_BAD_REQUEST}
                 return Response(response, status=status.HTTP_400_BAD_REQUEST)
             else:
-                self.perform_create(request, serializer)
+                self.perform_create(request, serializer, transaction_id)
 
                 headers = self.get_success_headers(serializer.data)
                 response = {"message": "Success", "status": status.HTTP_200_OK}
@@ -349,11 +373,12 @@ class BedOccupancyView(viewsets.ModelViewSet):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-    def perform_create(self, request, serializer):
+    def perform_create(self, request, serializer, transaction_id):
 
         # validate payload
         instance_bed_occupancy = BedOccupancy()
 
+        instance_bed_occupancy.transaction_id = transaction_id
         instance_bed_occupancy.org_name = serializer.data["orgName"]
         instance_bed_occupancy.facility_hfr_code = serializer.data["facilityHfrCode"]
         instance_bed_occupancy.save()

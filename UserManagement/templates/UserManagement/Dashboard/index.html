@@ -6,7 +6,7 @@
 
 {% block content %}
 
-    <div class="row" id="department_mappings">
+    <div class="row" id="transaction_summary">
         <div class="col-md-12 col-sm-12">
             <div class="card">
                 <div class="card-header">
@@ -112,11 +112,6 @@
 {#            jQuery('#file').trigger('click');#}
 
             $(".btn_audit_report").on( "click", function( event ) {
-{#                var id = $(this).attr('id');#}
-
-                {#                $("#view_more").load('{% url 'get_transaction_summary_lines' 123 %}'.replace('123', parseInt(id)), function() {#}
-                {#                    $("#view_more").modal("show");#}
-                {#                });#}
 
                 var item = $(this).attr("id");
                 var url = '{% url 'get_audit_report' 12345 %}'.replace(/12345/, parseInt(item));
@@ -126,61 +121,57 @@
             });
 
 
-            {#            $("#upload_payload").on( "click", function( event ) {#}
-            {##}
-            {#                var data = new FormData($('#fileForm').get(0));#}
-            {#                data.append('file', $('#file')[0].files);#}
-            {##}
-            {#                alert(data);#}
-            {##}
-            {##}
-            {#                swal({#}
-            {#                    title: "Are you sure you want to upload this file?",#}
-            {#                    text: "Upload payload to import records." ,#}
-            {#                    icon: "warning",#}
-            {#                    buttons: [#}
-            {#                        'No, cancel it!',#}
-            {#                        'Yes, I am sure!'#}
-            {#                    ],#}
-            {#                    dangerMode: true,#}
-            {#                }).then(function(isConfirm) {#}
-            {##}
-            {##}
-            {#                    var messageType = $("#option").val();#}
-            {#                    var url = '{% url "upload_payload" %}';#}
-            {##}
-            {#                    $.ajax({#}
-            {#                        type: "POST",#}
-            {#                        url: url,#}
-            {#                        data: {#}
-            {#                            messageType: messageType,data:data,#}
-            {#                            'csrfmiddlewaretoken': '{{ csrf_token }}'#}
-            {#                        },#}
-            {#                        success: function(data)#}
-            {#                        {#}
-            {##}
-            {#                            swal({#}
-            {#                                title: 'CSV file imported successfully',#}
-            {#                                icon: 'success'#}
-            {#                            })#}
-            {##}
-            {##}
-            {#                        },#}
-            {#                        error: function (XMLHttpRequest, textStatus, errorThrown) {#}
-            {##}
-            {#                            swal({#}
-            {#                                title: 'Operation failed.',#}
-            {#                                icon: 'error'#}
-            {#                            });#}
-            {##}
-            {#                        }#}
-            {#                    });#}
-            {##}
-            {#                    e.preventDefault(); // avoid to execute the actual submit of the form.#}
-            {##}
-            {#                });#}
-            {##}
-            {#            })#}
+            $('.btn_delete').on("click", function(event)
+            {
+                var item = $(this).attr("id");
+                var url = '{% url 'get_remove_transaction' 12345 %}'.replace(/12345/, parseInt(item));
+
+                swal({
+                    title: "Are you sure you want to remove this transaction?",
+                    text: ".",
+                    icon: "warning",
+                    buttons: [
+                        'No, cancel it!',
+                        'Yes, I am sure!'
+                    ],
+                    dangerMode: true,
+                }).then(function(isConfirm) {
+                    if (isConfirm) {
+                        {
+                            $.ajax({
+                                type: "POST",
+                                url: url,
+                                data: {
+                                    item: item,
+                                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                                },
+                                success: function (data) {
+
+                                    swal("Success!", "Removed successfully.", "success");
+                                    location.reload();
+
+                                },
+                                error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                                    swal("Removing item Failed.", "Error thrown: "+errorThrown+" ", "error");
+
+                                }
+                            });
+
+                            e.preventDefault(); // avoid to execute the actual submit of the form.
+                        }
+                    }
+
+                    else {
+
+                        swal("Info", "Action cancelled by user.", "info");
+                    }
+
+                });
+
+                e.preventDefault(); // avoid to execute the actual submit of the form.
+
+            });
 
             $(".btn_download").on( "click", function( event ) {
                 var id = $(this).attr('id');

@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import date
+from ValidationManagement import models as validation_management_models
 
 # Create your models here.
 def upload_image(self, filename):
@@ -10,6 +11,7 @@ class ServiceReceived(models.Model):
     def __str__(self):
         return '%d' % self.id
 
+    transaction = models.ForeignKey(validation_management_models.TransactionSummary, on_delete=models.DO_NOTHING, null=True, blank=True)
     org_name = models.CharField(max_length=255)
     facility_hfr_code = models.CharField(max_length=255)
 
@@ -43,6 +45,8 @@ class DeathByDiseaseCaseAtFacility(models.Model):
     def __str__(self):
         return '%d' %self.id
 
+    transaction = models.ForeignKey(validation_management_models.TransactionSummary, on_delete=models.DO_NOTHING,
+                               null=True, blank=True)
     org_name = models.CharField(max_length=255)
     facility_hfr_code = models.CharField(max_length=255)
 
@@ -76,6 +80,8 @@ class DeathByDiseaseCaseNotAtFacility(models.Model):
     def __str__(self):
         return '%d' %self.id
 
+    transaction = models.ForeignKey(validation_management_models.TransactionSummary, on_delete=models.DO_NOTHING,
+                                    null=True, blank=True)
     org_name = models.CharField(max_length=255)
     facility_hfr_code = models.CharField(max_length=255)
 
@@ -105,6 +111,8 @@ class BedOccupancy(models.Model):
     def __str__(self):
         return '%d' %self.id
 
+    transaction = models.ForeignKey(validation_management_models.TransactionSummary, on_delete=models.DO_NOTHING,
+                                    null=True, blank=True)
     org_name = models.CharField(max_length=255)
     facility_hfr_code = models.CharField(max_length=255)
 
@@ -149,6 +157,8 @@ class RevenueReceived(models.Model):
     def __str__(self):
         return '%d' %self.id
 
+    transaction = models.ForeignKey(validation_management_models.TransactionSummary, on_delete=models.DO_NOTHING,
+                                    null=True, blank=True)
     org_name = models.CharField(max_length=255)
     facility_hfr_code = models.CharField(max_length=255)
 

@@ -92,6 +92,8 @@ def validate_received_payload(data):
     instance_transaction_summary.facility_hfr_code = facility_hfr_code
     instance_transaction_summary.save()
 
+    transaction_id = instance_transaction_summary.id
+
     validation_rule_failed = 0
     total_passed_records = 0
     total_failed_records = 0
@@ -265,7 +267,7 @@ def validate_received_payload(data):
         previous_transaction.save()
 
         instance_transaction_summary_lines = TransactionSummaryLine()
-        instance_transaction_summary_lines.transaction_id = instance_transaction_summary.id
+        instance_transaction_summary_lines.transaction_id = transaction_id
         instance_transaction_summary_lines.payload_object = json.dumps(val)
 
         if False in transaction_status_array:
@@ -293,7 +295,11 @@ def validate_received_payload(data):
     else:
         transaction_status  = True
 
-    return transaction_status
+    d = dict()
+    d["transaction_status"] = transaction_status
+    d["transaction_id"] = transaction_id
+
+    return d
 
 
 def calculate_threshold(total_failed, total_passed):

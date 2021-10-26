@@ -92,6 +92,7 @@ class TransactionSummary(models.Model):
     facility_hfr_code  = models.CharField(max_length=255)
     total_passed = models.IntegerField(default=0)
     total_failed = models.IntegerField(default=0)
+    is_active = models.BooleanField(default=True)
 
 
     class Meta:
