@@ -105,6 +105,8 @@ CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers.DatabaseScheduler'
 CELERY_TIMEZONE = 'Africa/Dar_es_Salaam'
 CELERY_ENABLE_UTC = True
 
+ONE_DEFAULT_TIMEOUT = 60 * 60
+
 WSGI_APPLICATION = 'HDR.wsgi.application'
 
 # Database
