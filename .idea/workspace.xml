@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/rev-1.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/tasks.py" afterPath="$PROJECT_DIR$/Core/tasks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/views.py" afterPath="$PROJECT_DIR$/Core/views.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,17 +51,17 @@
       <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Core/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="97" column="68" selection-start-line="97" selection-start-column="68" selection-end-line="97" selection-end-column="68" />
+            <state relative-caret-position="90">
+              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
               <folding>
-                <element signature="e#1969#3675#0" expanded="false" />
-                <element signature="e#3765#5624#0" expanded="false" />
-                <element signature="e#5747#7408#0" expanded="false" />
-                <element signature="e#7519#8657#0" expanded="false" />
-                <element signature="e#8759#10509#0" expanded="false" />
-                <element signature="e#10564#10747#0" expanded="false" />
-                <element signature="e#10809#14226#0" expanded="false" />
-                <element signature="e#14350#15030#0" expanded="false" />
+                <element signature="e#1962#3668#0" expanded="false" />
+                <element signature="e#3758#5617#0" expanded="false" />
+                <element signature="e#5740#7401#0" expanded="false" />
+                <element signature="e#7512#8650#0" expanded="false" />
+                <element signature="e#8752#10502#0" expanded="false" />
+                <element signature="e#10557#10740#0" expanded="false" />
+                <element signature="e#10802#14219#0" expanded="false" />
+                <element signature="e#14343#15023#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1082,17 +1079,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Core/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="97" column="68" selection-start-line="97" selection-start-column="68" selection-end-line="97" selection-end-column="68" />
+        <state relative-caret-position="90">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
           <folding>
-            <element signature="e#1969#3675#0" expanded="false" />
-            <element signature="e#3765#5624#0" expanded="false" />
-            <element signature="e#5747#7408#0" expanded="false" />
-            <element signature="e#7519#8657#0" expanded="false" />
-            <element signature="e#8759#10509#0" expanded="false" />
-            <element signature="e#10564#10747#0" expanded="false" />
-            <element signature="e#10809#14226#0" expanded="false" />
-            <element signature="e#14350#15030#0" expanded="false" />
+            <element signature="e#1962#3668#0" expanded="false" />
+            <element signature="e#3758#5617#0" expanded="false" />
+            <element signature="e#5740#7401#0" expanded="false" />
+            <element signature="e#7512#8650#0" expanded="false" />
+            <element signature="e#8752#10502#0" expanded="false" />
+            <element signature="e#10557#10740#0" expanded="false" />
+            <element signature="e#10802#14219#0" expanded="false" />
+            <element signature="e#14343#15023#0" expanded="false" />
           </folding>
         </state>
       </provider>

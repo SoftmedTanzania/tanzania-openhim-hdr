@@ -15,7 +15,7 @@ app = Celery()
 
 
 @app.task()
-def save_payload_from_csv(request):
+def save_payload_from_csv():
     print("function was called")
     root_path = "uploads"
     i = 0
