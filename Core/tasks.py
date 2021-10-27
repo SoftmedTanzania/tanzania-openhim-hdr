@@ -15,7 +15,7 @@ app = Celery()
 
 
 @app.task()
-def save_payload_from_csv():
+def save_payload_from_csv(request):
     print("function was called")
     root_path = "uploads"
     i = 0
@@ -74,6 +74,7 @@ def save_payload_from_csv():
 
                     # Death in Facility
                     if message_type == "DDC":
+                        print("ddc execut")
                         instance_death_by_disease_case_at_facility = core_models.DeathByDiseaseCaseAtFacility()
                         instance_death_by_disease_case_at_facility.transaction_id = transaction_id
                         instance_death_by_disease_case_at_facility.org_name = facility_name

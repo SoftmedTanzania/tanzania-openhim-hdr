@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/tasks.py" afterPath="$PROJECT_DIR$/Core/tasks.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/views.py" afterPath="$PROJECT_DIR$/Core/views.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Core/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="212" column="30" selection-start-line="212" selection-start-column="30" selection-end-line="222" selection-end-column="67" />
+            <state relative-caret-position="300">
+              <caret line="221" column="49" selection-start-line="221" selection-start-column="49" selection-end-line="221" selection-end-column="49" />
               <folding>
                 <element signature="e#3640#4543#0" expanded="false" />
                 <element signature="e#4590#5283#0" expanded="false" />
@@ -48,20 +50,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            <state relative-caret-position="285">
+              <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
               <folding>
-                <element signature="e#1962#3668#0" expanded="false" />
-                <element signature="e#3758#5617#0" expanded="false" />
-                <element signature="e#5740#7401#0" expanded="false" />
-                <element signature="e#7512#8650#0" expanded="false" />
-                <element signature="e#8752#10502#0" expanded="false" />
-                <element signature="e#10557#10740#0" expanded="false" />
-                <element signature="e#10802#14219#0" expanded="false" />
-                <element signature="e#14343#15023#0" expanded="false" />
+                <element signature="e#1969#3675#0" expanded="false" />
+                <element signature="e#5791#7452#0" expanded="false" />
+                <element signature="e#7563#8701#0" expanded="false" />
+                <element signature="e#8803#10553#0" expanded="false" />
+                <element signature="e#10608#10791#0" expanded="false" />
+                <element signature="e#10853#14270#0" expanded="false" />
+                <element signature="e#14394#15074#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Core/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="19" column="39" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2896">
+              <caret line="274" column="10" selection-start-line="274" selection-start-column="10" selection-end-line="276" selection-end-column="53" />
+              <folding>
+                <element signature="e#1449#1618#0" expanded="false" />
+                <element signature="e#18757#18910#0" expanded="false" />
+                <element signature="e#18959#19108#0" expanded="false" />
+                <element signature="e#19156#20902#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -162,8 +188,8 @@
         <option value="$PROJECT_DIR$/Core/models.py" />
         <option value="$PROJECT_DIR$/API/views.py" />
         <option value="$PROJECT_DIR$/Core/admin.py" />
-        <option value="$PROJECT_DIR$/Core/views.py" />
         <option value="$PROJECT_DIR$/Core/tasks.py" />
+        <option value="$PROJECT_DIR$/Core/views.py" />
       </list>
     </option>
   </component>
@@ -971,27 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3810">
-          <caret line="274" column="10" selection-start-line="274" selection-start-column="10" selection-end-line="276" selection-end-column="53" />
-          <folding>
-            <element signature="e#1449#1618#0" expanded="false" />
-            <element signature="e#18757#18910#0" expanded="false" />
-            <element signature="e#18959#19108#0" expanded="false" />
-            <element signature="e#19156#20902#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1055,20 +1060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="212" column="30" selection-start-line="212" selection-start-column="30" selection-end-line="222" selection-end-column="67" />
-          <folding>
-            <element signature="e#3640#4543#0" expanded="false" />
-            <element signature="e#4590#5283#0" expanded="false" />
-            <element signature="e#5319#5605#0" expanded="false" />
-            <element signature="e#5643#6491#0" expanded="false" />
-            <element signature="e#6568#7460#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HDR/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -1077,19 +1068,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Core/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2896">
+          <caret line="274" column="10" selection-start-line="274" selection-start-column="10" selection-end-line="276" selection-end-column="53" />
+          <folding>
+            <element signature="e#1449#1618#0" expanded="false" />
+            <element signature="e#18757#18910#0" expanded="false" />
+            <element signature="e#18959#19108#0" expanded="false" />
+            <element signature="e#19156#20902#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Core/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        <state relative-caret-position="285">
+          <caret line="30" column="61" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
           <folding>
-            <element signature="e#1962#3668#0" expanded="false" />
-            <element signature="e#3758#5617#0" expanded="false" />
-            <element signature="e#5740#7401#0" expanded="false" />
-            <element signature="e#7512#8650#0" expanded="false" />
-            <element signature="e#8752#10502#0" expanded="false" />
-            <element signature="e#10557#10740#0" expanded="false" />
-            <element signature="e#10802#14219#0" expanded="false" />
-            <element signature="e#14343#15023#0" expanded="false" />
+            <element signature="e#1969#3675#0" expanded="false" />
+            <element signature="e#5791#7452#0" expanded="false" />
+            <element signature="e#7563#8701#0" expanded="false" />
+            <element signature="e#8803#10553#0" expanded="false" />
+            <element signature="e#10608#10791#0" expanded="false" />
+            <element signature="e#10853#14270#0" expanded="false" />
+            <element signature="e#14394#15074#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="221" column="49" selection-start-line="221" selection-start-column="49" selection-end-line="221" selection-end-column="49" />
+          <folding>
+            <element signature="e#3640#4543#0" expanded="false" />
+            <element signature="e#4590#5283#0" expanded="false" />
+            <element signature="e#5319#5605#0" expanded="false" />
+            <element signature="e#5643#6491#0" expanded="false" />
+            <element signature="e#6568#7460#0" expanded="false" />
           </folding>
         </state>
       </provider>

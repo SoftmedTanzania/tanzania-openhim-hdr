@@ -229,9 +229,9 @@ def regenerate_json_payload_from_csv(lines):
                                "firstName": line[6],
                                "middleName": line[7],
                                "lastName": line[8],
-                               "icd10Code": line[9],
-                               "gender": line[10],
-                               "dob": line[11],
+                               "gender": line[9],
+                               "dob": line[10],
+                               "icd10Code": line[11],
                                "dateDeathOccurred": line[12]
                                }
             elif message_type == "BEDOCC":
