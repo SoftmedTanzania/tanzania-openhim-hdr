@@ -15,7 +15,7 @@ app = Celery()
 
 
 @app.task()
-def save_payload_from_csv():
+def save_payload_from_csv(request):
     print("function was called")
     root_path = "uploads"
     i = 0
@@ -28,166 +28,140 @@ def save_payload_from_csv():
                 print("open file path was called")
                 lines = csv.reader(fp, delimiter=',')
 
-                imported_payload = core_views.regenerate_services_received_json_payload(lines)
+                imported_payload = core_views.regenerate_json_payload_from_csv(lines)
 
                 result = validators.validate_received_payload(json.loads(imported_payload))
                 transaction_status = result["transaction_status"]
                 transaction_id = result["transaction_id"]
 
+                os.remove(file_path)
+                fp.close()
+
                 if transaction_status is False:
-                    os.remove(file_path)
                     print("validation failed")
                 else:
                     print("validation successful")
-                    for line in lines:
-                        if i == 1:
-                            message_type = str(line[0]).upper()
-                            facility_hfr_code = line[1]
-                            facility_name = line[2]
+                    json_imported_payload = json.loads(imported_payload)
+                    print(json_imported_payload)
+                    message_type = json_imported_payload["messageType"]
+                    facility_name = json_imported_payload["orgName"]
+                    facility_hfr_code = json_imported_payload["facilityHfrCode"]
 
-                            # Service received parents lines
-                            if message_type == "SVCREC":
-                                instance_service_received = core_models.ServiceReceived()
-                                instance_service_received.transaction_id = transaction_id
-                                instance_service_received.org_name = facility_name
-                                instance_service_received.facility_hfr_code = facility_hfr_code
-                                instance_service_received.save()
+                    items = json_imported_payload["items"]
 
-                                # Death by Facility in facility parent lines
-                            if message_type == "DDC":
-                                instance_death_by_disease_case_at_facility = core_models.DeathByDiseaseCaseAtFacility()
-                                instance_death_by_disease_case_at_facility.transaction_id = transaction_id
-                                instance_death_by_disease_case_at_facility.org_name = facility_name
-                                instance_death_by_disease_case_at_facility.facility_hfr_code = facility_hfr_code
-                                instance_death_by_disease_case_at_facility.save()
+                    # Service received parents lines
+                    if message_type == "SVCREC":
+                        instance_service_received = core_models.ServiceReceived()
+                        instance_service_received.transaction_id = transaction_id
+                        instance_service_received.org_name = facility_name
+                        instance_service_received.facility_hfr_code = facility_hfr_code
+                        instance_service_received.save()
 
-                                # Death by Disease Case Out of Faciity lines
-                            if message_type == "DDCOUT":
-                                instance_death_by_disease_case_not_at_facility = core_models.DeathByDiseaseCaseNotAtFacility()
-                                instance_death_by_disease_case_not_at_facility.transaction_id = transaction_id
-                                instance_death_by_disease_case_not_at_facility.org_name = facility_name
-                                instance_death_by_disease_case_not_at_facility.facility_hfr_code = facility_hfr_code
-                                instance_death_by_disease_case_not_at_facility.save()
-                                # Bed Occupany parent lines
-                            if message_type == "BEDOCC":
-                                instance_bed_occupancy = core_models.BedOccupancy()
-                                instance_bed_occupancy.transaction_id = transaction_id
-                                instance_bed_occupancy.org_name = facility_name
-                                instance_bed_occupancy.facility_hfr_code = facility_hfr_code
-                                instance_bed_occupancy.save()
+                        for item in items:
+                            instance_service_received_items = core_models.ServiceReceivedItems()
+                            instance_service_received_items.service_received_id = instance_service_received.id
+                            instance_service_received_items.department_name = item["deptName"]
+                            instance_service_received_items.department_id = item["deptId"]
+                            instance_service_received_items.patient_id = item["patId"]
+                            instance_service_received_items.gender = item["gender"]
+                            instance_service_received_items.date_of_birth = validators.convert_date_formats(item["dob"])
+                            instance_service_received_items.med_svc_code = item["medSvcCode"]
+                            instance_service_received_items.icd_10_code = item["icd10Code"]
+                            instance_service_received_items.service_date = validators.convert_date_formats(item["serviceDate"])
+                            instance_service_received_items.service_provider_ranking_id = item["serviceProviderRankingId"]
+                            instance_service_received_items.visit_type = item["visitType"]
+                            instance_service_received_items.save()
 
-                                # Revenue received parent lines
-                            if message_type == "REV":
-                                instance_revenue_received = core_models.RevenueReceived()
-                                instance_revenue_received.transaction_id = transaction_id
-                                instance_revenue_received.org_name = facility_name
-                                instance_revenue_received.facility_hfr_code = facility_hfr_code
-                                instance_revenue_received.save()
+                    # Death in Facility
+                    if message_type == "DDC":
+                        instance_death_by_disease_case_at_facility = core_models.DeathByDiseaseCaseAtFacility()
+                        instance_death_by_disease_case_at_facility.transaction_id = transaction_id
+                        instance_death_by_disease_case_at_facility.org_name = facility_name
+                        instance_death_by_disease_case_at_facility.facility_hfr_code = facility_hfr_code
+                        instance_death_by_disease_case_at_facility.save()
 
-                        i += 1
+                        for item in items:
+                            instance_death_by_disease_case_items = core_models.DeathByDiseaseCaseAtFacility()
+                            instance_death_by_disease_case_items.death_by_disease_case_at_facility_id = instance_death_by_disease_case_at_facility.id
+                            instance_death_by_disease_case_items.ward_id = item["wardId"]
+                            instance_death_by_disease_case_items.ward_name = item["wardName"]
+                            instance_death_by_disease_case_items.patient_id = item["patId"]
+                            instance_death_by_disease_case_items.first_name = item["firstName"]
+                            instance_death_by_disease_case_items.middle_name = item["middleName"]
+                            instance_death_by_disease_case_items.last_name = item["lastName"]
+                            instance_death_by_disease_case_items.gender = item["gender"]
+                            instance_death_by_disease_case_items.date_of_birth = item["dob"]
+                            instance_death_by_disease_case_items.icd_10_code = item["icd10Code"]
+                            instance_death_by_disease_case_items.date_death_occurred = item["dateDeathOccurred"]
+                            instance_death_by_disease_case_items.save()
 
-                    for line in lines:
-                        row = 0
+                        # Death by Disease Case Out of Faciity lines
 
-                        if row == 0:
-                            headers = line
-                            row = row + 1
-                        else:
-                            new_line_details = {}
-                            for i in range(len(headers)):
-                                new_line_details[headers[i]] = line[i]
+                    # Death outside at Facility
+                    if message_type == "DDCOUT":
+                        instance_death_by_disease_case_not_at_facility = core_models.DeathByDiseaseCaseNotAtFacility()
+                        instance_death_by_disease_case_not_at_facility.transaction_id = transaction_id
+                        instance_death_by_disease_case_not_at_facility.org_name = facility_name
+                        instance_death_by_disease_case_not_at_facility.facility_hfr_code = facility_hfr_code
+                        instance_death_by_disease_case_not_at_facility.save()
 
-                            # save the transaction lines and message
-                            if message_type == "SVCREC":
+                        for item in items:
+                            instance_death_by_disease_case_items_not_at_facility = core_models.DeathByDiseaseCaseNotAtFacilityItems()
+                            instance_death_by_disease_case_items_not_at_facility.death_by_disease_case_not_at_facility_id = instance_death_by_disease_case_not_at_facility.id
+                            instance_death_by_disease_case_items_not_at_facility.place_of_death_id = item["placeOfDeathID"]
+                            instance_death_by_disease_case_items_not_at_facility.gender = item["gender"]
+                            instance_death_by_disease_case_items_not_at_facility.date_of_birth = item["dob"]
+                            instance_death_by_disease_case_items_not_at_facility.icd_10_code = item["icd10Code"]
+                            instance_death_by_disease_case_items_not_at_facility.date_death_occurred = item["dateDeathOccurred"]
+                            instance_death_by_disease_case_items_not_at_facility.death_id = item["deathId"]
+                            instance_death_by_disease_case_items_not_at_facility.save()
 
-                                last_service_received = core_models.ServiceReceived.objects.all().last()
-                                instance_service_received_items = core_models.ServiceReceivedItems()
-                                instance_service_received_items.service_received_id = last_service_received.id
-                                instance_service_received_items.department_name = line[3]
-                                instance_service_received_items.department_id = line[4]
-                                instance_service_received_items.patient_id = line[5]
-                                instance_service_received_items.gender = line[6]
-                                instance_service_received_items.date_of_birth = validators.convert_date_formats(line[7])
-                                instance_service_received_items.med_svc_code = line[8]
-                                instance_service_received_items.icd_10_code = line[9]
-                                instance_service_received_items.service_date = validators.convert_date_formats(line[10])
-                                instance_service_received_items.service_provider_ranking_id = line[11]
-                                instance_service_received_items.visit_type = line[12]
-                                instance_service_received_items.save()
+                        # Bed Occupany parent lines
 
-                                # Update transactions
-                                # update_transaction_summary(transaction_id)
+                    # Bed Occupancy
+                    if message_type == "BEDOCC":
+                        instance_bed_occupancy = core_models.BedOccupancy()
+                        instance_bed_occupancy.transaction_id = transaction_id
+                        instance_bed_occupancy.org_name = facility_name
+                        instance_bed_occupancy.facility_hfr_code = facility_hfr_code
+                        instance_bed_occupancy.save()
 
-                            elif message_type == "DDC":
-                                last_death_at_facility = core_models.DeathByDiseaseCaseAtFacility.objects.all().last()
-                                instance_death_by_disease_case_items = core_models.DeathByDiseaseCaseAtFacility()
-                                instance_death_by_disease_case_items.death_by_disease_case_at_facility_id = last_death_at_facility.id
-                                instance_death_by_disease_case_items.ward_id = line[3]
-                                instance_death_by_disease_case_items.ward_name = line[4]
-                                instance_death_by_disease_case_items.patient_id = line[5]
-                                instance_death_by_disease_case_items.first_name = line[6]
-                                instance_death_by_disease_case_items.middle_name = line[7]
-                                instance_death_by_disease_case_items.last_name = line[8]
-                                instance_death_by_disease_case_items.gender = line[9]
-                                instance_death_by_disease_case_items.date_of_birth = line[10]
-                                instance_death_by_disease_case_items.icd_10_code = line[11]
-                                instance_death_by_disease_case_items.date_death_occurred = line[12]
-                                instance_death_by_disease_case_items.save()
+                        for item in items:
+                            instance_bed_occupancy_items = core_models.BedOccupancyItems()
 
-                            elif message_type == "DDCOUT":
-                                last_death_outside_facility = core_models.DeathByDiseaseCaseNotAtFacility.objects.all().last()
-                                instance_death_by_disease_case_items_not_at_facility = core_models.DeathByDiseaseCaseNotAtFacilityItems()
+                            instance_bed_occupancy_items.bed_occupancy_id = instance_bed_occupancy.id
+                            instance_bed_occupancy_items.ward_id = item["wardId"]
+                            instance_bed_occupancy_items.ward_name = item["wardName"]
+                            instance_bed_occupancy_items.patient_id = item["patId"]
+                            instance_bed_occupancy_items.admission_date = item["admissionDate"]
+                            instance_bed_occupancy_items.discharge_date = item["dischargeDate"]
+                            instance_bed_occupancy.save()
 
-                                instance_death_by_disease_case_items_not_at_facility.death_by_disease_case_not_at_facility_id = last_death_outside_facility.id
-                                instance_death_by_disease_case_items_not_at_facility.place_of_death_id = line[3]
-                                instance_death_by_disease_case_items_not_at_facility.gender = line[4]
-                                instance_death_by_disease_case_items_not_at_facility.date_of_birth = line[5]
-                                instance_death_by_disease_case_items_not_at_facility.icd_10_code = line[6]
-                                instance_death_by_disease_case_items_not_at_facility.date_death_occurred = line[7]
-                                instance_death_by_disease_case_items_not_at_facility.death_id = line[8]
-                                instance_death_by_disease_case_items_not_at_facility.save()
+                        # Revenue received parent lines
 
-                            elif message_type == "BEDOCC":
-                                last_bed_occupancy = core_models.BedOccupancy.objects.all().last()
-                                instance_bed_occupancy_items = core_models.BedOccupancyItems()
+                    # Revenue
+                    if message_type == "REV":
+                        instance_revenue_received = core_models.RevenueReceived()
+                        instance_revenue_received.transaction_id = transaction_id
+                        instance_revenue_received.org_name = facility_name
+                        instance_revenue_received.facility_hfr_code = facility_hfr_code
+                        instance_revenue_received.save()
 
-                                instance_bed_occupancy_items.bed_occupancy_id = last_bed_occupancy.id
-                                instance_bed_occupancy_items.ward_id = line[3]
-                                instance_bed_occupancy_items.ward_name = line[4]
-                                instance_bed_occupancy_items.patient_id = line(5)
-                                instance_bed_occupancy_items.admission_date = line[6]
-                                instance_bed_occupancy_items.discharge_date = line[7]
-
-                                instance_bed_occupancy_items.save()
-
-                            elif message_type == "REV":
-                                last_revenue_received = core_models.RevenueReceived.objects.filter().last()
-                                instance_revenue_received_items = core_models.RevenueReceivedItems()
-
-                                instance_revenue_received_items.revenue_received_id = last_revenue_received.id
-                                instance_revenue_received_items.system_trans_id = line(3)
-                                instance_revenue_received_items.transaction_date = line(4)
-                                instance_revenue_received_items.patient_id = line[5]
-                                instance_revenue_received_items.gender = line[6]
-                                instance_revenue_received_items.date_of_birth = line[7]
-                                instance_revenue_received_items.med_svc_code = line[8]
-                                instance_revenue_received_items.payer_id = line[9]
-                                instance_revenue_received_items.exemption_category_id = line[10]
-                                instance_revenue_received_items.billed_amount = line[11]
-                                instance_revenue_received_items.waived_amount = line[12]
-                                instance_revenue_received_items.service_provider_ranking_id = line[13]
-                                instance_revenue_received_items.save()
-
-                            else:
-                                return False
-
-                        row = row + 1
-
-                    os.remove(file_path)
-
-                    i = 0
-                fp.close()
-
+                        for item in items:
+                            instance_revenue_received_items = core_models.RevenueReceivedItems()
+                            instance_revenue_received_items.revenue_received_id = instance_revenue_received.id
+                            instance_revenue_received_items.system_trans_id = item["systemTransId"]
+                            instance_revenue_received_items.transaction_date = item["transactionDate"]
+                            instance_revenue_received_items.patient_id = item["patId"]
+                            instance_revenue_received_items.gender = item["gender"]
+                            instance_revenue_received_items.date_of_birth = item["dob"]
+                            instance_revenue_received_items.med_svc_code = item["medSvcCode"]
+                            instance_revenue_received_items.payer_id = item["payerId"]
+                            instance_revenue_received_items.exemption_category_id = item["exemptionCategoryId"]
+                            instance_revenue_received_items.billed_amount = item["billedAmount"]
+                            instance_revenue_received_items.waived_amount = item["waivedAmount"]
+                            instance_revenue_received_items.service_provider_ranking_id = item["serviceProviderRankingId"]
+                            instance_revenue_received_items.save()
 
 
 def update_transaction_summary(transaction_id):

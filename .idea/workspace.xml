@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/rev-1.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/tasks.py" afterPath="$PROJECT_DIR$/Core/tasks.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/views.py" afterPath="$PROJECT_DIR$/Core/views.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/HDR/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+              <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -35,39 +38,15 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="41" column="59" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
+            <state relative-caret-position="78">
+              <caret line="212" column="30" selection-start-line="212" selection-start-column="30" selection-end-line="222" selection-end-column="67" />
               <folding>
                 <element signature="e#3640#4543#0" expanded="false" />
                 <element signature="e#4590#5283#0" expanded="false" />
                 <element signature="e#5319#5605#0" expanded="false" />
                 <element signature="e#5643#6491#0" expanded="false" />
                 <element signature="e#6568#7460#0" expanded="false" />
-                <element signature="e#7521#10386#0" expanded="false" />
-                <element signature="e#7824#10090#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="179" column="44" selection-start-line="179" selection-start-column="44" selection-end-line="179" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -75,53 +54,17 @@
       <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Core/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            <state relative-caret-position="346">
+              <caret line="97" column="68" selection-start-line="97" selection-start-column="68" selection-end-line="97" selection-end-column="68" />
               <folding>
-                <element signature="e#4701#11662#0" expanded="false" />
-                <element signature="e#5201#6636#0" expanded="false" />
-                <element signature="e#6726#8044#0" expanded="false" />
-                <element signature="e#8137#9271#0" expanded="false" />
-                <element signature="e#9364#10111#0" expanded="false" />
-                <element signature="e#10201#11543#0" expanded="false" />
-                <element signature="e#11814#11997#0" expanded="false" />
-                <element signature="e#12059#15476#0" expanded="false" />
-                <element signature="e#15600#16280#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="validators.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/validators.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="300" column="0" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
-              <folding>
-                <element signature="e#3103#3636#0" expanded="false" />
-                <element signature="e#4078#4618#0" expanded="false" />
-                <element signature="e#4714#4959#0" expanded="false" />
-                <element signature="e#5066#5605#0" expanded="false" />
-                <element signature="e#6054#6603#0" expanded="false" />
-                <element signature="e#7043#7563#0" expanded="false" />
-                <element signature="e#7977#8504#0" expanded="false" />
-                <element signature="e#8914#9444#0" expanded="false" />
-                <element signature="e#11681#12036#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3810">
-              <caret line="274" column="10" selection-start-line="274" selection-start-column="10" selection-end-line="276" selection-end-column="53" />
-              <folding>
-                <element signature="e#1449#1618#0" expanded="false" />
-                <element signature="e#18757#18910#0" expanded="false" />
-                <element signature="e#18959#19108#0" expanded="false" />
-                <element signature="e#19156#20902#0" expanded="false" />
+                <element signature="e#1969#3675#0" expanded="false" />
+                <element signature="e#3765#5624#0" expanded="false" />
+                <element signature="e#5747#7408#0" expanded="false" />
+                <element signature="e#7519#8657#0" expanded="false" />
+                <element signature="e#8759#10509#0" expanded="false" />
+                <element signature="e#10564#10747#0" expanded="false" />
+                <element signature="e#10809#14226#0" expanded="false" />
+                <element signature="e#14350#15030#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -207,7 +150,6 @@
         <option value="$PROJECT_DIR$/HDR/__init__.py" />
         <option value="$PROJECT_DIR$/MasterData/admin.py" />
         <option value="$PROJECT_DIR$/MappingsManagement/admin.py" />
-        <option value="$PROJECT_DIR$/Core/views.py" />
         <option value="$PROJECT_DIR$/HDR/urls.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/API/tests.py" />
@@ -223,6 +165,7 @@
         <option value="$PROJECT_DIR$/Core/models.py" />
         <option value="$PROJECT_DIR$/API/views.py" />
         <option value="$PROJECT_DIR$/Core/admin.py" />
+        <option value="$PROJECT_DIR$/Core/views.py" />
         <option value="$PROJECT_DIR$/Core/tasks.py" />
       </list>
     </option>
@@ -293,20 +236,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HDR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HDR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="ValidationManagement" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -339,7 +268,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserManagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserManagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserManagement" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -647,13 +606,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="649" y="-1172" width="1920" height="1172" extended-state="6" />
+    <frame x="649" y="-1172" width="1920" height="1172" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25416666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -665,7 +625,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -701,19 +660,17 @@
           <url>file://$PROJECT_DIR$/Core/views.py</url>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/API/validators.py</url>
+          <line>82</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="36" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/UserManagement/templates/UserManagement/Dashboard/AuditReport.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NHIF/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -988,17 +945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/templates/UserManagement/Dashboard/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="218" column="38" selection-start-line="218" selection-start-column="38" selection-end-line="218" selection-end-column="38" />
-          <folding>
-            <element signature="e#6125#7558#0#HTML" expanded="false" />
-            <marker date="1635238638846" expanded="false" signature="3936:4142" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UserManagement/views/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1041,37 +987,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HDR/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/validators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="300" column="0" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
-          <folding>
-            <element signature="e#3103#3636#0" expanded="false" />
-            <element signature="e#4078#4618#0" expanded="false" />
-            <element signature="e#4714#4959#0" expanded="false" />
-            <element signature="e#5066#5605#0" expanded="false" />
-            <element signature="e#6054#6603#0" expanded="false" />
-            <element signature="e#7043#7563#0" expanded="false" />
-            <element signature="e#7977#8504#0" expanded="false" />
-            <element signature="e#8914#9444#0" expanded="false" />
-            <element signature="e#11681#12036#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1091,22 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="41" column="59" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
-          <folding>
-            <element signature="e#3640#4543#0" expanded="false" />
-            <element signature="e#4590#5283#0" expanded="false" />
-            <element signature="e#5319#5605#0" expanded="false" />
-            <element signature="e#5643#6491#0" expanded="false" />
-            <element signature="e#6568#7460#0" expanded="false" />
-            <element signature="e#7521#10386#0" expanded="false" />
-            <element signature="e#7824#10090#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -1117,20 +1021,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/templates/UserManagement/Dashboard/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="8" />
+          <folding>
+            <element signature="e#3936#4142#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/templates/UserManagement/Dashboard/FilteredElements.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/validators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1185">
+          <caret line="82" column="36" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
+          <folding>
+            <element signature="e#1862#11621#0" expanded="false" />
+            <element signature="e#3103#3636#0" expanded="false" />
+            <element signature="e#4078#4618#0" expanded="false" />
+            <element signature="e#4714#4959#0" expanded="false" />
+            <element signature="e#5066#5605#0" expanded="false" />
+            <element signature="e#6054#6603#0" expanded="false" />
+            <element signature="e#7043#7563#0" expanded="false" />
+            <element signature="e#7977#8504#0" expanded="false" />
+            <element signature="e#8914#9444#0" expanded="false" />
+            <element signature="e#11681#12036#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="212" column="30" selection-start-line="212" selection-start-column="30" selection-end-line="222" selection-end-column="67" />
+          <folding>
+            <element signature="e#3640#4543#0" expanded="false" />
+            <element signature="e#4590#5283#0" expanded="false" />
+            <element signature="e#5319#5605#0" expanded="false" />
+            <element signature="e#5643#6491#0" expanded="false" />
+            <element signature="e#6568#7460#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HDR/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Core/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        <state relative-caret-position="346">
+          <caret line="97" column="68" selection-start-line="97" selection-start-column="68" selection-end-line="97" selection-end-column="68" />
           <folding>
-            <element signature="e#4701#11662#0" expanded="false" />
-            <element signature="e#5201#6636#0" expanded="false" />
-            <element signature="e#6726#8044#0" expanded="false" />
-            <element signature="e#8137#9271#0" expanded="false" />
-            <element signature="e#9364#10111#0" expanded="false" />
-            <element signature="e#10201#11543#0" expanded="false" />
-            <element signature="e#11814#11997#0" expanded="false" />
-            <element signature="e#12059#15476#0" expanded="false" />
-            <element signature="e#15600#16280#0" expanded="false" />
+            <element signature="e#1969#3675#0" expanded="false" />
+            <element signature="e#3765#5624#0" expanded="false" />
+            <element signature="e#5747#7408#0" expanded="false" />
+            <element signature="e#7519#8657#0" expanded="false" />
+            <element signature="e#8759#10509#0" expanded="false" />
+            <element signature="e#10564#10747#0" expanded="false" />
+            <element signature="e#10809#14226#0" expanded="false" />
+            <element signature="e#14350#15030#0" expanded="false" />
           </folding>
         </state>
       </provider>
