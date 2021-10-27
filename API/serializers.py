@@ -103,9 +103,9 @@ class IncomingDeathByDiseaseCaseAtTheFacilityItemsSerializer(serializers.Seriali
     firstName = serializers.CharField(max_length=255)
     middleName = serializers.CharField(max_length=255, allow_blank=True, allow_null=True)
     lastName = serializers.CharField(max_length=255)
-    icd10Code = serializers.CharField(max_length=255, required=False, allow_blank=True, allow_null=True)
     gender = serializers.CharField(max_length=255)
     dob = serializers.CharField(max_length=255)
+    icd10Code = serializers.CharField(max_length=255, required=False, allow_blank=True, allow_null=True)
     dateDeathOccurred = serializers.CharField(max_length=255)
 
 
