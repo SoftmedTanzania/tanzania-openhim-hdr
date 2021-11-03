@@ -14,8 +14,8 @@ from API import validators as validators
 from ValidationManagement import models as validation_management_models
 from TerminologyServicesManagement import models as terminology_services_management
 from NHIF import models as nhif_models
-from UserManagement.views import main as user_management_views
-from rest_framework.views import APIView
+import datetime as dt
+from dateutil.relativedelta import relativedelta
 
 
 # Create your views here.
@@ -462,6 +462,7 @@ class ClaimsView(viewsets.ModelViewSet):
             instance_claim.facility_hfr_code = val["facilityHfrCode"]
             instance_claim.claimed_amount = val["claimedAmount"]
             instance_claim.period = val["period"]
+            instance_claim.date = get_last_day_of_month(val["period"])
             instance_claim.computed_amount = val["computedAmount"]
             instance_claim.accepted_amount = val["acceptedAmount"]
             instance_claim.loan_deductions = val["loanDeductions"]
@@ -475,3 +476,20 @@ class ClaimsView(viewsets.ModelViewSet):
         queryset = nhif_models.Claims.objects.all().order_by('-id')
         serializer = ClaimsSerializer(queryset, many=True)
         return Response(serializer.data)
+
+
+def get_last_day_of_month(claim_period):
+    period = claim_period.split(sep="-", maxsplit=1)
+    year = int(period[0])
+    month = int(period[1])
+
+    date_estimate = dt.datetime(year, month, 15)
+
+    last_day_of_the_month = dt.datetime(date_estimate.year, (date_estimate + relativedelta(months=1)).month,
+                                        1) - dt.timedelta(days=1)
+    print(last_day_of_the_month.date())
+
+    return last_day_of_the_month.date()
+
+
+
