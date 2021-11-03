@@ -204,10 +204,12 @@ def regenerate_json_payload_from_csv(lines):
                                "gender": line[6],
                                "dob": line[7],
                                "medSvcCode": line[8],
-                               "icd10Code": line[9],
-                               "serviceDate": line[10],
-                               "serviceProviderRankingId": line[11],
-                               "visitType": line[12]
+                               "confirmedDiagnosis": line[9],
+                               "differentialDiagnosis": line[10],
+                               "provisionalDiagnosis": line[11],
+                               "serviceDate": line[12],
+                               "serviceProviderRankingId": line[13],
+                               "visitType": line[14]
                                }
             elif message_type == "REV":
                 json_object = {"systemTransId": line[3],
@@ -231,8 +233,20 @@ def regenerate_json_payload_from_csv(lines):
                                "lastName": line[8],
                                "gender": line[9],
                                "dob": line[10],
-                               "icd10Code": line[11],
-                               "dateDeathOccurred": line[12]
+                               "causeOfDeath": line[11],
+                               "immediateCauseOfDeath": line[12],
+                               "underlyingCauseOfDeath": line[13],
+                               "dateDeathOccurred": line[14]
+                               }
+            elif message_type == "DDCOUT":
+                json_object = {"deathId": line[3],
+                               "placeOfDeathId": line[4],
+                               "causeOfDeath": line[5],
+                               "immediateCauseOfDeath": line[6],
+                               "underlyingCauseOfDeath": line[7],
+                               "gender": line[8],
+                               "dob": line[9],
+                               "dateDeathOccurred": line[10]
                                }
             elif message_type == "BEDOCC":
                 json_object = {"wardId": line[3],

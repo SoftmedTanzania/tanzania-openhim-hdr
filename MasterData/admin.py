@@ -25,7 +25,7 @@ class DepartmentAdmin(admin.ModelAdmin):
 
 
 class FacilityAdmin(admin.ModelAdmin):
-    list_display = ('id','description', 'facility_hfr_code','district_council', 'is_active')
+    list_display = ('id','description', 'facility_hfr_code','district_council','is_cpt_mapped','is_active')
     search_fields = ['description',]
 
 

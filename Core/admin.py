@@ -13,7 +13,7 @@ class ServiceReceivedAdmin(admin.ModelAdmin):
 
 class ServiceReceivedItemsAdmin(admin.ModelAdmin):
     list_display = ('id','service_received', 'department_name','department_id', 'patient_id','gender',
-                    'date_of_birth','med_svc_code','icd_10_code','service_date','service_provider_ranking_id','visit_type')
+                    'date_of_birth','med_svc_code','confirmed_diagnosis','differential_diagnosis','provisional_diagnosis','service_date','service_provider_ranking_id','visit_type')
     search_fields = ['service_received', ]
 
 
@@ -24,7 +24,7 @@ class DeathByDiseaseCaseAtFacilityAdmin(admin.ModelAdmin):
 
 class DeathByDiseaseCaseAtFacilityItemsAdmin(admin.ModelAdmin):
     list_display = ('id', 'death_by_disease_case_at_facility', 'ward_name','ward_id','patient_id','first_name', 'middle_name','last_name','gender',
-                    'date_of_birth','icd_10_code','date_death_occurred')
+                    'date_of_birth','cause_of_death','immediate_cause_of_death','underlying_cause_of_death','date_death_occurred')
     search_fields = ['ward_name',]
 
 
@@ -35,7 +35,7 @@ class DeathByDiseaseCaseNotAtFacilityAdmin(admin.ModelAdmin):
 
 class DeathByDiseaseCaseNotAtFacilityItemsAdmin(admin.ModelAdmin):
     list_display = ('id', 'death_by_disease_case_not_at_facility', 'place_of_death_id','gender',
-                    'date_of_birth', 'icd_10_code','date_death_occurred','death_id')
+                    'date_of_birth','cause_of_death','immediate_cause_of_death','underlying_cause_of_death','date_death_occurred','death_id')
     search_fields = ['place_of_death_id', ]
 
 

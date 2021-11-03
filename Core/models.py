@@ -30,8 +30,10 @@ class ServiceReceivedItems(models.Model):
     patient_id = models.CharField(max_length=255)
     gender = models.CharField(max_length=50)
     date_of_birth = models.DateField(null=True, blank=True)
-    med_svc_code = models.CharField(max_length=255)
-    icd_10_code = models.CharField(max_length=255, null=True, blank=True)
+    med_svc_code = models.TextField()
+    confirmed_diagnosis = models.TextField(null=True, blank=True)
+    differential_diagnosis = models.TextField(null=True, blank=True)
+    provisional_diagnosis = models.TextField(null=True, blank=True)
     service_date = models.DateField()
     service_provider_ranking_id = models.CharField(max_length=255)
     visit_type = models.CharField(max_length=255)
@@ -68,8 +70,10 @@ class DeathByDiseaseCaseAtFacilityItems(models.Model):
     last_name = models.CharField(max_length=255)
     gender = models.CharField(max_length=50)
     date_of_birth = models.DateField()
-    icd_10_code = models.CharField(max_length=255, null=True, blank=True)
-    date_death_occurred = models.DateField()
+    cause_of_death = models.CharField(max_length=255)
+    immediate_cause_of_death = models.CharField(max_length=255, null=True, blank=True)
+    underlying_cause_of_death = models.CharField(max_length=255)
+    date_death_occurred = models.CharField(max_length=50)
 
     class Meta:
         db_table = 'DeathByDiseaseCaseAtFacilityItems'
@@ -98,7 +102,9 @@ class DeathByDiseaseCaseNotAtFacilityItems(models.Model):
     place_of_death_id = models.CharField(max_length=255)
     gender = models.CharField(max_length=50)
     date_of_birth = models.DateField()
-    icd_10_code = models.CharField(max_length=255, null=True, blank=True)
+    cause_of_death = models.CharField(max_length=255)
+    immediate_cause_of_death = models.CharField(max_length=255, null=True, blank=True)
+    underlying_cause_of_death = models.CharField(max_length=255, null=True, blank=True)
     date_death_occurred = models.DateField()
     death_id = models.CharField(max_length=100)
 
@@ -134,7 +140,7 @@ class BedOccupancyItems(models.Model):
 
     class Meta:
         db_table = 'BedOccupancyItems'
-        verbose_name_plural = "Bed occupancyItems"
+        verbose_name_plural = "Bed occupancy Items"
 
 
 class BedOccupancyReport(models.Model):
@@ -177,7 +183,7 @@ class RevenueReceivedItems(models.Model):
     patient_id = models.CharField(max_length=255)
     gender = models.CharField(max_length=20)
     date_of_birth = models.DateField(null=True, blank=True)
-    med_svc_code = models.CharField(max_length=50)
+    med_svc_code = models.TextField()
     payer_id = models.CharField(max_length=50)
     exemption_category_id = models.CharField(max_length=100, null=True, blank=True)
     billed_amount = models.IntegerField(default=0)

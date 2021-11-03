@@ -15,12 +15,13 @@ app = Celery()
 
 
 @app.task()
-def save_payload_from_csv():
+def save_payload_from_csv(request):
     print("function was called")
     root_path = "uploads"
     i = 0
     for subdir, _, _ in os.walk(root_path):
         print("subdir was called")
+        print("root path is", root_path)
         for file in os.listdir(subdir):
             print("function was called")
             file_path = "" + root_path + "/" + file
@@ -66,7 +67,9 @@ def save_payload_from_csv():
                             instance_service_received_items.gender = item["gender"]
                             instance_service_received_items.date_of_birth = validators.convert_date_formats(item["dob"])
                             instance_service_received_items.med_svc_code = item["medSvcCode"]
-                            instance_service_received_items.icd_10_code = item["icd10Code"]
+                            instance_service_received_items.confirmed_diagnosis = item["confirmedDiagnosis"]
+                            instance_service_received_items.differential_diagnosis = item["differentialDiagnosis"]
+                            instance_service_received_items.provisional_diagnosis = item["provisionalDiagnosis"]
                             instance_service_received_items.service_date = validators.convert_date_formats(item["serviceDate"])
                             instance_service_received_items.service_provider_ranking_id = item["serviceProviderRankingId"]
                             instance_service_received_items.visit_type = item["visitType"]
@@ -91,9 +94,11 @@ def save_payload_from_csv():
                             instance_death_by_disease_case_items.middle_name = item["middleName"]
                             instance_death_by_disease_case_items.last_name = item["lastName"]
                             instance_death_by_disease_case_items.gender = item["gender"]
-                            instance_death_by_disease_case_items.date_of_birth = item["dob"]
-                            instance_death_by_disease_case_items.icd_10_code = item["icd10Code"]
-                            instance_death_by_disease_case_items.date_death_occurred = item["dateDeathOccurred"]
+                            instance_death_by_disease_case_items.date_of_birth = validators.convert_date_formats(item["dob"])
+                            instance_death_by_disease_case_items.cause_of_death = item["causeOfDeath"]
+                            instance_death_by_disease_case_items.immediate_cause_of_death = item["immediateCauseOfDeath"]
+                            instance_death_by_disease_case_items.underlying_cause_of_death = item["underlyingCauseOfDeath"]
+                            instance_death_by_disease_case_items.date_death_occurred = validators.convert_date_formats(item["dateDeathOccurred"])
                             instance_death_by_disease_case_items.save()
 
                         # Death by Disease Case Out of Faciity lines
@@ -109,11 +114,15 @@ def save_payload_from_csv():
                         for item in items:
                             instance_death_by_disease_case_items_not_at_facility = core_models.DeathByDiseaseCaseNotAtFacilityItems()
                             instance_death_by_disease_case_items_not_at_facility.death_by_disease_case_not_at_facility_id = instance_death_by_disease_case_not_at_facility.id
-                            instance_death_by_disease_case_items_not_at_facility.place_of_death_id = item["placeOfDeathID"]
+                            instance_death_by_disease_case_items_not_at_facility.place_of_death_id = item["placeOfDeathId"]
                             instance_death_by_disease_case_items_not_at_facility.gender = item["gender"]
-                            instance_death_by_disease_case_items_not_at_facility.date_of_birth = item["dob"]
-                            instance_death_by_disease_case_items_not_at_facility.icd_10_code = item["icd10Code"]
-                            instance_death_by_disease_case_items_not_at_facility.date_death_occurred = item["dateDeathOccurred"]
+                            instance_death_by_disease_case_items_not_at_facility.date_of_birth = validators.convert_date_formats(item["dob"])
+                            instance_death_by_disease_case_items.cause_of_death = item["causeOfDeath"]
+                            instance_death_by_disease_case_items.immediate_cause_of_death = item[
+                                "immediateCauseOfDeath"]
+                            instance_death_by_disease_case_items.underlying_cause_of_death = item[
+                                "underlyingCauseOfDeath"]
+                            instance_death_by_disease_case_items_not_at_facility.date_death_occurred = validators.convert_date_formats(item["dateDeathOccurred"])
                             instance_death_by_disease_case_items_not_at_facility.death_id = item["deathId"]
                             instance_death_by_disease_case_items_not_at_facility.save()
 
@@ -134,8 +143,8 @@ def save_payload_from_csv():
                             instance_bed_occupancy_items.ward_id = item["wardId"]
                             instance_bed_occupancy_items.ward_name = item["wardName"]
                             instance_bed_occupancy_items.patient_id = item["patId"]
-                            instance_bed_occupancy_items.admission_date = item["admissionDate"]
-                            instance_bed_occupancy_items.discharge_date = item["dischargeDate"]
+                            instance_bed_occupancy_items.admission_date = validators.convert_date_formats(item["admissionDate"])
+                            instance_bed_occupancy_items.discharge_date = validators.convert_date_formats(item["dischargeDate"])
                             instance_bed_occupancy.save()
 
                         # Revenue received parent lines
@@ -152,10 +161,10 @@ def save_payload_from_csv():
                             instance_revenue_received_items = core_models.RevenueReceivedItems()
                             instance_revenue_received_items.revenue_received_id = instance_revenue_received.id
                             instance_revenue_received_items.system_trans_id = item["systemTransId"]
-                            instance_revenue_received_items.transaction_date = item["transactionDate"]
+                            instance_revenue_received_items.transaction_date = validators.convert_date_formats(item["transactionDate"])
                             instance_revenue_received_items.patient_id = item["patId"]
                             instance_revenue_received_items.gender = item["gender"]
-                            instance_revenue_received_items.date_of_birth = item["dob"]
+                            instance_revenue_received_items.date_of_birth = validators.convert_date_formats(item["dob"])
                             instance_revenue_received_items.med_svc_code = item["medSvcCode"]
                             instance_revenue_received_items.payer_id = item["payerId"]
                             instance_revenue_received_items.exemption_category_id = item["exemptionCategoryId"]

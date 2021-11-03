@@ -13,7 +13,6 @@ router.register('revenue_received', views.RevenueReceivedView)
 router.register('icd10', views.ICD10View)
 router.register('cpt', views.CPTCodeView)
 router.register('nhif_claims', views.ClaimsView)
-# router.register('authenticate', views.authenticate_user, basename='api_authenticate')
 
 
 urlpatterns = [

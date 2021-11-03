@@ -13,6 +13,7 @@ class FacilitySerializer(serializers.ModelSerializer):
         model = master_data_models.Facility
         fields = "__all__"
 
+
 class ProfileSerializer(serializers.ModelSerializer):
     facility = FacilitySerializer()
 
@@ -66,8 +67,10 @@ class IncomingServiceReceivedItemsSerializer(serializers.Serializer):
     patId = serializers.CharField(max_length=255, required=False, allow_blank=True, allow_null=True)
     gender = serializers.CharField(max_length=255)
     dob = serializers.CharField(max_length=255)
-    medSvcCode = serializers.CharField(max_length=255)
-    icd10Code = serializers.CharField(max_length=255, required=False, allow_blank=True, allow_null=True)
+    medSvcCode = serializers.ListField()
+    confirmedDiagnosis = serializers.ListField(allow_null=True, allow_empty=True)
+    differentialDiagnosis = serializers.ListField(allow_null=True, allow_empty=True)
+    provisionalDiagnosis = serializers.ListField(allow_null=True, allow_empty=True)
     serviceDate = serializers.CharField(max_length=255)
     serviceProviderRankingId = serializers.CharField(max_length=255)
     visitType = serializers.CharField(max_length=255)
@@ -105,7 +108,9 @@ class IncomingDeathByDiseaseCaseAtTheFacilityItemsSerializer(serializers.Seriali
     lastName = serializers.CharField(max_length=255)
     gender = serializers.CharField(max_length=255)
     dob = serializers.CharField(max_length=255)
-    icd10Code = serializers.CharField(max_length=255, required=False, allow_blank=True, allow_null=True)
+    causeOfDeath = serializers.CharField(max_length=255)
+    immediateCauseOfDeath = serializers.CharField(max_length=255, allow_null=True, allow_blank=True)
+    underlyingCauseOfDeath = serializers.CharField(max_length=255)
     dateDeathOccurred = serializers.CharField(max_length=255)
 
 
@@ -134,7 +139,9 @@ class DeathByDiseaseCaseNotAtFacilitySerializer(serializers.ModelSerializer):
 class IncomingDeathByDiseaseCaseNotAtTheFacilityItemsSerializer(serializers.Serializer):
     deathId = serializers.CharField(max_length=255)
     placeOfDeathId = serializers.CharField(max_length=255)
-    icd10Code = serializers.CharField(max_length=255, required=False, allow_blank=True, allow_null=True )
+    causeOfDeath = serializers.CharField(max_length=255)
+    immediateCauseOfDeath = serializers.CharField(max_length=255, allow_null=True, allow_blank=True)
+    underlyingCauseOfDeath = serializers.CharField(max_length=255, allow_null=True, allow_blank=True)
     gender = serializers.CharField(max_length=255)
     dob = serializers.CharField(max_length=255)
     dateDeathOccurred = serializers.CharField(max_length=255)
@@ -199,7 +206,7 @@ class IncomingRevenueReceivedItemsSerializer(serializers.Serializer):
     patId = serializers.CharField(max_length=255, required=False, allow_blank=True, allow_null=True)
     gender = serializers.CharField(max_length=255)
     dob = serializers.CharField(max_length=255,required=False, allow_blank=True, allow_null=True)
-    medSvcCode = serializers.CharField(max_length=255)
+    medSvcCode = serializers.ListField()
     payerId = serializers.CharField(max_length=255)
     exemptionCategoryId = serializers.CharField(required=False, allow_blank=True, allow_null=True)
     billedAmount = serializers.IntegerField()

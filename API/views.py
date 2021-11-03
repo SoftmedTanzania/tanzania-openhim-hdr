@@ -89,7 +89,9 @@ class ServiceReceivedView(viewsets.ModelViewSet):
                 instance_service_received_item.gender = val["gender"]
                 instance_service_received_item.date_of_birth = validators.convert_date_formats(val["dob"])
                 instance_service_received_item.med_svc_code = val["medSvcCode"]
-                instance_service_received_item.icd_10_code = val["icd10Code"]
+                instance_service_received_item.confirmed_diagnosis = val["confirmedDiagnosis"]
+                instance_service_received_item.differential_diagnosis = val["differentialDiagnosis"]
+                instance_service_received_item.provisional_diagnosis = val["provisionalDiagnosis"]
                 instance_service_received_item.service_date = validators.convert_date_formats(val["serviceDate"])
                 instance_service_received_item.service_provider_ranking_id = val["serviceProviderRankingId"]
                 instance_service_received_item.visit_type = val["visitType"]
@@ -170,7 +172,9 @@ class DeathByDiseaseCaseAtFacilityView(viewsets.ModelViewSet):
                 instance_death_by_disease_case_at_facility_item.last_name = val["lastName"]
                 instance_death_by_disease_case_at_facility_item.gender = val["gender"]
                 instance_death_by_disease_case_at_facility_item.date_of_birth = validators.convert_date_formats(val["dob"])
-                instance_death_by_disease_case_at_facility_item.icd_10_code = val["icd10Code"]
+                instance_death_by_disease_case_at_facility_item.cause_of_death = val["causeOfDeath"]
+                instance_death_by_disease_case_at_facility_item.immediate_cause_of_death = val["immediateCauseOfDeath"]
+                instance_death_by_disease_case_at_facility_item.underlying_cause_of_death = val["underlyingCauseOfDeath"]
                 instance_death_by_disease_case_at_facility_item.date_death_occurred = validators.convert_date_formats(val["dateDeathOccurred"])
 
                 instance_death_by_disease_case_at_facility_item.save()
@@ -241,7 +245,9 @@ class DeathByDiseaseCaseNotAtFacilityView(viewsets.ModelViewSet):
                 instance_death_by_disease_case_not_at_facility_items.death_by_disease_case_not_at_facility_id=instance_death_by_disease_case_not_at_facility.id
                 instance_death_by_disease_case_not_at_facility_items.gender = val["gender"]
                 instance_death_by_disease_case_not_at_facility_items.date_of_birth = validators.convert_date_formats(val["dob"])
-                instance_death_by_disease_case_not_at_facility_items.icd_10_code = val["icd10Code"]
+                instance_death_by_disease_case_not_at_facility_items.cause_of_death = val["causeOfDeath"]
+                instance_death_by_disease_case_not_at_facility_items.immediate_cause_of_death = val["immediateCauseOfDeath"]
+                instance_death_by_disease_case_not_at_facility_items.underlying_cause_of_death = val["underlyingCauseOfDeath"]
                 instance_death_by_disease_case_not_at_facility_items.date_death_occurred = validators.convert_date_formats(val["dateDeathOccurred"])
                 instance_death_by_disease_case_not_at_facility_items.death_id = val["deathId"]
 

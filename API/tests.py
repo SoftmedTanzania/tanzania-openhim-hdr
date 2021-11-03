@@ -68,15 +68,12 @@ class ValidatorsTestCase(TestCase):
         self.assertEqual(data_status, True)
 
     def test_check_if_not_blank(self):
-        null_value = None
         blank_value = ""
         data = "test"
 
-        null_value_status = validators.check_if_not_blank_value(null_value)
         blank_value_status = validators.check_if_not_blank_value(blank_value)
         data_status = validators.check_if_not_blank_value(data)
 
-        self.assertEqual(null_value_status, True)
         self.assertEqual(blank_value_status, False)
         self.assertEqual(data_status, True)
 
@@ -110,6 +107,19 @@ class ValidatorsTestCase(TestCase):
     def test_calculate_threshold(self):
         self.assertEqual(validators.calculate_threshold(0,10), 100)
         self.assertEqual(validators.calculate_threshold(1,9), 90)
+
+    def test_check_if_array_not_null(self):
+        null_value = []
+        data1 = ["test_data"]
+        data2 = ["test_data", "test_data2"]
+
+        null_value_status = validators.check_if_array_not_null_value(null_value)
+        one_value_status = validators.check_if_array_not_null_value(data1)
+        two_value_status = validators.check_if_array_not_null_value(data2)
+
+        self.assertEqual(null_value_status, False)
+        self.assertEqual(one_value_status, True)
+        self.assertEqual(two_value_status, True)
 
 
 

@@ -56,15 +56,24 @@ def check_if_not_null_value(value):
 
 
 def check_if_not_blank_value(value):
-    if value == "":
+    if str(value) == "":
         return False
     elif value is None:
         return True
-    elif value.strip():
+    elif str(value).strip():
         return True
     else:
         return True
 
+
+def check_if_array_not_null_value(value):
+        try:
+            if not value:
+                return False
+            else:
+                return True
+        except NameError:
+            return False
 
 
 # Extended Functions
