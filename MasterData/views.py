@@ -358,7 +358,7 @@ def delete_mapping(request):
         elif mapping_type == "rankings":
             mappings_management_models.ServiceProviderRankingMapping.objects.get(id=mapping_id).delete()
         elif mapping_type == "cpt_codes_mappings":
-            mappings_management_models.CPTCodesMapping.objects.get(id=mapping_id).delete()
+            terminology_management_services_models.CPTCodesMapping.objects.get(id=mapping_id).delete()
 
     return redirect(request.META['HTTP_REFERER'])
 

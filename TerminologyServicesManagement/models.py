@@ -89,7 +89,7 @@ class CPTCodeSubCategory(models.Model):
 
 class CPTCode(models.Model):
     def __str__(self):
-        return '%d' %self.description
+        return '%s' %self.description
 
     sub_category = models.ForeignKey(CPTCodeSubCategory,related_name='code', on_delete=models.DO_NOTHING, null=True, blank=True)
     code = models.CharField(max_length=255)
