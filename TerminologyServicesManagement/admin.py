@@ -5,12 +5,12 @@ from .models import  ICD10CodeCategory,ICD10CodeSubCategory, ICD10Code, ICD10Sub
 
 # Register your models here.
 class ICD10CategoryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'description')
+    list_display = ('id','identifier' ,'description')
     search_fields = ['description', ]
 
 
 class ICD10SubCategoryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'category','description')
+    list_display = ('id','identifier','category','description')
     search_fields = ['description', ]
 
 

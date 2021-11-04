@@ -19,6 +19,7 @@ class ICD10CodeCategory(models.Model):
     def __str__(self):
         return '%s' %self.description
 
+    identifier = models.CharField(max_length=100)
     description = models.CharField(max_length=255)
 
     class Meta:
@@ -30,6 +31,7 @@ class ICD10CodeSubCategory(models.Model):
     def __str__(self):
         return '%s' % self.description
 
+    identifier = models.CharField(max_length=100)
     category = models.ForeignKey(ICD10CodeCategory,related_name='sub_category', on_delete=models.DO_NOTHING, null=True, blank=True)
     description = models.CharField(max_length=255)
 
@@ -113,156 +115,6 @@ class CPTCodesMapping(models.Model):
         db_table = "CPTCodesMappings"
 
 
-# ICD1O Backend events
-@receiver(post_save, sender=ICD10CodeCategory)
-def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
-
-    icd10_category_id = instance.id
-    icd10_category_description = instance.description
-
-    if created:
-        item = {
-            "icd10_code_category_id": icd10_category_id,
-            "icd10_category_description": icd10_category_description,
-            "icd10_sub_category_id": "",
-            "icd10_sub_category_description": "",
-            "icd10_id": "",
-            "icd10_code": "",
-            "icd10_description": "",
-            "icd10_sub_code_id": "",
-            "icd10_sub_code": "",
-            "icd10_sub_code_description": "",
-            "status": "N"
-        }
-
-        json_data = json.dumps(item)
-
-        response = requests.post(him_icd_url,auth=(him_username, him_password),data=json_data,
-                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
-    else:
-        item = {
-            "icd10_code_category_id": icd10_category_id,
-            "icd10_category_description": icd10_category_description,
-            "icd10_sub_category_id": "",
-            "icd10_sub_category_description": "",
-            "icd10_id": "",
-            "icd10_code": "",
-            "icd10_description": "",
-            "icd10_sub_code_id": "",
-            "icd10_sub_code": "",
-            "icd10_sub_code_description": "",
-            "status": "U"
-        }
-
-        json_data = json.dumps(item)
-
-        response = requests.post(him_icd_url, auth=(him_username, him_password),data=json_data,
-                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
-
-
-@receiver(post_save, sender=ICD10CodeSubCategory)
-def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
-    icd10_sub_category_id = instance.id
-    icd10_sub_category_description = instance.description
-    icd10_category_id = instance.category_id
-
-    icd10_category = ICD10CodeCategory.objects.get(id=icd10_category_id)
-    icd10_category_description = icd10_category.description
-
-    if created:
-        item = {
-            "icd10_code_category_id": icd10_category_id,
-            "icd10_category_description": icd10_category_description,
-            "icd10_sub_category_id": icd10_sub_category_id,
-            "icd10_sub_category_description": icd10_sub_category_description,
-            "icd10_id": "",
-            "icd10_code": "",
-            "icd10_description": "",
-            "icd10_sub_code_id": "",
-            "icd10_sub_code": "",
-            "icd10_sub_code_description": "",
-            "status": "N"
-        }
-
-        json_data = json.dumps(item)
-
-        response = requests.post(him_icd_url,auth=(him_username, him_password),data=json_data,
-                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
-    else:
-        item = {
-            "icd10_code_category_id": icd10_category_id,
-            "icd10_category_description": icd10_category_description,
-            "icd10_sub_category_id": icd10_sub_category_id,
-            "icd10_sub_category_description": icd10_sub_category_description,
-            "icd10_id": "",
-            "icd10_code": "",
-            "icd10_description": "",
-            "icd10_sub_code_id": "",
-            "icd10_sub_code": "",
-            "icd10_sub_code_description": "",
-            "status": "U"
-        }
-
-        json_data = json.dumps(item)
-
-        response = requests.post(him_icd_url, auth=(him_username, him_password),data=json_data,
-                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
-
-
-@receiver(post_save, sender=ICD10Code)
-def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
-    icd10_code_id = instance.id
-    icd10_code = instance.code
-    icd10_code_description = instance.description
-
-    icd10_sub_category = ICD10CodeSubCategory.objects.get(id=instance.sub_category_id)
-    icd10_sub_category_id= instance.sub_category_id
-    icd10_sub_category_description = icd10_sub_category.description
-
-    icd10_category_id = icd10_sub_category.category_id
-    icd10_category = ICD10CodeCategory.objects.get(id=icd10_category_id)
-    icd10_category_description = icd10_category.description
-
-
-    if created:
-        item = {
-            "icd10_code_category_id": icd10_category_id,
-            "icd10_category_description": icd10_category_description,
-            "icd10_sub_category_id": str(icd10_sub_category_id),
-            "icd10_sub_category_description": icd10_sub_category_description,
-            "icd10_id": icd10_code_id,
-            "icd10_code": icd10_code,
-            "icd10_description": icd10_code_description,
-            "icd10_sub_code_id": "",
-            "icd10_sub_code": "",
-            "icd10_sub_code_description": "",
-            "status": "N"
-        }
-
-        json_data = json.dumps(item)
-
-        response = requests.post(him_icd_url,auth=(him_username, him_password),data=json_data,
-                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
-    else:
-        item = {
-            "icd10_code_category_id": icd10_category_id,
-            "icd10_category_description": icd10_category_description,
-            "icd10_sub_category_id": str(icd10_sub_category_id),
-            "icd10_sub_category_description": icd10_sub_category_description,
-            "icd10_id": icd10_code_id,
-            "icd10_code": icd10_code,
-            "icd10_description": icd10_code_description,
-            "icd10_sub_code_id": "",
-            "icd10_sub_code": "",
-            "icd10_sub_code_description": "",
-            "status": "U"
-        }
-
-        json_data = json.dumps(item)
-
-        response = requests.post(him_icd_url, auth=(him_username, him_password),data=json_data,
-                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
-
 
 @receiver(post_save, sender=ICD10SubCode)
 def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
@@ -275,16 +127,20 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
 
     icd10_sub_category = ICD10CodeSubCategory.objects.get(id=icd10_sub_category_id)
     icd10_sub_category_description = icd10_sub_category.description
+    icd10_sub_category_identifier = icd10_sub_category.identifier
 
     icd10_category_id = icd10_sub_category.category_id
     icd10_category = ICD10CodeCategory.objects.get(id=icd10_category_id)
     icd10_category_description = icd10_category.description
+    icd10_category_identifier = icd10_category.identifier
 
     if created:
         item = {
             "icd10_code_category_id": icd10_category_id,
+            "icd10_code_category_identifier": icd10_category_identifier,
             "icd10_category_description": icd10_category_description,
             "icd10_sub_category_id": icd10_sub_category_id,
+            "icd10_sub_category_identifier": icd10_sub_category_identifier,
             "icd10_sub_category_description": icd10_sub_category_description,
             "icd10_id": icd10_code_id,
             "icd10_code": icd10_diagnoses_code,
@@ -303,8 +159,10 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
     else:
         item = {
             "icd10_code_category_id": icd10_category_id,
+            "icd10_code_category_identifier": icd10_category_identifier,
             "icd10_category_description": icd10_category_description,
             "icd10_sub_category_id": icd10_sub_category_id,
+            "icd10_sub_category_identifier": icd10_sub_category_identifier,
             "icd10_sub_category_description": icd10_sub_category_description,
             "icd10_id": icd10_code_id,
             "icd10_code": icd10_diagnoses_code,
@@ -318,89 +176,6 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
         json_data = json.dumps(item)
 
         response = requests.post(him_icd_url, auth=(him_username, him_password),data=json_data,
-                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
-
-
-# CPT Backend events
-@receiver(post_save, sender=CPTCodeCategory)
-def send_new_or_updated_cpt_code(sender, instance, created, **kwargs):
-    cpt_code_category_id = instance.id
-    cpt_code_category_description = instance.description
-
-    if created:
-        item = {
-            "cpt_category_code_id": str(cpt_code_category_id),
-            "cpt_code_category_description": cpt_code_category_description,
-            "cpt_code_sub_category_id": "",
-            "cpt_code_sub_category_description": "",
-            "cpt_code_id": "",
-            "cpt_code": "",
-            "cpt_description": "",
-            "status": "N"
-        }
-
-        json_data = json.dumps(item)
-
-        response = requests.post(him_cpt_url, auth=(him_username, him_password),data=json_data,
-                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
-    else:
-        item = {
-            "cpt_category_code_id": str(cpt_code_category_id),
-            "cpt_code_category_description": cpt_code_category_description,
-            "cpt_code_sub_category_id": "",
-            "cpt_code_sub_category_description": "",
-            "cpt_code_id": "",
-            "cpt_code": "",
-            "cpt_description": "",
-            "status": "U"
-        }
-
-        json_data = json.dumps(item)
-
-        response = requests.post(him_cpt_url, auth=(him_username, him_password), data=json_data,
-                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
-
-
-@receiver(post_save, sender=CPTCodeSubCategory)
-def send_new_or_updated_cpt_code(sender, instance, created, **kwargs):
-    cpt_code_sub_category_id = instance.id
-    cpt_code_sub_category_description = instance.description
-    cpt_code_category_id = instance.category_id
-
-    cpt_code_category = CPTCodeCategory.objects.get(id=cpt_code_category_id)
-    cpt_code_category_description = cpt_code_category.description
-
-    if created:
-        item = {
-            "cpt_category_code_id": cpt_code_category_id,
-            "cpt_code_category_description": cpt_code_category_description,
-            "cpt_code_sub_category_id": cpt_code_sub_category_id,
-            "cpt_code_sub_category_description": cpt_code_sub_category_description,
-            "cpt_code_id": "",
-            "cpt_code": "",
-            "cpt_description": "",
-            "status": "N"
-        }
-
-        json_data = json.dumps(item)
-
-        response = requests.post(him_cpt_url, auth=(him_username, him_password), data=json_data,
-                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
-    else:
-        item = {
-            "cpt_category_code_id": cpt_code_category_id,
-            "cpt_code_category_description": cpt_code_category_description,
-            "cpt_code_sub_category_id": cpt_code_sub_category_id,
-            "cpt_code_sub_category_description": cpt_code_sub_category_description,
-            "cpt_code_id": "",
-            "cpt_code": "",
-            "cpt_description": "",
-            "status": "U"
-        }
-
-        json_data = json.dumps(item)
-
-        response = requests.post(him_cpt_url, auth=(him_username, him_password), data=json_data,
                                  headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
 
 

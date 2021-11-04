@@ -241,7 +241,7 @@ class ICD10CodeSubCategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = terminology_services_management.ICD10CodeSubCategory
-        fields = ['id', 'description','code']
+        fields = ['id','identifier' ,'description','code']
 
 
 class ICD10CodeCategorySerializer(serializers.ModelSerializer):
@@ -249,7 +249,7 @@ class ICD10CodeCategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = terminology_services_management.ICD10CodeCategory
-        fields = ('id', 'description', 'sub_category')
+        fields = ('id', 'identifier','description', 'sub_category')
 
 
 class CPTCodeSerializer(serializers.ModelSerializer):

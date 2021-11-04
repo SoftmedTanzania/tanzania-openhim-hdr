@@ -8,6 +8,7 @@ from django_tables2 import RequestConfig
 from Core import forms as core_forms
 from MappingsManagement import models as mappings_management_models
 from TerminologyServicesManagement import models as terminology_management_services_models
+import re
 
 import json
 import csv
@@ -370,9 +371,11 @@ def import_icd_10_codes(request):
     for x in data:
         categories = x['category']
         sub_categories = x['subCategories']
+        identifier = categories.split('(', 1)[1].split(')')[0]
 
         # # insert category
         instance_category = terminology_management_services_models.ICD10CodeCategory()
+        instance_category.identifier = identifier
         instance_category.description = categories
         instance_category.save()
 
@@ -381,9 +384,11 @@ def import_icd_10_codes(request):
         for sub_category in sub_categories:
             sub_category_name = sub_category['subCategoryName']
             sub_sub_categories = sub_category['subSubCategories']
+            identifier = sub_category_name.split('(', 1)[1].split(')')[0]
 
             # # insert sub category
             instance_sub_category = terminology_management_services_models.ICD10CodeSubCategory()
+            instance_sub_category.identifier = identifier
             instance_sub_category.description = sub_category_name
             instance_sub_category.category_id = instance_category.id
             instance_sub_category.save()
