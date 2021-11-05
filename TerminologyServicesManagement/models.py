@@ -55,7 +55,7 @@ class ICD10Code(models.Model):
 
 class ICD10SubCode(models.Model):
     def __str__(self):
-        return '%d' %self.description
+        return '%s' %self.description
 
     code = models.ForeignKey(ICD10Code,related_name='sub_code',on_delete=models.DO_NOTHING, null=True, blank=True)
     sub_code = models.CharField(max_length=255)
@@ -68,7 +68,7 @@ class ICD10SubCode(models.Model):
 
 class CPTCodeCategory(models.Model):
     def __str__(self):
-        return '%d' %self.description
+        return '%s' %self.description
 
     description = models.CharField(max_length=255)
 
@@ -79,7 +79,7 @@ class CPTCodeCategory(models.Model):
 
 class CPTCodeSubCategory(models.Model):
     def __str__(self):
-        return '%d' % self.description
+        return '%s' % self.description
 
     category = models.ForeignKey(CPTCodeCategory, related_name='sub_category',on_delete=models.DO_NOTHING, null=True, blank=True)
     description = models.CharField(max_length=255)
