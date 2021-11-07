@@ -10,26 +10,24 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from Core import views as core_views
 from ValidationManagement import models as validation_management_models
+from TerminologyServicesManagement import models as terminology_management_services_models
 
 app = Celery()
 
 
 @app.task()
-def save_payload_from_csv(request):
-    print("function was called")
+def save_payload_from_csv():
     root_path = "uploads"
     i = 0
     for subdir, _, _ in os.walk(root_path):
-        print("subdir was called")
-        print("root path is", root_path)
         for file in os.listdir(subdir):
-            print("function was called")
             file_path = "" + root_path + "/" + file
             with open(file_path, 'r') as fp:
-                print("open file path was called")
                 lines = csv.reader(fp, delimiter=',')
 
                 imported_payload = core_views.regenerate_json_payload_from_csv(lines)
+
+                print(imported_payload)
 
                 result = validators.validate_received_payload(json.loads(imported_payload))
                 transaction_status = result["transaction_status"]
@@ -43,7 +41,6 @@ def save_payload_from_csv(request):
                 else:
                     print("validation successful")
                     json_imported_payload = json.loads(imported_payload)
-                    print(json_imported_payload)
                     message_type = json_imported_payload["messageType"]
                     facility_name = json_imported_payload["orgName"]
                     facility_hfr_code = json_imported_payload["facilityHfrCode"]
@@ -77,7 +74,6 @@ def save_payload_from_csv(request):
 
                     # Death in Facility
                     if message_type == "DDC":
-                        print("ddc execut")
                         instance_death_by_disease_case_at_facility = core_models.DeathByDiseaseCaseAtFacility()
                         instance_death_by_disease_case_at_facility.transaction_id = transaction_id
                         instance_death_by_disease_case_at_facility.org_name = facility_name
@@ -85,7 +81,7 @@ def save_payload_from_csv(request):
                         instance_death_by_disease_case_at_facility.save()
 
                         for item in items:
-                            instance_death_by_disease_case_items = core_models.DeathByDiseaseCaseAtFacility()
+                            instance_death_by_disease_case_items = core_models.DeathByDiseaseCaseAtFacilityItems()
                             instance_death_by_disease_case_items.death_by_disease_case_at_facility_id = instance_death_by_disease_case_at_facility.id
                             instance_death_by_disease_case_items.ward_id = item["wardId"]
                             instance_death_by_disease_case_items.ward_name = item["wardName"]
@@ -145,9 +141,7 @@ def save_payload_from_csv(request):
                             instance_bed_occupancy_items.patient_id = item["patId"]
                             instance_bed_occupancy_items.admission_date = validators.convert_date_formats(item["admissionDate"])
                             instance_bed_occupancy_items.discharge_date = validators.convert_date_formats(item["dischargeDate"])
-                            instance_bed_occupancy.save()
-
-                        # Revenue received parent lines
+                            instance_bed_occupancy_items.save()
 
                     # Revenue
                     if message_type == "REV":
@@ -251,3 +245,148 @@ def create_bed_occupancy_report_record(discharge_date, admission_date, item, bed
         instance_bed_occupancy_report.bed_occupancy = bed_occupancy_rate
         instance_bed_occupancy_report.facility_hfr_code = facility_hfr_code
         instance_bed_occupancy_report.save()
+
+
+@app.task
+def import_icd_10_codes():
+    with open ('icd10codes.json',"r") as f:
+        data = json.load(f)
+
+    for x in data:
+        categories = x['category']
+        sub_categories = x['subCategories']
+        identifier = categories.split('(', 1)[1].split(')')[0]
+
+        category = terminology_management_services_models.ICD10CodeCategory.objects.filter(identifier=identifier).first()
+
+        if category is None:
+            # # insert category
+            instance_category = terminology_management_services_models.ICD10CodeCategory()
+            instance_category.identifier = identifier
+            instance_category.description = categories
+            instance_category.save()
+        else:
+            category.identifier = identifier
+            category.description = categories
+            category.save()
+
+        for sub_category in sub_categories:
+            sub_category_name = sub_category['subCategoryName']
+            sub_sub_categories = sub_category['subSubCategories']
+            identifier = sub_category_name.split('(', 1)[1].split(')')[0]
+
+            last_category = terminology_management_services_models.ICD10CodeCategory.objects.all().last()
+            sub_category = terminology_management_services_models.ICD10CodeSubCategory.objects.filter(identifier=identifier).first()
+
+            if sub_category is None:
+                # # insert sub category
+                instance_sub_category = terminology_management_services_models.ICD10CodeSubCategory()
+                instance_sub_category.identifier = identifier
+                instance_sub_category.description = sub_category_name
+                instance_sub_category.category_id = last_category.id
+                instance_sub_category.save()
+            else:
+                sub_category.identifier = identifier
+                sub_category.description = sub_category_name
+                sub_category.category_id = last_category.id
+                sub_category.save()
+
+            # loop through the sub sub categories
+            for sub_sub_category in sub_sub_categories:
+                icd_10 = sub_sub_category["subSubCategoryName"]
+                icd_10_code = sub_sub_category["subSubCategoryCode"]
+                icd_sub_code_array = sub_sub_category["icd10Codes"]
+
+                last_sub_category = terminology_management_services_models.ICD10CodeSubCategory.objects.all().last()
+                code = terminology_management_services_models.ICD10Code.objects.filter(code = icd_10_code).first()
+
+                if code is None:
+                    # # insert icd code
+                    instance_icd_code = terminology_management_services_models.ICD10Code()
+                    instance_icd_code.sub_category_id =  last_sub_category.id
+                    instance_icd_code.code = icd_10_code
+                    instance_icd_code.description = icd_10
+                    instance_icd_code.save()
+                else:
+                    code.sub_category_id = last_sub_category.id
+                    code.code = icd_10_code
+                    code.description = icd_10
+                    code.save()
+
+                for y in icd_sub_code_array:
+                    icd_10_sub_code = y["icd10Code"]
+                    icd_10_sub_description = y["icd10Name"]
+
+                    last_code = terminology_management_services_models.ICD10Code.objects.all().last()
+                    sub_code = terminology_management_services_models.ICD10SubCode.objects.filter(sub_code=icd_10_sub_code).first()
+
+                    if sub_code is None:
+                        # insert icd sub code
+                        instance_icd_sub_code = terminology_management_services_models.ICD10SubCode()
+                        instance_icd_sub_code.code_id = last_code.id
+                        instance_icd_sub_code.sub_code = icd_10_sub_code
+                        instance_icd_sub_code.description = icd_10_sub_description
+                        instance_icd_sub_code.save()
+
+                    else:
+                        sub_code.code_id = last_code.id
+                        sub_code.sub_code = icd_10_sub_code
+                        sub_code.description = icd_10_sub_description
+                        sub_code.save()
+
+
+@app.task
+def import_cpt_codes():
+    with open('cpt.csv', 'r') as fp:
+        lines = csv.reader(fp, delimiter=',')
+
+        for line in lines:
+            code = line[0]
+            description = line[1]
+
+            if code == "CATEGORY":
+                category = terminology_management_services_models.CPTCodeCategory.objects.filter(description=description).first()
+
+                if category is None:
+                    instance_category = terminology_management_services_models.CPTCodeCategory()
+                    instance_category.description = description
+                    instance_category.save()
+                else:
+                    category.description = description
+                    category.save()
+
+            elif code == "SUBCATEGORY":
+                last_category = terminology_management_services_models.CPTCodeCategory.objects.latest('id')
+                last_category_id = last_category.id
+
+                sub_category = terminology_management_services_models.CPTCodeSubCategory.objects.filter(description=description).first()
+
+                if sub_category is None:
+                    instance_sub_category = terminology_management_services_models.CPTCodeSubCategory()
+                    instance_sub_category.category_id = last_category_id
+                    instance_sub_category.description = description
+                    instance_sub_category.save()
+                else:
+                    sub_category.category_id = last_category_id
+                    sub_category.description = description
+                    sub_category.save()
+
+            else:
+                last_sub_category = terminology_management_services_models.CPTCodeSubCategory.objects.latest('id')
+                last_sub_category_id = last_sub_category.id
+
+                codes = terminology_management_services_models.CPTCode.objects.filter(code=code).first()
+
+                if codes is None:
+                    instance_code = terminology_management_services_models.CPTCode()
+                    instance_code.sub_category_id = last_sub_category_id
+                    instance_code.code = code
+                    instance_code.description = description
+                    instance_code.save()
+                else:
+                    codes.sub_category_id = last_sub_category_id
+                    codes.code = code
+                    codes.description = description
+                    codes.save()
+
+    return HttpResponse("Finished Uploading")

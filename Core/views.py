@@ -198,46 +198,77 @@ def regenerate_json_payload_from_csv(lines):
 
         if row > 0:
             if message_type == "SVCREC":
-                json_object = {"deptName": line[3],
-                               "deptId": line[4],
-                               "patId": line[5],
-                               "gender": line[6],
-                               "dob": line[7],
-                               "medSvcCode": line[8],
-                               "confirmedDiagnosis": line[9],
-                               "differentialDiagnosis": line[10],
-                               "provisionalDiagnosis": line[11],
-                               "serviceDate": line[12],
-                               "serviceProviderRankingId": line[13],
-                               "visitType": line[14]
-                               }
+                if len(line) == 15:
+                    json_object = {"deptName": str(line[3]).strip(),
+                                   "deptId": str(line[4]).strip(),
+                                   "patId": str(line[5]).strip(),
+                                   "gender": str(line[6]).strip(),
+                                   "dob": str(line[7]).strip(),
+                                   "medSvcCode": str(line[8]).strip().split(','),
+                                   "confirmedDiagnosis": list(line[9]),
+                                   "differentialDiagnosis": list(line[10]),
+                                   "provisionalDiagnosis": list(line[11]),
+                                   "serviceDate": line[12],
+                                   "serviceProviderRankingId": line[13],
+                                   "visitType": line[14]
+                                   }
+                elif len(line) == 13:
+                    json_object = {"deptName": str(line[3]).strip(),
+                                   "deptId": str(line[4]).strip(),
+                                   "patId": str(line[5]).strip(),
+                                   "gender": str(line[6]).strip(),
+                                   "dob": str(line[7]).strip(),
+                                   "medSvcCode": str(line[8]).strip().split(','),
+                                   "confirmedDiagnosis": str(line[9]).strip().split(','),
+                                   "differentialDiagnosis": str(line[9]).strip().split(','),
+                                   "provisionalDiagnosis": [],
+                                   "serviceDate": line[10],
+                                   "serviceProviderRankingId": line[11],
+                                   "visitType": line[12]
+                                   }
             elif message_type == "REV":
-                json_object = {"systemTransId": line[3],
-                               "transactionDate": line[4],
-                               "patId": line[5],
-                               "gender": line[6],
-                               "dob": line[7],
-                               "medSvcCode": line[8],
-                               "payerId": line[9],
-                               "exemptionCategoryId": line[10],
-                               "billedAmount": line[11],
-                               "waivedAmount": line[12],
-                               "serviceProviderRankingId": line[13]
+                json_object = {"systemTransId": str(line[3]).strip(),
+                               "transactionDate": str(line[4]).strip(),
+                               "patId": str(line[5]).strip(),
+                               "gender": str(line[6]).strip(),
+                               "dob": str(line[7]).strip(),
+                               "medSvcCode": str(line[8]).strip().split(','),
+                               "payerId": str(line[9]).strip(),
+                               "exemptionCategoryId": str(line[10]).strip(),
+                               "billedAmount": str(line[11]).strip(),
+                               "waivedAmount": str(line[12]).strip(),
+                               "serviceProviderRankingId": str(line[13]).strip()
                                }
             elif message_type == "DDC":
-                json_object = {"wardId": line[3],
-                               "wardName": line[4],
-                               "patId": line[5],
-                               "firstName": line[6],
-                               "middleName": line[7],
-                               "lastName": line[8],
-                               "gender": line[9],
-                               "dob": line[10],
-                               "causeOfDeath": line[11],
-                               "immediateCauseOfDeath": line[12],
-                               "underlyingCauseOfDeath": line[13],
-                               "dateDeathOccurred": line[14]
-                               }
+                if len(line) == 15:
+
+                    json_object = {"wardId": str(line[3]).strip(),
+                                   "wardName": str(line[4]).strip(),
+                                   "patId": str(line[5]).strip(),
+                                   "firstName": str(line[6]).strip(),
+                                   "middleName": str(line[7]).strip(),
+                                   "lastName": str(line[8]).strip(),
+                                   "gender": str(line[9]).strip(),
+                                   "dob": str(line[10]).strip(),
+                                   "causeOfDeath": str(line[11]).strip(),
+                                   "immediateCauseOfDeath": str(line[12]).strip(),
+                                   "underlyingCauseOfDeath": str(line[13]).strip(),
+                                   "dateDeathOccurred": str(line[14]).strip()
+                                   }
+                elif len(line) == 13: #support the old csv files coming in
+                    json_object = {"wardId": str(line[3]).strip(),
+                                   "wardName": str(line[4]).strip(),
+                                   "patId": str(line[5]).strip(),
+                                   "firstName": str(line[6]).strip(),
+                                   "middleName": str(line[7]).strip(),
+                                   "lastName": str(line[8]).strip(),
+                                   "gender": str(line[9]).strip(),
+                                   "dob": str(line[10]).strip(),
+                                   "causeOfDeath": str(line[11]).strip(),
+                                   "immediateCauseOfDeath": "",
+                                   "underlyingCauseOfDeath": str(line[11]).strip(),
+                                   "dateDeathOccurred": str(line[12]).strip()
+                                   }
             elif message_type == "DDCOUT":
                 json_object = {"deathId": line[3],
                                "placeOfDeathId": line[4],
@@ -249,11 +280,11 @@ def regenerate_json_payload_from_csv(lines):
                                "dateDeathOccurred": line[10]
                                }
             elif message_type == "BEDOCC":
-                json_object = {"wardId": line[3],
-                               "wardName": line[4],
-                               "patId": line[5],
-                               "admissionDate": line[6],
-                               "dischargeDate": line[7]
+                json_object = {"wardId": str(line[3]).strip(),
+                               "wardName": str(line[4]).strip(),
+                               "patId": str(line[5]).strip(),
+                               "admissionDate": str(line[6]).strip(),
+                               "dischargeDate": str(line[7]).strip()
                                }
 
             data_items_array.append(json_object)
