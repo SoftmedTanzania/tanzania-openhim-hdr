@@ -50,7 +50,8 @@ class ServiceReceivedItemsSerializer(serializers.ModelSerializer):
     class Meta:
         model = core_models.ServiceReceivedItems
         fields = ('service_received', 'department_name','department_id', 'patient_id', 'gender', 'date_of_birth',
-                  'med_svc_code', 'icd_10_code', 'service_date','service_provider_ranking_id','visit_type' )
+                  'med_svc_code', 'confirmed_diagnosis','differential_diagnosis','provisional_diagnosis',
+                  'service_date','service_provider_ranking_id','visit_type' )
 
 
 class ServiceReceivedSerializer(serializers.ModelSerializer):
@@ -88,7 +89,7 @@ class DeathByDiseaseCaseAtFacilityItemsSerializer(serializers.ModelSerializer):
     class Meta:
         model = core_models.DeathByDiseaseCaseAtFacilityItems
         fields = ('death_by_disease_case_at_facility','ward_name','ward_id','patient_id','first_name','middle_name','last_name',
-                  'gender','date_of_birth','icd_10_code','date_death_occurred')
+                  'gender','date_of_birth','cause_of_death','immediate_cause_of_death','underlying_cause_of_death','date_death_occurred')
 
 
 class DeathByDiseaseCaseAtFacilitySerializer(serializers.ModelSerializer):
@@ -125,7 +126,9 @@ class DeathByDiseaseCaseNotAtFacilityItemsSerializer(serializers.ModelSerializer
 
     class Meta:
         model = core_models.DeathByDiseaseCaseNotAtFacilityItems
-        fields = ('place_of_death_id','gender','date_of_birth','icd_10_code','date_death_occurred','death_id')
+        fields = ('place_of_death_id','gender','date_of_birth','cause_of_death','immediate_cause_of_death',
+                  'underlying_cause_of_death',
+                  'date_death_occurred','death_id')
 
 
 class DeathByDiseaseCaseNotAtFacilitySerializer(serializers.ModelSerializer):
