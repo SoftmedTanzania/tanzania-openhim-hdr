@@ -265,10 +265,6 @@ def import_icd_10_codes():
             instance_category.identifier = identifier
             instance_category.description = categories
             instance_category.save()
-        else:
-            category.identifier = identifier
-            category.description = categories
-            category.save()
 
         for sub_category in sub_categories:
             sub_category_name = sub_category['subCategoryName']
@@ -285,11 +281,6 @@ def import_icd_10_codes():
                 instance_sub_category.description = sub_category_name
                 instance_sub_category.category_id = last_category.id
                 instance_sub_category.save()
-            else:
-                sub_category.identifier = identifier
-                sub_category.description = sub_category_name
-                sub_category.category_id = last_category.id
-                sub_category.save()
 
             # loop through the sub sub categories
             for sub_sub_category in sub_sub_categories:
@@ -307,11 +298,6 @@ def import_icd_10_codes():
                     instance_icd_code.code = icd_10_code
                     instance_icd_code.description = icd_10
                     instance_icd_code.save()
-                else:
-                    code.sub_category_id = last_sub_category.id
-                    code.code = icd_10_code
-                    code.description = icd_10
-                    code.save()
 
                 for y in icd_sub_code_array:
                     icd_10_sub_code = y["icd10Code"]
@@ -328,11 +314,6 @@ def import_icd_10_codes():
                         instance_icd_sub_code.description = icd_10_sub_description
                         instance_icd_sub_code.save()
 
-                    else:
-                        sub_code.code_id = last_code.id
-                        sub_code.sub_code = icd_10_sub_code
-                        sub_code.description = icd_10_sub_description
-                        sub_code.save()
 
 
 @app.task
@@ -351,9 +332,6 @@ def import_cpt_codes():
                     instance_category = terminology_management_services_models.CPTCodeCategory()
                     instance_category.description = description
                     instance_category.save()
-                else:
-                    category.description = description
-                    category.save()
 
             elif code == "SUBCATEGORY":
                 last_category = terminology_management_services_models.CPTCodeCategory.objects.latest('id')
@@ -366,11 +344,6 @@ def import_cpt_codes():
                     instance_sub_category.category_id = last_category_id
                     instance_sub_category.description = description
                     instance_sub_category.save()
-                else:
-                    sub_category.category_id = last_category_id
-                    sub_category.description = description
-                    sub_category.save()
-
             else:
                 last_sub_category = terminology_management_services_models.CPTCodeSubCategory.objects.latest('id')
                 last_sub_category_id = last_sub_category.id
@@ -383,10 +356,5 @@ def import_cpt_codes():
                     instance_code.code = code
                     instance_code.description = description
                     instance_code.save()
-                else:
-                    codes.sub_category_id = last_sub_category_id
-                    codes.code = code
-                    codes.description = description
-                    codes.save()
 
     return HttpResponse("Finished Uploading")

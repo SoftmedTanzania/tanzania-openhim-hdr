@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/serializers.py" afterPath="$PROJECT_DIR$/API/serializers.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/tasks.py" afterPath="$PROJECT_DIR$/Core/tasks.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,8 +86,8 @@
       <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-391">
-              <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+            <state relative-caret-position="360">
+              <caret line="74" column="42" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
               <folding>
                 <element signature="e#490#572#0" expanded="false" />
                 <element signature="e#510#572#0" expanded="false" />
@@ -99,11 +99,10 @@
                 <element signature="e#1203#1335#0" expanded="false" />
                 <element signature="e#1408#1510#0" expanded="false" />
                 <element signature="e#1428#1510#0" expanded="false" />
-                <element signature="e#1605#1943#0" expanded="false" />
+                <element signature="e#1585#1943#0" expanded="false" />
                 <element signature="e#1664#1941#0" expanded="false" />
                 <element signature="e#2012#2197#0" expanded="false" />
                 <element signature="e#2104#2197#0" expanded="false" />
-                <element signature="e#2274#3044#0" expanded="false" />
                 <element signature="e#3117#3359#0" expanded="false" />
                 <element signature="e#3447#3787#0" expanded="false" />
                 <element signature="e#3467#3787#0" expanded="false" />
@@ -151,8 +150,17 @@
                 <element signature="e#12251#12439#0" expanded="false" />
                 <element signature="e#12296#12438#0" expanded="false" />
                 <element signature="e#12497#12598#0" expanded="false" />
-                <marker date="1636279753201" expanded="false" signature="1579:1943" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HDR/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="105" column="24" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -172,8 +180,8 @@
       <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Core/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1467">
-              <caret line="334" column="39" selection-start-line="334" selection-start-column="39" selection-end-line="334" selection-end-column="39" />
+            <state relative-caret-position="344">
+              <caret line="339" column="48" selection-start-line="339" selection-start-column="48" selection-end-line="339" selection-end-column="48" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#557#11442#0" expanded="false" />
@@ -181,64 +189,27 @@
                 <element signature="e#11497#11680#0" expanded="false" />
                 <element signature="e#11742#15159#0" expanded="false" />
                 <element signature="e#15283#15963#0" expanded="false" />
-                <element signature="e#20243#22690#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TerminologyServicesManagement/views.py">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Core/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="-316">
+              <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validators.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/validators.py">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TerminologyServicesManagement/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1231">
-              <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="4" />
-              <folding>
-                <element signature="e#3321#3854#0" expanded="false" />
-                <element signature="e#3950#4185#0" expanded="false" />
-                <element signature="e#4296#4836#0" expanded="false" />
-                <element signature="e#4932#5177#0" expanded="false" />
-                <element signature="e#5284#5823#0" expanded="false" />
-                <element signature="e#6272#6821#0" expanded="false" />
-                <element signature="e#7261#7781#0" expanded="false" />
-                <element signature="e#8195#8722#0" expanded="false" />
-                <element signature="e#11899#12254#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MasterData/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="90" />
-              <folding>
-                <element signature="e#2799#3912#0" expanded="false" />
-                <element signature="e#3958#4850#0" expanded="false" />
-                <element signature="e#4891#5869#0" expanded="false" />
-                <element signature="e#5916#6805#0" expanded="false" />
-                <element signature="e#6842#7746#0" expanded="false" />
-                <element signature="e#7789#8634#0" expanded="false" />
-                <element signature="e#8670#9519#0" expanded="false" />
-                <element signature="e#9561#10361#0" expanded="false" />
-                <element signature="e#10398#11321#0" expanded="false" />
-                <element signature="e#11365#12221#0" expanded="false" />
-                <element signature="e#12277#13510#0" expanded="false" />
-                <element signature="e#13572#14619#0" expanded="false" />
-                <element signature="e#14665#15698#0" expanded="false" />
-                <element signature="e#15750#16708#0" expanded="false" />
-                <element signature="e#16744#17988#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -313,8 +284,8 @@
         <option value="$PROJECT_DIR$/Core/views.py" />
         <option value="$PROJECT_DIR$/MasterData/views.py" />
         <option value="$PROJECT_DIR$/HDR/urls.py" />
-        <option value="$PROJECT_DIR$/Core/tasks.py" />
         <option value="$PROJECT_DIR$/API/serializers.py" />
+        <option value="$PROJECT_DIR$/Core/tasks.py" />
       </list>
     </option>
   </component>
@@ -368,6 +339,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TerminologyServicesManagement" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -876,13 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1009,13 +987,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TerminologyServicesManagement/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/icd10codes.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="724350">
@@ -1043,14 +1014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HDR/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="57" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1183,10 +1146,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Core/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-316">
+          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TerminologyServicesManagement/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HDR/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="105" column="24" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/API/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+        <state relative-caret-position="360">
+          <caret line="74" column="42" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
           <folding>
             <element signature="e#490#572#0" expanded="false" />
             <element signature="e#510#572#0" expanded="false" />
@@ -1198,11 +1185,10 @@
             <element signature="e#1203#1335#0" expanded="false" />
             <element signature="e#1408#1510#0" expanded="false" />
             <element signature="e#1428#1510#0" expanded="false" />
-            <element signature="e#1605#1943#0" expanded="false" />
+            <element signature="e#1585#1943#0" expanded="false" />
             <element signature="e#1664#1941#0" expanded="false" />
             <element signature="e#2012#2197#0" expanded="false" />
             <element signature="e#2104#2197#0" expanded="false" />
-            <element signature="e#2274#3044#0" expanded="false" />
             <element signature="e#3117#3359#0" expanded="false" />
             <element signature="e#3447#3787#0" expanded="false" />
             <element signature="e#3467#3787#0" expanded="false" />
@@ -1250,15 +1236,14 @@
             <element signature="e#12251#12439#0" expanded="false" />
             <element signature="e#12296#12438#0" expanded="false" />
             <element signature="e#12497#12598#0" expanded="false" />
-            <marker date="1636279753201" expanded="false" signature="1579:1943" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Core/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1467">
-          <caret line="334" column="39" selection-start-line="334" selection-start-column="39" selection-end-line="334" selection-end-column="39" />
+        <state relative-caret-position="344">
+          <caret line="339" column="48" selection-start-line="339" selection-start-column="48" selection-end-line="339" selection-end-column="48" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#557#11442#0" expanded="false" />
@@ -1266,7 +1251,6 @@
             <element signature="e#11497#11680#0" expanded="false" />
             <element signature="e#11742#15159#0" expanded="false" />
             <element signature="e#15283#15963#0" expanded="false" />
-            <element signature="e#20243#22690#0" expanded="false" />
           </folding>
         </state>
       </provider>
