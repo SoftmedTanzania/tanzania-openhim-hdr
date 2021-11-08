@@ -65,7 +65,7 @@ def create_claims_payload():
                     data_value = {
                         "dataElement": data_element_uid,
                         "period":str(period),
-                        "orgUnit": dhis_org_unit_uid,
+                        "orgUnit": facility_hfr_code,
                         "value": float(value)
                     }
 

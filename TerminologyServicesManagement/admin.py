@@ -10,17 +10,17 @@ class ICD10CategoryAdmin(admin.ModelAdmin):
 
 
 class ICD10SubCategoryAdmin(admin.ModelAdmin):
-    list_display = ('id','identifier','category','description')
+    list_display = ('id','identifier','category_id','category','description')
     search_fields = ['description', ]
 
 
 class ICD10CodeAdmin(admin.ModelAdmin):
-    list_display = ('id', 'sub_category','code','description')
+    list_display = ('id', 'sub_category','sub_category_id','code','description')
     search_fields = ['description', ]
 
 
 class ICD10SubCodeAdmin(admin.ModelAdmin):
-    list_display = ('id', 'code', 'sub_code', 'description')
+    list_display = ('id', 'code','code_id','sub_code', 'description')
     search_fields = ['description', ]
 
 
@@ -30,12 +30,12 @@ class CPTCategoryAdmin(admin.ModelAdmin):
 
 
 class CPTSubCategoryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'category','description')
+    list_display = ('id','category_id','category','description')
     search_fields = ['description', ]
 
 
 class CPTCodeAdmin(admin.ModelAdmin):
-    list_display = ('id','sub_category','code', 'description')
+    list_display = ('id','sub_category_id','sub_category','code', 'description')
     search_fields = ['description', ]
 
 
