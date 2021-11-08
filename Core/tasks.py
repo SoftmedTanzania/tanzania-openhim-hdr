@@ -337,25 +337,23 @@ def import_cpt_codes():
                     instance_category.save()
 
             elif code == "SUBCATEGORY":
-                last_category = terminology_management_services_models.CPTCodeCategory.objects.latest('id')
-                last_category_id = last_category.id
-
                 sub_category = terminology_management_services_models.CPTCodeSubCategory.objects.filter(description=description).first()
 
                 if sub_category is None:
                     instance_sub_category = terminology_management_services_models.CPTCodeSubCategory()
-                    instance_sub_category.category_id = last_category_id
+
+                    last_category = terminology_management_services_models.CPTCodeCategory.objects.all().last()
+                    instance_sub_category.category_id = last_category.id
                     instance_sub_category.description = description
                     instance_sub_category.save()
             else:
-                last_sub_category = terminology_management_services_models.CPTCodeSubCategory.objects.latest('id')
-                last_sub_category_id = last_sub_category.id
-
                 codes = terminology_management_services_models.CPTCode.objects.filter(code=code).first()
 
                 if codes is None:
                     instance_code = terminology_management_services_models.CPTCode()
-                    instance_code.sub_category_id = last_sub_category_id
+
+                    last_sub_category = terminology_management_services_models.CPTCodeSubCategory.objects.all().last()
+                    instance_code.sub_category_id = last_sub_category.id
                     instance_code.code = code
                     instance_code.description = description
                     instance_code.save()
