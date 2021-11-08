@@ -271,12 +271,13 @@ def import_icd_10_codes():
             sub_sub_categories = sub_category['subSubCategories']
             identifier = sub_category_name.split('(', 1)[1].split(')')[0]
 
-            last_category = terminology_management_services_models.ICD10CodeCategory.objects.all().last()
             sub_category = terminology_management_services_models.ICD10CodeSubCategory.objects.filter(identifier=identifier).first()
 
             if sub_category is None:
                 # # insert sub category
                 instance_sub_category = terminology_management_services_models.ICD10CodeSubCategory()
+
+                last_category = terminology_management_services_models.ICD10CodeCategory.objects.all().last()
                 instance_sub_category.identifier = identifier
                 instance_sub_category.description = sub_category_name
                 instance_sub_category.category_id = last_category.id
@@ -288,12 +289,13 @@ def import_icd_10_codes():
                 icd_10_code = sub_sub_category["subSubCategoryCode"]
                 icd_sub_code_array = sub_sub_category["icd10Codes"]
 
-                last_sub_category = terminology_management_services_models.ICD10CodeSubCategory.objects.all().last()
                 code = terminology_management_services_models.ICD10Code.objects.filter(code = icd_10_code).first()
 
                 if code is None:
                     # # insert icd code
                     instance_icd_code = terminology_management_services_models.ICD10Code()
+
+                    last_sub_category = terminology_management_services_models.ICD10CodeSubCategory.objects.all().last()
                     instance_icd_code.sub_category_id =  last_sub_category.id
                     instance_icd_code.code = icd_10_code
                     instance_icd_code.description = icd_10
@@ -303,12 +305,13 @@ def import_icd_10_codes():
                     icd_10_sub_code = y["icd10Code"]
                     icd_10_sub_description = y["icd10Name"]
 
-                    last_code = terminology_management_services_models.ICD10Code.objects.all().last()
                     sub_code = terminology_management_services_models.ICD10SubCode.objects.filter(sub_code=icd_10_sub_code).first()
 
                     if sub_code is None:
                         # insert icd sub code
                         instance_icd_sub_code = terminology_management_services_models.ICD10SubCode()
+
+                        last_code = terminology_management_services_models.ICD10Code.objects.all().last()
                         instance_icd_sub_code.code_id = last_code.id
                         instance_icd_sub_code.sub_code = icd_10_sub_code
                         instance_icd_sub_code.description = icd_10_sub_description
