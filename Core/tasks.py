@@ -11,8 +11,30 @@ from pathlib import Path
 from Core import views as core_views
 from ValidationManagement import models as validation_management_models
 from TerminologyServicesManagement import models as terminology_management_services_models
+from functools import wraps
 
 app = Celery()
+
+def skip_if_running(f):
+    task_name = '{f.__module__}.{f.__name__}'
+
+    @wraps(f)
+    def wrapped(self, *args, **kwargs):
+        workers = self.app.control.inspect().active()
+
+        for worker, tasks in workers.items():
+            for task in tasks:
+                if (task_name == task['name'] and
+                        tuple(args) == tuple(task['args']) and
+                        kwargs == task['kwargs'] and
+                        self.request.id != task['id']):
+                    print('task {task_name} ({args}, {kwargs}) is running on {worker}, skipping')
+
+                    return None
+
+        return f(self, *args, **kwargs)
+
+    return wrapped
 
 
 @app.task()
@@ -248,6 +270,7 @@ def create_bed_occupancy_report_record(discharge_date, admission_date, item, bed
 
 
 @app.task
+@skip_if_running
 def import_icd_10_codes():
     with open ('icd10codes.json',"r") as f:
         data = json.load(f)
@@ -320,6 +343,7 @@ def import_icd_10_codes():
 
 
 @app.task
+@skip_if_running
 def import_cpt_codes():
     with open('cpt.csv', 'r') as fp:
         lines = csv.reader(fp, delimiter=',')
