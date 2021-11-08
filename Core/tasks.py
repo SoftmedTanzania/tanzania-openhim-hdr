@@ -269,9 +269,9 @@ def create_bed_occupancy_report_record(discharge_date, admission_date, item, bed
         instance_bed_occupancy_report.save()
 
 
-# @app.task
-@shared_task(bind=True)
-@skip_if_running
+# @shared_task(bind=True)
+# @skip_if_running
+@app.task()
 def import_icd_10_codes(self):
     with open ('icd10codes.json',"r") as f:
         data = json.load(f)
@@ -289,6 +289,8 @@ def import_icd_10_codes(self):
             instance_category.identifier = identifier
             instance_category.description = categories
             instance_category.save()
+        else:
+            pass
 
         for sub_category in sub_categories:
             sub_category_name = sub_category['subCategoryName']
@@ -306,6 +308,8 @@ def import_icd_10_codes(self):
                 instance_sub_category.description = sub_category_name
                 instance_sub_category.category_id = last_category.id
                 instance_sub_category.save()
+            else:
+                pass
 
             # loop through the sub sub categories
             for sub_sub_category in sub_sub_categories:
@@ -324,6 +328,8 @@ def import_icd_10_codes(self):
                     instance_icd_code.code = icd_10_code
                     instance_icd_code.description = icd_10
                     instance_icd_code.save()
+                else:
+                    pass
 
                 for y in icd_sub_code_array:
                     icd_10_sub_code = y["icd10Code"]
@@ -340,12 +346,13 @@ def import_icd_10_codes(self):
                         instance_icd_sub_code.sub_code = icd_10_sub_code
                         instance_icd_sub_code.description = icd_10_sub_description
                         instance_icd_sub_code.save()
+                    else:
+                        pass
 
 
-
-# @app.task
-@shared_task(bind=True)
-@skip_if_running
+# @shared_task(bind=True)
+# @skip_if_running
+@app.task()
 def import_cpt_codes(self):
     with open('cpt.csv', 'r') as fp:
         lines = csv.reader(fp, delimiter=',')
