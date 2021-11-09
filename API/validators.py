@@ -86,7 +86,7 @@ def convert_date_formats(date):
             except ValueError:
                 pass
     else:
-        return ""
+        return None
 
 
 def validate_received_payload(data):
@@ -126,14 +126,15 @@ def validate_received_payload(data):
             try:
                 if rule_name == "convert_date_formats":
                     date = convert_date_formats(val[field])
-                    if date is None:
-                        raised_error = "Failed to convert " + field + " with value of " + val[
-                            field] + " to a valid date format."
-                        transaction_status = False
-                        validation_rule_failed += 1
-                        error_message.append(raised_error)
-                    else:
-                        transaction_status = True
+                    transaction_status =  True
+                    # if date is None:
+                    #     raised_error = "Failed to convert " + field + " with value of " + val[
+                    #         field] + " to a valid date format."
+                    #     transaction_status = False
+                    #     validation_rule_failed += 1
+                    #     error_message.append(raised_error)
+                    # else:
+                    #     transaction_status = True
             except (NameError, TypeError, RuntimeError, KeyError, ValueError):
                 raised_error = "Failed to convert "+field+" with value of "+val[field]+" to a valid date format."
                 transaction_status = False

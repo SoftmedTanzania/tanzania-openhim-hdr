@@ -380,7 +380,6 @@ class BedOccupancyView(viewsets.ModelViewSet):
             )
 
     def perform_create(self, request, serializer, transaction_id):
-
         # validate payload
         instance_bed_occupancy = BedOccupancy()
 
@@ -390,9 +389,10 @@ class BedOccupancyView(viewsets.ModelViewSet):
         instance_bed_occupancy.save()
 
         status = []
+
         for val in serializer.data["items"]:
             try:
-
+                print(validators.convert_date_formats(val["dischargeDate"]))
                 instance_bed_occupancy_item = BedOccupancyItems()
                 instance_bed_occupancy_item.patient_id = val["patId"]
                 instance_bed_occupancy_item.bed_occupancy_id = instance_bed_occupancy.id
