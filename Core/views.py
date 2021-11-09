@@ -220,7 +220,7 @@ def regenerate_json_payload_from_csv(lines):
                                    "dob": str(line[7]).strip(),
                                    "medSvcCode": str(line[8]).strip().split(','),
                                    "confirmedDiagnosis": str(line[9]).strip().split(','),
-                                   "differentialDiagnosis": str(line[9]).strip().split(','),
+                                   "differentialDiagnosis": [],
                                    "provisionalDiagnosis": [],
                                    "serviceDate": line[10],
                                    "serviceProviderRankingId": line[11],
