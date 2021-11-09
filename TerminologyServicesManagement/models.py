@@ -136,16 +136,12 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
 
     if created:
         item = {
-            "icd10_code_category_id": icd10_category_id,
             "icd10_code_category_identifier": icd10_category_identifier,
             "icd10_category_description": icd10_category_description,
-            "icd10_sub_category_id": icd10_sub_category_id,
             "icd10_sub_category_identifier": icd10_sub_category_identifier,
             "icd10_sub_category_description": icd10_sub_category_description,
-            "icd10_id": icd10_code_id,
             "icd10_code": icd10_diagnoses_code,
             "icd10_description": icd10_description,
-            "icd10_sub_code_id": instance.id,
             "icd10_sub_code": instance.sub_code,
             "icd10_sub_code_description": instance.description,
             "status": "N"
@@ -158,16 +154,12 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
         print(response)
     else:
         item = {
-            "icd10_code_category_id": icd10_category_id,
             "icd10_code_category_identifier": icd10_category_identifier,
             "icd10_category_description": icd10_category_description,
-            "icd10_sub_category_id": icd10_sub_category_id,
             "icd10_sub_category_identifier": icd10_sub_category_identifier,
             "icd10_sub_category_description": icd10_sub_category_description,
-            "icd10_id": icd10_code_id,
             "icd10_code": icd10_diagnoses_code,
             "icd10_description": icd10_description,
-            "icd10_sub_code_id": instance.id,
             "icd10_sub_code": instance.sub_code,
             "icd10_sub_code_description": instance.description,
             "status": "U"
@@ -194,11 +186,8 @@ def send_new_or_updated_cpt_code(sender, instance, created, **kwargs):
 
     if created:
         item = {
-            "cpt_category_code_id": cpt_code_category_id,
             "cpt_code_category_description": cpt_code_category_description,
-            "cpt_code_sub_category_id": cpt_code_sub_category_id,
             "cpt_code_sub_category_description": cpt_code_sub_category_description,
-            "cpt_code_id": instance.id,
             "cpt_code": cpt_code,
             "cpt_description": cpt_description,
             "status": "N"
@@ -210,11 +199,8 @@ def send_new_or_updated_cpt_code(sender, instance, created, **kwargs):
                                  headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
     else:
         item = {
-            "cpt_category_code_id": cpt_code_category_id,
             "cpt_code_category_description": cpt_code_category_description,
-            "cpt_code_sub_category_id": cpt_code_sub_category_id,
             "cpt_code_sub_category_description": cpt_code_sub_category_description,
-            "cpt_code_id": instance.id,
             "cpt_code": cpt_code,
             "cpt_description": cpt_description,
             "status": "U"
