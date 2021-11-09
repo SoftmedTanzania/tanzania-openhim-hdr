@@ -29,8 +29,7 @@ def create_claims_payload():
 
     for facility in facilities:
         facility_hfr_code =  facility.facility_hfr_code
-        dhis_org_unit_uid = facility.dhis_org_unit_uid
-
+        
         claims = nhif_models.Claims.objects.filter(facility_hfr_code=facility_hfr_code, date__gte=month_ago,
                                                    date__lte=current_date)
 

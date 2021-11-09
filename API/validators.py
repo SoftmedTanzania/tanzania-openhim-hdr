@@ -78,13 +78,15 @@ def check_if_array_not_null_value(value):
 
 # Extended Functions
 def convert_date_formats(date):
+    value = None
     if date != "":
-        for date_format in ('%Y-%m-%d', '%Y%m%d', '%d.%m.%Y', '%d/%m/%Y', '%Y.%m.%d','%Y/%m/%d', '%d-%m-%Y', '%dd-%mm-%yy'):
+        for date_format in ('%Y%m%d','%Y-%m-%d','%d.%m.%Y', '%d/%m/%Y', '%Y.%m.%d','%Y/%m/%d', '%d-%m-%Y', '%dd-%mm-%yy'):
             try:
                 date = datetime.strptime(date, date_format).strftime('%Y-%m-%d')
                 return datetime.strptime(date, '%Y-%m-%d').date()
             except ValueError:
-                pass
+                value = ""
+        return value
     else:
         return None
 
@@ -126,15 +128,15 @@ def validate_received_payload(data):
             try:
                 if rule_name == "convert_date_formats":
                     date = convert_date_formats(val[field])
-                    transaction_status =  True
-                    # if date is None:
-                    #     raised_error = "Failed to convert " + field + " with value of " + val[
-                    #         field] + " to a valid date format."
-                    #     transaction_status = False
-                    #     validation_rule_failed += 1
-                    #     error_message.append(raised_error)
-                    # else:
-                    #     transaction_status = True
+                    print(date)
+                    if date == "":
+                        raised_error = "Failed to convert " + field + " with value of " + val[
+                            field] + " to a valid date format."
+                        transaction_status = False
+                        validation_rule_failed += 1
+                        error_message.append(raised_error)
+                    else:
+                        transaction_status = True
             except (NameError, TypeError, RuntimeError, KeyError, ValueError):
                 raised_error = "Failed to convert "+field+" with value of "+val[field]+" to a valid date format."
                 transaction_status = False

@@ -41,7 +41,6 @@ class Facility(models.Model):
     district_council = models.ForeignKey(DistrictCouncil, on_delete=models.DO_NOTHING, null=True, blank=True)
     description = models.CharField(max_length=255)
     facility_hfr_code = models.CharField(max_length=255)
-    dhis_org_unit_uid = models.CharField(max_length=255)
     is_active = models.BooleanField(default=1)
     is_cpt_mapped = models.BooleanField(default=1)
 
