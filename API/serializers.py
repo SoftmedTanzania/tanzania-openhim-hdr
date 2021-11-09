@@ -228,7 +228,7 @@ class ICD10SubCodeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = terminology_services_management.ICD10SubCode
-        fields = ('id','sub_code', 'description')
+        fields = ('sub_code', 'description')
 
 
 class ICD10CodeSerializer(serializers.ModelSerializer):
@@ -236,7 +236,7 @@ class ICD10CodeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = terminology_services_management.ICD10Code
-        fields = ('id','code', 'description', 'sub_code')
+        fields = ('code', 'description', 'sub_code')
 
 
 class ICD10CodeSubCategorySerializer(serializers.ModelSerializer):
@@ -244,7 +244,7 @@ class ICD10CodeSubCategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = terminology_services_management.ICD10CodeSubCategory
-        fields = ['id','identifier' ,'description','code']
+        fields = ['identifier' ,'description','code']
 
 
 class ICD10CodeCategorySerializer(serializers.ModelSerializer):
@@ -252,14 +252,14 @@ class ICD10CodeCategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = terminology_services_management.ICD10CodeCategory
-        fields = ('id', 'identifier','description', 'sub_category')
+        fields = ('identifier','description', 'sub_category')
 
 
 class CPTCodeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = terminology_services_management.CPTCode
-        fields = ('id','code','description')
+        fields = ('code','description')
 
 
 class CPTCodeSubCategorySerializer(serializers.ModelSerializer):
@@ -267,7 +267,7 @@ class CPTCodeSubCategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = terminology_services_management.CPTCodeSubCategory
-        fields = ('id','description', 'code')
+        fields = ('description', 'code')
 
 
 class CPTCodeCategorySerializer(serializers.ModelSerializer):
@@ -275,7 +275,7 @@ class CPTCodeCategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = terminology_services_management.CPTCodeCategory
-        fields = ('id', 'description', 'sub_category')
+        fields = ('description', 'sub_category')
 
 
 class IncomingClaimsSerializer(serializers.Serializer):
