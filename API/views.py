@@ -507,7 +507,7 @@ class ICD10View(viewsets.ModelViewSet):
 
                     for sub_code in sub_codes:
                         identifier = sub_code["sub_code"]
-                        description = y["description"]
+                        description = sub_code["description"]
 
                         sub_code = terminology_services_management.ICD10SubCode.objects.filter(
                             sub_code=identifier).first()
