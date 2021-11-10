@@ -609,9 +609,9 @@ class CPTCodeView(viewsets.ModelViewSet):
                     description = code["description"]
                     code = code["code"]
 
-                    code = terminology_services_management.CPTCode.objects.filter(code=code).first()
+                    code_query = terminology_services_management.CPTCode.objects.filter(code=code).first()
 
-                    if code is None:
+                    if code_query is None:
                         # # insert icd code
                         instance_cpt_code = terminology_services_management.CPTCode()
 

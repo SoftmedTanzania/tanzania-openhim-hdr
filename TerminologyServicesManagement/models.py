@@ -94,7 +94,7 @@ class CPTCode(models.Model):
         return '%s' %self.description
 
     sub_category = models.ForeignKey(CPTCodeSubCategory,related_name='code', on_delete=models.DO_NOTHING, null=True, blank=True)
-    code = models.CharField(max_length=255, null=True, blank=True)
+    code = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
 
     class Meta:
