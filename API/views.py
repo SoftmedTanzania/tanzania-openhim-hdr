@@ -16,6 +16,7 @@ from TerminologyServicesManagement import models as terminology_services_managem
 from NHIF import models as nhif_models
 import datetime as dt
 from dateutil.relativedelta import relativedelta
+import json
 
 
 # Create your views here.
@@ -446,14 +447,13 @@ class ICD10View(viewsets.ModelViewSet):
             )
 
     def perform_create(self, request, serializer):
-        # validate payload
-        data = serializer.data
+        with open('icd10codes.json', "r") as f:
+            data = json.load(f)
 
         for x in data:
-            identifier = x["identifier"]
-            description = x["description"]
-
-            sub_categories = x["sub_category"]
+            categories = x['category']
+            sub_categories = x['subCategories']
+            identifier = categories.split('(', 1)[1].split(')')[0]
 
             category = terminology_services_management.ICD10CodeCategory.objects.filter(
                 identifier=identifier).first()
@@ -462,16 +462,16 @@ class ICD10View(viewsets.ModelViewSet):
                 # # insert category
                 instance_category = terminology_services_management.ICD10CodeCategory()
                 instance_category.identifier = identifier
-                instance_category.description = description
-                instance_category.save()
+                instance_category.description = categories
+                # instance_category.save()
             else:
                 pass
+            print(categories)
 
             for sub_category in sub_categories:
-                identifier = sub_category["identifier"]
-                description = sub_category["description"]
-
-                codes = sub_category["code"]
+                sub_category_name = sub_category['subCategoryName']
+                sub_sub_categories = sub_category['subSubCategories']
+                identifier = sub_category_name.split('(', 1)[1].split(')')[0]
 
                 sub_category = terminology_services_management.ICD10CodeSubCategory.objects.filter(
                     identifier=identifier).first()
@@ -482,20 +482,21 @@ class ICD10View(viewsets.ModelViewSet):
 
                     last_category = terminology_services_management.ICD10CodeCategory.objects.all().last()
                     instance_sub_category.identifier = identifier
-                    instance_sub_category.description = description
+                    instance_sub_category.description = sub_category_name
                     instance_sub_category.category_id = last_category.id
-                    instance_sub_category.save()
+                    # instance_sub_category.save()
                 else:
                     pass
 
+                print(sub_category_name)
+
                 # loop through the sub sub categories
-                for code in codes:
-                    description = code["description"]
-                    identifier = code["code"]
+                for sub_sub_category in sub_sub_categories:
+                    icd_10 = sub_sub_category["subSubCategoryName"]
+                    icd_10_code = sub_sub_category["subSubCategoryCode"]
+                    icd_sub_code_array = sub_sub_category["icd10Codes"]
 
-                    sub_codes = code["sub_code"]
-
-                    code = terminology_services_management.ICD10Code.objects.filter(code=identifier).first()
+                    code = terminology_services_management.ICD10Code.objects.filter(code=icd_10_code).first()
 
                     if code is None:
                         # # insert icd code
@@ -503,18 +504,20 @@ class ICD10View(viewsets.ModelViewSet):
 
                         last_sub_category = terminology_services_management.ICD10CodeSubCategory.objects.all().last()
                         instance_icd_code.sub_category_id = last_sub_category.id
-                        instance_icd_code.code = identifier
-                        instance_icd_code.description = description
-                        instance_icd_code.save()
+                        instance_icd_code.code = icd_10_code
+                        instance_icd_code.description = icd_10
+                        # instance_icd_code.save()
                     else:
                         pass
 
-                    for sub_code in sub_codes:
-                        identifier = sub_code["sub_code"]
-                        description = sub_code["description"]
+                    print(icd_10)
+
+                    for y in icd_sub_code_array:
+                        icd_10_sub_code = y["icd10Code"]
+                        icd_10_sub_description = y["icd10Name"]
 
                         sub_code = terminology_services_management.ICD10SubCode.objects.filter(
-                            sub_code=identifier).first()
+                            sub_code=icd_10_sub_code).first()
 
                         if sub_code is None:
                             # insert icd sub code
@@ -522,11 +525,99 @@ class ICD10View(viewsets.ModelViewSet):
 
                             last_code = terminology_services_management.ICD10Code.objects.all().last()
                             instance_icd_sub_code.code_id = last_code.id
-                            instance_icd_sub_code.sub_code = identifier
-                            instance_icd_sub_code.description = description
-                            instance_icd_sub_code.save()
+                            instance_icd_sub_code.sub_code = icd_10_sub_code
+                            instance_icd_sub_code.description = icd_10_sub_description
+                            # instance_icd_sub_code.save()
                         else:
                             pass
+
+        # validate payload
+        # data = serializer.data
+        #
+        # for x in data:
+        #     identifier = x["identifier"]
+        #     description = x["description"]
+        #
+        #     sub_categories = x["sub_category"]
+        #
+        #     category = terminology_services_management.ICD10CodeCategory.objects.filter(
+        #         identifier=identifier).first()
+        #
+        #     if category is None:
+        #         # # insert category
+        #         instance_category = terminology_services_management.ICD10CodeCategory()
+        #         instance_category.identifier = identifier
+        #         instance_category.description = description
+        #         # instance_category.save()
+        #         print(description)
+        #     else:
+        #         pass
+        #
+        #     for sub_category in sub_categories:
+        #         identifier = sub_category["identifier"]
+        #         description = sub_category["description"]
+        #
+        #         codes = sub_category["code"]
+        #
+        #         sub_category = terminology_services_management.ICD10CodeSubCategory.objects.filter(
+        #             identifier=identifier).first()
+        #
+        #         if sub_category is None:
+        #             # # insert sub category
+        #             instance_sub_category = terminology_services_management.ICD10CodeSubCategory()
+        #
+        #             last_category = terminology_services_management.ICD10CodeCategory.objects.all().last()
+        #             instance_sub_category.identifier = identifier
+        #             instance_sub_category.description = description
+        #             instance_sub_category.category_id = last_category.id
+        #             # instance_sub_category.save()
+        #             print(description)
+        #         else:
+        #             pass
+        #
+        #         # loop through the sub sub categories
+        #         for code in codes:
+        #             description = code["description"]
+        #             identifier = code["code"]
+        #
+        #             sub_codes = code["sub_code"]
+        #
+        #             code = terminology_services_management.ICD10Code.objects.filter(code=identifier).first()
+        #
+        #             if code is None:
+        #                 # # insert icd code
+        #                 instance_icd_code = terminology_services_management.ICD10Code()
+        #
+        #                 last_sub_category = terminology_services_management.ICD10CodeSubCategory.objects.all().last()
+        #                 instance_icd_code.sub_category_id = last_sub_category.id
+        #                 instance_icd_code.code = identifier
+        #                 instance_icd_code.description = description
+        #                 # instance_icd_code.save()
+        #                 print(description)
+        #             else:
+        #                 pass
+        #
+        #             for sub_code in sub_codes:
+        #                 identifier = sub_code["sub_code"]
+        #                 description = sub_code["description"]
+        #
+        #                 sub_code = terminology_services_management.ICD10SubCode.objects.filter(
+        #                     sub_code=identifier).first()
+        #
+        #                 if sub_code is None:
+        #                     # insert icd sub code
+        #                     instance_icd_sub_code = terminology_services_management.ICD10SubCode()
+        #
+        #                     last_code = terminology_services_management.ICD10Code.objects.all().last()
+        #                     instance_icd_sub_code.code_id = last_code.id
+        #                     instance_icd_sub_code.sub_code = identifier
+        #                     instance_icd_sub_code.description = description
+        #                     # instance_icd_sub_code.save()
+        #                     print(description)
+        #                 else:
+        #                     pass
+
+        # return True
 
         return True
 
