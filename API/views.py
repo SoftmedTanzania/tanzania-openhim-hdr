@@ -463,7 +463,7 @@ class ICD10View(viewsets.ModelViewSet):
                 instance_category = terminology_services_management.ICD10CodeCategory()
                 instance_category.identifier = identifier
                 instance_category.description = categories
-                # instance_category.save()
+                instance_category.save()
             else:
                 pass
             print(categories)
@@ -484,7 +484,7 @@ class ICD10View(viewsets.ModelViewSet):
                     instance_sub_category.identifier = identifier
                     instance_sub_category.description = sub_category_name
                     instance_sub_category.category_id = last_category.id
-                    # instance_sub_category.save()
+                    instance_sub_category.save()
                 else:
                     pass
 
@@ -506,7 +506,7 @@ class ICD10View(viewsets.ModelViewSet):
                         instance_icd_code.sub_category_id = last_sub_category.id
                         instance_icd_code.code = icd_10_code
                         instance_icd_code.description = icd_10
-                        # instance_icd_code.save()
+                        instance_icd_code.save()
                     else:
                         pass
 
@@ -527,7 +527,7 @@ class ICD10View(viewsets.ModelViewSet):
                             instance_icd_sub_code.code_id = last_code.id
                             instance_icd_sub_code.sub_code = icd_10_sub_code
                             instance_icd_sub_code.description = icd_10_sub_description
-                            # instance_icd_sub_code.save()
+                            instance_icd_sub_code.save()
                         else:
                             pass
 

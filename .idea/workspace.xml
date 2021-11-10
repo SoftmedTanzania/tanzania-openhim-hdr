@@ -26,8 +26,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="452" column="22" selection-start-line="452" selection-start-column="22" selection-end-line="452" selection-end-column="22" />
+            <state relative-caret-position="377">
+              <caret line="523" column="61" selection-start-line="523" selection-start-column="61" selection-end-line="523" selection-end-column="61" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
                 <element signature="e#1428#1597#0" expanded="false" />
@@ -39,10 +39,9 @@
                 <element signature="e#16431#16606#0" expanded="false" />
                 <element signature="e#16836#17929#0" expanded="false" />
                 <element signature="e#18006#19280#0" expanded="false" />
-                <element signature="e#20697#24497#0" expanded="false" />
-                <element signature="e#28615#28816#0" expanded="false" />
-                <element signature="e#29062#30879#0" expanded="false" />
-                <element signature="e#30927#31335#0" expanded="false" />
+                <element signature="e#28607#28808#0" expanded="false" />
+                <element signature="e#29054#30871#0" expanded="false" />
+                <element signature="e#30919#31327#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -711,7 +710,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2904762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -720,7 +719,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2814739" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2814739" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -769,8 +768,18 @@
           <line>197</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/API/views.py</url>
+          <line>452</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/API/views.py</url>
+          <line>453</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="47" />
+      <option name="time" value="49" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1163,14 +1172,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -1259,10 +1260,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/API/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/API/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="452" column="22" selection-start-line="452" selection-start-column="22" selection-end-line="452" selection-end-column="22" />
+        <state relative-caret-position="377">
+          <caret line="523" column="61" selection-start-line="523" selection-start-column="61" selection-end-line="523" selection-end-column="61" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
             <element signature="e#1428#1597#0" expanded="false" />
@@ -1274,10 +1283,9 @@
             <element signature="e#16431#16606#0" expanded="false" />
             <element signature="e#16836#17929#0" expanded="false" />
             <element signature="e#18006#19280#0" expanded="false" />
-            <element signature="e#20697#24497#0" expanded="false" />
-            <element signature="e#28615#28816#0" expanded="false" />
-            <element signature="e#29062#30879#0" expanded="false" />
-            <element signature="e#30927#31335#0" expanded="false" />
+            <element signature="e#28607#28808#0" expanded="false" />
+            <element signature="e#29054#30871#0" expanded="false" />
+            <element signature="e#30919#31327#0" expanded="false" />
           </folding>
         </state>
       </provider>
