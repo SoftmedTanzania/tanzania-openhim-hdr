@@ -430,10 +430,14 @@ class ICD10View(viewsets.ModelViewSet):
             serializer = self.get_serializer(data=request.data)
 
         if serializer.is_valid():
-            self.perform_create(request, serializer)
-            headers = self.get_success_headers(serializer.data)
-            response = {"message": "Success", "status": status.HTTP_200_OK}
+            process_status = self.perform_create(request, serializer)
 
+            if process_status is True:
+                response = {"message": "Success", "status": status.HTTP_200_OK}
+            else:
+                response = {"message": "Fail", "status": status.HTTP_400_BAD_REQUEST}
+
+            headers = self.get_success_headers(serializer.data)
             return Response(response, headers=headers)
         else:
             return Response(
@@ -524,7 +528,7 @@ class ICD10View(viewsets.ModelViewSet):
                         else:
                             pass
 
-        return status
+        return True
 
     def list(self, request):
         queryset = terminology_services_management.ICD10CodeCategory.objects.all().order_by('-id')
