@@ -26,8 +26,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="523" column="61" selection-start-line="523" selection-start-column="61" selection-end-line="523" selection-end-column="61" />
+            <state relative-caret-position="109">
+              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
                 <element signature="e#1428#1597#0" expanded="false" />
@@ -39,9 +39,11 @@
                 <element signature="e#16431#16606#0" expanded="false" />
                 <element signature="e#16836#17929#0" expanded="false" />
                 <element signature="e#18006#19280#0" expanded="false" />
-                <element signature="e#28607#28808#0" expanded="false" />
-                <element signature="e#29054#30871#0" expanded="false" />
-                <element signature="e#30919#31327#0" expanded="false" />
+                <element signature="e#19729#20528#0" expanded="false" />
+                <element signature="e#20589#24179#0" expanded="false" />
+                <element signature="e#24218#24419#0" expanded="false" />
+                <element signature="e#24665#26482#0" expanded="false" />
+                <element signature="e#26530#26938#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -719,7 +721,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2814739" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2814739" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -767,16 +769,6 @@
           <url>file://$PROJECT_DIR$/API/serializers.py</url>
           <line>197</line>
           <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/API/views.py</url>
-          <line>452</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/API/views.py</url>
-          <line>453</line>
-          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="49" />
@@ -1270,8 +1262,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="523" column="61" selection-start-line="523" selection-start-column="61" selection-end-line="523" selection-end-column="61" />
+        <state relative-caret-position="109">
+          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
             <element signature="e#1428#1597#0" expanded="false" />
@@ -1283,9 +1275,11 @@
             <element signature="e#16431#16606#0" expanded="false" />
             <element signature="e#16836#17929#0" expanded="false" />
             <element signature="e#18006#19280#0" expanded="false" />
-            <element signature="e#28607#28808#0" expanded="false" />
-            <element signature="e#29054#30871#0" expanded="false" />
-            <element signature="e#30919#31327#0" expanded="false" />
+            <element signature="e#19729#20528#0" expanded="false" />
+            <element signature="e#20589#24179#0" expanded="false" />
+            <element signature="e#24218#24419#0" expanded="false" />
+            <element signature="e#24665#26482#0" expanded="false" />
+            <element signature="e#26530#26938#0" expanded="false" />
           </folding>
         </state>
       </provider>
