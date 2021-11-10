@@ -422,6 +422,116 @@ class ICD10View(viewsets.ModelViewSet):
     serializer_class = ICD10CodeCategorySerializer
     permission_classes = ()
 
+    def create(self, request):
+        data = request.data
+        if isinstance(data, list):
+            serializer = self.get_serializer(data=request.data, many=True)
+        else:
+            serializer = self.get_serializer(data=request.data)
+
+        if serializer.is_valid():
+            self.perform_create(request, serializer)
+
+            headers = self.get_success_headers(serializer.data)
+            response = {"message": "Success", "status": status.HTTP_200_OK}
+
+            return Response(response, headers=headers)
+        else:
+            return Response(
+                serializer.errors,
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+    def perform_create(self, request, serializer, transaction_id):
+        # validate payload
+        data = serializer.data
+
+        for x in data:
+            identifier = x["identifier"]
+            description = x["description"]
+
+            sub_categories = x["sub_category"]
+
+            category = terminology_services_management.ICD10CodeCategory.objects.filter(
+                identifier=identifier).first()
+
+            if category is None:
+                # # insert category
+                instance_category = terminology_services_management.ICD10CodeCategory()
+                instance_category.identifier = identifier
+                instance_category.description = description
+                instance_category.save()
+            else:
+                pass
+
+            for sub_category in sub_categories:
+                identifier = sub_category["identifier"]
+                description = sub_category["description"]
+
+                codes = sub_category["code"]
+
+                sub_category = terminology_services_management.ICD10CodeSubCategory.objects.filter(
+                    identifier=identifier).first()
+
+                if sub_category is None:
+                    # # insert sub category
+                    instance_sub_category = terminology_services_management.ICD10CodeSubCategory()
+
+                    last_category = terminology_services_management.ICD10CodeCategory.objects.all().last()
+                    instance_sub_category.identifier = identifier
+                    instance_sub_category.description = description
+                    instance_sub_category.category_id = last_category.id
+                    instance_sub_category.save()
+                else:
+                    pass
+
+                # loop through the sub sub categories
+                for code in codes:
+                    description = code["description"]
+                    identifier = code["code"]
+
+                    sub_codes = code["sub_code"]
+
+                    code = terminology_services_management.ICD10Code.objects.filter(code=identifier).first()
+
+                    if code is None:
+                        # # insert icd code
+                        instance_icd_code = terminology_services_management.ICD10Code()
+
+                        last_sub_category = terminology_services_management.ICD10CodeSubCategory.objects.all().last()
+                        instance_icd_code.sub_category_id = last_sub_category.id
+                        instance_icd_code.code = identifier
+                        instance_icd_code.description = description
+                        instance_icd_code.save()
+                    else:
+                        pass
+
+                    for sub_code in sub_codes:
+                        identifier = sub_code["sub_code"]
+                        description = y["description"]
+
+                        sub_code = terminology_services_management.ICD10SubCode.objects.filter(
+                            sub_code=identifier).first()
+
+                        if sub_code is None:
+                            # insert icd sub code
+                            instance_icd_sub_code = terminology_services_management.ICD10SubCode()
+
+                            last_code = terminology_services_management.ICD10Code.objects.all().last()
+                            instance_icd_sub_code.code_id = last_code.id
+                            instance_icd_sub_code.sub_code = identifier
+                            instance_icd_sub_code.description = description
+                            instance_icd_sub_code.save()
+                        else:
+                            pass
+
+        return status
+
+    def list(self, request):
+        queryset = terminology_services_management.ICD10CodeCategory.objects.all().order_by('-id')
+        serializer = ICD10CodeCategorySerializer(queryset, many=True)
+        return Response(serializer.data)
+
 
 class CPTCodeView(viewsets.ModelViewSet):
     queryset = terminology_services_management.CPTCodeCategory.objects.all()
