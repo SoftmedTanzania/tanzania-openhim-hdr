@@ -542,6 +542,94 @@ class CPTCodeView(viewsets.ModelViewSet):
     serializer_class = CPTCodeCategorySerializer
     permission_classes = ()
 
+    def create(self, request):
+        data = request.data
+        if isinstance(data, list):
+            serializer = self.get_serializer(data=request.data, many=True)
+        else:
+            serializer = self.get_serializer(data=request.data)
+
+        if serializer.is_valid():
+            process_status = self.perform_create(request, serializer)
+
+            if process_status is True:
+                response = {"message": "Success", "status": status.HTTP_200_OK}
+            else:
+                response = {"message": "Fail", "status": status.HTTP_400_BAD_REQUEST}
+
+            headers = self.get_success_headers(serializer.data)
+            return Response(response, headers=headers)
+        else:
+            return Response(
+                serializer.errors,
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+    def perform_create(self, request, serializer):
+        # validate payload
+        data = serializer.data
+
+        for x in data:
+            description = x["description"]
+
+            sub_categories = x["sub_category"]
+
+            category = terminology_services_management.CPTCodeCategory.objects.filter(
+                description=description).first()
+
+            if category is None:
+                # # insert category
+                instance_category = terminology_services_management.CPTCodeCategory()
+                instance_category.description = description
+                instance_category.save()
+            else:
+                pass
+
+            for sub_category in sub_categories:
+                description = sub_category["description"]
+
+                codes = sub_category["code"]
+
+                sub_category = terminology_services_management.CPTCodeSubCategory.objects.filter(
+                    description=description).first()
+
+                if sub_category is None:
+                    # # insert sub category
+                    instance_sub_category = terminology_services_management.CPTCodeSubCategory()
+
+                    last_category = terminology_services_management.CPTCodeCategory.objects.all().last()
+                    instance_sub_category.description = description
+                    instance_sub_category.category_id = last_category.id
+                    instance_sub_category.save()
+                else:
+                    pass
+
+                # loop through the sub sub categories
+                for code in codes:
+                    description = code["description"]
+                    code = code["code"]
+
+                    code = terminology_services_management.CPTCode.objects.filter(code=code).first()
+
+                    if code is None:
+                        # # insert icd code
+                        instance_cpt_code = terminology_services_management.CPTCode()
+
+                        last_sub_category = terminology_services_management.CPTCodeSubCategory.objects.all().last()
+                        instance_cpt_code.sub_category_id = last_sub_category.id
+                        instance_cpt_code.code = code
+                        instance_cpt_code.description = description
+                        instance_cpt_code.save()
+                    else:
+                        pass
+
+        return True
+
+    def list(self, request):
+        queryset = terminology_services_management.CPTCodeCategory.objects.all().order_by('-id')
+        serializer = CPTCodeCategorySerializer(queryset, many=True)
+        return Response(serializer.data)
+
 
 class ClaimsView(viewsets.ModelViewSet):
     queryset = nhif_models.Claims.objects.all()
