@@ -134,41 +134,21 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
     icd10_category_description = icd10_category.description
     icd10_category_identifier = icd10_category.identifier
 
-    if created:
-        item = {
-            "icd10_code_category_identifier": icd10_category_identifier,
-            "icd10_category_description": icd10_category_description,
-            "icd10_sub_category_identifier": icd10_sub_category_identifier,
-            "icd10_sub_category_description": icd10_sub_category_description,
-            "icd10_code": icd10_diagnoses_code,
-            "icd10_description": icd10_description,
-            "icd10_sub_code": instance.sub_code,
-            "icd10_sub_code_description": instance.description,
-            "status": "N"
-        }
+    item = {
+        "icd10_code_category_identifier": icd10_category_identifier,
+        "icd10_category_description": icd10_category_description,
+        "icd10_sub_category_identifier": icd10_sub_category_identifier,
+        "icd10_sub_category_description": icd10_sub_category_description,
+        "icd10_code": icd10_diagnoses_code,
+        "icd10_description": icd10_description,
+        "icd10_sub_code": instance.sub_code,
+        "icd10_sub_code_description": instance.description
+    }
 
-        json_data = json.dumps(item)
+    json_data = json.dumps(item)
 
-        response = requests.post(him_icd_url,auth=(him_username, him_password),data=json_data,
-                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
-        print(response)
-    else:
-        item = {
-            "icd10_code_category_identifier": icd10_category_identifier,
-            "icd10_category_description": icd10_category_description,
-            "icd10_sub_category_identifier": icd10_sub_category_identifier,
-            "icd10_sub_category_description": icd10_sub_category_description,
-            "icd10_code": icd10_diagnoses_code,
-            "icd10_description": icd10_description,
-            "icd10_sub_code": instance.sub_code,
-            "icd10_sub_code_description": instance.description,
-            "status": "U"
-        }
-
-        json_data = json.dumps(item)
-
-        response = requests.post(him_icd_url, auth=(him_username, him_password),data=json_data,
-                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
+    response = requests.post(him_icd_url,auth=(him_username, him_password),data=json_data,
+                             headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
 
 
 @receiver(post_save, sender=CPTCode)
@@ -184,29 +164,14 @@ def send_new_or_updated_cpt_code(sender, instance, created, **kwargs):
     cpt_code_category = CPTCodeCategory.objects.get(id=cpt_code_category_id)
     cpt_code_category_description = cpt_code_category.description
 
-    if created:
-        item = {
-            "cpt_code_category_description": cpt_code_category_description,
-            "cpt_code_sub_category_description": cpt_code_sub_category_description,
-            "cpt_code": cpt_code,
-            "cpt_description": cpt_description,
-            "status": "N"
-        }
+    item = {
+        "cpt_code_category_description": cpt_code_category_description,
+        "cpt_code_sub_category_description": cpt_code_sub_category_description,
+        "cpt_code": cpt_code,
+        "cpt_description": cpt_description
+    }
 
-        json_data = json.dumps(item)
+    json_data = json.dumps(item)
 
-        response = requests.post(him_cpt_url, auth=(him_username, him_password),data=json_data,
-                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
-    else:
-        item = {
-            "cpt_code_category_description": cpt_code_category_description,
-            "cpt_code_sub_category_description": cpt_code_sub_category_description,
-            "cpt_code": cpt_code,
-            "cpt_description": cpt_description,
-            "status": "U"
-        }
-
-        json_data = json.dumps(item)
-
-        response = requests.post(him_cpt_url, auth=(him_username, him_password), data=json_data,
-                                 headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
+    response = requests.post(him_cpt_url, auth=(him_username, him_password),data=json_data,
+                             headers={'User-Agent': 'XY', 'Content-type': 'application/json'})

@@ -24,6 +24,7 @@ from DHIS import tasks as dhis_tasks
 urlpatterns = [
 
     path('', include('UserManagement.urls')),
+    # path('authenticate', api_views.authenticate_user, name='authenticate'),
     path('admin/', admin.site.urls),
     path('get_', include('MasterData.urls')),
     path('api_', include('API.urls')),

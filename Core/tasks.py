@@ -291,6 +291,7 @@ def import_icd_10_codes(self):
             instance_category.save()
         else:
             pass
+        print(categories)
 
         for sub_category in sub_categories:
             sub_category_name = sub_category['subCategoryName']
@@ -311,6 +312,8 @@ def import_icd_10_codes(self):
             else:
                 pass
 
+            print(sub_category_name)
+
             # loop through the sub sub categories
             for sub_sub_category in sub_sub_categories:
                 icd_10 = sub_sub_category["subSubCategoryName"]
@@ -330,6 +333,8 @@ def import_icd_10_codes(self):
                     instance_icd_code.save()
                 else:
                     pass
+
+                print(icd_10)
 
                 for y in icd_sub_code_array:
                     icd_10_sub_code = y["icd10Code"]
