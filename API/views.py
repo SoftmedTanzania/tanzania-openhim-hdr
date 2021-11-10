@@ -431,7 +431,6 @@ class ICD10View(viewsets.ModelViewSet):
 
         if serializer.is_valid():
             self.perform_create(request, serializer)
-
             headers = self.get_success_headers(serializer.data)
             response = {"message": "Success", "status": status.HTTP_200_OK}
 
@@ -442,7 +441,7 @@ class ICD10View(viewsets.ModelViewSet):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-    def perform_create(self, request, serializer, transaction_id):
+    def perform_create(self, request, serializer):
         # validate payload
         data = serializer.data
 

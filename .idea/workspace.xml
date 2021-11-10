@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-465">
-              <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="443" column="42" selection-start-line="443" selection-start-column="42" selection-end-line="443" selection-end-column="42" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
                 <element signature="e#1416#1585#0" expanded="false" />
@@ -38,18 +38,19 @@
                 <element signature="e#14424#16380#0" expanded="false" />
                 <element signature="e#16419#16594#0" expanded="false" />
                 <element signature="e#16648#19476#0" expanded="false" />
-                <element signature="e#24500#26317#0" expanded="false" />
-                <element signature="e#26365#26773#0" expanded="false" />
+                <element signature="e#24036#24237#0" expanded="false" />
+                <element signature="e#24483#26300#0" expanded="false" />
+                <element signature="e#26348#26756#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="22" />
+              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -1239,10 +1240,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/API/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/API/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-465">
-          <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="443" column="42" selection-start-line="443" selection-start-column="42" selection-end-line="443" selection-end-column="42" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
             <element signature="e#1416#1585#0" expanded="false" />
@@ -1253,17 +1262,10 @@
             <element signature="e#14424#16380#0" expanded="false" />
             <element signature="e#16419#16594#0" expanded="false" />
             <element signature="e#16648#19476#0" expanded="false" />
-            <element signature="e#24500#26317#0" expanded="false" />
-            <element signature="e#26365#26773#0" expanded="false" />
+            <element signature="e#24036#24237#0" expanded="false" />
+            <element signature="e#24483#26300#0" expanded="false" />
+            <element signature="e#26348#26756#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
