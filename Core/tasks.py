@@ -269,8 +269,8 @@ def create_bed_occupancy_report_record(discharge_date, admission_date, item, bed
         instance_bed_occupancy_report.save()
 
 
-@shared_task(bind=True)
-@skip_if_running
+# @shared_task(bind=True)
+# @skip_if_running
 # @app.task()
 def import_icd_10_codes():
     with open ('icd10codes.json',"r") as f:
