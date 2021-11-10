@@ -603,6 +603,7 @@ class CPTCodeView(viewsets.ModelViewSet):
                     instance_sub_category.category_id = last_category.id
                     instance_sub_category.save()
                 else:
+                    last_category = terminology_services_management.CPTCodeCategory.objects.all().last()
                     sub_category.description = description
                     sub_category.category_id = last_category.id
                     sub_category.save()
@@ -624,6 +625,7 @@ class CPTCodeView(viewsets.ModelViewSet):
                         instance_cpt_code.description = description
                         instance_cpt_code.save()
                     else:
+                        last_sub_category = terminology_services_management.CPTCodeSubCategory.objects.all().last()
                         code_query.sub_category_id = last_sub_category.id
                         code_query.code = code
                         code_query.description = description
