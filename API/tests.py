@@ -46,12 +46,24 @@ class ValidatorsTestCase(TestCase):
 
     def test_check_if_valid_date(self):
         valid_date = "2021-01-03"
+        valid_date1 = "2021-01-3"
+        valid_date2 = "2021-01-23"
+        valid_date3 = "2021-13-03"
+        valid_date4 = "2021-10-00"
         invalid_date = "2021-01-033"
 
         valid_date_status = validators.check_if_valid_date(valid_date)
+        valid_date1_status = validators.check_if_valid_date(valid_date1)
+        valid_date2_status = validators.check_if_valid_date(valid_date2)
+        valid_date3_status = validators.check_if_valid_date(valid_date3)
+        valid_date4_status = validators.check_if_valid_date(valid_date4)
         invalid_date_status = validators.check_if_valid_date(invalid_date)
 
         self.assertEqual(valid_date_status, True)
+        self.assertEqual(valid_date1_status, True)
+        self.assertEqual(valid_date2_status, True)
+        self.assertEqual(valid_date3_status, False)
+        self.assertEqual(valid_date4_status, False)
         self.assertEqual(invalid_date_status, False)
 
     def test_check_if_not_null(self):
