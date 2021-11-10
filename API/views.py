@@ -583,7 +583,8 @@ class CPTCodeView(viewsets.ModelViewSet):
                 instance_category.description = description
                 instance_category.save()
             else:
-                pass
+                category.description = description
+                category.save()
 
             for sub_category in sub_categories:
                 description = sub_category["description"]
@@ -602,7 +603,9 @@ class CPTCodeView(viewsets.ModelViewSet):
                     instance_sub_category.category_id = last_category.id
                     instance_sub_category.save()
                 else:
-                    pass
+                    sub_category.description = description
+                    sub_category.category_id = last_category.id
+                    sub_category.save()
 
                 # loop through the sub sub categories
                 for code in codes:
@@ -621,7 +624,10 @@ class CPTCodeView(viewsets.ModelViewSet):
                         instance_cpt_code.description = description
                         instance_cpt_code.save()
                     else:
-                        pass
+                        code_query.sub_category_id = last_sub_category.id
+                        code_query.code = code
+                        code_query.description = description
+                        code_query.save()
 
         return True
 

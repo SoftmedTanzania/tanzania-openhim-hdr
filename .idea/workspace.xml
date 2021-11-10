@@ -4,7 +4,6 @@
     <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/views.py" afterPath="$PROJECT_DIR$/API/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TerminologyServicesManagement/models.py" afterPath="$PROJECT_DIR$/TerminologyServicesManagement/models.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="602" column="48" selection-start-line="602" selection-start-column="48" selection-end-line="602" selection-end-column="48" />
+            <state relative-caret-position="213">
+              <caret line="581" column="31" selection-start-line="581" selection-start-column="31" selection-end-line="581" selection-end-column="31" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
                 <element signature="e#1428#1597#0" expanded="false" />
@@ -42,10 +41,10 @@
                 <element signature="e#16836#17929#0" expanded="false" />
                 <element signature="e#18006#19280#0" expanded="false" />
                 <element signature="e#24218#24419#0" expanded="false" />
-                <element signature="e#28141#29958#0" expanded="false" />
-                <element signature="e#30006#30414#0" expanded="false" />
-                <marker date="1636570945151" expanded="false" signature="19530:24419" placeholder="..." />
-                <marker date="1636570945151" expanded="false" signature="20580:24179" placeholder="..." />
+                <element signature="e#28536#30353#0" expanded="false" />
+                <element signature="e#30401#30809#0" expanded="false" />
+                <marker date="1636571262730" expanded="false" signature="19530:24419" placeholder="..." />
+                <marker date="1636571262730" expanded="false" signature="20580:24179" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -206,10 +205,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TerminologyServicesManagement/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
+            <state relative-caret-position="1350">
               <caret line="96" column="42" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
               <folding />
             </state>
@@ -296,8 +295,8 @@
         <option value="$PROJECT_DIR$/API/validators.py" />
         <option value="$PROJECT_DIR$/API/tests.py" />
         <option value="$PROJECT_DIR$/Core/tasks.py" />
-        <option value="$PROJECT_DIR$/API/views.py" />
         <option value="$PROJECT_DIR$/TerminologyServicesManagement/models.py" />
+        <option value="$PROJECT_DIR$/API/views.py" />
       </list>
     </option>
   </component>
@@ -1247,10 +1246,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TerminologyServicesManagement/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="96" column="42" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/API/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="602" column="48" selection-start-line="602" selection-start-column="48" selection-end-line="602" selection-end-column="48" />
+        <state relative-caret-position="213">
+          <caret line="581" column="31" selection-start-line="581" selection-start-column="31" selection-end-line="581" selection-end-column="31" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
             <element signature="e#1428#1597#0" expanded="false" />
@@ -1264,19 +1271,11 @@
             <element signature="e#16836#17929#0" expanded="false" />
             <element signature="e#18006#19280#0" expanded="false" />
             <element signature="e#24218#24419#0" expanded="false" />
-            <element signature="e#28141#29958#0" expanded="false" />
-            <element signature="e#30006#30414#0" expanded="false" />
-            <marker date="1636570945151" expanded="false" signature="19530:24419" placeholder="..." />
-            <marker date="1636570945151" expanded="false" signature="20580:24179" placeholder="..." />
+            <element signature="e#28536#30353#0" expanded="false" />
+            <element signature="e#30401#30809#0" expanded="false" />
+            <marker date="1636571262730" expanded="false" signature="19530:24419" placeholder="..." />
+            <marker date="1636571262730" expanded="false" signature="20580:24179" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TerminologyServicesManagement/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="96" column="42" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
