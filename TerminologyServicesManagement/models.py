@@ -135,12 +135,12 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
     icd10_category_identifier = icd10_category.identifier
 
     item = {
-        "icd10_code_category_identifier": icd10_category_identifier,
+        "icd10_category_identifier": icd10_category_identifier,
         "icd10_category_description": icd10_category_description,
         "icd10_sub_category_identifier": icd10_sub_category_identifier,
         "icd10_sub_category_description": icd10_sub_category_description,
         "icd10_code": icd10_diagnoses_code,
-        "icd10_description": icd10_description,
+        "icd10_code_description": icd10_description,
         "icd10_sub_code": instance.sub_code,
         "icd10_sub_code_description": instance.description
     }
@@ -165,10 +165,10 @@ def send_new_or_updated_cpt_code(sender, instance, created, **kwargs):
     cpt_code_category_description = cpt_code_category.description
 
     item = {
-        "cpt_code_category_description": cpt_code_category_description,
-        "cpt_code_sub_category_description": cpt_code_sub_category_description,
+        "cpt_category_description": cpt_code_category_description,
+        "cpt_sub_category_description": cpt_code_sub_category_description,
         "cpt_code": cpt_code,
-        "cpt_description": cpt_description
+        "cpt_code_description": cpt_description
     }
 
     json_data = json.dumps(item)
