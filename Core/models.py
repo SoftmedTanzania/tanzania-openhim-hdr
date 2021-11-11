@@ -73,7 +73,7 @@ class DeathByDiseaseCaseAtFacilityItems(models.Model):
     cause_of_death = models.CharField(max_length=255)
     immediate_cause_of_death = models.CharField(max_length=255, null=True, blank=True)
     underlying_cause_of_death = models.CharField(max_length=255)
-    date_death_occurred = models.CharField(max_length=50)
+    date_death_occurred = models.DateField()
 
     class Meta:
         db_table = 'DeathByDiseaseCaseAtFacilityItems'

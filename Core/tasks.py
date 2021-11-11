@@ -198,17 +198,20 @@ def update_transaction_summary(transaction_id):
 
 
 @app.task
-def calculate_and_save_bed_occupancy_rate():
+def calculate_and_save_bed_occupancy_rate(request):
     date_week_ago = datetime.today() - timedelta(days=60)
-    bed_occupancy_items = core_models.BedOccupancyItems.objects.filter(admission_date__gte=date_week_ago.strftime("%Y-%m-%d"))
+    bed_occupancy_items = core_models.BedOccupancyItems.objects.filter(admission_date__gte=
+                                                                       date_week_ago.strftime("%Y-%m-%d"), bed_occupancy__transaction__is_active=True)
 
     admission_date = date_week_ago.strftime("%Y-%m-%d")
     discharge_date = datetime.now().strftime("%Y-%m-%d")
 
+    print(bed_occupancy_items)
+
     if bed_occupancy_items is not None:
         for item in bed_occupancy_items:
             bed_occupancy_id = item.bed_occupancy_id
-            bed_occupancy = core_models.BedOccupancy.objects.get(id=bed_occupancy_id)
+            bed_occupancy = core_models.BedOccupancy.objects.get(id=bed_occupancy_id, transaction__is_active = True)
             facility_hfr_code = bed_occupancy.facility_hfr_code
 
             instance_ward = master_data_models.Ward.objects.filter(local_ward_id=item.ward_id,
@@ -221,13 +224,14 @@ def calculate_and_save_bed_occupancy_rate():
                 if instance_patient.count() == 0:
                     get_patient_admission_discharge_period = core_models.BedOccupancyItems.objects.filter(
                         patient_id=item.patient_id, admission_date=item.admission_date,
-                        discharge_date=item.discharge_date).first()
+                        discharge_date=item.discharge_date, bed_occupancy__transaction__is_active=True).first()
 
                     # Patient has does not have both admission and discharge dates
                     if get_patient_admission_discharge_period is None:
                         get_patient_admission_period = core_models.BedOccupancyItems.objects.filter(
                             patient_id=item.patient_id,
-                            admission_date=item.admission_date).first()
+                            admission_date=item.admission_date, bed_occupancy__transaction__is_active=True
+                        ).first()
                         # Patient has admission date only
                         if get_patient_admission_period is not None:
                             admission_date = get_patient_admission_period.admission_date
@@ -235,7 +239,7 @@ def calculate_and_save_bed_occupancy_rate():
                         else:
                             get_patient_discharge_period = core_models.BedOccupancyItems.objects.filter(
                                 patient_id=item.patient_id,
-                                discharge_date=item.discharge_date).first()
+                                discharge_date=item.discharge_date, bed_occupancy__transaction__is_active=True).first()
                             # Patient has discharge date only
                             if get_patient_discharge_period is not None:
                                 admission_date = bed_occupancy_items.first().admission_date
