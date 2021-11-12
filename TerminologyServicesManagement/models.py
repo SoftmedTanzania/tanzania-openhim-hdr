@@ -146,9 +146,12 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
     }
 
     json_data = json.dumps(item)
+    print(json_data)
 
     response = requests.post(him_icd_url,auth=(him_username, him_password),data=json_data,
                              headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
+
+    print(response.json())
 
 
 @receiver(post_save, sender=CPTCode)
