@@ -49,8 +49,6 @@ def save_payload_from_csv():
 
                 imported_payload = core_views.regenerate_json_payload_from_csv(lines)
 
-                print(imported_payload)
-
                 result = validators.validate_received_payload(json.loads(imported_payload))
                 transaction_status = result["transaction_status"]
                 transaction_id = result["transaction_id"]

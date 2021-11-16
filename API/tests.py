@@ -2,7 +2,7 @@ from django.test import TestCase, RequestFactory
 from . import validators
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
-
+from ValidationManagement import models as validation_management
 
 class ValidatorsTestCase(TestCase):
     def test_check_if_not_future_date(self):
@@ -132,6 +132,17 @@ class ValidatorsTestCase(TestCase):
         self.assertEqual(null_value_status, False)
         self.assertEqual(one_value_status, True)
         self.assertEqual(two_value_status, True)
+
+    def test_check_if_payload_exists(self):
+        status = validators.check_if_payload_exists("SVCREC", "00000")
+        invalid_status = validators.check_if_payload_exists("SVRE", "00000")
+
+        print(status)
+        print(invalid_status)
+
+        self.assertEqual(status, False)
+        self.assertEqual(invalid_status, False)
+
 
 
 
