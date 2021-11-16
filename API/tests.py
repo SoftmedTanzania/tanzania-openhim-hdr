@@ -5,6 +5,9 @@ from dateutil.relativedelta import relativedelta
 from ValidationManagement import models as validation_management
 
 class ValidatorsTestCase(TestCase):
+    def setUp(self):
+        validation_management.TransactionSummary.objects.create(message_type="BEDOCC", facility_hfr_code="111836-3")
+
     def test_check_if_not_future_date(self):
         future_date = str(datetime.now().date() + relativedelta(days=1))
         present_date = date = str(datetime.now().date())

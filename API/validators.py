@@ -336,8 +336,8 @@ def check_if_payload_exists(message_type,facility_hfr_code):
     today = date.today()
     midnight = datetime.combine(today, datetime.min.time())
 
-    transaction = TransactionSummary.objects.filter(Q(message_type=message_type) & Q(facility_hfr_code=facility_hfr_code) &
-                                                    Q(transaction_date_time__gte = midnight))
+    transaction = TransactionSummary.objects.filter(message_type__exact=message_type, facility_hfr_code=facility_hfr_code,
+                                                    transaction_date_time__gte = midnight)
 
     if transaction.count() == 0: #Payload not created
         return False
