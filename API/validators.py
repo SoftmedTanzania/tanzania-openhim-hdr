@@ -2,7 +2,7 @@ from datetime import datetime, date
 from dateutil.parser import parse
 from ValidationManagement.models import FieldValidationMapping, ValidationRule, TransactionSummary, TransactionSummaryLine, PayloadThreshold
 import json
-from django.db.models import Q
+import pytz
 
 # Validation Rules
 def check_if_not_future_date(date):
@@ -334,10 +334,15 @@ def calculate_threshold(total_failed, total_passed):
 
 def check_if_payload_exists(message_type,facility_hfr_code):
     today = date.today()
+    tz = pytz.timezone('Africa/Dar_es_Salaam')
     midnight = datetime.combine(today, datetime.min.time())
 
+    midnight_aware = pytz.utc.localize(midnight)
+
+    print(midnight_aware)
+
     transaction = TransactionSummary.objects.filter(message_type__exact=message_type, facility_hfr_code=facility_hfr_code,
-                                                    transaction_date_time__gte = midnight)
+                                                    transaction_date_time__gte = midnight_aware)
 
     if transaction.count() == 0: #Payload not created
         return False
