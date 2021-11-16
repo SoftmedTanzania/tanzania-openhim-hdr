@@ -137,9 +137,6 @@ class ValidatorsTestCase(TestCase):
         status = validators.check_if_payload_exists("SVCREC", "00000")
         invalid_status = validators.check_if_payload_exists("SVRE", "00000")
 
-        print(status)
-        print(invalid_status)
-
         self.assertEqual(status, False)
         self.assertEqual(invalid_status, False)
 
