@@ -134,10 +134,10 @@ class ValidatorsTestCase(TestCase):
         self.assertEqual(two_value_status, True)
 
     def test_check_if_payload_exists(self):
-        status = validators.check_if_payload_exists("SVCREC", "00000")
+        status = validators.check_if_payload_exists("BEDOCC", "111836-3")
         invalid_status = validators.check_if_payload_exists("SVRE", "00000")
 
-        self.assertEqual(status, False)
+        self.assertEqual(status, True)
         self.assertEqual(invalid_status, False)
 
 
