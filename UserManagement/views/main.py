@@ -7,7 +7,7 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.models import User
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
-from ..tables import TransactionSummaryTable, TransactionSummaryLineTable
+from ..tables import TransactionSummaryTable, TransactionSummaryLineTable, UploadsTable
 from Core import models as core_models
 from ValidationManagement import models as validation_management_models
 from django_tables2 import RequestConfig
@@ -15,6 +15,7 @@ import xlwt
 from Core import forms as core_forms
 from datetime import datetime, timedelta
 import json
+
 
 def get_login_page(request):
     return render(request, 'UserManagement/Auth/Login.html')
@@ -76,9 +77,13 @@ def authenticate_user(request):
                 facility = request.user.profile.facility
                 transaction_summary = validation_management_models.TransactionSummary.objects.filter(
                     facility_hfr_code=facility.facility_hfr_code).order_by('-transaction_date_time')
+                uploads = validation_management_models.PayloadUpload.objects.all().order_by('-id')[:25]
+                uploads_table = UploadsTable(uploads)
                 transaction_summary_table = TransactionSummaryTable(transaction_summary)
+                RequestConfig(request, paginate={"per_page": 15}).configure(uploads_table)
                 RequestConfig(request, paginate={"per_page": 10}).configure(transaction_summary_table)
-                return redirect('/dashboard', {"transaction_summary_table": transaction_summary_table,"payload_form":form})
+                return redirect('/dashboard', {"transaction_summary_table": transaction_summary_table,
+                                               "uploads_table":uploads_table,"payload_form":form})
             else:
                 messages.success(request,'Not allowed to access this portal')
                 return render(request, 'UserManagement/Auth/Login.html')
@@ -187,11 +192,15 @@ def export_transaction_lines(request):
 def get_dashboard(request):
     form = core_forms.PayloadImportForm()
     facility = request.user.profile.facility
+    uploads = validation_management_models.PayloadUpload.objects.all().order_by('-id')[:25]
+    uploads_table = UploadsTable(uploads)
     transaction_summary = validation_management_models.TransactionSummary.objects.filter(facility_hfr_code=facility.facility_hfr_code, is_active=True).order_by('-transaction_date_time')
     transaction_summary_table = TransactionSummaryTable(transaction_summary)
+    RequestConfig(request, paginate={"per_page": 15}).configure(uploads_table)
     RequestConfig(request, paginate={"per_page": 10}).configure(transaction_summary_table)
 
     return render(request, 'UserManagement/Dashboard/index.html',{"transaction_summary_table": transaction_summary_table,
+                                                                  "uploads_table":uploads_table,
                                                                   "payload_form": form})
 
 
