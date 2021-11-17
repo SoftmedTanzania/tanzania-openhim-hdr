@@ -92,9 +92,9 @@ def convert_date_formats(date):
 
 
 def validate_received_payload(data):
-    message_type = data["messageType"]
-    org_name = data["orgName"]
-    facility_hfr_code = data["facilityHfrCode"]
+    message_type = data["messageType"].strip()
+    org_name = data["orgName"].strip()
+    facility_hfr_code = data["facilityHfrCode"].strip()
     data_items = data["items"]
 
     status = check_if_payload_exists(message_type, facility_hfr_code)
@@ -338,8 +338,6 @@ def check_if_payload_exists(message_type,facility_hfr_code):
     midnight = datetime.combine(today, datetime.min.time())
 
     midnight_aware = pytz.utc.localize(midnight)
-
-    print(midnight_aware)
 
     transaction = TransactionSummary.objects.filter(message_type__exact=message_type, facility_hfr_code=facility_hfr_code,
                                                     transaction_date_time__gte = midnight_aware, is_active=True)
