@@ -1,4 +1,5 @@
 from django.db import models
+from MasterData import models as master_data_models
 
 
 # Create your models here.
@@ -147,6 +148,7 @@ class PayloadUpload(models.Model):
     date_time_uploaded = models.DateTimeField(auto_now=True)
     message_type = models.CharField(max_length=100, choices=MESSAGE_TYPE_CHOICES)
     file = models.FileField(blank=True, null=True, upload_to="uploads")
+    facility = models.ForeignKey(master_data_models.Facility, on_delete=models.DO_NOTHING)
 
     class Meta:
         db_table = "PayloadUploads"

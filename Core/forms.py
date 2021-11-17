@@ -7,6 +7,7 @@ class PayloadImportForm(forms.ModelForm):
     class Meta:
         model = PayloadUpload
         fields = "__all__"
+        widgets = {'facility': forms.HiddenInput()}
 
     # message_types = [
     #     ("SVCREC", 'Services Received'),

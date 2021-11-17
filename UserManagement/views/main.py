@@ -77,7 +77,7 @@ def authenticate_user(request):
                 facility = request.user.profile.facility
                 transaction_summary = validation_management_models.TransactionSummary.objects.filter(
                     facility_hfr_code=facility.facility_hfr_code).order_by('-transaction_date_time')
-                uploads = validation_management_models.PayloadUpload.objects.all().order_by('-id')[:25]
+                uploads = validation_management_models.PayloadUpload.objects.filter(facility=request.user.profile.facility).order_by('-id')[:25]
                 uploads_table = UploadsTable(uploads)
                 transaction_summary_table = TransactionSummaryTable(transaction_summary)
                 RequestConfig(request, paginate={"per_page": 15}).configure(uploads_table)
@@ -190,9 +190,9 @@ def export_transaction_lines(request):
 
 
 def get_dashboard(request):
-    form = core_forms.PayloadImportForm()
+    form = core_forms.PayloadImportForm(initial={"facility":request.user.profile.facility})
     facility = request.user.profile.facility
-    uploads = validation_management_models.PayloadUpload.objects.all().order_by('-id')[:25]
+    uploads = validation_management_models.PayloadUpload.objects.filter(facility=request.user.profile.facility).order_by('-id')[:25]
     uploads_table = UploadsTable(uploads)
     transaction_summary = validation_management_models.TransactionSummary.objects.filter(facility_hfr_code=facility.facility_hfr_code, is_active=True).order_by('-transaction_date_time')
     transaction_summary_table = TransactionSummaryTable(transaction_summary)
@@ -211,4 +211,4 @@ def get_transaction_summary_lines(request,item_pk):
     RequestConfig(request, paginate={"per_page": 10}).configure(transaction_summary_lines_table)
 
     return render(request,'UserManagement/Dashboard/TransactionLines.html', {"item_pk": item_pk,
-                                                                             "transaction_summary_lines_table":transaction_summary_lines_table})
+                                            "transaction_summary_lines_table":transaction_summary_lines_table})
