@@ -204,8 +204,6 @@ def calculate_and_save_bed_occupancy_rate():
     admission_date = date_week_ago.strftime("%Y-%m-%d")
     discharge_date = datetime.now().strftime("%Y-%m-%d")
 
-    print(bed_occupancy_items)
-
     if bed_occupancy_items is not None:
         for item in bed_occupancy_items:
             bed_occupancy_id = item.bed_occupancy_id
