@@ -29,11 +29,6 @@ urlpatterns = [
     path('get_', include('MasterData.urls')),
     path('api_', include('API.urls')),
     path('rest-auth/', include('rest_auth.urls')),
-    path('change_password', user_management_views.change_password, name="change_password"),
-    path('insert_icd_10', core_tasks.import_icd_10_codes, name='insert_icd_10'),
-    path('import_cpt_codes', core_tasks.import_cpt_codes, name='import_cpt_codes'),
-    path('save_payload_from_csv', core_tasks.save_payload_from_csv, name='save_payload_from_csv'),
-    path('calculate_and_save_bed_occupancy_rate', core_tasks.calculate_and_save_bed_occupancy_rate, name='calculate_and_save_bed_occupancy_rate'),
-    path('send_claims', dhis_tasks.create_claims_payload, name='send_claims')
+    path('change_password', user_management_views.change_password, name="change_password")
 
 ]

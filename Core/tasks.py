@@ -196,7 +196,7 @@ def update_transaction_summary(transaction_id):
 
 
 @app.task
-def calculate_and_save_bed_occupancy_rate(request):
+def calculate_and_save_bed_occupancy_rate():
     date_week_ago = datetime.today() - timedelta(days=60)
     bed_occupancy_items = core_models.BedOccupancyItems.objects.filter(admission_date__gte=
                                                                        date_week_ago.strftime("%Y-%m-%d"),
