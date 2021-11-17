@@ -197,19 +197,20 @@ def update_transaction_summary(transaction_id):
 
 @app.task
 def calculate_and_save_bed_occupancy_rate():
-    date_week_ago = datetime.today() - timedelta(days=60)
+    date_three_months_ago = datetime.today() - timedelta(days=90)
     bed_occupancy_items = core_models.BedOccupancyItems.objects.filter(admission_date__gte=
-                                                                       date_week_ago.strftime("%Y-%m-%d"),
+                                                                       date_three_months_ago.strftime("%Y-%m-%d"),
                                                                        bed_occupancy__transaction__is_active=True,
                                                                        bed_occupancy__is_processed=False)
 
-    admission_date = date_week_ago.strftime("%Y-%m-%d")
+    admission_date = date_three_months_ago.strftime("%Y-%m-%d")
     discharge_date = datetime.now().strftime("%Y-%m-%d")
 
     if bed_occupancy_items is not None:
         for item in bed_occupancy_items:
             bed_occupancy_id = item.bed_occupancy_id
-            bed_occupancy = core_models.BedOccupancy.objects.get(id=bed_occupancy_id, transaction__is_active = True)
+            bed_occupancy = core_models.BedOccupancy.objects.get(id=bed_occupancy_id, transaction__is_active = True,
+                                                                 is_processed=False)
             facility_hfr_code = bed_occupancy.facility_hfr_code
 
             instance_ward = master_data_models.Ward.objects.filter(local_ward_id=item.ward_id,
@@ -250,6 +251,8 @@ def calculate_and_save_bed_occupancy_rate():
                     pass
                 try:
                     bed_occupancy_rate = 1 / int(instance_ward.number_of_beds) * 100
+
+                    print(bed_occupancy_rate)
 
                     create_bed_occupancy_report_record(discharge_date, admission_date, item, bed_occupancy_rate,
                                                        facility_hfr_code)

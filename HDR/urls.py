@@ -29,6 +29,7 @@ urlpatterns = [
     path('get_', include('MasterData.urls')),
     path('api_', include('API.urls')),
     path('rest-auth/', include('rest_auth.urls')),
-    path('change_password', user_management_views.change_password, name="change_password")
+    path('change_password', user_management_views.change_password, name="change_password"),
+    path('calculate_and_save_bed_occupancy_rate', core_tasks.calculate_and_save_bed_occupancy_rate, name='calculate_and_save_bed_occupancy_rate')
 
 ]
