@@ -121,6 +121,7 @@ class BedOccupancy(models.Model):
                                     null=True, blank=True)
     org_name = models.CharField(max_length=255)
     facility_hfr_code = models.CharField(max_length=255)
+    is_processed = models.BooleanField(default=False)
 
     class Meta:
         db_table = 'BedOccupancy'

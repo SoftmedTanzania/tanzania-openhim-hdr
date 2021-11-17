@@ -199,7 +199,9 @@ def update_transaction_summary(transaction_id):
 def calculate_and_save_bed_occupancy_rate():
     date_week_ago = datetime.today() - timedelta(days=60)
     bed_occupancy_items = core_models.BedOccupancyItems.objects.filter(admission_date__gte=
-                                                                       date_week_ago.strftime("%Y-%m-%d"), bed_occupancy__transaction__is_active=True)
+                                                                       date_week_ago.strftime("%Y-%m-%d"),
+                                                                       bed_occupancy__transaction__is_active=True,
+                                                                       bed_occupancy__is_processed=False)
 
     admission_date = date_week_ago.strftime("%Y-%m-%d")
     discharge_date = datetime.now().strftime("%Y-%m-%d")
@@ -267,6 +269,10 @@ def create_bed_occupancy_report_record(discharge_date, admission_date, item, bed
         instance_bed_occupancy_report.bed_occupancy = bed_occupancy_rate
         instance_bed_occupancy_report.facility_hfr_code = facility_hfr_code
         instance_bed_occupancy_report.save()
+
+    bed_occupancy = core_models.BedOccupancy.objects.get(id=item.bed_occupancy_id)
+    bed_occupancy.is_processed = True
+    bed_occupancy.save()
 
 
 def import_icd_10_codes(request):
