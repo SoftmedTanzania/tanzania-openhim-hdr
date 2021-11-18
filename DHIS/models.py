@@ -27,6 +27,14 @@ class DataElement(models.Model):
     other_deductions = 'other_deductions'
     paid_amount = 'paid_amount'
 
+    date_death_occurred = 'date_death_occurred'
+    client_name = 'client_name'
+    gender = 'gender'
+    date_of_birth = 'date_of_birth'
+    place_of_death = 'place_of_death'
+    immediate_cause_of_death = 'immediate_cause_of_death'
+    underlying_cause_of_death = 'underlying_cause_of_death'
+
     DATA_ELEMENT_TYPE_CHOICES = (
         (claimed_amount, 'Claimed Amount'),
         (computed_amount, 'Computed Amount'),
@@ -34,6 +42,14 @@ class DataElement(models.Model):
         (loan_deductions, 'Loan Deductions'),
         (other_deductions, 'Other Deductions'),
         (paid_amount, 'Paid Amount'),
+
+        (date_death_occurred, 'Date Death Occurred'),
+        (client_name, 'Client Name'),
+        (gender, 'Gender'),
+        (date_of_birth, 'Date of Birth'),
+        (place_of_death, 'Place of Death'),
+        (immediate_cause_of_death, 'Immediate Cause of Death'),
+        (underlying_cause_of_death, 'Underlying_Cause of Death'),
     )
 
     data_element_sys_name = models.CharField(max_length=30, choices=DATA_ELEMENT_TYPE_CHOICES)
