@@ -196,8 +196,8 @@ def update_transaction_summary(transaction_id):
 
 
 @app.task
-def calculate_and_save_bed_occupancy_rate():
-    date_three_months_ago = datetime.today() - timedelta(days=90)
+def calculate_and_save_bed_occupancy_rate(request):
+    date_three_months_ago = datetime.today() - timedelta(days=720)
     bed_occupancy_items = core_models.BedOccupancyItems.objects.filter(admission_date__gte=
                                                                        date_three_months_ago.strftime("%Y-%m-%d"),
                                                                        bed_occupancy__transaction__is_active=True,
@@ -217,6 +217,7 @@ def calculate_and_save_bed_occupancy_rate():
                                                                    facility__facility_hfr_code=facility_hfr_code).first()
 
             if instance_ward is not None:
+                print(instance_ward.count())
                 # Get Patient admission period to add days to it
                 instance_patient = core_models.BedOccupancyReport.objects.filter(patient_id=item.patient_id,
                                                                                  admission_date=item.admission_date)
