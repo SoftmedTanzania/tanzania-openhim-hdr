@@ -26,11 +26,11 @@ def create_claims_payload(request):
     current_date = datetime.now().date()
     month_ago = current_date - relativedelta(months=1)
 
-    # date_from = month_ago.replace(day=1)
-    # date_to = get_end_date_by_month(date_from)
+    date_from = month_ago.replace(day=1)
+    date_to = get_end_date_by_month(date_from)
 
-    date_from = "2020-01-01"
-    date_to = "2021-12-30"
+    # date_from = "2020-01-01"
+    # date_to = "2021-12-30"
 
     facilities = master_data_models.Facility.objects.all().values('facility_hfr_code').distinct()
 
@@ -138,10 +138,11 @@ def create_death_payload(request):
     current_date = datetime.now().date()
     month_ago = current_date - relativedelta(months=1)
 
-    # date_from = month_ago.replace(day=1)
-    date_from = "2020-01-01"
-    date_to = "2021-12-30"
-    # date_to = get_end_date_by_month(date_from)
+    date_from = month_ago.replace(day=1)
+    date_to = get_end_date_by_month(date_from)
+    # date_from = "2020-01-01"
+    # date_to = "2021-12-30"
+
 
     facilities = master_data_models.Facility.objects.all().values('facility_hfr_code').distinct()
 

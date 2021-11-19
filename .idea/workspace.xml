@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DHIS/admin.py" afterPath="$PROJECT_DIR$/DHIS/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DHIS/models.py" afterPath="$PROJECT_DIR$/DHIS/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DHIS/tasks.py" afterPath="$PROJECT_DIR$/DHIS/tasks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HDR/urls.py" afterPath="$PROJECT_DIR$/HDR/urls.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,11 +65,11 @@
         <entry file="file://$PROJECT_DIR$/DHIS/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="111" column="53" selection-start-line="111" selection-start-column="53" selection-end-line="111" selection-end-column="53" />
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-                <element signature="e#10729#10993#0" expanded="false" />
-                <element signature="e#11056#11416#0" expanded="false" />
+                <element signature="e#10730#10994#0" expanded="false" />
+                <element signature="e#11057#11417#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1196,11 +1192,11 @@
     <entry file="file://$PROJECT_DIR$/DHIS/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="111" column="53" selection-start-line="111" selection-start-column="53" selection-end-line="111" selection-end-column="53" />
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-            <element signature="e#10729#10993#0" expanded="false" />
-            <element signature="e#11056#11416#0" expanded="false" />
+            <element signature="e#10730#10994#0" expanded="false" />
+            <element signature="e#11057#11417#0" expanded="false" />
           </folding>
         </state>
       </provider>
