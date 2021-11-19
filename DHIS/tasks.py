@@ -10,12 +10,12 @@ import json
 from django.db.models import Sum
 import calendar
 from Core import models as core_models
+from MappingsManagement import models as mappings_management_models
 
 app = Celery()
 
 
-def send_to_dhis(payload):
-    dhis_url = config('HIM_DHIS_URL')
+def send_to_dhis(payload, dhis_url ):
     response = requests.post(dhis_url, auth=(config('HIM_USERNAME'), config('HIM_PASSWORD')),
                              json=payload)
     return response
@@ -27,9 +27,10 @@ def create_claims_payload(request):
     month_ago = current_date - relativedelta(months=1)
 
     # date_from = month_ago.replace(day=1)
+    # date_to = get_end_date_by_month(date_from)
+
     date_from = "2020-01-01"
     date_to = "2021-12-30"
-    # date_to = get_end_date_by_month(date_from)
 
     facilities = master_data_models.Facility.objects.all().values('facility_hfr_code').distinct()
 
@@ -80,6 +81,7 @@ def create_claims_payload(request):
             for data_element in data_elements:
                 data_element_uid = data_element.data_element_uid
                 data_element_sys_name = data_element.data_element_sys_name
+                payload_type = data_element.payload_type
 
                 value =  0
                 period = ''
@@ -111,74 +113,85 @@ def create_claims_payload(request):
                 else:
                     pass
 
-                data_dict = dict()
-                data_dict["dataElement"] = data_element_uid
-                data_dict["period"] = str(period).replace('-', '')
-                data_dict["orgUnit"] = facility_hfr_code
-                data_dict["value"] = float(value)
+                if payload_type == "nhif_claims":
+                    data_dict = dict()
+                    data_dict["dataElement"] = data_element_uid
+                    data_dict["period"] = str(period).replace('-', '')
+                    data_dict["orgUnit"] = facility_hfr_code
+                    data_dict["value"] = float(value)
 
-                data_values.append(data_dict)
+                    data_values.append(data_dict)
 
             if len(data_values) > 0:
                 payload = {
                     "dataValues":data_values
                 }
-                response = send_to_dhis(payload)
-                # print(response.status_code)
-                # print(response.content)
+
+                dhis_url = config('HIM_DHIS_CLAIMS_URL')
+
+                response = send_to_dhis(payload, dhis_url)
                 data_values = []
 
 
 @app.task()
-def create_ddc_payload(request):
+def create_death_payload(request):
     current_date = datetime.now().date()
     month_ago = current_date - relativedelta(months=1)
 
-    date_from = month_ago.replace(day=1)
-    date_to = get_end_date_by_month(date_from)
+    # date_from = month_ago.replace(day=1)
+    date_from = "2020-01-01"
+    date_to = "2021-12-30"
+    # date_to = get_end_date_by_month(date_from)
 
     facilities = master_data_models.Facility.objects.all().values('facility_hfr_code').distinct()
 
-    data_values = []
 
     for facility in facilities:
         facility_hfr_code = facility['facility_hfr_code']
 
-        deaths_occured = core_models.DeathByDiseaseCaseAtFacilityItems.objects.filter(death_by_disease_case_at_facility__facility_hfr_code=facility_hfr_code,
-                                                                                      date_death_occurred__gte=date_from,
-                                                                                      date_death_occurred__lte=date_to)
-
+        deaths_occurred = core_models.DeathByDiseaseCaseAtFacilityItems.objects.filter(death_by_disease_case_at_facility__facility_hfr_code=facility_hfr_code,
+                                                                                       date_death_occurred__gte=date_from,
+                                                                                       date_death_occurred__lte=date_to)
+        event_data_values = []
         client_data_values = []
-        if deaths_occured.count() > 0:
-            for death in  deaths_occured:
-                client_name = death.first_name + " " + death.middle_name + ' ' + death.last_name
+
+        if deaths_occurred.count() > 0:
+            for death in  deaths_occurred:
+                if death.first_name is None:
+                    client_name = "None"
+                elif death.first_name is not None and death.middle_name is not None and death.last_name is not None:
+                    client_name = death.first_name + " " + death.middle_name + ' ' + death.last_name
+                elif death.first_name is not None and death.middle_name is None and death.last_name is not None:
+                    client_name = death.first_name + ' ' + death.last_name
+                else:
+                    client_name = "None"
                 gender = death.gender
+
                 date_of_birth = death.date_of_birth
 
                 date_death_occurred = death.date_death_occurred
 
-                cause_of_death = death.cause_of_death
-                immediate_cause_of_death = death.immediate_cause_of_death
+                immediate_cause_of_death = death.cause_of_death
                 underlying_cause_of_death = death.underlying_cause_of_death
 
                 data_elements = dhis_models.DataElement.objects.all()
+                value = 0
 
                 for data_element in data_elements:
                     data_element_uid = data_element.data_element_uid
                     data_element_sys_name = data_element.data_element_sys_name
+                    payload_type = data_element.payload_type
 
-                    value = 0
-
-                    if data_element_sys_name == "date_death_occurred":
-                        value = date_death_occurred
+                    if data_element_sys_name == "reporting_date":
+                        value = str(date_death_occurred)
                     elif data_element_sys_name == "client_name":
                         value = client_name
                     elif data_element_sys_name == "gender":
-                        value = gender
+                        value = get_gender_mapping(facility_hfr_code,gender)
                     elif data_element_sys_name == "date_of_birth":
-                        value = date_of_birth
+                        value = str(date_of_birth)
                     elif data_element_sys_name == "place_of_death":
-                        value = 'Health Facility'
+                        value = 'Health facility'
                     elif data_element_sys_name == "immediate_cause_of_death":
                         value = immediate_cause_of_death
                     elif data_element_sys_name == "underlying_cause_of_death":
@@ -186,20 +199,33 @@ def create_ddc_payload(request):
                     else:
                         pass
 
-                    data_values_dict = dict()
-                    data_values_dict["dataElement"] = data_element_uid
-                    data_values_dict["value"] = float(value)
+                    if payload_type == "death_within_facility":
 
-                    client_data_values.append(data_values_dict)
+                        data_values_dict = dict()
+                        data_values_dict["dataElement"] = data_element_uid
+                        data_values_dict["value"] = value
 
-    if len(data_values) > 0:
-        payload = {
-            "dataValues": data_values
-        }
-        response = send_to_dhis(payload)
-        print(response.status_code)
-        print(response.content)
-        data_values = []
+                        client_data_values.append(data_values_dict)
+
+                client_dict = dict()
+                client_dict["eventDate"] = str(date_death_occurred)
+                client_dict["program"] = "Mvc0jfU9Ua2"
+                client_dict["status"] = "COMPLETED"
+                client_dict["completedDate"] = str(datetime.now().date())
+                client_dict["programStage"] = "mlDzRw3ibhE"
+                client_dict["orgUnit"] = str(facility_hfr_code)
+                client_dict["dataValues"] = client_data_values
+
+                event_data_values.append(client_dict)
+                client_data_values = []
+
+        if len(event_data_values) > 0:
+            payload = {
+
+                "events": event_data_values
+            }
+            dhis_url = config('HIM_DHIS_DEATH_URL')
+            response = send_to_dhis(payload, dhis_url)
 
 
 def get_end_date_by_month(start_date):
@@ -213,3 +239,12 @@ def get_end_date_by_month(start_date):
     end_date = str(year) + "-" + str(month) + "-" + str(end_day)
 
     return datetime.strptime(end_date, '%Y-%m-%d').date()
+
+
+def get_gender_mapping(facility_hfr_code,local_gender):
+    gender_mapping = mappings_management_models.GenderMapping.objects.filter(facility__facility_hfr_code = facility_hfr_code,
+                                                                             local_gender_description= local_gender).first()
+
+    gender = master_data_models.Gender.objects.get(id = gender_mapping.gender_id)
+
+    return gender.description

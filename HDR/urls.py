@@ -32,5 +32,6 @@ urlpatterns = [
     path('change_password', user_management_views.change_password, name="change_password"),
     path('calculate_and_save_bed_occupancy_rate', core_tasks.calculate_and_save_bed_occupancy_rate, name='calculate_and_save_bed_occupancy_rate'),
     path('create_claims_payload', dhis_tasks.create_claims_payload, name='create_claims_payload'),
+    path('create_death_payload', dhis_tasks.create_death_payload, name='create_death_payload'),
 
 ]

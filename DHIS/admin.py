@@ -4,7 +4,7 @@ from DHIS import models as dhis_models
 
 # Register your models here.
 class DataElementAdmin(admin.ModelAdmin):
-    list_display = ('id','data_element_sys_name','data_element_name', 'data_element_uid')
+    list_display = ('id','data_element_sys_name','data_element_name', 'data_element_uid', 'payload_type')
     search_fields = ['data_element_name']
 
 

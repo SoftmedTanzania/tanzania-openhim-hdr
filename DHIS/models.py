@@ -20,6 +20,9 @@ class DataElement(models.Model):
     def __str__(self):
         return "%s" % self.data_element_name
 
+    nhif_claims = 'nhif_claims'
+    death_within_facility = 'death_within_facility'
+
     claimed_amount = 'claimed_amount'
     computed_amount = 'computed_amount'
     accepted_amount = 'accepted_amount'
@@ -27,6 +30,7 @@ class DataElement(models.Model):
     other_deductions = 'other_deductions'
     paid_amount = 'paid_amount'
 
+    reporting_date = 'reporting_date'
     date_death_occurred = 'date_death_occurred'
     client_name = 'client_name'
     gender = 'gender'
@@ -43,15 +47,22 @@ class DataElement(models.Model):
         (other_deductions, 'Other Deductions'),
         (paid_amount, 'Paid Amount'),
 
+        (reporting_date, 'Reporting Date'),
         (date_death_occurred, 'Date Death Occurred'),
         (client_name, 'Client Name'),
         (gender, 'Gender'),
         (date_of_birth, 'Date of Birth'),
         (place_of_death, 'Place of Death'),
         (immediate_cause_of_death, 'Immediate Cause of Death'),
-        (underlying_cause_of_death, 'Underlying_Cause of Death'),
+        (underlying_cause_of_death, 'Underlying Cause of Death'),
     )
 
+    PAYLOAD_TYPE = (
+        (nhif_claims, 'NHIF Claims'),
+        (death_within_facility, 'Death Within Facility')
+    )
+
+    payload_type = models.CharField(max_length=100, choices=PAYLOAD_TYPE)
     data_element_sys_name = models.CharField(max_length=30, choices=DATA_ELEMENT_TYPE_CHOICES)
     data_element_name = models.CharField(max_length=255)
     data_element_uid = models.CharField(max_length=255)
