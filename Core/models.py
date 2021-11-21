@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import date
 from ValidationManagement import models as validation_management_models
+from django.contrib.postgres.fields import ArrayField
 
 # Create your models here.
 def upload_image(self, filename):
@@ -30,10 +31,10 @@ class ServiceReceivedItems(models.Model):
     patient_id = models.CharField(max_length=255)
     gender = models.CharField(max_length=50)
     date_of_birth = models.DateField(null=True, blank=True)
-    med_svc_code = models.TextField()
-    confirmed_diagnosis = models.TextField(null=True, blank=True)
-    differential_diagnosis = models.TextField(null=True, blank=True)
-    provisional_diagnosis = models.TextField(null=True, blank=True)
+    med_svc_code = ArrayField(ArrayField(models.TextField()))
+    confirmed_diagnosis = ArrayField(ArrayField(models.TextField()))
+    differential_diagnosis = ArrayField(ArrayField(models.TextField()))
+    provisional_diagnosis = ArrayField(ArrayField(models.TextField()))
     service_date = models.DateField()
     service_provider_ranking_id = models.CharField(max_length=255)
     visit_type = models.CharField(max_length=255)
@@ -184,7 +185,7 @@ class RevenueReceivedItems(models.Model):
     patient_id = models.CharField(max_length=255)
     gender = models.CharField(max_length=20)
     date_of_birth = models.DateField(null=True, blank=True)
-    med_svc_code = models.TextField()
+    med_svc_code = ArrayField(ArrayField(models.TextField()))
     payer_id = models.CharField(max_length=50)
     exemption_category_id = models.CharField(max_length=100, null=True, blank=True)
     billed_amount = models.IntegerField(default=0)

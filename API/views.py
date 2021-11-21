@@ -89,10 +89,10 @@ class ServiceReceivedView(viewsets.ModelViewSet):
 
                 instance_service_received_item.gender = val["gender"]
                 instance_service_received_item.date_of_birth = validators.convert_date_formats(val["dob"])
-                instance_service_received_item.med_svc_code = val["medSvcCode"]
-                instance_service_received_item.confirmed_diagnosis = val["confirmedDiagnosis"]
-                instance_service_received_item.differential_diagnosis = val["differentialDiagnosis"]
-                instance_service_received_item.provisional_diagnosis = val["provisionalDiagnosis"]
+                instance_service_received_item.med_svc_code = list(val["medSvcCode"])
+                instance_service_received_item.confirmed_diagnosis = list(val["confirmedDiagnosis"])
+                instance_service_received_item.differential_diagnosis = list(val["differentialDiagnosis"])
+                instance_service_received_item.provisional_diagnosis = list(val["provisionalDiagnosis"])
                 instance_service_received_item.service_date = validators.convert_date_formats(val["serviceDate"])
                 instance_service_received_item.service_provider_ranking_id = val["serviceProviderRankingId"]
                 instance_service_received_item.visit_type = val["visitType"]
@@ -326,7 +326,7 @@ class RevenueReceivedView(viewsets.ModelViewSet):
                 instance_revenue_received_items.gender = val["gender"]
                 instance_revenue_received_items.revenue_received_id = instance_revenue_received.id
                 instance_revenue_received_items.date_of_birth = validators.convert_date_formats(val["dob"])
-                instance_revenue_received_items.med_svc_code = val["medSvcCode"]
+                instance_revenue_received_items.med_svc_code = list(val["medSvcCode"])
                 instance_revenue_received_items.payer_id = val["payerId"]
                 instance_revenue_received_items.exemption_category_id = val["exemptionCategoryId"]
                 instance_revenue_received_items.billed_amount = val["billedAmount"]
