@@ -42,7 +42,7 @@ class Facility(models.Model):
     description = models.CharField(max_length=255)
     facility_hfr_code = models.CharField(max_length=255)
     is_active = models.BooleanField(default=1)
-    is_cpt_mapped = models.BooleanField(default=1)
+    uses_cpt_internally = models.BooleanField(default=1)
 
     class Meta:
         db_table = 'Facility'
