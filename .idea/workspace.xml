@@ -29,15 +29,15 @@
       <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Core/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="263" column="0" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="203" column="0" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
               <folding>
-                <element signature="e#580#1222#0" expanded="false" />
-                <element signature="e#1270#12114#0" expanded="false" />
-                <element signature="e#12169#12352#0" expanded="false" />
-                <element signature="e#17708#21363#0" expanded="false" />
-                <element signature="e#17804#21363#0" expanded="false" />
-                <element signature="e#21401#23235#0" expanded="false" />
+                <element signature="e#580#1234#0" expanded="false" />
+                <element signature="e#1282#12134#0" expanded="false" />
+                <element signature="e#12189#12372#0" expanded="false" />
+                <element signature="e#17207#20862#0" expanded="false" />
+                <element signature="e#17303#20862#0" expanded="false" />
+                <element signature="e#20900#22734#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -763,48 +763,8 @@
           <line>197</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/Core/tasks.py</url>
-          <line>227</line>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/Core/tasks.py</url>
-          <line>232</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/Core/tasks.py</url>
-          <line>238</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/Core/tasks.py</url>
-          <line>244</line>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/Core/tasks.py</url>
-          <line>247</line>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/Core/tasks.py</url>
-          <line>252</line>
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/Core/tasks.py</url>
-          <line>256</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/Core/tasks.py</url>
-          <line>259</line>
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="68" />
+      <option name="time" value="69" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1251,15 +1211,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Core/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="263" column="0" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="203" column="0" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
           <folding>
-            <element signature="e#580#1222#0" expanded="false" />
-            <element signature="e#1270#12114#0" expanded="false" />
-            <element signature="e#12169#12352#0" expanded="false" />
-            <element signature="e#17708#21363#0" expanded="false" />
-            <element signature="e#17804#21363#0" expanded="false" />
-            <element signature="e#21401#23235#0" expanded="false" />
+            <element signature="e#580#1234#0" expanded="false" />
+            <element signature="e#1282#12134#0" expanded="false" />
+            <element signature="e#12189#12372#0" expanded="false" />
+            <element signature="e#17207#20862#0" expanded="false" />
+            <element signature="e#17303#20862#0" expanded="false" />
+            <element signature="e#20900#22734#0" expanded="false" />
           </folding>
         </state>
       </provider>
