@@ -29,15 +29,15 @@
       <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Core/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="203" column="0" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="198" column="42" selection-start-line="198" selection-start-column="42" selection-end-line="198" selection-end-column="42" />
               <folding>
                 <element signature="e#580#1234#0" expanded="false" />
                 <element signature="e#1282#12134#0" expanded="false" />
                 <element signature="e#12189#12372#0" expanded="false" />
-                <element signature="e#17207#20862#0" expanded="false" />
-                <element signature="e#17303#20862#0" expanded="false" />
-                <element signature="e#20900#22734#0" expanded="false" />
+                <element signature="e#17200#20855#0" expanded="false" />
+                <element signature="e#17296#20855#0" expanded="false" />
+                <element signature="e#20893#22727#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1211,15 +1211,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Core/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="203" column="0" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="198" column="42" selection-start-line="198" selection-start-column="42" selection-end-line="198" selection-end-column="42" />
           <folding>
             <element signature="e#580#1234#0" expanded="false" />
             <element signature="e#1282#12134#0" expanded="false" />
             <element signature="e#12189#12372#0" expanded="false" />
-            <element signature="e#17207#20862#0" expanded="false" />
-            <element signature="e#17303#20862#0" expanded="false" />
-            <element signature="e#20900#22734#0" expanded="false" />
+            <element signature="e#17200#20855#0" expanded="false" />
+            <element signature="e#17296#20855#0" expanded="false" />
+            <element signature="e#20893#22727#0" expanded="false" />
           </folding>
         </state>
       </provider>
