@@ -195,7 +195,7 @@ def update_transaction_summary(transaction_id):
     transaction.save()
 
 
-@shared_task()
+@app.task()
 def calculate_and_save_bed_occupancy_rate():
     discharge_date = datetime.now().strftime("%Y-%m-%d")
 
