@@ -196,7 +196,7 @@ def update_transaction_summary(transaction_id):
 
 
 @app.task()
-def calculate_and_save_bed_occupancy_rate():
+def calculate_and_save_bed_occupancy_rate(*args, **kwargs):
     discharge_date = datetime.now().strftime("%Y-%m-%d")
 
     bed_occupancies = core_models.BedOccupancy.objects.filter(transaction__is_active=True,
