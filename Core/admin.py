@@ -40,7 +40,7 @@ class DeathByDiseaseCaseNotAtFacilityItemsAdmin(admin.ModelAdmin):
 
 
 class BedOccupancyAdmin(admin.ModelAdmin):
-    list_display = ('id','transaction_id' ,'org_name', 'facility_hfr_code')
+    list_display = ('id','transaction_id' ,'org_name', 'facility_hfr_code', 'is_processed')
     search_fields = ['org_name', ]
 
 
