@@ -20,7 +20,7 @@ class ICD10CodeAdmin(admin.ModelAdmin):
 
 
 class ICD10SubCodeAdmin(admin.ModelAdmin):
-    list_display = ('id', 'code','code_id','sub_code', 'description')
+    list_display = ('id', 'code','code_id','sub_code', 'description','is_active')
     search_fields = ['description', ]
 
 
@@ -35,7 +35,7 @@ class CPTSubCategoryAdmin(admin.ModelAdmin):
 
 
 class CPTCodeAdmin(admin.ModelAdmin):
-    list_display = ('id','sub_category_id','sub_category','code', 'description')
+    list_display = ('id','sub_category_id','sub_category','code', 'description', 'is_active')
     search_fields = ['description', ]
 
 

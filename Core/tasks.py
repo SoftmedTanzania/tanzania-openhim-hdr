@@ -228,7 +228,6 @@ def calculate_and_save_bed_occupancy_rate():
                             ).first()
                             # Patient has admission date only
                             if get_patient_admission_period is not None:
-                                admission_date = get_patient_admission_period.admission_date
                                 discharge_date = bed_occupancy_items.last().admission_date
                             else:
                                 get_patient_discharge_period = core_models.BedOccupancyItems.objects.filter(
@@ -236,7 +235,6 @@ def calculate_and_save_bed_occupancy_rate():
                                     discharge_date=item.discharge_date, bed_occupancy__transaction__is_active=True).first()
                                 # Patient has discharge date only
                                 if get_patient_discharge_period is not None:
-                                    admission_date = bed_occupancy_items.first().admission_date
                                     discharge_date = get_patient_discharge_period.discharge_date
                         # Patient has both admission and discharge dates
                         else:

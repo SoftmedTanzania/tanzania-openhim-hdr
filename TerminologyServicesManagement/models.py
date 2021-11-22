@@ -60,6 +60,7 @@ class ICD10SubCode(models.Model):
     code = models.ForeignKey(ICD10Code,related_name='sub_code',on_delete=models.DO_NOTHING, null=True, blank=True)
     sub_code = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
+    is_active = models.BooleanField(default=True)
 
     class Meta:
         db_table="ICD10SubCodes"
@@ -96,6 +97,7 @@ class CPTCode(models.Model):
     sub_category = models.ForeignKey(CPTCodeSubCategory,related_name='code', on_delete=models.DO_NOTHING, null=True, blank=True)
     code = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
+    is_active = models.BooleanField(default=True)
 
     class Meta:
         db_table = "CPTCodes"
