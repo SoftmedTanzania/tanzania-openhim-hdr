@@ -33,5 +33,6 @@ urlpatterns = [
     path('calculate_and_save_bed_occupancy_rate', core_tasks.calculate_and_save_bed_occupancy_rate, name='calculate_and_save_bed_occupancy_rate'),
     path('create_claims_payload', dhis_tasks.create_claims_payload, name='create_claims_payload'),
     path('create_death_payload', dhis_tasks.create_death_payload, name='create_death_payload'),
+    path('save_payload_from_csv', core_tasks.save_payload_from_csv, name='save_payload_from_csv'),
 
 ]

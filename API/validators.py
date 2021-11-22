@@ -345,7 +345,7 @@ def check_if_payload_exists(message_type,facility_hfr_code):
 
     facility = master_data_models.Facility.objects.filter(facility_hfr_code=facility_hfr_code).first()
 
-    is_cpt_mapped = facility.is_cpt_mapped
+    is_cpt_mapped = facility.uses_cpt_internally
 
     if transaction.count() == 0: #Payload not created
         return False

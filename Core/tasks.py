@@ -38,7 +38,7 @@ def skip_if_running(f):
 
 
 @app.task()
-def save_payload_from_csv():
+def save_payload_from_csv(request):
     root_path = "uploads"
     i = 0
     for subdir, _, _ in os.walk(root_path):
