@@ -269,7 +269,7 @@ def create_bed_occupancy_report_record(discharge_date, item, bed_occupancy_rate,
         instance_bed_occupancy_report.save()
 
 
-def import_icd_10_codes(request):
+def import_icd_10_codes():
     with open ('icd10codes.json',"r") as f:
         data = json.load(f)
 
@@ -352,7 +352,7 @@ def import_icd_10_codes(request):
                         pass
 
 
-def import_cpt_codes(request):
+def import_cpt_codes():
     with open('cpt.csv', 'r') as fp:
         lines = csv.reader(fp, delimiter=',')
 
