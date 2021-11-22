@@ -38,7 +38,7 @@ def skip_if_running(f):
 
 
 @app.task()
-def save_payload_from_csv(request):
+def save_payload_from_csv():
     root_path = "uploads"
     i = 0
     for subdir, _, _ in os.walk(root_path):
@@ -196,7 +196,7 @@ def update_transaction_summary(transaction_id):
 
 
 @app.task
-def calculate_and_save_bed_occupancy_rate(request):
+def calculate_and_save_bed_occupancy_rate():
     date_three_months_ago = datetime.today() - timedelta(days=720)
     bed_occupancy_items = core_models.BedOccupancyItems.objects.filter(admission_date__gte=
                                                                        date_three_months_ago.strftime("%Y-%m-%d"),
@@ -205,6 +205,8 @@ def calculate_and_save_bed_occupancy_rate(request):
 
     admission_date = date_three_months_ago.strftime("%Y-%m-%d")
     discharge_date = datetime.now().strftime("%Y-%m-%d")
+
+    print(admission_date)
 
     if bed_occupancy_items is not None:
         for item in bed_occupancy_items:
@@ -217,7 +219,6 @@ def calculate_and_save_bed_occupancy_rate(request):
                                                                    facility__facility_hfr_code=facility_hfr_code).first()
 
             if instance_ward is not None:
-                print(instance_ward.count())
                 # Get Patient admission period to add days to it
                 instance_patient = core_models.BedOccupancyReport.objects.filter(patient_id=item.patient_id,
                                                                                  admission_date=item.admission_date)
@@ -252,8 +253,6 @@ def calculate_and_save_bed_occupancy_rate(request):
                     pass
                 try:
                     bed_occupancy_rate = 1 / int(instance_ward.number_of_beds) * 100
-
-                    print(bed_occupancy_rate)
 
                     create_bed_occupancy_report_record(discharge_date, admission_date, item, bed_occupancy_rate,
                                                        facility_hfr_code)
