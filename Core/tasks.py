@@ -12,6 +12,7 @@ from Core import views as core_views
 from ValidationManagement import models as validation_management_models
 from TerminologyServicesManagement import models as terminology_management_services_models
 from functools import wraps
+from django.db.models import Count
 
 app = Celery()
 
@@ -254,6 +255,31 @@ def calculate_and_save_bed_occupancy_rate():
         bed_occupancy = core_models.BedOccupancy.objects.get(id=bed_occupancy.id)
         bed_occupancy.is_processed = True
         bed_occupancy.save()
+
+
+@app.task()
+def cleanup_uploaded_csv_files():
+    discovered_duplicate_transactions = validation_management_models.TransactionSummary.objects.values('message_type',
+                                                                                           'facility_hfr_code',
+                                                                                           'total_passed',
+                                                                                           'total_failed') \
+        .annotate(records=Count('message_type')) \
+        .filter(records__gt=1)
+
+    for transaction in discovered_duplicate_transactions:
+        facility = master_data_models.Facility.objects.filter(facility_hfr_code = transaction['facility_hfr_code']).first()
+
+        # Check if facility sends CSVs as mapping will be done on the the HDRAdmin
+        if facility.uses_cpt_internally is False:
+            facility_transactions = validation_management_models.TransactionSummary.objects.filter(message_type=transaction['message_type'],
+                                                             facility_hfr_code=transaction['facility_hfr_code'],
+                                                            total_passed=transaction['total_passed'],
+                                                            total_failed=transaction['total_failed'])[1:]
+
+            for facility_transaction in facility_transactions:
+                facility_transaction.is_active = False
+                facility_transaction.save()
+
 
 
 def create_bed_occupancy_report_record(discharge_date, item, bed_occupancy_rate, facility_hfr_code):

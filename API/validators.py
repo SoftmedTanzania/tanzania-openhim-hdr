@@ -355,3 +355,5 @@ def check_if_payload_exists(message_type,facility_hfr_code):
         return False #uses API allow as many transactions as needed.
     else:
         return True
+
+
