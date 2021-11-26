@@ -26,6 +26,9 @@ class ValidationRuleAdmin(admin.ModelAdmin):
     search_fields = ['description',]
 
 
+class FieldValidationMappingAdmin(admin.ModelAdmin):
+    list_display = ('validation_rule','message_type','field' )
+
 class PayloadFieldMappingAdmin(admin.ModelAdmin):
     list_display = ('id','message_type','field')
     search_fields = ['message_type',]
@@ -36,5 +39,5 @@ class PayloadFieldMappingAdmin(admin.ModelAdmin):
 admin.site.register(TransactionSummary, TransactionSummaryAdmin)
 admin.site.register(TransactionSummaryLine, TransactionSummaryLinesAdmin)
 admin.site.register(ValidationRule, ValidationRuleAdmin)
-admin.site.register(FieldValidationMapping, FieldValidationMapping)
+admin.site.register(FieldValidationMapping, FieldValidationMappingAdmin)
 admin.site.register(PayloadThreshold, PayloadThresholdAdmin)
