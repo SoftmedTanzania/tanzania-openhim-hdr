@@ -168,8 +168,8 @@
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ValidationManagement/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+            <state relative-caret-position="45">
+              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -180,23 +180,23 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ValidationManagement/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+            <state relative-caret-position="654">
+              <caret line="153" column="35" selection-start-line="153" selection-start-column="35" selection-end-line="153" selection-end-column="35" />
               <folding>
-                <element signature="e#820#849#0" expanded="false" />
-                <element signature="e#999#1027#0" expanded="false" />
-                <element signature="e#1806#1842#0" expanded="false" />
-                <element signature="e#1889#3806#0" expanded="false" />
-                <element signature="e#1916#1936#0" expanded="false" />
-                <element signature="e#1971#2043#0" expanded="false" />
-                <element signature="e#2084#2873#0" expanded="false" />
-                <element signature="e#3089#3286#0" expanded="false" />
-                <element signature="e#3722#3806#0" expanded="false" />
-                <element signature="e#3857#4268#0" expanded="false" />
-                <element signature="e#3884#3904#0" expanded="false" />
-                <element signature="e#4174#4268#0" expanded="false" />
-                <element signature="e#4337#4359#0" expanded="false" />
-                <element signature="e#4575#4772#0" expanded="false" />
+                <element signature="e#177#206#0" expanded="false" />
+                <element signature="e#356#384#0" expanded="false" />
+                <element signature="e#1163#1199#0" expanded="false" />
+                <element signature="e#1246#3163#0" expanded="false" />
+                <element signature="e#1273#1293#0" expanded="false" />
+                <element signature="e#1328#1400#0" expanded="false" />
+                <element signature="e#1441#2230#0" expanded="false" />
+                <element signature="e#2446#2643#0" expanded="false" />
+                <element signature="e#3079#3163#0" expanded="false" />
+                <element signature="e#3214#3625#0" expanded="false" />
+                <element signature="e#3241#3261#0" expanded="false" />
+                <element signature="e#3531#3625#0" expanded="false" />
+                <element signature="e#4032#4054#0" expanded="false" />
+                <element signature="e#4270#4467#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -282,8 +282,8 @@
         <option value="$PROJECT_DIR$/Core/tasks.py" />
         <option value="$PROJECT_DIR$/Core/admin.py" />
         <option value="$PROJECT_DIR$/API/validators.py" />
-        <option value="$PROJECT_DIR$/ValidationManagement/models.py" />
         <option value="$PROJECT_DIR$/ValidationManagement/admin.py" />
+        <option value="$PROJECT_DIR$/ValidationManagement/models.py" />
       </list>
     </option>
   </component>
@@ -353,6 +353,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ValidationManagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ValidationManagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1168,31 +1186,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ValidationManagement/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+        <state relative-caret-position="654">
+          <caret line="153" column="35" selection-start-line="153" selection-start-column="35" selection-end-line="153" selection-end-column="35" />
           <folding>
-            <element signature="e#820#849#0" expanded="false" />
-            <element signature="e#999#1027#0" expanded="false" />
-            <element signature="e#1806#1842#0" expanded="false" />
-            <element signature="e#1889#3806#0" expanded="false" />
-            <element signature="e#1916#1936#0" expanded="false" />
-            <element signature="e#1971#2043#0" expanded="false" />
-            <element signature="e#2084#2873#0" expanded="false" />
-            <element signature="e#3089#3286#0" expanded="false" />
-            <element signature="e#3722#3806#0" expanded="false" />
-            <element signature="e#3857#4268#0" expanded="false" />
-            <element signature="e#3884#3904#0" expanded="false" />
-            <element signature="e#4174#4268#0" expanded="false" />
-            <element signature="e#4337#4359#0" expanded="false" />
-            <element signature="e#4575#4772#0" expanded="false" />
+            <element signature="e#177#206#0" expanded="false" />
+            <element signature="e#356#384#0" expanded="false" />
+            <element signature="e#1163#1199#0" expanded="false" />
+            <element signature="e#1246#3163#0" expanded="false" />
+            <element signature="e#1273#1293#0" expanded="false" />
+            <element signature="e#1328#1400#0" expanded="false" />
+            <element signature="e#1441#2230#0" expanded="false" />
+            <element signature="e#2446#2643#0" expanded="false" />
+            <element signature="e#3079#3163#0" expanded="false" />
+            <element signature="e#3214#3625#0" expanded="false" />
+            <element signature="e#3241#3261#0" expanded="false" />
+            <element signature="e#3531#3625#0" expanded="false" />
+            <element signature="e#4032#4054#0" expanded="false" />
+            <element signature="e#4270#4467#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ValidationManagement/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+        <state relative-caret-position="45">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>

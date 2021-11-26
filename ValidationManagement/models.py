@@ -3,29 +3,6 @@ from MasterData import models as master_data_models
 
 
 # Create your models here.
-class PayloadThreshold(models.Model):
-    def __str__(self):
-        return '%s' %self.payload_description
-
-    payload_description = models.CharField(max_length=255)
-    payload_code = models.CharField(max_length=255)
-    percentage_threshold = models.DecimalField(max_digits=5, decimal_places=2)
-
-    class Meta:
-        db_table = "PayloadThreshold"
-
-
-class PayloadFieldMapping(models.Model):
-    def __str__(self):
-        return "%s" % self.field
-
-    message_type = models.ForeignKey(PayloadThreshold, on_delete=models.DO_NOTHING)
-    field = models.CharField(max_length=255)
-
-    class Meta:
-        db_table = "PayloadFieldMappings"
-
-
 class ValidationRule(models.Model):
     def __str__(self):
         return '%s' %self.description
@@ -136,6 +113,18 @@ class TransactionSummaryLine(models.Model):
     class Meta:
         db_table = "TransactionSummaryLine"
         verbose_name_plural = "Transactions summary lines"
+
+
+class PayloadThreshold(models.Model):
+    def __str__(self):
+        return '%d' %self.id
+
+    payload_description = models.CharField(max_length=255)
+    payload_code = models.CharField(max_length=255)
+    percentage_threshold = models.DecimalField(max_digits=5, decimal_places=2)
+
+    class Meta:
+        db_table = "PayloadThreshold"
 
 
 class PayloadUpload(models.Model):
