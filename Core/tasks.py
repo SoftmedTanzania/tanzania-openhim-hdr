@@ -210,16 +210,21 @@ def update_transaction_summary(transaction_id):
 def calculate_and_save_bed_occupancy_rate():
     discharge_date = datetime.now().strftime("%Y-%m-%d")
 
+    # Get all active bed occupancy transactions
     bed_occupancies = core_models.BedOccupancy.objects.filter(transaction__is_active=True,
                                                            is_processed=False).order_by('-id')[:5]
 
+    # Loop through each transaction
     for bed_occupancy in bed_occupancies:
         facility_hfr_code = bed_occupancy.facility_hfr_code
 
+        # Get the bed occupancy items associated with each transaction
         bed_occupancy_items = core_models.BedOccupancyItems.objects.filter(bed_occupancy__transaction__is_active=True,
                                                                            bed_occupancy_id=bed_occupancy.id)
         if bed_occupancy_items is not None:
+            # Lopp through each bed occupancy item
             for item in bed_occupancy_items:
+                # Get ward details for each record in the bed occupancy items
                 ward = master_data_models.Ward.objects.filter(local_ward_id=item.ward_id,
                                                                        facility__facility_hfr_code=facility_hfr_code).first()
                 if ward is not None:
