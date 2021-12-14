@@ -38,6 +38,8 @@ def skip_if_running(f):
     return wrapped
 
 
+#This function checks for uploaded csv files in the uploads
+# directory in the server and picks them up for processing
 @app.task()
 def save_payload_from_csv():
     root_path = "uploads"
@@ -45,10 +47,12 @@ def save_payload_from_csv():
     for subdir, _, _ in os.walk(root_path):
         for file in os.listdir(subdir):
             file_path = os.path.join(root_path, file) # This will join the paths to create one path intelligently
+            print(file_path)
             with open(file_path, 'r') as fp:
                 lines = csv.reader(fp, delimiter=',')
 
                 imported_payload = core_views.regenerate_json_payload_from_csv(lines)
+                print(imported_payload)
 
                 result = validators.validate_received_payload(json.loads(imported_payload))
                 transaction_status = result["transaction_status"]
@@ -188,6 +192,8 @@ def save_payload_from_csv():
                             instance_revenue_received_items.save()
 
 
+#The function will update the records passed and failed as the
+# payload is being processed.
 def update_transaction_summary(transaction_id):
     transaction = validation_management_models.TransactionSummary.objects.get(id=transaction_id)
     transaction.total_passed += 1
@@ -195,6 +201,11 @@ def update_transaction_summary(transaction_id):
     transaction.save()
 
 
+#The function will process bed occupancy data received from emrs
+# and will calculate the BOR(Bed Occupancy rate) per facility and
+# per patient on a daily basis
+#breaking it down to patient level will elimitate the issue with
+# discharging of patients at the facility
 @app.task()
 def calculate_and_save_bed_occupancy_rate():
     discharge_date = datetime.now().strftime("%Y-%m-%d")
@@ -256,6 +267,8 @@ def calculate_and_save_bed_occupancy_rate():
         bed_occupancy.save()
 
 
+#This function will be run periodically to find any duplicates in the
+# uploaded csv and deactivate transactions taht are detected as duplicates
 @app.task()
 def cleanup_uploaded_csv_files():
     discovered_duplicate_transactions = validation_management_models.TransactionSummary.objects.values('message_type',
@@ -280,6 +293,8 @@ def cleanup_uploaded_csv_files():
                 facility_transaction.save()
 
 
+#This function will save the individual patient records calculated
+# for the bed occupancy and save them as daily records
 def create_bed_occupancy_report_record(discharge_date, item, bed_occupancy_rate, facility_hfr_code):
     for x in range(int((discharge_date - item.admission_date).days)):
         instance_bed_occupancy_report = core_models.BedOccupancyReport()
@@ -292,11 +307,12 @@ def create_bed_occupancy_report_record(discharge_date, item, bed_occupancy_rate,
         instance_bed_occupancy_report.facility_hfr_code = facility_hfr_code
         instance_bed_occupancy_report.save()
 
-
+#This function will import all the icd10 codes from the json resource in the repo
 def import_icd_10_codes():
-    with open ('icd10codes.json',"r") as f:
+    with open ('icd10codes.json',"r") as f: # Import the CDC codes from the json file in the repo
         data = json.load(f)
 
+    #the ICD10 structure is in four levels and has to be entered the same way
     for x in data:
         categories = x['category']
         sub_categories = x['subCategories']
@@ -376,6 +392,7 @@ def import_icd_10_codes():
                         pass
 
 
+#This function will import all teh cpt codes from the json resource in the repo
 def import_cpt_codes():
     with open('cpt.csv', 'r') as fp:
         lines = csv.reader(fp, delimiter=',')
