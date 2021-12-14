@@ -17,6 +17,16 @@ from NHIF import models as nhif_models
 import datetime as dt
 from dateutil.relativedelta import relativedelta
 import json
+import logging
+from django.conf import settings
+
+
+#SETTING UP LOGGING
+fmt = getattr(settings, 'LOG_FORMAT', None)
+lvl = getattr(settings, 'LOG_LEVEL', logging.DEBUG)
+
+logging.basicConfig(format=fmt, level=lvl)
+logging.debug("Logging started on %s for %s" % (logging.root.name, logging.getLevelName(lvl)))
 
 
 # Create your views here.
@@ -39,7 +49,7 @@ class ServiceReceivedView(viewsets.ModelViewSet):
             serializer = self.get_serializer(data=request.data)
 
         if serializer.is_valid():
-            print("serializer is valid")
+            logging.debug("serializer is valid")
             result = validators.validate_received_payload(dict(serializer.data))
             transaction_status = result["transaction_status"]
             transaction_id = result["transaction_id"]
@@ -55,8 +65,8 @@ class ServiceReceivedView(viewsets.ModelViewSet):
 
                 return Response(response, headers=headers)
         else:
-            print(serializer.errors)
-            print("serializer is not valid")
+            logging.debug(serializer.errors)
+            logging.debug("serializer is not valid")
             return Response(
                 serializer.errors,
                 status=status.HTTP_400_BAD_REQUEST
@@ -393,7 +403,7 @@ class BedOccupancyView(viewsets.ModelViewSet):
 
         for val in serializer.data["items"]:
             try:
-                print(validators.convert_date_formats(val["dischargeDate"]))
+                logging.debug(validators.convert_date_formats(val["dischargeDate"]))
                 instance_bed_occupancy_item = BedOccupancyItems()
                 instance_bed_occupancy_item.patient_id = val["patId"]
                 instance_bed_occupancy_item.bed_occupancy_id = instance_bed_occupancy.id
@@ -697,7 +707,6 @@ def get_last_day_of_month(claim_period):
 
     last_day_of_the_month = dt.datetime(date_estimate.year, (date_estimate + relativedelta(months=1)).month,
                                         1) - dt.timedelta(days=1)
-    print(last_day_of_the_month.date())
 
     return last_day_of_the_month.date()
 

@@ -44,7 +44,7 @@ def save_payload_from_csv():
     i = 0
     for subdir, _, _ in os.walk(root_path):
         for file in os.listdir(subdir):
-            file_path = "" + root_path + "/" + file
+            file_path = os.path.join(root_path, file) # This will join the paths to create one path intelligently
             with open(file_path, 'r') as fp:
                 lines = csv.reader(fp, delimiter=',')
 
@@ -55,7 +55,6 @@ def save_payload_from_csv():
                 transaction_id = result["transaction_id"]
 
                 os.remove(file_path)
-                fp.close()
 
                 if transaction_status is False:
                     print("validation failed")
@@ -281,7 +280,6 @@ def cleanup_uploaded_csv_files():
                 facility_transaction.save()
 
 
-
 def create_bed_occupancy_report_record(discharge_date, item, bed_occupancy_rate, facility_hfr_code):
     for x in range(int((discharge_date - item.admission_date).days)):
         instance_bed_occupancy_report = core_models.BedOccupancyReport()
@@ -416,4 +414,4 @@ def import_cpt_codes():
                     instance_code.description = description
                     instance_code.save()
 
-    return HttpResponse("Finished Uploading")
+

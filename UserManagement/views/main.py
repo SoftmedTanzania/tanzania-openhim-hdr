@@ -16,11 +16,12 @@ from Core import forms as core_forms
 from datetime import datetime, timedelta
 import json
 
-
+# This function will be the entry point to the System
+# A superuser will land on the configuration page and is_staff will access the Home page
 def get_login_page(request):
     return render(request, 'UserManagement/Auth/Login.html')
 
-
+# This function will open a new tab with the selected transaction lines for filtering.
 def get_audit_report(request,item_pk):
     transaction_summary_lines = validation_management_models.TransactionSummaryLine.objects.filter \
         (transaction_id=item_pk).order_by('-id')
@@ -31,6 +32,7 @@ def get_audit_report(request,item_pk):
                                                                        'table_transactions':transaction_summary_lines_table})
 
 
+#this function will be used to change the password when initiated by the end-user
 @login_required(login_url='/')
 def change_password(request):
     if request.method == 'POST':
@@ -51,6 +53,8 @@ def change_password(request):
         })
 
 
+# This view will be used to log the user out of the system.
+#This will also disable the back button from returning the user back to the system
 @login_required(login_url='/')
 def logout_view(request):
     logout(request)
@@ -58,6 +62,7 @@ def logout_view(request):
         return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
 
 
+#Function will handle all authentication issues
 def authenticate_user(request):
 
     username = request.POST['username']
@@ -95,6 +100,7 @@ def authenticate_user(request):
         return render(request, 'UserManagement/Auth/Login.html')
 
 
+#This function will return the Admin page
 def get_admin_page(request):
     if request.user.is_super_user:
         return redirect('/admin/')
@@ -102,6 +108,7 @@ def get_admin_page(request):
         return render(request, 'UserManagement/Auth/Login.html')
 
 
+#This function will affect the changed password at the db level
 @login_required(login_url='/')
 def set_changed_password(request):
 
@@ -123,6 +130,8 @@ def set_changed_password(request):
             return HttpResponse(status=401)
 
 
+# This function will disable a transaction that a user might point out as irrelevant and needs to be discarded.
+# HDR visualizations will leave this transaction out of any comoutation
 def remove_transaction(request,item_pk):
     transaction_id = item_pk
     print(transaction_id)
@@ -137,21 +146,7 @@ def remove_transaction(request,item_pk):
         return HttpResponse(status=400)
 
 
-def disable_payload_items():
-    disabled_transaction = validation_management_models.TransactionSummary.objects.filter(is_active=False,
-                                                                transaction_date_time__gte=timedelta(days=-7)).order_by('-id')
-
-    for transaction in disabled_transaction:
-        transaction_lines = validation_management_models.TransactionSummaryLine.objects.filter(transaction_id = transaction.id)
-
-        for transaction_line in transaction_lines:
-            payload = transaction_line.payload
-
-            json_payload = json.dumps(payload)
-
-            item_id = payload[""]
-
-
+#This function will export the transaction lines as a CSV file.
 def export_transaction_lines(request):
     if request.method == "POST":
         transaction_id = request.POST["item_pk"]
@@ -189,6 +184,7 @@ def export_transaction_lines(request):
         return response
 
 
+#This function returns the home page
 def get_dashboard(request):
     form = core_forms.PayloadImportForm(initial={"facility":request.user.profile.facility})
     facility = request.user.profile.facility
@@ -204,6 +200,7 @@ def get_dashboard(request):
                                                                   "payload_form": form})
 
 
+#The function will display the transaction lines that are part of a transaction
 def get_transaction_summary_lines(request,item_pk):
     transaction_summary_lines = validation_management_models.TransactionSummaryLine.objects.filter \
         (transaction_id=item_pk).order_by('-id')

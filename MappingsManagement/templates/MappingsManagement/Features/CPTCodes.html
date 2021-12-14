@@ -4,54 +4,54 @@
 
 {% block content %}
 
-    <div class="row" id="department_mappings">
-        <div class="col-md-12 col-sm-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">CPT Codes Mappings</h4>
-                </div>
-                <div class="col-md-2">
-                    <button type="button" class="btn btn-outline-primary block btn-md" data-toggle="modal" data-target="#default">
-                        <i class="la la-plus"></i>New CPT Code Mapping
-                    </button>
+    <section class="row" id="department_mappings">
+    <div class="col-md-12 col-sm-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">CPT Codes Mappings</h4>
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-outline-primary block btn-md" data-toggle="modal" data-target="#default">
+                    <i class="la la-plus"></i>New CPT Code Mapping
+                </button>
+
+            </div>
+
+            <div align="right" style="padding-right: 50px">
+                <a class="las la-file-excel la-3x" href="{% url 'download_cpt_codes_as_csv' %}" id="id_export_xls"></a>
+
+                <a class="las la-upload la-3x" data-toggle="modal" data-target="#import"></a>
+
+            </div>
+
+            <div class="card-body">
+
+                <div class="table-responsive">
+
+                    {% render_table cpt_code_mappings_table %}
 
                 </div>
 
-                <div align="right" style="padding-right: 50px">
-                    <a class="las la-file-excel la-3x" href="{% url 'download_cpt_codes_as_csv' %}" id="id_export_xls"></a>
-
-                    <a class="las la-upload la-3x" data-toggle="modal" data-target="#import"></a>
-
-                </div>
-
-                <div class="card-body">
-
-                    <div class="table-responsive">
-
-                        {% render_table cpt_code_mappings_table %}
-
-                    </div>
-
-                </div>
             </div>
         </div>
     </div>
+    <section/>
 
-        <div class="col-lg-4 col-md-6 col-sm-12">
+    <section class="col-lg-4 col-md-6 col-sm-12">
         <div class="form-group">
             <!-- Modal -->
             <div class="modal fade text-left" id="import" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
                 <div class="modal-dialog modal-sm" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
+                        <header class="modal-header">
                             <h4 class="modal-title" id="myModalLabel1">Upload CPT Codes Mapping</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                        </div>
-                        <div class="modal-body">
+                        </header>
+                        <section class="modal-body">
 
-                             <form method = "POST" action="{% url 'upload_cpt_codes' %}" enctype="multipart/form-data">
+                            <form method = "POST" action="{% url 'upload_cpt_codes' %}" enctype="multipart/form-data">
 
                                 {% csrf_token %}
 
@@ -62,22 +62,22 @@
 
                                 </table>
 
-                                <div class="modal-footer">
+                                <footer class="modal-footer">
                                     <button type="button" class="btn grey btn-outline-secondary" data-dismiss="modal">Close</button>
                                     <button type="submit" class="btn btn-outline-primary">Upload</button>
-                                </div>
+                                </footer>
 
                             </form>
 
-                        </div>
+                        </section>
 
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="col-lg-4 col-md-6 col-sm-12">
+    <section class="col-lg-4 col-md-6 col-sm-12">
         <div class="form-group">
             <!-- Modal -->
             <div class="modal fade text-left" id="default" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
@@ -116,7 +116,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 {% endblock %}
 
@@ -161,10 +161,10 @@
                         },
                         error: function (XMLHttpRequest, textStatus, errorThrown) {
 
-                              swal({
-                                    title: 'Operation failed.',
-                                    icon: 'error'
-                                });
+                            swal({
+                                title: 'Operation failed.',
+                                icon: 'error'
+                            });
 
                         }
                     });

@@ -14,6 +14,8 @@ import os
 from pathlib import Path
 import json
 from decouple import config
+import logging
+from django.conf import settings
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -27,13 +29,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG_MODE')
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=lambda v: [
     s.strip() for s in v.split(',')])
 
-# Application definition
 
+# Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -70,7 +72,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.BasicAuthentication',  # enables simple command line authentication
+        'rest_framework.authentication.BasicAuthentication',  # This is required for Basic Auth between various systems
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
     )
@@ -188,3 +190,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+LOG_FORMAT = None
+LOG_LEVEL = logging.DEBUG

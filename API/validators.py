@@ -5,7 +5,9 @@ import json
 import pytz
 from MasterData import models as master_data_models
 
-# Validation Rules
+
+
+#The function will run a check to see if the date is not a future date
 def check_if_not_future_date(date):
     formatted_date = convert_date_formats(date)
     now = datetime.now().date()
@@ -16,6 +18,7 @@ def check_if_not_future_date(date):
         return True
 
 
+#The function will check that the given date is not a past date.
 def check_if_not_past_date(date):
     formatted_date = convert_date_formats(date)
     now = datetime.now().date()
@@ -26,6 +29,7 @@ def check_if_not_past_date(date):
         return True
 
 
+#The function will check that the given date is not a present date.
 def check_if_not_present_date(date):
     formatted_date = convert_date_formats(date)
     now = datetime.now().date()
@@ -36,6 +40,7 @@ def check_if_not_present_date(date):
         return True
 
 
+#The function will check that the given date is valid
 def check_if_valid_date(date):
     if date:
         try:
@@ -46,6 +51,7 @@ def check_if_valid_date(date):
     return False
 
 
+# The function will check that the given field is not null
 def check_if_not_null_value(value):
     try:
         if value is None:
@@ -56,6 +62,7 @@ def check_if_not_null_value(value):
         return False
 
 
+#The function will check that the given field is not blank
 def check_if_not_blank_value(value):
     if str(value) == "":
         return False
@@ -67,6 +74,7 @@ def check_if_not_blank_value(value):
         return True
 
 
+#The function will check that the given array field is not null
 def check_if_array_not_null_value(value):
     try:
         if not value:
@@ -77,7 +85,7 @@ def check_if_array_not_null_value(value):
         return False
 
 
-# Extended Functions
+# The function will convert incoming date formats to a django supported date value
 def convert_date_formats(date):
     value = None
     if date != "":
@@ -92,6 +100,7 @@ def convert_date_formats(date):
         return None
 
 
+#The function will validate the received payload against all defined functions for the specific payload
 def validate_received_payload(data):
     message_type = data["messageType"].strip()
     org_name = data["orgName"].strip()
@@ -321,6 +330,7 @@ def validate_received_payload(data):
     return d
 
 
+#The function will calculate the threshold for a specific payload and return a percentage
 def calculate_threshold(total_failed, total_passed):
     calculated_threshold = 0
     if total_failed != 0 and total_passed != 0:
@@ -333,6 +343,7 @@ def calculate_threshold(total_failed, total_passed):
     return calculated_threshold
 
 
+#The function will determine if a payload was already created in Transaction Summary
 def check_if_payload_exists(message_type,facility_hfr_code):
     today = date.today()
     tz = pytz.timezone('Africa/Dar_es_Salaam')
