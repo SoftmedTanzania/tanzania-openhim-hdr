@@ -13,6 +13,16 @@ from ValidationManagement import models as validation_management_models
 from TerminologyServicesManagement import models as terminology_management_services_models
 from functools import wraps
 from django.db.models import Count
+import logging
+from django.conf import settings
+
+
+#SETTING UP LOGGING
+fmt = getattr(settings, 'LOG_FORMAT', None)
+lvl = getattr(settings, 'LOG_LEVEL', logging.DEBUG)
+
+logging.basicConfig(format=fmt, level=lvl)
+
 
 app = Celery()
 
@@ -29,7 +39,7 @@ def skip_if_running(f):
                             tuple(args) == tuple(task['args']) and
                             kwargs == task['kwargs'] and
                             self.request.id != task['id']):
-                    print('task {task_name} ({args}, {kwargs}) is running on {worker}, skipping')
+                    logging.debug('task {task_name} ({args}, {kwargs}) is running on {worker}, skipping')
 
                     return None
 
@@ -47,12 +57,12 @@ def save_payload_from_csv():
     for subdir, _, _ in os.walk(root_path):
         for file in os.listdir(subdir):
             file_path = os.path.join(root_path, file) # This will join the paths to create one path intelligently
-            print(file_path)
+            logging.debug(file_path)
             with open(file_path, 'r') as fp:
                 lines = csv.reader(fp, delimiter=',')
 
                 imported_payload = core_views.regenerate_json_payload_from_csv(lines)
-                print(imported_payload)
+                logging.debug(imported_payload)
 
                 result = validators.validate_received_payload(json.loads(imported_payload))
                 transaction_status = result["transaction_status"]
@@ -61,9 +71,9 @@ def save_payload_from_csv():
                 os.remove(file_path)
 
                 if transaction_status is False:
-                    print("validation failed")
+                    logging.debug("validation failed")
                 else:
-                    print("validation successful")
+                    logging.debug("validation successful")
                     json_imported_payload = json.loads(imported_payload)
                     message_type = json_imported_payload["messageType"]
                     facility_name = json_imported_payload["orgName"]
@@ -265,7 +275,7 @@ def calculate_and_save_bed_occupancy_rate():
                                                            facility_hfr_code)
 
                     except Exception as e:
-                        print(e)
+                        logging.debug(e)
 
         bed_occupancy = core_models.BedOccupancy.objects.get(id=bed_occupancy.id)
         bed_occupancy.is_processed = True
@@ -333,7 +343,7 @@ def import_icd_10_codes():
             instance_category.save()
         else:
             pass
-        print(categories)
+            logging.debug(categories)
 
         for sub_category in sub_categories:
             sub_category_name = sub_category['subCategoryName']
@@ -353,8 +363,7 @@ def import_icd_10_codes():
                 instance_sub_category.save()
             else:
                 pass
-
-            print(sub_category_name)
+                logging.debug(sub_category_name)
 
             # loop through the sub sub categories
             for sub_sub_category in sub_sub_categories:
@@ -375,8 +384,6 @@ def import_icd_10_codes():
                     instance_icd_code.save()
                 else:
                     pass
-
-                print(icd_10)
 
                 for y in icd_sub_code_array:
                     icd_10_sub_code = y["icd10Code"]

@@ -11,6 +11,15 @@ from django.db.models import Sum
 import calendar
 from Core import models as core_models
 from MappingsManagement import models as mappings_management_models
+import logging
+from django.conf import settings
+
+
+#SETTING UP LOGGING
+fmt = getattr(settings, 'LOG_FORMAT', None)
+lvl = getattr(settings, 'LOG_LEVEL', logging.DEBUG)
+
+logging.basicConfig(format=fmt, level=lvl)
 
 app = Celery()
 

@@ -13,8 +13,16 @@ from ValidationManagement import models as validation_management_models
 from django_tables2 import RequestConfig
 import xlwt
 from Core import forms as core_forms
-from datetime import datetime, timedelta
-import json
+import logging
+from django.conf import settings
+
+
+#SETTING UP LOGGING
+fmt = getattr(settings, 'LOG_FORMAT', None)
+lvl = getattr(settings, 'LOG_LEVEL', logging.DEBUG)
+
+logging.basicConfig(format=fmt, level=lvl)
+
 
 # This function will be the entry point to the System
 # A superuser will land on the configuration page and is_staff will access the Home page
@@ -134,7 +142,7 @@ def set_changed_password(request):
 # HDR visualizations will leave this transaction out of any comoutation
 def remove_transaction(request,item_pk):
     transaction_id = item_pk
-    print(transaction_id)
+    logging.debug(transaction_id)
 
     transaction = validation_management_models.TransactionSummary.objects.get(id=transaction_id)
 
@@ -177,7 +185,7 @@ def export_transaction_lines(request):
             column_names = tuple(row)
             row_num += 1
             for col_num in range(len(column_names)):
-                print(col_num)
+                logging.debug(col_num)
                 ws.write(row_num, col_num, row[col_num], font_style)
 
         wb.save(response)

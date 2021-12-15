@@ -4,7 +4,15 @@ from ValidationManagement.models import FieldValidationMapping, ValidationRule, 
 import json
 import pytz
 from MasterData import models as master_data_models
+import logging
+from django.conf import settings
 
+
+#SETTING UP LOGGING
+fmt = getattr(settings, 'LOG_FORMAT', None)
+lvl = getattr(settings, 'LOG_LEVEL', logging.DEBUG)
+
+logging.basicConfig(format=fmt, level=lvl)
 
 
 #The function will run a check to see if the date is not a future date
@@ -142,7 +150,7 @@ def validate_received_payload(data):
                 try:
                     if rule_name == "convert_date_formats":
                         date = convert_date_formats(val[field])
-                        print(date)
+                        logging.debug(date)
                         if date == "":
                             raised_error = "Failed to convert " + field + " with value of " + val[
                                 field] + " to a valid date format."

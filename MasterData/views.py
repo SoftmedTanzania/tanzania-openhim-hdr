@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, HttpResponse
+from django.shortcuts import render, redirect
+from django.db import transaction
 from .tables import PayerMappingTable, ExemptionMappingTable, DepartmentMappingTable, WardMappingTable, \
     GenderMappingTable, ServiceProviderRankingMappingTable, PlaceODeathMappingTable, CPTCodeMappingTable
 from .models import Ward
@@ -8,6 +9,15 @@ from django_tables2 import RequestConfig
 from Core import forms as core_forms
 from MappingsManagement import models as mappings_management_models
 from TerminologyServicesManagement import models as terminology_management_services_models
+import logging
+from django.conf import settings
+
+
+#SETTING UP LOGGING
+fmt = getattr(settings, 'LOG_FORMAT', None)
+lvl = getattr(settings, 'LOG_LEVEL', logging.DEBUG)
+
+logging.basicConfig(format=fmt, level=lvl)
 
 
 # Get all the mappings based on facility system admin logged in using the request context variable request
@@ -24,13 +34,14 @@ def get_departments_page(request):
         department_mappings = mappings_management_models.DepartmentMapping.objects.filter(facility=facility)
         department_mappings_table = DepartmentMappingTable(department_mappings)
         department_mapping_form = DepartmentMappingForm(initial={'facility': request.user.profile.facility})
-        RequestConfig(request, paginate={"per_page": 10}).configure(department_mappings_table)
+        RequestConfig(request, paginate={"per_page": 15}).configure(department_mappings_table)
         return render(request,
                       'MappingsManagement/Features/Departments.html', {"department_mappings_table": department_mappings_table,
                                                                        "department_mapping_form" : department_mapping_form})
 
 
 # Perform an update for a specific department mapping
+@transaction.atomic()
 def update_department(request, item_pk):
     instance_department = mappings_management_models.DepartmentMapping.objects.get(id=item_pk)
     form = DepartmentMappingForm(instance=instance_department)
@@ -43,7 +54,7 @@ def update_department(request, item_pk):
                 return redirect(request.META['HTTP_REFERER'])
             else:
                 pass
-    else:
+    else:#This block of code will pass the header and update url to a generic page so as to reuse it for all updates
         header = "Update Department"
         url = "update_department"
 
@@ -69,7 +80,7 @@ def get_cpt_codes_page(request):
         cpt_code_mappings_table = CPTCodeMappingTable(cpt_code_mappings)
         cpt_code_mapping_form = CPTCodesMappingForm(initial={'facility': request.user.profile.facility})
         cpt_code_mapping_import_form = core_forms.CPTCodeMappingImportForm()
-        RequestConfig(request, paginate={"per_page": 10}).configure(cpt_code_mappings_table)
+        RequestConfig(request, paginate={"per_page": 15}).configure(cpt_code_mappings_table)
         return render(request, 'MappingsManagement/Features/CPTCodes.html',
                       {"cpt_code_mappings_table": cpt_code_mappings_table,
                        "cpt_code_mapping_form": cpt_code_mapping_form,
@@ -78,6 +89,7 @@ def get_cpt_codes_page(request):
 
 
 #Add more mappings to the CPT mappings done
+@transaction.atomic()
 def update_cpt_code(request, item_pk):
     instance_cpt_code = terminology_management_services_models.CPTCodesMapping.objects.get(id=item_pk)
     form = CPTCodesMappingForm(instance=instance_cpt_code)
@@ -90,7 +102,7 @@ def update_cpt_code(request, item_pk):
                 return redirect(request.META['HTTP_REFERER'])
             else:
                 pass
-    else:
+    else:#This block of code will pass the header and update url to a generic page so as to reuse it for all updates
         header = "Update CPT code"
         url = "update_cpt_code"
 
@@ -114,11 +126,13 @@ def get_exemptions_page(request):
         exemption_mappings = mappings_management_models.ExemptionMapping.objects.filter(facility=facility)
         exemption_mappings_table = ExemptionMappingTable(exemption_mappings)
         exemption_mapping_form = ExemptionMappingForm(initial={'facility': request.user.profile.facility})
-        RequestConfig(request, paginate={"per_page": 10}).configure(exemption_mappings_table)
+        RequestConfig(request, paginate={"per_page": 15}).configure(exemption_mappings_table)
         return render(request, 'MappingsManagement/Features/Exemptions.html', {"exemption_mappings_table":exemption_mappings_table,
                                                                       "exemption_mapping_form":exemption_mapping_form})
 
-
+#This function will either update an existing exemption mapping record or load an instance of the
+# exemption mapping record in a form for a user
+@transaction.atomic()
 def update_exemption(request, item_pk):
     instance_exemption = mappings_management_models.ExemptionMapping.objects.get(id=item_pk)
     form = ExemptionMappingForm(instance=instance_exemption)
@@ -131,6 +145,7 @@ def update_exemption(request, item_pk):
                 return redirect(request.META['HTTP_REFERER'])
             else:
                 pass
+    #This block of code will pass the header and update url to a generic page so as to reuse it for all updates
     else:
         header = "Update Exemption"
         url = "update_exemption"
@@ -141,6 +156,7 @@ def update_exemption(request, item_pk):
     return redirect(request.META['HTTP_REFERER'])
 
 
+#This function either laods saves a committed form or loads an empty form for the user to map records
 def get_payers_page(request):
     if request.method == "POST":
         payer_mapping_form = PayerMappingForm(request.POST)
@@ -154,11 +170,13 @@ def get_payers_page(request):
         payer_mappings = mappings_management_models.PayerMapping.objects.filter(facility=facility)
         payer_mappings_table = PayerMappingTable(payer_mappings)
         payer_mapping_form = PayerMappingForm(initial={'facility': request.user.profile.facility})
-        RequestConfig(request, paginate={"per_page": 10}).configure(payer_mappings_table)
+        RequestConfig(request, paginate={"per_page": 15}).configure(payer_mappings_table)
         return render(request, 'MappingsManagement/Features/Payers.html', {"payer_mappings_table":payer_mappings_table,
                                                                    "payer_mapping_form":payer_mapping_form})
 
 
+#this function will either update an existing payer record or load an instance of the payer record in a form for a user
+@transaction.atomic()
 def update_payer(request, item_pk):
     instance_payer = mappings_management_models.PayerMapping.objects.get(id=item_pk)
     form = PayerMappingForm(instance=instance_payer)
@@ -171,7 +189,7 @@ def update_payer(request, item_pk):
                 return redirect(request.META['HTTP_REFERER'])
             else:
                 pass
-    else:
+    else:#This block of code will pass the header and update url to a generic page so as to reuse it for all updates
         header = "Update Payer"
         url = "update_payer"
 
@@ -181,7 +199,9 @@ def update_payer(request, item_pk):
     return redirect(request.META['HTTP_REFERER'])
 
 
+# This function will either load an emoty wards mapping form or save a ward definition after a user clicks on save
 def get_wards_page(request):
+    #Save a new instance
     if request.method == "POST":
         ward_mapping_form = WardMappingForm(request.POST)
 
@@ -189,6 +209,7 @@ def get_wards_page(request):
             ward_mapping_form.full_clean()
             ward_mapping_form.save()
             return redirect(request.META['HTTP_REFERER'])
+    # Load an empty form
     else:
         facility = request.user.profile.facility
         ward_mappings = Ward.objects.filter(facility=facility)
@@ -199,6 +220,8 @@ def get_wards_page(request):
                                                                  "ward_mapping_form":ward_mapping_form})
 
 
+# Update a ward mapping or load an instance of a ward mapping to a form for the user to verify
+@transaction.atomic()
 def update_ward(request, item_pk):
     instance_ward = Ward.objects.get(id=item_pk)
     form = WardMappingForm(instance=instance_ward)
@@ -220,7 +243,7 @@ def update_ward(request, item_pk):
                                                                                                                           })
     return redirect(request.META['HTTP_REFERER'])
 
-
+# Load a new gender mapping form or save a gender mapping form
 def get_gender_page(request):
     if request.method == "POST":
         gender_mapping_form = GenderMappingForm(request.POST)
@@ -239,6 +262,8 @@ def get_gender_page(request):
                                                                    "gender_mapping_form": gender_mapping_form})
 
 
+# Update the gender mapping or load an instance of the record on a form
+@transaction.atomic()
 def update_gender(request, item_pk):
     instance_gender = mappings_management_models.GenderMapping.objects.get(id=item_pk)
     form = GenderMappingForm(instance=instance_gender)
@@ -261,6 +286,7 @@ def update_gender(request, item_pk):
     return redirect(request.META['HTTP_REFERER'])
 
 
+# Returns an empty service prvider ranking form or saves the mapping done by the user
 def get_service_provider_rankings_page(request):
     if request.method == "POST":
         service_provider_ranking_mapping_form = ServiceProviderRankingMappingForm(request.POST)
@@ -281,6 +307,7 @@ def get_service_provider_rankings_page(request):
                        "service_provider_ranking_mappings_form": service_provider_ranking_mapping_mapping_form})
 
 
+@transaction.atomic()
 def update_service_provider_ranking(request, item_pk):
     instance_server_provider_ranking = mappings_management_models.ServiceProviderRankingMapping.objects.get(id=item_pk)
     form = ServiceProviderRankingMappingForm(instance=instance_server_provider_ranking)
@@ -324,6 +351,7 @@ def get_places_of_death_page(request):
                        "place_of_death_mapping_form": place_of_death_mapping_form})
 
 
+@transaction.atomic()
 def update_place_of_death(request, item_pk):
     instance_place_of_death = mappings_management_models.ServiceProviderRankingMapping.objects.get(id=item_pk)
     form = ServiceProviderRankingMappingForm(instance=instance_place_of_death)
@@ -347,6 +375,7 @@ def update_place_of_death(request, item_pk):
 
 
 #Permanently deletes a mapping that was done by the respective facility
+@transaction.atomic()
 def delete_mapping(request):
     if request.method == "POST":
         mapping_id = int(request.POST["mapping_id"])
