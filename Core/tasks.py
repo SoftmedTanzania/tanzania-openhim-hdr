@@ -286,7 +286,10 @@ def calculate_and_save_bed_occupancy_rate():
 # uploaded csv and deactivate transactions taht are detected as duplicates
 @app.task()
 def cleanup_uploaded_csv_files():
-    discovered_duplicate_transactions = validation_management_models.TransactionSummary.objects.values('message_type',
+    today = datetime.now().date()
+    formatted_today = str(today) + " 00:00:00"
+    discovered_duplicate_transactions = validation_management_models.TransactionSummary.objects.\
+                                                filter(transaction_date_time__gte = formatted_today, is_active=True).values('message_type',
                                                                                            'facility_hfr_code',
                                                                                            'total_passed',
                                                                                            'total_failed') \
@@ -298,10 +301,12 @@ def cleanup_uploaded_csv_files():
 
         # Check if facility sends CSVs as mapping will be done on the the HDRAdmin
         if facility.uses_cpt_internally is False:
-            facility_transactions = validation_management_models.TransactionSummary.objects.filter(message_type=transaction['message_type'],
+            facility_transactions = validation_management_models.TransactionSummary.objects.filter(
+                                                            message_type=transaction['message_type'],
+                                                            transaction_date_time__gte=formatted_today,
                                                              facility_hfr_code=transaction['facility_hfr_code'],
                                                             total_passed=transaction['total_passed'],
-                                                            total_failed=transaction['total_failed'])[1:]
+                                                            total_failed=transaction['total_failed'], is_active=True).order_by('id')[1:]
 
             for facility_transaction in facility_transactions:
                 facility_transaction.is_active = False
