@@ -88,8 +88,9 @@ class TransactionSummary(models.Model):
         (BedOccupancy, 'BEDOCC'),
     )
 
-    transaction_date_time = models.DateTimeField(auto_now=True) #This changes when the record is updated
-    date_time_created = models.DateTimeField(default=datetime.datetime.now())
+    transaction_date_time = models.DateTimeField(auto_now=True,auto_now_add=False)  # This changes when the record is updated
+    date_time_created = models.DateTimeField(
+        'Created Date', auto_now_add=True, auto_now=False)
     message_type = models.CharField(max_length=100, choices=MESSAGE_TYPE_CHOICES)
     org_name = models.CharField(max_length=255)
     facility_hfr_code  = models.CharField(max_length=255)
