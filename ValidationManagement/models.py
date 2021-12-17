@@ -6,7 +6,7 @@ import datetime
 # Create your models here.
 class ValidationRule(models.Model):
     def __str__(self):
-        return '%s' %self.description
+        return '%s' % self.description
 
     description = models.CharField(max_length=255)
     rule_name = models.CharField(max_length=255, null=True, blank=True)
@@ -17,7 +17,7 @@ class ValidationRule(models.Model):
 
 class FieldValidationMapping(models.Model):
     def __str__(self):
-        return '%d' %self.id
+        return '%d' % self.id
 
     ServicesReceived = 'SVCREC'
     DeathByDiseaseCaseAtFacility = 'DDC'
@@ -43,10 +43,10 @@ class FieldValidationMapping(models.Model):
 
 class TransactionSummary(models.Model):
     def __str__(self):
-        return '%d' %self.id
+        return '%d' % self.id
 
     def threshold(self):
-        return (self.total_passed/(self.total_failed + self.total_passed)) * 100
+        return (self.total_passed / (self.total_failed + self.total_passed)) * 100
 
     def row_color_codes(self):
         message = PayloadThreshold.objects.filter(payload_code=self.message_type).first()
@@ -62,7 +62,7 @@ class TransactionSummary(models.Model):
 
         if total_failed != 0 and total_passed != 0:
             calculated_threshold = self.threshold()
-        elif total_passed ==0 and total_failed != 0:
+        elif total_passed == 0 and total_failed != 0:
             calculated_threshold = 0
         elif total_passed != 0 and total_failed == 0:
             calculated_threshold = 100
@@ -88,15 +88,14 @@ class TransactionSummary(models.Model):
         (BedOccupancy, 'BEDOCC'),
     )
 
-    transaction_date_time = models.DateTimeField(auto_now=True) #This changes when the record is updated
+    transaction_date_time = models.DateTimeField(auto_now=True)  # This changes when the record is updated
     date_time_created = models.DateTimeField(default=datetime.datetime.now())
     message_type = models.CharField(max_length=100, choices=MESSAGE_TYPE_CHOICES)
     org_name = models.CharField(max_length=255)
-    facility_hfr_code  = models.CharField(max_length=255)
+    facility_hfr_code = models.CharField(max_length=255)
     total_passed = models.IntegerField(default=0)
     total_failed = models.IntegerField(default=0)
     is_active = models.BooleanField(default=True)
-
 
     class Meta:
         db_table = "TransactionSummary"
@@ -105,7 +104,7 @@ class TransactionSummary(models.Model):
 
 class TransactionSummaryLine(models.Model):
     def __str__(self):
-        return '%d' %self.id
+        return '%d' % self.id
 
     transaction = models.ForeignKey(TransactionSummary, on_delete=models.DO_NOTHING, null=True, blank=True)
     payload_object = models.TextField()
@@ -119,7 +118,7 @@ class TransactionSummaryLine(models.Model):
 
 class PayloadThreshold(models.Model):
     def __str__(self):
-        return '%d' %self.id
+        return '%d' % self.id
 
     payload_description = models.CharField(max_length=255)
     payload_code = models.CharField(max_length=255)
@@ -131,7 +130,7 @@ class PayloadThreshold(models.Model):
 
 class PayloadUpload(models.Model):
     def __str__(self):
-        return "%d"  % self.id
+        return "%d" % self.id
 
     ServicesReceived = 'SVCREC'
     DeathByDiseaseCaseAtFacility = 'DDC'
@@ -154,5 +153,3 @@ class PayloadUpload(models.Model):
 
     class Meta:
         db_table = "PayloadUploads"
-
-
