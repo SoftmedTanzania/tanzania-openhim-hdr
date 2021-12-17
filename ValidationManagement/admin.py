@@ -10,7 +10,7 @@ class PayloadThresholdAdmin(admin.ModelAdmin):
 
 
 class TransactionSummaryAdmin(admin.ModelAdmin):
-    list_display = ('id','transaction_date_time','message_type','org_name','facility_hfr_code',
+    list_display = ('id','transaction_date_time','date_time_created','message_type','org_name','facility_hfr_code',
                     'total_passed','total_failed','is_active')
     search_fields = ['facility_hfr_code',]
 

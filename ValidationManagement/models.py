@@ -1,5 +1,6 @@
 from django.db import models
 from MasterData import models as master_data_models
+import datetime
 
 
 # Create your models here.
@@ -87,7 +88,8 @@ class TransactionSummary(models.Model):
         (BedOccupancy, 'BEDOCC'),
     )
 
-    transaction_date_time = models.DateTimeField(auto_now=True)
+    transaction_date_time = models.DateTimeField(auto_now=True) #This changes when the record is updated
+    date_time_created = models.DateTimeField(default=datetime.datetime.now())
     message_type = models.CharField(max_length=100, choices=MESSAGE_TYPE_CHOICES)
     org_name = models.CharField(max_length=255)
     facility_hfr_code  = models.CharField(max_length=255)
