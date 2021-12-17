@@ -19,7 +19,7 @@ services:
       - static:/app/tanzania-openhim-hdr/static
       - media:/app/tanzania-openhim-hdr/media
     ports:
-      - "8080:80"
+      - "54505:80"
     depends_on:
       - hdr
 
