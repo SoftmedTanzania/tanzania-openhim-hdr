@@ -18,7 +18,7 @@
             <div class="container">
                 <div class="col-md-12 col-sm-12 col-xs-12 content-body" align="center">
                     <div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
-                        <form class="login100-form validate-form flex-sb flex-w" action="{% url 'authenticate_user' %}" method="post">
+                        <form class="login100-form validate-form flex-sb flex-w" action="{% url 'user_management:authenticate_user' %}" method="post">
 
                             {% csrf_token %}
                             <span class="login100-form-title p-b-32">

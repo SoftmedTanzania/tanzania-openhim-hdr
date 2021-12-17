@@ -2,11 +2,15 @@ from django.urls import path
 from UserManagement.views import main
 from Core import views as core_views
 
+# app_name = 'user_management'
+
 urlpatterns = [
-    path('', main.get_login_page, name='login_page'),
+    # path('', main.get_login_page, name='login_page'),
+    path("", main.redirect_to_dashboard, name="redirect_to_dashboard"),
+    path('login', main.get_login_page, name='login_page'),
     path('admin', main.get_admin_page, name= 'admin'),
     path('password/', main.change_password, name='change_password'),
-    path('dashboard', main.get_dashboard, name='dashboard'),
+    path('dashboard/', main.get_dashboard, name='dashboard'),
     path('get_transaction_summary_lines/<int:item_pk>/', main.get_transaction_summary_lines, name='get_transaction_summary_lines'),
     path('save_changed_password/', main.set_changed_password, name='save_changed_password'),
     path('user', main.authenticate_user, name='authenticate_user'),

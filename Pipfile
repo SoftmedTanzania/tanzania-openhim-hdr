@@ -34,6 +34,7 @@ django-report-builder = "==6.2.2"
 django-rest-auth = "==0.9.5"
 django-tables2 = "==2.3.4"
 django-widget-tweaks = "==1.4.3"
+#django-session-timeout= "==0.1.0"
 django-wkhtmltopdf = "==3.2.0"
 djangorestframework = "==3.12.2"
 et-xmlfile = "==1.0.1"
@@ -55,6 +56,7 @@ psycopg2-binary = "*"
 python-dateutil = "*"
 django-celery-beat = "*"
 requests = "*"
+django-session-timeout = "*"
 
 [dev-packages]
 
