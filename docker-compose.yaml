@@ -1,0 +1,113 @@
+version: '3.7'
+
+services:
+
+  db:
+    restart: always
+    image: postgres:12-alpine
+    env_file:
+      - .env-prod
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data/
+
+  nginx:
+    restart: always
+    build: ./.config/nginx
+    volumes:
+      - static:/app/HDR/static
+      - media:/app/HDR/media
+    ports:
+      - "8080:80"
+    depends_on:
+      - hdr
+
+  hdr:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - static:/app/HDR/static
+      - media:/app/HDR/media
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py collectstatic --no-input --clear
+             gunicorn HDR.wsgi:application --preload --bind 0.0.0.0:81 --timeout 250 --workers 3 --log-file=- --log-level debug"
+    env_file:
+      - .env-prod
+    expose:
+      - "81"
+    depends_on:
+      - db
+    links:
+      - db
+
+  celery:
+    image: celery:3.1.25
+    restart: always
+    build: .
+    #    command: sh -c "wait-for redis:6379 && wait-for tz_hprs:9091 -- celery -A tz_hprs worker -l info"
+    command: celery -A HDR worker -l info
+    working_dir: /app
+    env_file:
+      - .env.prod
+    volumes:
+      - .:/app
+      - media:/app/HDR/media
+      - static:/app/HDR/static
+    depends_on:
+      - db
+      - rabbitmq
+      - HDR
+
+  celery-beat:
+    restart: always
+    build: .
+    command: celery -A HDR beat -l info
+    working_dir: /app
+    environment:
+      CELERY_BROKER_URL: amqp://localhost:5672
+    env_file:
+      - .env.prod
+    volumes:
+      - .:/app
+      - media:/app/HDR/media
+      - static:/app/HDR/static
+    depends_on:
+      - db
+      - rabbitmq
+      - hdr
+
+  pgbackups:
+    restart: always
+    container_name: Backup
+    image: prodrigestivill/postgres-backup-local
+    volumes:
+      - /var/opt/pgbackups:/backups
+    depends_on:
+      - db
+    env_file:
+      - .env-prod
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: 'rabbitmq'
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - rabbit_data:/var/lib/rabbitmq/data/
+      - rabbit_log:/var/lib/rabbitmq/log/
+    networks:
+      - rabbitmq_go_net
+
+
+volumes:
+  pgdata:
+  static:
+  media:
+  rabbit_log:
+  rabbit_data:
