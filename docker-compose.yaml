@@ -60,7 +60,7 @@ services:
     depends_on:
       - db
       - rabbitmq
-      - HDR
+      - hdr
 
   celery-beat:
     restart: always
