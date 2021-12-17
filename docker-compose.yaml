@@ -91,23 +91,23 @@ services:
     env_file:
       - .env.prod
 
-  rabbitmq:
-    image: rabbitmq:3-management-alpine
-    container_name: 'rabbitmq'
-    restart: always
-    ports:
-      - 5672:5672
-      - 15672:15672
-    volumes:
-      - rabbit_data:/var/lib/rabbitmq/data/
-      - rabbit_log:/var/lib/rabbitmq/log/
-    networks:
-      - rabbitmq_go_net
+#  rabbitmq:
+#    image: rabbitmq:3-management-alpine
+#    container_name: 'rabbitmq'
+#    restart: always
+#    ports:
+#      - 5672:5672
+#      - 15672:15672
+#    volumes:
+#      - rabbit_data:/var/lib/rabbitmq/data/
+#      - rabbit_log:/var/lib/rabbitmq/log/
+#    networks:
+#      - rabbitmq_go_net
 
 
 volumes:
   pgdata:
   static:
   media:
-  rabbit_log:
-  rabbit_data:
+#  rabbit_log:
+#  rabbit_data:
