@@ -16,8 +16,8 @@ services:
     restart: always
     build: ./.config/nginx
     volumes:
-      - static:/app/HDR/static
-      - media:/app/HDR/media
+      - static:/app/tanzania-openhim-hdr/static
+      - media:/app/tanzania-openhim-hdr/media
     ports:
       - "8080:80"
     depends_on:
@@ -29,8 +29,8 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - static:/app/HDR/static
-      - media:/app/HDR/media
+      - static:/app/tanzania-openhim-hdr/static
+      - media:/app/tanzania-openhim-hdr/media
     command: >
       sh -c "python manage.py migrate &&
              python manage.py collectstatic --no-input --clear
@@ -55,8 +55,8 @@ services:
       - .env.prod
     volumes:
       - .:/app
-      - media:/app/HDR/media
-      - static:/app/HDR/static
+      - media:/app/tanzania-openhim-hdr/media
+      - static:/app/tanzania-openhim-hdr/static
     depends_on:
       - db
 #      - rabbitmq
@@ -73,8 +73,8 @@ services:
       - .env.prod
     volumes:
       - .:/app
-      - media:/app/HDR/media
-      - static:/app/HDR/static
+      - media:/app/tanzania-openhim-hdr/media
+      - static:/app/tanzania-openhim-hdr/static
     depends_on:
       - db
 #      - rabbitmq
