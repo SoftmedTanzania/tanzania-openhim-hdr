@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="" />
+    <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.env-larry" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.prod" beforeDir="false" afterPath="$PROJECT_DIR$/.env.prod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -318,6 +322,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/.env" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="last_opened_file_path" value="$USER_HOME$/Production/Latest HDR/HDR" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -453,7 +458,7 @@
       <workItem from="1628324413506" duration="903000" />
       <workItem from="1628336817014" duration="1022000" />
       <workItem from="1628348293948" duration="598000" />
-      <workItem from="1639648403272" duration="25826000" />
+      <workItem from="1639648403272" duration="26735000" />
     </task>
     <servers />
   </component>
