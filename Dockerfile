@@ -7,7 +7,7 @@ RUN pip install --upgrade pip
 
 COPY ./requirements.txt .
 
-RUN pip install --default-timeout=100 -r requirements.txt
+RUN pip install --default-timeout=120 -r requirements.txt
 
 COPY . /app
 

@@ -33,7 +33,6 @@ services:
       - media:/app/tanzania-openhim-hdr/media
     command: >
       sh -c "python manage.py migrate &&
-             python manage.py collectstatic --no-input --clear
              gunicorn HDR.wsgi:application --preload --bind 0.0.0.0:81 --timeout 250 --workers 3 --log-file=- --log-level debug"
     env_file:
       - .env.prod
