@@ -54,7 +54,7 @@
                         </div>
                         <div class="modal-body">
 
-                            <form method = "POST" action="{% url 'upload_payload' %}" enctype="multipart/form-data">
+                            <form method = "POST" action="{% url 'user_management:upload_payload' %}" enctype="multipart/form-data">
 
                                 {% csrf_token %}
 
@@ -149,7 +149,7 @@
             $(".btn_audit_report").on( "click", function( event ) {
 
                 var item = $(this).attr("id");
-                var url = '{% url 'get_audit_report' 12345 %}'.replace(/12345/, parseInt(item));
+                var url = '{% url 'user_management:get_audit_report' 12345 %}'.replace(/12345/, parseInt(item));
 
                 window.open(url, '_blank');
 
@@ -159,7 +159,7 @@
             $('.btn_delete').on("click", function(event)
             {
                 var item = $(this).attr("id");
-                var url = '{% url 'get_remove_transaction' 12345 %}'.replace(/12345/, parseInt(item));
+                var url = '{% url 'user_management:get_remove_transaction' 12345 %}'.replace(/12345/, parseInt(item));
 
                 swal({
                     title: "Are you sure you want to remove this transaction?",
@@ -210,7 +210,7 @@
 
             $(".btn_download").on( "click", function( event ) {
                 var id = $(this).attr('id');
-                var url = '{% url 'export_transaction_lines' %}';
+                var url = '{% url 'user_management:export_transaction_lines' %}';
 
                 var dateTimeNow = new Date($.now()).toString().match(/\d{2}:\d{2}:\d{2}/)[0];
 

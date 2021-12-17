@@ -63,7 +63,7 @@
 
                     <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"><span class="mr-1 user-name text-bold-700"> {{ user }}</span></a>
                         <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" id="change_password" href="{%  url "change_password" %}"><i class="ft-user"></i>Change Password</a>
-                            <div class="dropdown-divider"></div><a class="dropdown-item" href="{% url 'logout' %}" id="id_logout"><i class="ft-power"></i> Logout</a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" href="{% url 'user_management:logout' %}" id="id_logout"><i class="ft-power"></i> Logout</a>
                             <div class="dropdown-divider"></div><a class="dropdown-item"><i></i><p style="color:red"> Access Level : {{ user.profile.facility }}</p></a>
                         </div>
                     </li>
@@ -81,7 +81,7 @@
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
 
-            <li class="navigation-header"><span data-i18n="nav.category.professional"><b><a href="{% url 'dashboard' %}">Transaction Summary</a></b></span><i class="la la-ellipsis-h" data-toggle="tooltip" data-placement="right" data-original-title="Professional"></i>
+            <li class="navigation-header"><span data-i18n="nav.category.professional"><b><a href="{% url 'user_management:dashboard' %}">Transaction Summary</a></b></span><i class="la la-ellipsis-h" data-toggle="tooltip" data-placement="right" data-original-title="Professional"></i>
             </li>
 
         </ul>
