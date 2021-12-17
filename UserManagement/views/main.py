@@ -74,7 +74,7 @@ def logout_view(request):
 
 def redirect_to_dashboard(request):
     if request.user.is_authenticated:
-        if request.user.is_super_user:
+        if request.user.is_superuser:
             return redirect('/admin/')
         else:
             return redirect("user_management:dashboard")
@@ -122,7 +122,7 @@ def authenticate_user(request):
 
 #This function will return the Admin page
 def get_admin_page(request):
-    if request.user.is_super_user:
+    if request.user.is_superuser:
         return redirect('/admin/')
     else:
         return render(request, 'UserManagement/Auth/Login.html')

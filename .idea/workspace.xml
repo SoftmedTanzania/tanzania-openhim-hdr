@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HDR/settings.py" afterPath="$PROJECT_DIR$/HDR/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HDR/urls.py" afterPath="$PROJECT_DIR$/HDR/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MappingsManagement/templates/MappingsManagement/Features/CPTCodes.html" afterPath="$PROJECT_DIR$/MappingsManagement/templates/MappingsManagement/Features/CPTCodes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pipfile" afterPath="$PROJECT_DIR$/Pipfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pipfile.lock" afterPath="$PROJECT_DIR$/Pipfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/admin.py" afterPath="$PROJECT_DIR$/UserManagement/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/templates/UserManagement/Auth/Login.html" afterPath="$PROJECT_DIR$/UserManagement/templates/UserManagement/Auth/Login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/templates/UserManagement/Dashboard/index.html" afterPath="$PROJECT_DIR$/UserManagement/templates/UserManagement/Dashboard/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/urls.py" afterPath="$PROJECT_DIR$/UserManagement/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/views/main.py" afterPath="$PROJECT_DIR$/UserManagement/views/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ValidationManagement/models.py" afterPath="$PROJECT_DIR$/ValidationManagement/models.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,32 +30,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ValidationManagement/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-245">
-              <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+            <state relative-caret-position="415">
+              <caret line="102" column="41" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <element signature="e#193#222#0" expanded="false" />
-                <element signature="e#372#400#0" expanded="false" />
-                <element signature="e#451#1215#0" expanded="false" />
-                <element signature="e#478#498#0" expanded="false" />
-                <element signature="e#714#911#0" expanded="false" />
-                <element signature="e#1179#1215#0" expanded="false" />
-                <element signature="e#1289#1309#0" expanded="false" />
-                <element signature="e#1344#1416#0" expanded="false" />
-                <element signature="e#2462#2659#0" expanded="false" />
-                <element signature="e#3214#3298#0" expanded="false" />
-                <element signature="e#3349#3760#0" expanded="false" />
-                <element signature="e#3376#3396#0" expanded="false" />
-                <element signature="e#3666#3760#0" expanded="false" />
-                <element signature="e#3832#3852#0" expanded="false" />
-                <element signature="e#4069#4098#0" expanded="false" />
-                <element signature="e#4140#4968#0" expanded="false" />
-                <element signature="e#4167#4189#0" expanded="false" />
-                <element signature="e#4405#4602#0" expanded="false" />
-                <element signature="e#4941#4968#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -80,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Payers.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Payers.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MappingsManagement/templates/MappingsManagement/Features/Payers.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1626">
@@ -236,8 +208,8 @@
         <option value="$PROJECT_DIR$/HDR/urls.py" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/API/validators.py" />
-        <option value="$PROJECT_DIR$/ValidationManagement/models.py" />
         <option value="$PROJECT_DIR$/ValidationManagement/admin.py" />
+        <option value="$PROJECT_DIR$/ValidationManagement/models.py" />
       </list>
     </option>
   </component>
@@ -723,7 +695,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1797619" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -732,7 +704,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24974412" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24974412" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1375,40 +1347,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ValidationManagement/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-245">
-          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#193#222#0" expanded="false" />
-            <element signature="e#372#400#0" expanded="false" />
-            <element signature="e#451#1215#0" expanded="false" />
-            <element signature="e#478#498#0" expanded="false" />
-            <element signature="e#714#911#0" expanded="false" />
-            <element signature="e#1179#1215#0" expanded="false" />
-            <element signature="e#1289#1309#0" expanded="false" />
-            <element signature="e#1344#1416#0" expanded="false" />
-            <element signature="e#2462#2659#0" expanded="false" />
-            <element signature="e#3214#3298#0" expanded="false" />
-            <element signature="e#3349#3760#0" expanded="false" />
-            <element signature="e#3376#3396#0" expanded="false" />
-            <element signature="e#3666#3760#0" expanded="false" />
-            <element signature="e#3832#3852#0" expanded="false" />
-            <element signature="e#4069#4098#0" expanded="false" />
-            <element signature="e#4140#4968#0" expanded="false" />
-            <element signature="e#4167#4189#0" expanded="false" />
-            <element signature="e#4405#4602#0" expanded="false" />
-            <element signature="e#4941#4968#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MappingsManagement/templates/MappingsManagement/Features/Payers.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1626">
           <caret line="135" column="62" selection-start-line="135" selection-start-column="59" selection-end-line="135" selection-end-column="62" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ValidationManagement/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="102" column="41" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
