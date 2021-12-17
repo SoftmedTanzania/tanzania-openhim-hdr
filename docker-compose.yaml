@@ -59,7 +59,7 @@ services:
       - static:/app/HDR/static
     depends_on:
       - db
-      - rabbitmq
+#      - rabbitmq
       - hdr
 
   celery-beat:
@@ -77,7 +77,7 @@ services:
       - static:/app/HDR/static
     depends_on:
       - db
-      - rabbitmq
+#      - rabbitmq
       - hdr
 
   pgbackups:
