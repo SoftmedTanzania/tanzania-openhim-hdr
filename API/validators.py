@@ -120,6 +120,7 @@ def validate_received_payload(data):
 
     if status is False:
         instance_transaction_summary = TransactionSummary()
+        instance_transaction_summary.date_time_created = datetime.now()
         instance_transaction_summary.message_type = message_type
         instance_transaction_summary.org_name = org_name
         instance_transaction_summary.facility_hfr_code = facility_hfr_code
