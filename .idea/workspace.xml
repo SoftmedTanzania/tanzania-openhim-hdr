@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.env-larry" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.prod" beforeDir="false" afterPath="$PROJECT_DIR$/.env.prod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -458,7 +454,7 @@
       <workItem from="1628324413506" duration="903000" />
       <workItem from="1628336817014" duration="1022000" />
       <workItem from="1628348293948" duration="598000" />
-      <workItem from="1639648403272" duration="26735000" />
+      <workItem from="1639648403272" duration="27116000" />
     </task>
     <servers />
   </component>
