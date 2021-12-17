@@ -4,7 +4,7 @@ from django.db import models
 # models for mapping
 class Zone(models.Model):
     def __str__(self):
-        return '%s' %self.description
+        return self.description
 
     description = models.CharField(max_length=255)
 
@@ -14,7 +14,7 @@ class Zone(models.Model):
 
 class Region(models.Model):
     def __str__(self):
-        return '%s' % self.description
+        return self.description
 
     zone = models.ForeignKey(Zone, on_delete=models.DO_NOTHING, null=True, blank=True)
     description = models.CharField(max_length=255)
@@ -25,7 +25,7 @@ class Region(models.Model):
 
 class DistrictCouncil(models.Model):
     def __str__(self):
-        return '%s' % self.description
+        return self.description
 
     region = models.ForeignKey(Region, on_delete=models.DO_NOTHING, null=True, blank=True)
     description = models.CharField(max_length=255)
@@ -36,7 +36,7 @@ class DistrictCouncil(models.Model):
 
 class Facility(models.Model):
     def __str__(self):
-        return '%s' % self.description
+        return self.description
 
     district_council = models.ForeignKey(DistrictCouncil, on_delete=models.DO_NOTHING, null=True, blank=True)
     description = models.CharField(max_length=255)
@@ -51,7 +51,7 @@ class Facility(models.Model):
 
 class Payer(models.Model):
     def __str__(self):
-        return '%s' %self.description
+        return self.description
 
     description = models.CharField(max_length=255)
 
@@ -61,7 +61,7 @@ class Payer(models.Model):
 
 class Exemption(models.Model):
     def __str__(self):
-        return '%s' %self.description
+        return self.description
 
     description = models.CharField(max_length=255)
 
@@ -71,7 +71,7 @@ class Exemption(models.Model):
 
 class Department(models.Model):
     def __str__(self):
-        return '%s' %self.description
+        return self.description
 
     description = models.CharField(max_length=255)
 
@@ -81,7 +81,7 @@ class Department(models.Model):
 
 class Ward(models.Model):
     def __str__(self):
-        return '%s' %self.description
+        return self.description
 
     description = models.CharField(max_length=255)
     local_ward_id = models.CharField(max_length=100)
@@ -96,7 +96,7 @@ class Ward(models.Model):
 
 class Gender(models.Model):
     def __str__(self):
-        return '%s' %self.description
+        return self.description
 
     description = models.CharField(max_length=50)
 
@@ -106,7 +106,7 @@ class Gender(models.Model):
 
 class ServiceProviderRanking(models.Model):
     def __str__(self):
-        return '%s' %self.description
+        return self.description
 
     description = models.CharField(max_length=255)
 
@@ -116,7 +116,7 @@ class ServiceProviderRanking(models.Model):
 
 class PlaceOfDeath(models.Model):
     def __str__(self):
-        return "%s" %self.description
+        return self.description
 
     description = models.CharField(max_length=255)
 

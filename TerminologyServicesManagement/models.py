@@ -6,7 +6,6 @@ import json
 from decouple import config
 import requests
 
-
 him_icd_url = config('HIM_ICD_URL')
 him_cpt_url = config('HIM_CPT_URL')
 
@@ -17,22 +16,23 @@ him_password = config('HIM_PASSWORD')
 # Create your models here.
 class ICD10CodeCategory(models.Model):
     def __str__(self):
-        return '%s' %self.description
+        return self.description
 
     identifier = models.CharField(max_length=100)
     description = models.CharField(max_length=255)
 
     class Meta:
-        db_table="ICD10CodeCategories"
+        db_table = "ICD10CodeCategories"
         verbose_name_plural = "ICD10 Code Categories"
 
 
 class ICD10CodeSubCategory(models.Model):
     def __str__(self):
-        return '%s' % self.description
+        return self.description
 
     identifier = models.CharField(max_length=100)
-    category = models.ForeignKey(ICD10CodeCategory,related_name='sub_category', on_delete=models.DO_NOTHING, null=True, blank=True)
+    category = models.ForeignKey(ICD10CodeCategory, related_name='sub_category', on_delete=models.DO_NOTHING, null=True,
+                                 blank=True)
     description = models.CharField(max_length=255)
 
     class Meta:
@@ -42,47 +42,49 @@ class ICD10CodeSubCategory(models.Model):
 
 class ICD10Code(models.Model):
     def __str__(self):
-        return '%s' %self.description
+        return self.description
 
-    sub_category = models.ForeignKey(ICD10CodeSubCategory,related_name='code', on_delete=models.DO_NOTHING, null=True, blank=True)
+    sub_category = models.ForeignKey(ICD10CodeSubCategory, related_name='code', on_delete=models.DO_NOTHING, null=True,
+                                     blank=True)
     code = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
 
     class Meta:
-        db_table="ICD10Codes"
+        db_table = "ICD10Codes"
         verbose_name_plural = "ICD10 Codes"
 
 
 class ICD10SubCode(models.Model):
     def __str__(self):
-        return '%s' %self.description
+        return self.description
 
-    code = models.ForeignKey(ICD10Code,related_name='sub_code',on_delete=models.DO_NOTHING, null=True, blank=True)
+    code = models.ForeignKey(ICD10Code, related_name='sub_code', on_delete=models.DO_NOTHING, null=True, blank=True)
     sub_code = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
 
     class Meta:
-        db_table="ICD10SubCodes"
+        db_table = "ICD10SubCodes"
         verbose_name_plural = "ICD10 SubCodes"
 
 
 class CPTCodeCategory(models.Model):
     def __str__(self):
-        return '%s' %self.description
+        return self.description
 
     description = models.CharField(max_length=255)
 
     class Meta:
-        db_table="CPTCodeCategories"
+        db_table = "CPTCodeCategories"
         verbose_name_plural = "CPT Code Categories"
 
 
 class CPTCodeSubCategory(models.Model):
     def __str__(self):
-        return '%s' % self.description
+        return self.description
 
-    category = models.ForeignKey(CPTCodeCategory, related_name='sub_category',on_delete=models.DO_NOTHING, null=True, blank=True)
+    category = models.ForeignKey(CPTCodeCategory, related_name='sub_category', on_delete=models.DO_NOTHING, null=True,
+                                 blank=True)
     description = models.CharField(max_length=255)
 
     class Meta:
@@ -92,9 +94,10 @@ class CPTCodeSubCategory(models.Model):
 
 class CPTCode(models.Model):
     def __str__(self):
-        return '%s' %self.description
+        return self.description
 
-    sub_category = models.ForeignKey(CPTCodeSubCategory,related_name='code', on_delete=models.DO_NOTHING, null=True, blank=True)
+    sub_category = models.ForeignKey(CPTCodeSubCategory, related_name='code', on_delete=models.DO_NOTHING, null=True,
+                                     blank=True)
     code = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
@@ -115,7 +118,6 @@ class CPTCodesMapping(models.Model):
 
     class Meta:
         db_table = "CPTCodesMappings"
-
 
 
 @receiver(post_save, sender=ICD10SubCode)
@@ -149,8 +151,8 @@ def send_new_or_updated_icd10_code(sender, instance, created, **kwargs):
 
     json_data = json.dumps(item)
 
-    requests.post(him_icd_url,auth=(him_username, him_password),data=json_data,
-                             headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
+    requests.post(him_icd_url, auth=(him_username, him_password), data=json_data,
+                  headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
 
 
 @receiver(post_save, sender=CPTCode)
@@ -161,7 +163,7 @@ def send_new_or_updated_cpt_code(sender, instance, created, **kwargs):
 
     cpt_code_sub_category = CPTCodeSubCategory.objects.get(id=cpt_code_sub_category_id)
     cpt_code_category_id = cpt_code_sub_category.category_id
-    cpt_code_sub_category_description  = cpt_code_sub_category.description
+    cpt_code_sub_category_description = cpt_code_sub_category.description
 
     cpt_code_category = CPTCodeCategory.objects.get(id=cpt_code_category_id)
     cpt_code_category_description = cpt_code_category.description
@@ -175,5 +177,5 @@ def send_new_or_updated_cpt_code(sender, instance, created, **kwargs):
 
     json_data = json.dumps(item)
 
-    requests.post(him_cpt_url, auth=(him_username, him_password),data=json_data,
-                             headers={'User-Agent': 'XY', 'Content-type': 'application/json'})
+    requests.post(him_cpt_url, auth=(him_username, him_password), data=json_data,
+                  headers={'User-Agent': 'XY', 'Content-type': 'application/json'})

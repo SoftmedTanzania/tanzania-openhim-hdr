@@ -18,7 +18,7 @@ class OrganisationUnit(models.Model):
 
 class DataElement(models.Model):
     def __str__(self):
-        return "%s" % self.data_element_name
+        return self.data_element_name
 
     nhif_claims = 'nhif_claims'
     death_within_facility = 'death_within_facility'
@@ -73,7 +73,7 @@ class DataElement(models.Model):
 
 class CategoryOptionCombo(models.Model):
     def __str__(self):
-        return "%s" % self.category_option_combo_name
+        return self.category_option_combo_name
 
     category_option_combo_name = models.CharField(max_length=255)
     category_option_combo_uid = models.CharField(max_length=255)
