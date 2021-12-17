@@ -18,7 +18,7 @@
             </div>
 
             <div align="right" style="padding-right: 50px">
-                <a class="las la-file-excel la-3x" href="{% url 'download_cpt_codes_as_csv' %}" id="id_export_xls"></a>
+                <a class="las la-file-excel la-3x" href="{% url 'user_management:download_cpt_codes_as_csv' %}" id="id_export_xls"></a>
 
                 <a class="las la-upload la-3x" data-toggle="modal" data-target="#import"></a>
 
@@ -51,7 +51,7 @@
                         </header>
                         <section class="modal-body">
 
-                            <form method = "POST" action="{% url 'upload_cpt_codes' %}" enctype="multipart/form-data">
+                            <form method = "POST" action="{% url 'user_management:upload_cpt_codes' %}" enctype="multipart/form-data">
 
                                 {% csrf_token %}
 

@@ -193,3 +193,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 LOG_FORMAT = None
 LOG_LEVEL = logging.DEBUG
+
+SESSION_EXPIRE_SECONDS = 900  # 900 seconds = 15 minutes
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True

@@ -66,8 +66,20 @@ def change_password(request):
 @login_required(login_url='/')
 def logout_view(request):
     logout(request)
-    if not request.user.is_authenticated:
-        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+    return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+
+    # if not request.user.is_authenticated:
+    #     return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+
+
+def redirect_to_dashboard(request):
+    if request.user.is_authenticated:
+        if request.user.is_super_user:
+            return redirect('/admin/')
+        else:
+            return redirect("user_management:dashboard")
+            # return render(request, 'UserManagement/Auth/Login.html')
+    return redirect("user_management:login_page")
 
 
 #Function will handle all authentication issues
@@ -193,6 +205,7 @@ def export_transaction_lines(request):
 
 
 #This function returns the home page
+@login_required()
 def get_dashboard(request):
     form = core_forms.PayloadImportForm(initial={"facility":request.user.profile.facility})
     facility = request.user.profile.facility
