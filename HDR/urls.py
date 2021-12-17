@@ -37,5 +37,6 @@ urlpatterns = [
     path('create_claims_payload', dhis_tasks.create_claims_payload, name='create_claims_payload'),
     path('create_death_payload', dhis_tasks.create_death_payload, name='create_death_payload'),
     path('save_payload_from_csv', core_tasks.save_payload_from_csv, name='save_payload_from_csv'),
+    path('cleanup_uploaded_csv_files', core_tasks.cleanup_uploaded_csv_files, name='cleanup_uploaded_csv_files'),
 
 ]
