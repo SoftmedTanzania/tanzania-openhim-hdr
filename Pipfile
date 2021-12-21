@@ -52,7 +52,6 @@ jdcal = "==1.4"
 lazy-object-proxy = "==1.6.0"
 python-decouple = "*"
 xlwt = "*"
-psycopg2-binary = "*"
 python-dateutil = "*"
 django-celery-beat = "*"
 requests = "*"
@@ -61,4 +60,4 @@ django-session-timeout = "*"
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.8"
