@@ -1,0 +1,21 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: trailing-whitespace
+      - id: check-json
+      - id: name-tests-test
+      - id: requirements-txt-fixer
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+      - id: pretty-format-json
+        exclude: (Pipfile|Pipfile.lock|requirements.txt)
+      - id: forbid-new-submodules
+      - id: debug-statements
+      - id: check-merge-conflict
+  - repo: https://github.com/pre-commit/mirrors-autopep8
+    rev: v1.5.7
+    hooks:
+      - id: autopep8
