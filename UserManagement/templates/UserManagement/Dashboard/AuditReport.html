@@ -84,7 +84,7 @@
 
             var status = $('.select_field_class').val().toString();
             var id = {{ item_pk }};
-            var url = "{% url 'filter_transaction_lines' %}";
+            var url = "{% url 'user_management:filter_transaction_lines' %}";
 
             $("#dashboard_elements").empty();
 

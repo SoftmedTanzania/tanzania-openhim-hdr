@@ -2,7 +2,7 @@ from django.urls import path
 from UserManagement.views import main
 from Core import views as core_views
 
-# app_name = 'user_management'
+app_name = 'user_management'
 
 urlpatterns = [
     # path('', main.get_login_page, name='login_page'),

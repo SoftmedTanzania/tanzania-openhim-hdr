@@ -12,7 +12,7 @@
 
                 <div class="col-md-12 col-sm-12 col-xs-12 content-body" align="center">
                     <div class="col-md-12" style="padding-top: 100px">
-                        <img class="" src="{% static "app-assets/images/tanzania_logo.png" %}"/>
+                        <img  src="{% static "app-assets/images/tanzania_logo.png" %}"/>
                     </div>
                     <h1 class="login-header">HDR Admin Panel</h1>
                     <div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
@@ -48,9 +48,10 @@
                             </div>
 
                             {% if messages %}
-                                <ul class="messages" style="color: #FA2704;">
+                                <ul class="messages">
+                                <br />
                                     {% for message in messages %}
-                                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                                        <li style="color: white" {% if message.tags %} {% endif %}>{{ message }}</li>
                                     {% endfor %}
                                 </ul>
                             {% endif %}
@@ -65,9 +66,6 @@
         </div>
     </div>
 
-{#    <div class="bg-full-screen-image">#}
-{##}
-{#    </div>#}
 
     </body>
 
