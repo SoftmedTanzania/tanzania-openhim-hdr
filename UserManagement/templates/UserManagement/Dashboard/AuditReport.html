@@ -118,7 +118,7 @@
 
         $("#btn_download").on( "click", function( event ) {
             var id = {{ item_pk }};
-            var url = '{% url 'export_transaction_lines' %}';
+            var url = '{% url 'user_management:export_transaction_lines' %}';
             var status = $('.select_field_class').val().toString();
 
             var dateTimeNow = new Date($.now()).toString().match(/\d{2}:\d{2}:\d{2}/)[0];
