@@ -78,7 +78,6 @@ def redirect_to_dashboard(request):
             return redirect('/admin/')
         else:
             return redirect("user_management:dashboard")
-            # return render(request, 'UserManagement/Auth/Login.html')
     return redirect("user_management:login_page")
 
 

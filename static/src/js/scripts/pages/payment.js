@@ -1,4 +1,0 @@
-
- //Initialize validation
-$("#commentForm").validate();
-
