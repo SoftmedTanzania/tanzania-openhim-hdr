@@ -24,9 +24,20 @@
  z-index: 9999 !important; 
 }
 
+.login-header {
+    color:black;
+    font-size:30px;
+}
+
+
 .summary-spacing
 {
     margin-left:10px;
+}
+
+.login-responsive-text {
+
+    font-size:calc(12px + 1.5vw);
 }
 
 #container {
