@@ -511,7 +511,8 @@ def query_services_received():
                 FROM public."GenderMappings" GenderMappings
                 INNER JOIN public."Gender" as Gender on Gender.id = GenderMappings.gender_id
                 INNER JOIN public."Facility" as facility on facility.id = GenderMappings.facility_id) as GenderMapping on GenderMapping.local_gender = ServiceReceivedItems.gender
-                AND GenderMapping.facility_hfr_code = ServiceReceived.facility_hfr_code where facility.uses_cpt_internally is True) AS virtual_table where service_date >= '2021-03-01' and service_date <= '"''' + str(current_date) + '''"'
+                AND GenderMapping.facility_hfr_code = ServiceReceived.facility_hfr_code where facility.uses_cpt_internally is True) AS virtual_table where service_date >= '2021-03-01' and service_date <= '"''' + str(
+                current_date) + '''"'
                 union
                 SELECT *
                 FROM
@@ -561,7 +562,7 @@ def query_services_received():
                 FROM public."GenderMappings" GenderMappings
                 INNER JOIN public."Gender" as Gender on Gender.id = GenderMappings.gender_id
                 INNER JOIN public."Facility" as facility on facility.id = GenderMappings.facility_id) as GenderMapping on GenderMapping.local_gender = ServiceReceivedItems.gender
-                AND GenderMapping.facility_hfr_code = ServiceReceived.facility_hfr_code where facility.uses_cpt_internally is False) AS virtual_table where service_date >= '2021-03-01' and service_date <= '"''' + str(current_date) + '''"'
+                AND GenderMapping.facility_hfr_code = ServiceReceived.facility_hfr_code where facility.uses_cpt_internally is False) AS virtual_table where service_date >= '2021-03-01' and service_date <= '"''' + str(current_date) + '''"' '''
 
     cursor.execute(raw_query)
 
