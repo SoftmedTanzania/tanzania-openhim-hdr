@@ -2,101 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HDR.log.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pipfile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pipfile.lock" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/validators.py" afterPath="$PROJECT_DIR$/API/validators.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/models.py" afterPath="$PROJECT_DIR$/Core/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/tasks.py" afterPath="$PROJECT_DIR$/Core/tasks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HDR/settings.py" afterPath="$PROJECT_DIR$/HDR/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/images/datatables/resources/syntax/shCore.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/images/datatables/resources/syntax/shCore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/js/scripts/charts/d3/pie/pie-calendar.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/js/scripts/charts/d3/pie/pie-calendar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/js/scripts/charts/mapael/advance/afterInit-extend.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/js/scripts/charts/mapael/advance/afterInit-extend.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/js/scripts/forms/select/form-select2.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/js/scripts/forms/select/form-select2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/js/select2.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/js/select2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/charts/echarts/zrender/core/curve.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/charts/echarts/zrender/core/curve.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/charts/flot/jquery.flot.canvas.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/charts/flot/jquery.flot.canvas.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/charts/flot/jquery.flot.pie.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/charts/flot/jquery.flot.pie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-coldfusion.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-coldfusion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-curly.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-curly.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-ejs.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-ejs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-ftl.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-ftl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-gobstones.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-gobstones.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-groovy.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-groovy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-haml.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-haml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-handlebars.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-handlebars.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-html.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-html.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-html_elixir.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-html_elixir.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-html_ruby.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-html_ruby.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-jade.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-jade.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-java.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-java.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-javascript.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-javascript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-jsp.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-jsp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-liquid.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-liquid.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-luapage.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-luapage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-markdown.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-markdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-mask.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-mask.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-matlab.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-matlab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-nsis.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-nsis.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-pgsql.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-pgsql.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-php.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-php.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-razor.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-razor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-rhtml.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-rhtml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-scala.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-scala.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-sjs.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-sjs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-smarty.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-smarty.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-soy_template.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-soy_template.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-sqlserver.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-sqlserver.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-svg.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-svg.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-swig.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-swig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-typescript.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-typescript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-velocity.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-velocity.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-wollok.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/mode-wollok.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/snippets/erlang.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/snippets/erlang.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/snippets/jsp.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/snippets/jsp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/snippets/r.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/snippets/r.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/worker-javascript.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/worker-javascript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/worker-xquery.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/ace/worker-xquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/addon/tern/tern.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/addon/tern/tern.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/keymap/vim.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/keymap/vim.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/gas/gas.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/gas/gas.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/lua/lua.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/lua/lua.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/mathematica/mathematica.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/mathematica/mathematica.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/mumps/mumps.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/mumps/mumps.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/perl/perl.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/perl/perl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/pig/pig.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/pig/pig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/sql/sql.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/sql/sql.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/velocity/velocity.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/velocity/velocity.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/xquery/xquery.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/codemirror/mode/xquery/xquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/quill/highlight.min.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/quill/highlight.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/quill/quill.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/quill/quill.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/summernote/summernote.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/summernote/summernote.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/tinymce/plugins/compat3x/tiny_mce_popup.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/tinymce/plugins/compat3x/tiny_mce_popup.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/tinymce/plugins/imagetools/plugin.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/editors/tinymce/plugins/imagetools/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/extensions/wNumb.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/extensions/wNumb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/forms/extended/typeahead/handlebars.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/forms/extended/typeahead/handlebars.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/forms/select/qunit-1.14.0.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/forms/select/qunit-1.14.0.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/forms/select/select2.full.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/forms/select/select2.full.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/forms/select/select2.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/forms/select/select2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/gallery/photo-swipe/photoswipe.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/gallery/photo-swipe/photoswipe.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/pickers/spectrum/spectrum.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/pickers/spectrum/spectrum.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/select/select2.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/select/select2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/select2.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/select2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/tables/handsontable/handsontable.full.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/tables/handsontable/handsontable.full.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/tables/handsontable/handsontable.full.min.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/tables/handsontable/handsontable.full.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/tables/jquery-1.12.3.js" afterPath="$PROJECT_DIR$/UserManagement/static/app-assets/vendors/js/tables/jquery-1.12.3.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/css/main.css" afterPath="$PROJECT_DIR$/UserManagement/static/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/js/jstree.js" afterPath="$PROJECT_DIR$/UserManagement/static/js/jstree.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/js/select2.js" afterPath="$PROJECT_DIR$/UserManagement/static/js/select2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/src/js/scripts/charts/d3/pie/pie-calendar.js" afterPath="$PROJECT_DIR$/UserManagement/static/src/js/scripts/charts/d3/pie/pie-calendar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/src/js/scripts/charts/mapael/advance/afterInit-extend.js" afterPath="$PROJECT_DIR$/UserManagement/static/src/js/scripts/charts/mapael/advance/afterInit-extend.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/src/js/scripts/forms/select/form-select2.js" afterPath="$PROJECT_DIR$/UserManagement/static/src/js/scripts/forms/select/form-select2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/src/scss/bootstrap/_functions.scss" afterPath="$PROJECT_DIR$/UserManagement/static/src/scss/bootstrap/_functions.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/src/scss/bootstrap/mixins/_deprecate.scss" afterPath="$PROJECT_DIR$/UserManagement/static/src/scss/bootstrap/mixins/_deprecate.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/static/vendor/select2/select2.js" afterPath="$PROJECT_DIR$/UserManagement/static/vendor/select2/select2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/templates/UserManagement/Dashboard/AuditReport.html" afterPath="$PROJECT_DIR$/UserManagement/templates/UserManagement/Dashboard/AuditReport.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/views/main.py" afterPath="$PROJECT_DIR$/UserManagement/views/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/admin.py" afterPath="$PROJECT_DIR$/Core/admin.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -162,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="587">
@@ -194,11 +101,33 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Core/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="87" column="43" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="662">
-              <caret line="231" column="44" selection-start-line="231" selection-start-column="44" selection-end-line="231" selection-end-column="44" />
+            <state relative-caret-position="557">
+              <caret line="228" column="10" selection-start-line="228" selection-start-column="4" selection-end-line="228" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UserManagement/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -238,7 +167,6 @@
         <option value="$PROJECT_DIR$/DHIS/models.py" />
         <option value="$PROJECT_DIR$/MasterData/admin.py" />
         <option value="$PROJECT_DIR$/TerminologyServicesManagement/admin.py" />
-        <option value="$PROJECT_DIR$/Core/admin.py" />
         <option value="$PROJECT_DIR$/TerminologyServicesManagement/models.py" />
         <option value="$PROJECT_DIR$/MasterData/models.py" />
         <option value="$PROJECT_DIR$/NHIF/models.py" />
@@ -278,6 +206,7 @@
         <option value="$PROJECT_DIR$/Core/models.py" />
         <option value="$PROJECT_DIR$/HDR/settings.py" />
         <option value="$PROJECT_DIR$/Core/tasks.py" />
+        <option value="$PROJECT_DIR$/Core/admin.py" />
       </list>
     </option>
   </component>
@@ -900,13 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MappingsManagement/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1046,13 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HDR.log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1079,16 +994,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1156,14 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="231" column="44" selection-start-line="231" selection-start-column="44" selection-end-line="231" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HDR/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1198,6 +1095,40 @@
             <marker date="1659180971272" expanded="true" signature="32533:33078" placeholder="SELECT local... ServiceProviderRankingMappings" />
             <marker date="1659180971272" expanded="true" signature="33360:34117" placeholder="SELECT ICD10... ICD10SubCodes" />
             <marker date="1659180971272" expanded="true" signature="34252:34662" placeholder="SELECT Gende... GenderMappings" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="228" column="10" selection-start-line="228" selection-start-column="4" selection-end-line="228" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="87" column="43" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>

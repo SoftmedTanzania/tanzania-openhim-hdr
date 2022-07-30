@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import ServiceReceived, ServiceReceivedItems, DeathByDiseaseCaseAtFacility, DeathByDiseaseCaseAtFacilityItems, \
     DeathByDiseaseCaseNotAtFacility, DeathByDiseaseCaseNotAtFacilityItems, BedOccupancy, BedOccupancyItems, \
-    RevenueReceived, RevenueReceivedItems, BedOccupancyReport
+    RevenueReceived, RevenueReceivedItems, BedOccupancyReport, ServicesReceivedDataset
 from UserManagement import models as user_management_models
 from django.contrib.admin import helpers
 
@@ -65,6 +65,15 @@ class BedOccupancyReportAdmin(admin.ModelAdmin):
     list_display = ('id','bed_occupancy', 'facility_hfr_code','patient_id', 'ward_id', 'ward_name', 'admission_date', 'date')
 
 
+class ServicesReceivedDatasetAdmin(admin.ModelAdmin):
+    list_display = ('department_name', 'department_id', 'patient_id', 'gender', 'date_of_birth', 'med_svc_code',
+                    'service_date', 'service_provider_ranking_id', 'visit_type', 'service_received_id',
+                    'confirmed_diagnosis', 'differential_diagnosis', 'provisional_diagnosis', 'hdr_gender',
+                    'org_name', 'cpt_code', 'cpt_description', 'cpt_category', 'hdr_service_provider_rankings',
+                    'icd10_code', 'icd10_code_description', 'icd10_sub_category', 'icd10_categories', 'icd10_chapter',
+                    'district_council', 'region')
+
+
 admin.site.register(ServiceReceived, ServiceReceivedAdmin)
 admin.site.register(ServiceReceivedItems, ServiceReceivedItemsAdmin)
 admin.site.register(DeathByDiseaseCaseAtFacility, DeathByDiseaseCaseAtFacilityAdmin)
@@ -76,4 +85,5 @@ admin.site.register(BedOccupancyItems, BedOccupancyItemsAdmin)
 admin.site.register(RevenueReceived, RevenueReceivedAdmin)
 admin.site.register(RevenueReceivedItems, RevenueReceivedItemsAdmin)
 admin.site.register(BedOccupancyReport, BedOccupancyReportAdmin)
+admin.site.register(ServicesReceivedDataset, ServicesReceivedDatasetAdmin)
 
