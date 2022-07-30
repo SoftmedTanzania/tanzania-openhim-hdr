@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HDR.log.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/tasks.py" afterPath="$PROJECT_DIR$/Core/tasks.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HDR.log" afterPath="$PROJECT_DIR$/HDR.log" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +33,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HDR/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
+            <state relative-caret-position="0">
               <caret line="48" column="10" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
               <folding />
             </state>
@@ -69,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="563" column="238" selection-start-line="563" selection-start-column="238" selection-end-line="563" selection-end-column="238" />
+            <state relative-caret-position="434">
+              <caret line="564" column="239" selection-start-line="564" selection-start-column="239" selection-end-line="564" selection-end-column="239" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#913#1575#0" expanded="false" />
@@ -84,18 +85,32 @@
                 <element signature="e#20265#20952#0" expanded="false" />
                 <element signature="e#21065#24847#0" expanded="false" />
                 <element signature="e#24955#26742#0" expanded="false" />
-                <marker date="1659195741314" expanded="true" signature="26860:30703" placeholder="SELECT Servi... ServiceReceivedItems" />
-                <marker date="1659195741314" expanded="true" signature="27783:28245" placeholder="SELECT code CPTCodes" />
-                <marker date="1659195741314" expanded="true" signature="28365:28910" placeholder="SELECT local... ServiceProviderRankingMappings" />
-                <marker date="1659195741314" expanded="true" signature="29192:29949" placeholder="SELECT ICD10... ICD10SubCodes" />
-                <marker date="1659195741314" expanded="true" signature="30084:30494" placeholder="SELECT Gende... GenderMappings" />
-                <marker date="1659195741314" expanded="true" signature="30849:34932" placeholder="SELECT * FRO... *" />
-                <marker date="1659195741314" expanded="true" signature="30896:34859" placeholder="SELECT Servi... ServiceReceivedItems" />
-                <marker date="1659195741314" expanded="true" signature="31819:32400" placeholder="SELECT code CPTCodes" />
-                <marker date="1659195741314" expanded="true" signature="32520:33065" placeholder="SELECT local... ServiceProviderRankingMappings" />
-                <marker date="1659195741314" expanded="true" signature="33347:34104" placeholder="SELECT ICD10... ICD10SubCodes" />
-                <marker date="1659195741314" expanded="true" signature="34239:34649" placeholder="SELECT Gende... GenderMappings" />
+                <marker date="1659195933227" expanded="true" signature="26829:30827" placeholder="SELECT * FRO... *" />
+                <marker date="1659195933227" expanded="true" signature="26829:34983" placeholder="SELECT * FRO... " />
+                <marker date="1659195933227" expanded="true" signature="26829:36428" placeholder="SELECT * FRO... " />
+                <marker date="1659195933227" expanded="true" signature="26860:30703" placeholder="SELECT Servi... ServiceReceivedItems" />
+                <marker date="1659195933227" expanded="true" signature="27783:28245" placeholder="SELECT code CPTCodes" />
+                <marker date="1659195933227" expanded="true" signature="28365:28910" placeholder="SELECT local... ServiceProviderRankingMappings" />
+                <marker date="1659195933227" expanded="true" signature="29192:29949" placeholder="SELECT ICD10... ICD10SubCodes" />
+                <marker date="1659195933227" expanded="true" signature="30084:30494" placeholder="SELECT Gende... GenderMappings" />
+                <marker date="1659195933227" expanded="true" signature="30866:34949" placeholder="SELECT * FRO... *" />
+                <marker date="1659195933227" expanded="true" signature="30866:34983" placeholder="SELECT * FRO... *" />
+                <marker date="1659195933227" expanded="true" signature="30913:34876" placeholder="SELECT Servi... ServiceReceivedItems" />
+                <marker date="1659195933227" expanded="true" signature="31836:32417" placeholder="SELECT code CPTCodes" />
+                <marker date="1659195933227" expanded="true" signature="32537:33082" placeholder="SELECT local... ServiceProviderRankingMappings" />
+                <marker date="1659195933227" expanded="true" signature="33364:34121" placeholder="SELECT ICD10... ICD10SubCodes" />
+                <marker date="1659195933227" expanded="true" signature="34256:34666" placeholder="SELECT Gende... GenderMappings" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HDR.log" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HDR.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -155,7 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/API/urls.py" />
         <option value="$PROJECT_DIR$/MasterData/forms.py" />
         <option value="$PROJECT_DIR$/NHIF/admin.py" />
@@ -206,6 +220,7 @@
         <option value="$PROJECT_DIR$/HDR/settings.py" />
         <option value="$PROJECT_DIR$/Core/admin.py" />
         <option value="$PROJECT_DIR$/Core/tasks.py" />
+        <option value="$PROJECT_DIR$/HDR.log" />
       </list>
     </option>
   </component>
@@ -642,16 +657,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="37" width="1512" height="945" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21564625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21564625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2575024" sideWeight="0.5015625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2857143" sideWeight="0.4984375" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2857143" sideWeight="0.4984375" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -659,7 +675,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -719,13 +734,6 @@
     <SUITE FILE_PATH="coverage/tanzania_openhim_hdr$main.coverage" NAME="main Coverage Results" MODIFIED="1639648109495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MappingsManagement/templates/MappingsManagement/Features/UpdateItem.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MappingsManagement/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
@@ -966,13 +974,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HDR.log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1014,7 +1015,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HDR/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
+        <state relative-caret-position="0">
           <caret line="48" column="10" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
           <folding />
         </state>
@@ -1072,8 +1073,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Core/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="563" column="238" selection-start-line="563" selection-start-column="238" selection-end-line="563" selection-end-column="238" />
+        <state relative-caret-position="434">
+          <caret line="564" column="239" selection-start-line="564" selection-start-column="239" selection-end-line="564" selection-end-column="239" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#913#1575#0" expanded="false" />
@@ -1084,18 +1085,38 @@
             <element signature="e#20265#20952#0" expanded="false" />
             <element signature="e#21065#24847#0" expanded="false" />
             <element signature="e#24955#26742#0" expanded="false" />
-            <marker date="1659195741314" expanded="true" signature="26860:30703" placeholder="SELECT Servi... ServiceReceivedItems" />
-            <marker date="1659195741314" expanded="true" signature="27783:28245" placeholder="SELECT code CPTCodes" />
-            <marker date="1659195741314" expanded="true" signature="28365:28910" placeholder="SELECT local... ServiceProviderRankingMappings" />
-            <marker date="1659195741314" expanded="true" signature="29192:29949" placeholder="SELECT ICD10... ICD10SubCodes" />
-            <marker date="1659195741314" expanded="true" signature="30084:30494" placeholder="SELECT Gende... GenderMappings" />
-            <marker date="1659195741314" expanded="true" signature="30849:34932" placeholder="SELECT * FRO... *" />
-            <marker date="1659195741314" expanded="true" signature="30896:34859" placeholder="SELECT Servi... ServiceReceivedItems" />
-            <marker date="1659195741314" expanded="true" signature="31819:32400" placeholder="SELECT code CPTCodes" />
-            <marker date="1659195741314" expanded="true" signature="32520:33065" placeholder="SELECT local... ServiceProviderRankingMappings" />
-            <marker date="1659195741314" expanded="true" signature="33347:34104" placeholder="SELECT ICD10... ICD10SubCodes" />
-            <marker date="1659195741314" expanded="true" signature="34239:34649" placeholder="SELECT Gende... GenderMappings" />
+            <marker date="1659195933227" expanded="true" signature="26829:30827" placeholder="SELECT * FRO... *" />
+            <marker date="1659195933227" expanded="true" signature="26829:34983" placeholder="SELECT * FRO... " />
+            <marker date="1659195933227" expanded="true" signature="26829:36428" placeholder="SELECT * FRO... " />
+            <marker date="1659195933227" expanded="true" signature="26860:30703" placeholder="SELECT Servi... ServiceReceivedItems" />
+            <marker date="1659195933227" expanded="true" signature="27783:28245" placeholder="SELECT code CPTCodes" />
+            <marker date="1659195933227" expanded="true" signature="28365:28910" placeholder="SELECT local... ServiceProviderRankingMappings" />
+            <marker date="1659195933227" expanded="true" signature="29192:29949" placeholder="SELECT ICD10... ICD10SubCodes" />
+            <marker date="1659195933227" expanded="true" signature="30084:30494" placeholder="SELECT Gende... GenderMappings" />
+            <marker date="1659195933227" expanded="true" signature="30866:34949" placeholder="SELECT * FRO... *" />
+            <marker date="1659195933227" expanded="true" signature="30866:34983" placeholder="SELECT * FRO... *" />
+            <marker date="1659195933227" expanded="true" signature="30913:34876" placeholder="SELECT Servi... ServiceReceivedItems" />
+            <marker date="1659195933227" expanded="true" signature="31836:32417" placeholder="SELECT code CPTCodes" />
+            <marker date="1659195933227" expanded="true" signature="32537:33082" placeholder="SELECT local... ServiceProviderRankingMappings" />
+            <marker date="1659195933227" expanded="true" signature="33364:34121" placeholder="SELECT ICD10... ICD10SubCodes" />
+            <marker date="1659195933227" expanded="true" signature="34256:34666" placeholder="SELECT Gende... GenderMappings" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HDR.log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HDR.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
