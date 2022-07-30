@@ -46,7 +46,7 @@
 		document = window.document; // local variable is always faster to access then a global
 
 	/**
-	 * holds all jstree related functions and variables, including the actual class and methods to create, access and manipulate instances.
+	 * holds all jstree related usecases and variables, including the actual class and methods to create, access and manipulate instances.
 	 * @name $.jstree
 	 */
 	$.jstree = {
@@ -265,7 +265,7 @@
 		 * You can also pass in a HTML string or a JSON array here.
 		 *
 		 * It is possible to pass in a standard jQuery-like AJAX config and jstree will automatically determine if the response is JSON or HTML and use that to populate the tree.
-		 * In addition to the standard jQuery ajax options here you can suppy functions for `data` and `url`, the functions will be run in the current instance's scope and a param will be passed indicating which node is being loaded, the return value of those functions will be used.
+		 * In addition to the standard jQuery ajax options here you can suppy usecases for `data` and `url`, the usecases will be run in the current instance's scope and a param will be passed indicating which node is being loaded, the return value of those usecases will be used.
 		 *
 		 * The last option is to specify a function, that function will receive the node being loaded as argument and a second param which is a function which should be called with the result.
 		 *
@@ -7276,7 +7276,7 @@
 	 * massload configuration
 	 *
 	 * It is possible to set this to a standard jQuery-like AJAX config.
-	 * In addition to the standard jQuery ajax options here you can supply functions for `data` and `url`, the functions will be run in the current instance's scope and a param will be passed indicating which node IDs need to be loaded, the return value of those functions will be used.
+	 * In addition to the standard jQuery ajax options here you can supply usecases for `data` and `url`, the usecases will be run in the current instance's scope and a param will be passed indicating which node IDs need to be loaded, the return value of those usecases will be used.
 	 *
 	 * You can also set this to a function, that function will receive the node IDs being loaded as argument and a second param which is a function (callback) which should be called with the result.
 	 *
@@ -7963,7 +7963,7 @@
 
 	(function ($, undefined) {
 		$.vakata.storage = {
-			// simply specifying the functions in FF throws an error
+			// simply specifying the usecases in FF throws an error
 			set : function (key, val) { return window.localStorage.setItem(key, val); },
 			get : function (key) { return window.localStorage.getItem(key); },
 			del : function (key) { return window.localStorage.removeItem(key); }

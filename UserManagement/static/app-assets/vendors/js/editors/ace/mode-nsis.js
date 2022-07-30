@@ -128,7 +128,7 @@ var NSISHighlightRules = function() {
 };
 
 NSISHighlightRules.metaData = {
-    comment: "\n\ttodo: - highlight functions\n\t",
+    comment: "\n\ttodo: - highlight usecases\n\t",
     fileTypes: ["nsi", "nsh"],
     name: "NSIS",
     scopeName: "source.nsis"

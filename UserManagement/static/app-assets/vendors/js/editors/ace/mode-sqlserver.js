@@ -133,7 +133,7 @@ var SqlServerHighlightRules = function() {
             regex: "[+-]?\\d+(?:(?:\\.\\d*)?(?:[eE][+-]?\\d+)?)?\\b"
         }, {
             token: keywordMapper,
-            regex: "@{0,2}[a-zA-Z_$][a-zA-Z0-9_$]*\\b(?!])" //up to 2 @symbols for some built in functions
+            regex: "@{0,2}[a-zA-Z_$][a-zA-Z0-9_$]*\\b(?!])" //up to 2 @symbols for some built in usecases
         }, {
             token: "constant.class",
             regex: "@@?[a-zA-Z_$][a-zA-Z0-9_$]*\\b"

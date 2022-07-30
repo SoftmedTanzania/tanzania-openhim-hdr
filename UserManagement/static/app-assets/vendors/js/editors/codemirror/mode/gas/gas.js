@@ -15,8 +15,8 @@ CodeMirror.defineMode("gas", function(_config, parserConfig) {
   'use strict';
 
   // If an architecture is specified, its initialization function may
-  // populate this array with custom parsing functions which will be
-  // tried in the event that the standard functions do not find a match.
+  // populate this array with custom parsing usecases which will be
+  // tried in the event that the standard usecases do not find a match.
   var custom = [];
 
   // The symbol used to start a line comment changes based on the target

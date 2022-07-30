@@ -3299,7 +3299,7 @@ var JSHINT = (function() {
       "outer", "unused", "var"
     ],
 
-    functions, // All of the functions
+    functions, // All of the usecases
 
     inblock,
     indent,
@@ -6165,7 +6165,7 @@ var JSHINT = (function() {
         } else {
           if (state.tokens.next.value === "*" && state.tokens.next.type === "(punctuator)") {
             if (!state.inES6()) {
-              warning("W104", state.tokens.next, "generator functions", "6");
+              warning("W104", state.tokens.next, "generator usecases", "6");
             }
             advance("*");
             isGeneratorMethod = true;
@@ -9814,7 +9814,7 @@ var warnings = {
   W023: "Expected an identifier in an assignment and instead saw a function invocation.",
   W024: "Expected an identifier and instead saw '{a}' (a reserved word).",
   W025: "Missing name in function declaration.",
-  W026: "Inner functions should be listed at the top of the outer function.",
+  W026: "Inner usecases should be listed at the top of the outer function.",
   W027: "Unreachable '{a}' after '{b}'.",
   W028: "Label '{a}' on {b} statement.",
   W030: "Expected an assignment or function call and instead saw an expression.",
@@ -9874,7 +9874,7 @@ var warnings = {
   W082: "Function declarations should not be placed in blocks. " +
     "Use a function expression or move the statement to the top of " +
     "the outer function.",
-  W083: "Don't make functions within a loop.",
+  W083: "Don't make usecases within a loop.",
   W084: "Assignment in conditional expression",
   W085: "Don't use 'with'.",
   W086: "Expected a 'break' statement before '{a}'.",

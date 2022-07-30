@@ -17,7 +17,7 @@ CodeMirror.defineMode("xquery", function() {
   // function. Each keyword is a property of the keywords object whose
   // value is {type: atype, style: astyle}
   var keywords = function(){
-    // convenience functions used to build keywords object
+    // convenience usecases used to build keywords object
     function kw(type) {return {type: type, style: "keyword"};}
     var operator = kw("operator")
       , atom = {type: "atom", style: "atom"}
@@ -390,7 +390,7 @@ CodeMirror.defineMode("xquery", function() {
   }
 
 
-  // functions to test the current context of the state
+  // usecases to test the current context of the state
   function isInXmlBlock(state) { return isIn(state, "tag"); }
   function isInXmlAttributeBlock(state) { return isIn(state, "attribute"); }
   function isInXmlConstructor(state) { return isIn(state, "xmlconstructor"); }

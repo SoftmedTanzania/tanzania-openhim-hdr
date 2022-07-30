@@ -15,11 +15,14 @@ from functools import wraps
 from django.db.models import Count
 import logging
 from django.conf import settings
+from django.db import connection
 
 
 #SETTING UP LOGGING
 fmt = getattr(settings, 'LOG_FORMAT', None)
 lvl = getattr(settings, 'LOG_LEVEL', logging.DEBUG)
+
+current_date = datetime.today().strftime('%Y-%m-%d')
 
 logging.basicConfig(format=fmt, level=lvl)
 
@@ -459,3 +462,147 @@ def import_cpt_codes():
                     instance_code.save()
 
 
+def query_services_received():
+    cursor = connection.cursor()
+
+    raw_query = '''SELECT * FROM
+                (SELECT ServiceReceivedItems.*,
+                GenderMapping.hdr_gender,
+                ServiceReceived.org_name,
+                CPTCodes.*,
+                hdr_service_provider_rankings,
+                ICD10Codes.*,
+                DistrictCouncils.description as district_council,
+                Regions.description as region
+                FROM public."ServiceReceivedItems" ServiceReceivedItems
+                INNER JOIN public."ServiceReceived" ServiceReceived ON ServiceReceived.id = ServiceReceivedItems.service_received_id
+                INNER JOIN public."Facility" as facility ON facility.facility_hfr_code = ServiceReceived.facility_hfr_code
+                INNER JOIN public."DistrictCouncils" DistrictCouncils ON DistrictCouncils.id = facility.district_council_id
+                INNER JOIN public."Regions" Regions ON Regions.id = DistrictCouncils.region_id
+                INNER JOIN
+                (SELECT code as cpt_code,
+                CPTCodes.description as cpt_description,
+                CPTCodeCategories.description as cpt_category
+                FROM public."CPTCodes" CPTCodes
+                INNER JOIN public."CPTCodeSubCategories" as CPTCodeSubCategories ON CPTCodeSubCategories.id = CPTCodes."sub_category_id"
+                INNER JOIN public."CPTCodeCategories" as CPTCodeCategories ON CPTCodeCategories.id = CPTCodeSubCategories.category_id) as CPTCodes on CPTCodes.cpt_code = any(ServiceReceivedItems.med_svc_code)
+                INNER JOIN
+                (SELECT local_service_provider_ranking_id,
+                ServiceProviderRankings.description as hdr_service_provider_rankings,
+                facility_hfr_code
+                FROM public."ServiceProviderRankingMappings" ServiceProviderRankingMappings
+                INNER JOIN public."ServiceProviderRankings" ServiceProviderRankings on ServiceProviderRankings.id = ServiceProviderRankingMappings.service_provider_ranking_id
+                INNER JOIN public."Facility" as facility ON facility.id = ServiceProviderRankingMappings.facility_id) as ServiceProviderRankings on ServiceProviderRankings.local_service_provider_ranking_id = ServiceReceivedItems.service_provider_ranking_id
+                and ServiceProviderRankings.facility_hfr_code = ServiceReceived.facility_hfr_code
+                LEFT JOIN
+                (SELECT ICD10SubCodes.sub_code as icd10_code,
+                ICD10SubCodes.description as icd10_code_description,
+                ICD10Codes.description as icd10_sub_category,
+                ICD10CodeSubCategories.description as icd10_categories,
+                ICD10CodeCategories.description as icd10_chapter
+                FROM public."ICD10SubCodes" ICD10SubCodes
+                INNER JOIN public."ICD10Codes" as ICD10Codes on ICD10Codes.id = ICD10SubCodes.code_id
+                INNER JOIN public."ICD10CodeSubCategories" as ICD10CodeSubCategories on ICD10CodeSubCategories.id = ICD10Codes.sub_category_id
+                INNER JOIN public."ICD10CodeCategories" as ICD10CodeCategories on ICD10CodeCategories.id = ICD10CodeSubCategories.category_id) as ICD10Codes on ICD10Codes.icd10_code =   any(ServiceReceivedItems.confirmed_diagnosis)
+                INNER JOIN
+                (SELECT GenderMappings.local_gender_description as local_gender,
+                Gender.description as hdr_gender,
+                facility.facility_hfr_code
+                FROM public."GenderMappings" GenderMappings
+                INNER JOIN public."Gender" as Gender on Gender.id = GenderMappings.gender_id
+                INNER JOIN public."Facility" as facility on facility.id = GenderMappings.facility_id) as GenderMapping on GenderMapping.local_gender = ServiceReceivedItems.gender
+                AND GenderMapping.facility_hfr_code = ServiceReceived.facility_hfr_code where facility.uses_cpt_internally is True) AS virtual_table where event_date >= '2021-03-01' and event_date <= '"''' + str(
+                current_date) + '''"'
+                union
+                SELECT *
+                FROM
+                (SELECT ServiceReceivedItems.*,
+                GenderMapping.hdr_gender,
+                ServiceReceived.org_name,
+                CPTCodes.*,
+                hdr_service_provider_rankings,
+                ICD10Codes.*,
+                DistrictCouncils.description as district_council,
+                Regions.description as region
+                FROM public."ServiceReceivedItems" ServiceReceivedItems
+                INNER JOIN public."ServiceReceived" ServiceReceived ON ServiceReceived.id = ServiceReceivedItems.service_received_id
+                INNER JOIN public."Facility" as facility ON facility.facility_hfr_code = ServiceReceived.facility_hfr_code
+                INNER JOIN public."DistrictCouncils" DistrictCouncils ON DistrictCouncils.id = facility.district_council_id
+                INNER JOIN public."Regions" Regions ON Regions.id = DistrictCouncils.region_id
+                INNER JOIN
+                (SELECT code as cpt_code,
+                CPTCodes.description as cpt_description,
+                CPTCodeCategories.description as cpt_category
+                FROM public."CPTCodes" CPTCodes
+                INNER JOIN public."CPTCodeSubCategories" as CPTCodeSubCategories ON CPTCodeSubCategories.id = CPTCodes."sub_category_id"
+                INNER JOIN public."CPTCodeCategories" as CPTCodeCategories ON CPTCodeCategories.id = CPTCodeSubCategories.category_id
+                INNER JOIN public."CPTCodesMappings" as CPTCodesMappings ON CPTCodesMappings.cpt_code_id = CPTCodes.id) as CPTCodes on CPTCodes.cpt_code = any(ServiceReceivedItems.med_svc_code)
+                INNER JOIN
+                (SELECT local_service_provider_ranking_id,
+                ServiceProviderRankings.description as hdr_service_provider_rankings,
+                facility_hfr_code
+                FROM public."ServiceProviderRankingMappings" ServiceProviderRankingMappings
+                INNER JOIN public."ServiceProviderRankings" ServiceProviderRankings on ServiceProviderRankings.id = ServiceProviderRankingMappings.service_provider_ranking_id
+                INNER JOIN public."Facility" as facility ON facility.id = ServiceProviderRankingMappings.facility_id) as ServiceProviderRankings on ServiceProviderRankings.local_service_provider_ranking_id = ServiceReceivedItems.service_provider_ranking_id
+                and ServiceProviderRankings.facility_hfr_code = ServiceReceived.facility_hfr_code
+                LEFT JOIN
+                (SELECT ICD10SubCodes.sub_code as icd10_code,
+                ICD10SubCodes.description as icd10_code_description,
+                ICD10Codes.description as icd10_sub_category,
+                ICD10CodeSubCategories.description as icd10_categories,
+                ICD10CodeCategories.description as icd10_chapter
+                FROM public."ICD10SubCodes" ICD10SubCodes
+                INNER JOIN public."ICD10Codes" as ICD10Codes on ICD10Codes.id = ICD10SubCodes.code_id
+                INNER JOIN public."ICD10CodeSubCategories" as ICD10CodeSubCategories on ICD10CodeSubCategories.id = ICD10Codes.sub_category_id
+                INNER JOIN public."ICD10CodeCategories" as ICD10CodeCategories on ICD10CodeCategories.id = ICD10CodeSubCategories.category_id) as ICD10Codes on ICD10Codes.icd10_code =   any(ServiceReceivedItems.confirmed_diagnosis)
+                INNER JOIN
+                (SELECT GenderMappings.local_gender_description as local_gender,
+                Gender.description as hdr_gender,
+                facility.facility_hfr_code
+                FROM public."GenderMappings" GenderMappings
+                INNER JOIN public."Gender" as Gender on Gender.id = GenderMappings.gender_id
+                INNER JOIN public."Facility" as facility on facility.id = GenderMappings.facility_id) as GenderMapping on GenderMapping.local_gender = ServiceReceivedItems.gender
+                AND GenderMapping.facility_hfr_code = ServiceReceived.facility_hfr_code where facility.uses_cpt_internally is False) AS virtual_table where event_date >= '2021-03-01' and event_date <= '"''' + str(
+        current_date) + '''"' '''
+
+    cursor.execute(raw_query)
+
+    row = cursor.fetchall()
+
+    return row
+
+@app.task()
+def load_services_received():
+    services_received = query_services_received()
+
+    for entry in services_received:
+        instance = core_models.ServicesReceivedDataset()
+
+        instance.department_name = entry[0]
+        instance.department_id = entry[1]
+        instance.patient_id = entry[2]
+        instance.gender = entry[3]
+        instance.date_of_birth = entry[4]
+        instance.med_svc_code = entry[5]
+        instance.service_date = entry[6]
+        instance.service_provider_ranking_id = entry[7]
+        instance.visit_type = entry[8]
+        instance.service_received_id = entry[9]
+        instance.confirmed_diagnosis = entry[10]
+        instance.differential_diagnosis = entry[11]
+        instance.provisional_diagnosis = entry[11]
+        instance.hdr_gender = entry[12]
+        instance.org_name = entry[13]
+        instance.cpt_code = entry[14]
+        instance.cpt_description = entry[15]
+        instance.cpt_category = entry[16]
+        instance.hdr_service_provider_rankings = entry[17]
+        instance.icd10_code = entry[18]
+        instance.icd10_code_description = entry[19]
+        instance.icd10_sub_category = entry[20]
+        instance.icd10_categories = entry[21]
+        instance.icd10_chapter = entry[22]
+        instance.district_council = entry[23]
+        instance.region = entry[24]
+
+        instance.save()

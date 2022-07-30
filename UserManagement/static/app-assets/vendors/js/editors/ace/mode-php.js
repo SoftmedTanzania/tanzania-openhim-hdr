@@ -209,7 +209,7 @@ var JavaScriptHighlightRules = function(options) {
             "Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray|"                    +
             "Error|EvalError|InternalError|RangeError|ReferenceError|StopIteration|"   + // Errors
             "SyntaxError|TypeError|URIError|"                                          +
-            "decodeURI|decodeURIComponent|encodeURI|encodeURIComponent|eval|isFinite|" + // Non-constructor functions
+            "decodeURI|decodeURIComponent|encodeURI|encodeURIComponent|eval|isFinite|" + // Non-constructor usecases
             "isNaN|parseFloat|parseInt|"                                               +
             "JSON|Math|"                                                               + // Other
             "this|arguments|prototype|window|document"                                 , // Pseudo
@@ -2352,7 +2352,7 @@ var functionMap = {
     ],
     "array_udiff_uassoc": [
         "array array_udiff_uassoc(array arr1, array arr2 [, array ...], callback data_comp_func, callback key_comp_func)",
-        "Returns the entries of arr1 that have values which are not present in any of the others arguments but do additional checks whether the keys are equal. Keys and elements are compared by user supplied functions."
+        "Returns the entries of arr1 that have values which are not present in any of the others arguments but do additional checks whether the keys are equal. Keys and elements are compared by user supplied usecases."
     ],
     "array_uintersect": [
         "array array_uintersect(array arr1, array arr2 [, array ...], callback data_compare_func)",
@@ -2472,7 +2472,7 @@ var functionMap = {
     ],
     "bcscale": [
         "bool bcscale(int scale)",
-        "Sets default scale parameter for all bc math functions"
+        "Sets default scale parameter for all bc math usecases"
     ],
     "bcsqrt": [
         "string bcsqrt(string operand [, int scale])",
@@ -2956,11 +2956,11 @@ var functionMap = {
     ],
     "date_default_timezone_get": [
         "string date_default_timezone_get()",
-        "Gets the default timezone used by all date\/time functions in a script"
+        "Gets the default timezone used by all date\/time usecases in a script"
     ],
     "date_default_timezone_set": [
         "bool date_default_timezone_set(string timezone_identifier)",
-        "Sets the default timezone used by all date\/time functions in a script"
+        "Sets the default timezone used by all date\/time usecases in a script"
     ],
     "date_diff": [
         "DateInterval date_diff(DateTime object [, bool absolute])",
@@ -4296,7 +4296,7 @@ var functionMap = {
     ],
     "get_defined_functions": [
         "array get_defined_functions(void)",
-        "Returns an array of all defined functions"
+        "Returns an array of all defined usecases"
     ],
     "get_defined_vars": [
         "array get_defined_vars(void)",
@@ -4320,7 +4320,7 @@ var functionMap = {
     ],
     "get_extension_funcs": [
         "array get_extension_funcs(string extension_name)",
-        "Returns an array with the names of functions belonging to the named extension"
+        "Returns an array with the names of usecases belonging to the named extension"
     ],
     "get_headers": [
         "array get_headers(string url[, int format])",
@@ -5080,7 +5080,7 @@ var functionMap = {
     ],
     "imageantialias": [
         "bool imageantialias(resource im, bool on)",
-        "Should antialiased functions used or not"
+        "Should antialiased usecases used or not"
     ],
     "imagearc": [
         "bool imagearc(resource im, int cx, int cy, int w, int h, int s, int e, int col)",
@@ -6412,7 +6412,7 @@ var functionMap = {
     ],
     "mb_regex_set_options": [
         "string mb_regex_set_options([string options])",
-        "Set or get the default options for mbregex functions"
+        "Set or get the default options for mbregex usecases"
     ],
     "mb_send_mail": [
         "int mb_send_mail(string to, string subject, string message [, string additional_headers [, string additional_parameters]])",
@@ -6676,7 +6676,7 @@ var functionMap = {
     ],
     "mhash_keygen_s2k": [
         "string mhash_keygen_s2k(int hash, string input_password, string salt, int bytes)",
-        "Generates a key using hash functions"
+        "Generates a key using hash usecases"
     ],
     "microtime": [
         "mixed microtime([bool get_as_float])",
@@ -7348,7 +7348,7 @@ var functionMap = {
     ],
     "mysqli_set_local_infile_handler": [
         "bool mysqli_set_local_infile_handler(object link, callback read_func)",
-        "Set callback functions for LOAD DATA LOCAL INFILE"
+        "Set callback usecases for LOAD DATA LOCAL INFILE"
     ],
     "mysqli_sqlstate": [
         "string mysqli_sqlstate(object link)",
@@ -9392,7 +9392,7 @@ var functionMap = {
     ],
     "session_set_save_handler": [
         "void session_set_save_handler(string open, string close, string read, string write, string destroy, string gc)",
-        "Sets user-level functions"
+        "Sets user-level usecases"
     ],
     "session_start": [
         "bool session_start(void)",

@@ -1679,7 +1679,7 @@ exports.StaticContext = function (parent, pos) {
     };
 
     if(!parent) {
-        namespaces['http://jsoniq.org/functions'] = {
+        namespaces['http://jsoniq.org/usecases'] = {
             prefix: 'jn',
             pos: emptyPos,
             type: 'module',
@@ -1703,13 +1703,13 @@ exports.StaticContext = function (parent, pos) {
             type: 'module',
             override: true
         };
-        namespaces['http://www.w3.org/2005/xpath-functions'] = {
+        namespaces['http://www.w3.org/2005/xpath-usecases'] = {
             prefix: 'fn',
             pos: emptyPos,
             type: 'module',
             override: true
         };
-        namespaces['http://www.w3.org/2005/xquery-local-functions'] = {
+        namespaces['http://www.w3.org/2005/xquery-local-usecases'] = {
             prefix: 'local',
             pos: emptyPos,
             type: 'declare',
@@ -1835,11 +1835,11 @@ exports.StaticContext = function (parent, pos) {
             return this;
         },
         moduleNamespace: '',
-        defaultFunctionNamespace: 'http://www.w3.org/2005/xpath-functions',
+        defaultFunctionNamespace: 'http://www.w3.org/2005/xpath-usecases',
         defaultFunctionNamespaces: [
             'http://www.28msec.com/modules/collections',
             'http://www.28msec.com/modules/store',
-            'http://jsoniq.org/functions',
+            'http://jsoniq.org/usecases',
             'http://jsoniq.org/function-library',
             'http://www.w3.org/2001/XMLSchema' //Built-in type constructors
         ],
@@ -2024,9 +2024,9 @@ exports.StaticContext = function (parent, pos) {
         
         addFunctionCall: function(qname, arity, pos){
             var fn = this.getFunction(qname, arity);
-            if(!fn && (qname.uri === 'http://www.w3.org/2005/xquery-local-functions' || this.root.moduleResolver)){
-                if((qname.uri === 'http://www.w3.org/2005/xpath-functions' ||
-                    (qname.uri === '' && this.root.defaultFunctionNamespaces.concat(this.root.defaultFunctionNamespace).indexOf('http://www.w3.org/2005/xpath-functions') !== -1)) && qname.name === 'concat') {
+            if(!fn && (qname.uri === 'http://www.w3.org/2005/xquery-local-usecases' || this.root.moduleResolver)){
+                if((qname.uri === 'http://www.w3.org/2005/xpath-usecases' ||
+                    (qname.uri === '' && this.root.defaultFunctionNamespaces.concat(this.root.defaultFunctionNamespace).indexOf('http://www.w3.org/2005/xpath-usecases') !== -1)) && qname.name === 'concat') {
                 } else if(!fn){
                     throw new StaticError('XPST0008', '"' + qname.name + '#' + arity + '": undeclared function', pos);
                 }
@@ -2619,7 +2619,7 @@ exports.Translator = function(rootStcx, ast){
 
     this.visit(ast);
     Object.keys(rootStcx.variables).forEach(function(key){
-        if(!rootStcx.varRefs[key] && (rootStcx.variables[key].annotations['http://www.w3.org/2005/xpath-functions#private'] || rootStcx.moduleNamespace === '') && rootStcx.variables[key].pos) {
+        if(!rootStcx.varRefs[key] && (rootStcx.variables[key].annotations['http://www.w3.org/2005/xpath-usecases#private'] || rootStcx.moduleNamespace === '') && rootStcx.variables[key].pos) {
             addWarning('W03', 'Unused variable "' + rootStcx.variables[key].qname.name + '"', rootStcx.variables[key].pos);
         }
     });
@@ -2714,7 +2714,7 @@ var completePrefix = function(identifier, pos, sctx){
         var prefixes = [];
         var namespaces = sctx.getNamespaces();
         Object.keys(namespaces).forEach(function(key){
-            if(namespaces[key].type === 'module' || key === 'http://www.w3.org/2005/xquery-local-functions') {
+            if(namespaces[key].type === 'module' || key === 'http://www.w3.org/2005/xquery-local-usecases') {
                 prefixes.push(namespaces[key].prefix);
             }
         });

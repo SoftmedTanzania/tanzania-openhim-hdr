@@ -100,7 +100,7 @@ defineGlobal("global!tinymce.util.Delay", tinymce.util.Delay);
  */
 
 /**
- * Contains various canvas functions.
+ * Contains various canvas usecases.
  */
 define("ephox/imagetools/util/Canvas", [], function() {
   function create(width, height) {

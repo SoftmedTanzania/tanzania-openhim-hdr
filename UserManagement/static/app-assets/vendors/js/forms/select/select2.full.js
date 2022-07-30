@@ -2131,7 +2131,7 @@ S2.define('select2/translation',[
     this.dict = $.extend({}, translation.all(), this.dict);
   };
 
-  // Static functions
+  // Static usecases
 
   Translation._cache = {};
 

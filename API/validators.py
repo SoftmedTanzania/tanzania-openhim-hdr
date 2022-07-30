@@ -108,7 +108,7 @@ def convert_date_formats(date):
         return None
 
 
-#The function will validate the received payload against all defined functions for the specific payload
+#The function will validate the received payload against all defined usecases for the specific payload
 def validate_received_payload(data):
     message_type = data["messageType"].strip()
     org_name = data["orgName"].strip()

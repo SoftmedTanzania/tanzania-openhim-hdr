@@ -77,7 +77,7 @@ define(function(require) {
      * @return {number} 有效根数目
      */
     function cubicRootAt(p0, p1, p2, p3, val, roots) {
-        // Evaluate roots of cubic functions
+        // Evaluate roots of cubic usecases
         var a = p3 + 3 * (p1 - p2) - p0;
         var b = 3 * (p2 - p1 * 2 + p0);
         var c = 3 * (p1  - p0);

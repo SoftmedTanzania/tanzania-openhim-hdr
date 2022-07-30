@@ -4054,7 +4054,7 @@ clone.clonePrototype = function clonePrototype(parent) {
   return new c();
 };
 
-// private utility functions
+// private utility usecases
 
 function __objToStr(o) {
   return Object.prototype.toString.call(o);

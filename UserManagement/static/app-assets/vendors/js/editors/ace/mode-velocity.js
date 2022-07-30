@@ -65,7 +65,7 @@ var JavaScriptHighlightRules = function(options) {
             "Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray|"                    +
             "Error|EvalError|InternalError|RangeError|ReferenceError|StopIteration|"   + // Errors
             "SyntaxError|TypeError|URIError|"                                          +
-            "decodeURI|decodeURIComponent|encodeURI|encodeURIComponent|eval|isFinite|" + // Non-constructor functions
+            "decodeURI|decodeURIComponent|encodeURI|encodeURIComponent|eval|isFinite|" + // Non-constructor usecases
             "isNaN|parseFloat|parseInt|"                                               +
             "JSON|Math|"                                                               + // Other
             "this|arguments|prototype|window|document"                                 , // Pseudo

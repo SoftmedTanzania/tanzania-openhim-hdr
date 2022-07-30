@@ -106,7 +106,7 @@ CodeMirror.defineMode("velocity", function() {
             // is it one of the listed keywords?
             if (keywords && keywords.propertyIsEnumerable(word))
                 return "keyword";
-            // is it one of the listed functions?
+            // is it one of the listed usecases?
             if (functions && functions.propertyIsEnumerable(word) ||
                     (stream.current().match(/^#@?[a-z0-9_]+ *$/i) && stream.peek()=="(") &&
                      !(functions && functions.propertyIsEnumerable(word.toLowerCase()))) {

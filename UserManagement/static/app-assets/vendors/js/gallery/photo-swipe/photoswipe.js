@@ -17,7 +17,7 @@
 /*>>framework-bridge*/
 /**
  *
- * Set of generic functions used by gallery.
+ * Set of generic usecases used by gallery.
  * 
  * You're free to modify anything here as long as functionality is kept.
  * 
@@ -347,7 +347,7 @@ framework.extend(_options, options);
 
 
 /**
- * Private helper variables & functions
+ * Private helper variables & usecases
  */
 
 var _getEmptyPoint = function() { 
@@ -620,7 +620,7 @@ var _isOpen,
 			return;
 		}
 
-		// Override zoom/pan/move functions in case old browser is used (most likely IE)
+		// Override zoom/pan/move usecases in case old browser is used (most likely IE)
 		// (so they use left/top/width/height, instead of CSS transform)
 	
 		_transformKey = 'left';
@@ -771,7 +771,7 @@ var _animations = {},
 
 var publicMethods = {
 
-	// make a few local variables and functions public
+	// make a few local variables and usecases public
 	shout: _shout,
 	listen: _listen,
 	viewportSize: _viewportSize,

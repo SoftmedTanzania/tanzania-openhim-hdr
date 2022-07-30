@@ -29,7 +29,7 @@
  *     and instantiation
  *  5. Key handler (the main command dispatcher) implementation
  *  6. Motion, operator, and action implementations
- *  7. Helper functions for the key handler, motions, operators, and actions
+ *  7. Helper usecases for the key handler, motions, operators, and actions
  *  8. Set up Vim to work as a keymap for CodeMirror.
  *  9. Ex command implementations.
  */
@@ -1717,7 +1717,7 @@
      * typedef {Object{line:number,ch:number}} Cursor An object containing the
      *     position of the cursor.
      */
-    // All of the functions below return Cursor objects.
+    // All of the usecases below return Cursor objects.
     var motions = {
       moveToTopLine: function(cm, _head, motionArgs) {
         var line = getUserVisibleLines(cm).top + motionArgs.repeat -1;
@@ -1878,7 +1878,7 @@
         return res;
       },
       moveByPage: function(cm, head, motionArgs) {
-        // CodeMirror only exposes functions that move the cursor page down, so
+        // CodeMirror only exposes usecases that move the cursor page down, so
         // doing this bad hack to move the cursor and move it back. evalInput
         // will move the cursor to where it should be in the end.
         var curStart = head;
@@ -2773,7 +2773,7 @@
     }
 
     /*
-     * Below are miscellaneous utility functions used by vim.js
+     * Below are miscellaneous utility usecases used by vim.js
      */
 
     /**
@@ -2917,7 +2917,7 @@
       cm.setCursor(Pos(lineNum, endCh));
       cm.replaceRange(spaces, cm.getCursor());
     }
-    // This functions selects a rectangular block
+    // This usecases selects a rectangular block
     // of text with selectionEnd as any of its corner
     // Height of block:
     // Difference in selectionEnd.line and first/last selection.line
@@ -3894,7 +3894,7 @@
       };
     }
 
-    // Search functions
+    // Search usecases
     defineOption('pcre', true, 'boolean');
     function SearchState() {}
     SearchState.prototype = {
@@ -5008,7 +5008,7 @@
     */
     function doReplace(cm, confirm, global, lineStart, lineEnd, searchCursor, query,
         replaceWith, callback) {
-      // Set up all the functions.
+      // Set up all the usecases.
       cm.state.vim.exMode = true;
       var done = false;
       var lastPos = searchCursor.from();

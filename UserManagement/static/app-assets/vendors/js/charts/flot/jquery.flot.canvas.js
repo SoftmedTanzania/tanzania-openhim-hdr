@@ -43,9 +43,9 @@ browser, but needs to redraw with canvas text when exporting as an image.
 
 		var Canvas = classes.Canvas;
 
-		// We only want to replace the functions once; the second time around
+		// We only want to replace the usecases once; the second time around
 		// we would just get our new function back.  This whole replacing of
-		// prototype functions is a disaster, and needs to be changed ASAP.
+		// prototype usecases is a disaster, and needs to be changed ASAP.
 
 		if (render == null) {
 			getTextInfo = Canvas.prototype.getTextInfo,

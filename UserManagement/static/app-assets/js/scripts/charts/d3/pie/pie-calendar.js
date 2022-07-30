@@ -12,7 +12,7 @@
 // ------------------------------
 $(window).on("load", function(){
 
-    // Revealing module pattern to store some global data that will be shared between different functions.
+    // Revealing module pattern to store some global data that will be shared between different usecases.
     var d3CalendarGlobals = function() {
         var ele = d3.select("#pie-calendar"),
             // calendarWidth = ele.node().getBoundingClientRect().width,
@@ -275,13 +275,13 @@ $(window).on("load", function(){
                 return color(d[2]);
             })
             .attr("d", function(d, i) {
-                // Standard functions for drawing a pie charts in D3.
+                // Standard usecases for drawing a pie charts in D3.
                 return arc(d[0]);
             });
 
         arcs.append("text")
             .attr("transform", function(d, i) {
-                // Standard functions for drawing a pie charts in D3.
+                // Standard usecases for drawing a pie charts in D3.
                 return "translate(" + arc.centroid(d[0]) + ")";
             })
             .attr("text-anchor", "middle")
@@ -313,7 +313,7 @@ $(window).on("load", function(){
             .attr("height", d3CalendarGlobals.calendarHeight)
             .append("g");
 
-        // Cell positions are generated and stored globally because they are used by other functions as a reference to render different things.
+        // Cell positions are generated and stored globally because they are used by other usecases as a reference to render different things.
         var cellPositions = d3CalendarGlobals.gridCellPositions;
 
         // Draw rectangles at the appropriate postions, starting from the top left corner. Since we want to leave some room for the heading and buttons,

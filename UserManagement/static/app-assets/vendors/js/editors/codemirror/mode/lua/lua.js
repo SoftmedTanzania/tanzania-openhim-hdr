@@ -26,7 +26,7 @@ CodeMirror.defineMode("lua", function(config, parserConfig) {
   }
   var specials = wordRE(parserConfig.specials || []);
 
-  // long list of standard functions from lua manual
+  // long list of standard usecases from lua manual
   var builtins = wordRE([
     "_G","_VERSION","assert","collectgarbage","dofile","error","getfenv","getmetatable","ipairs","load",
     "loadfile","loadstring","module","next","pairs","pcall","print","rawequal","rawget","rawset","require",

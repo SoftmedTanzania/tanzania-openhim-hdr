@@ -280,7 +280,7 @@ var
 					throw new Error(optionName);
 				}
 
-			// These options, when provided, must be functions.
+			// These options, when provided, must be usecases.
 			} else if ( optionName === 'encoder' || optionName === 'decoder' || optionName === 'edit' || optionName === 'undo' ) {
 				if ( typeof optionValue === 'function' ) {
 					filteredOptions[optionName] = optionValue;

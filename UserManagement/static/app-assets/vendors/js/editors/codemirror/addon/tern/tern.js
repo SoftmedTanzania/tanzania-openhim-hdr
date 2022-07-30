@@ -5,7 +5,7 @@
 //
 // Create a CodeMirror.TernServer to wrap an actual Tern server,
 // register open documents (CodeMirror.Doc instances) with it, and
-// call its methods to activate the assisting functions that Tern
+// call its methods to activate the assisting usecases that Tern
 // provides.
 //
 // Options supported (all optional):

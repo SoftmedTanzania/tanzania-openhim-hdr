@@ -17,13 +17,6 @@ import logging
 from django.conf import settings
 
 
-#SETTING UP LOGGING
-fmt = getattr(settings, 'LOG_FORMAT', None)
-lvl = getattr(settings, 'LOG_LEVEL', logging.DEBUG)
-
-logging.basicConfig(format=fmt, level=lvl)
-
-
 # This function will be the entry point to the System
 # A superuser will land on the configuration page and is_staff will access the Home page
 def get_login_page(request):

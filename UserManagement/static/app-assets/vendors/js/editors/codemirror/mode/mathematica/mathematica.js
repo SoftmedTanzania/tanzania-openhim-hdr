@@ -115,7 +115,7 @@ CodeMirror.defineMode('mathematica', function(_config, _parserConfig) {
       return 'variable-2';
     }
 
-    // Literals like variables, keywords, functions
+    // Literals like variables, keywords, usecases
     if (stream.match(reIdInContext, true, false)) {
       return 'keyword';
     }

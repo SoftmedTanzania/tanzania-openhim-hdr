@@ -26,7 +26,7 @@ snippet ei\n\
 		${2:code}\n\
 	}\n\
 \n\
-# functions\n\
+# usecases\n\
 snippet fun\n\
 	${1:name} = function (${2:variables}) {\n\
 		${3:code}\n\
@@ -44,7 +44,7 @@ snippet li\n\
 snippet mat\n\
 	matrix(${1:data}, nrow=${2:rows}, ncol=${3:cols})\n\
 \n\
-# apply functions\n\
+# apply usecases\n\
 snippet apply\n\
 	apply(${1:array}, ${2:margin}, ${3:function})\n\
 snippet lapply\n\
@@ -60,7 +60,7 @@ snippet tapply\n\
 snippet rapply\n\
 	rapply(${1:list}, ${2:function})\n\
 \n\
-# plyr functions\n\
+# plyr usecases\n\
 snippet dd\n\
 	ddply(${1:frame}, ${2:variables}, ${3:function})\n\
 snippet dl\n\
@@ -97,7 +97,7 @@ snippet ma\n\
 snippet m_\n\
 	m_ply(${1:matrix}, ${2:function})\n\
 \n\
-# plot functions\n\
+# plot usecases\n\
 snippet pl\n\
 	plot(${1:x}, ${2:y})\n\
 snippet ggp\n\
@@ -107,7 +107,7 @@ snippet img\n\
 	${6:plot}\n\
 	dev.off()\n\
 \n\
-# statistical test functions\n\
+# statistical test usecases\n\
 snippet fis\n\
 	fisher.test(${1:x}, ${2:y})\n\
 snippet chi\n\

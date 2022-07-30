@@ -422,7 +422,7 @@ var JavaScriptHighlightRules = function(options) {
             "Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray|"                    +
             "Error|EvalError|InternalError|RangeError|ReferenceError|StopIteration|"   + // Errors
             "SyntaxError|TypeError|URIError|"                                          +
-            "decodeURI|decodeURIComponent|encodeURI|encodeURIComponent|eval|isFinite|" + // Non-constructor functions
+            "decodeURI|decodeURIComponent|encodeURI|encodeURIComponent|eval|isFinite|" + // Non-constructor usecases
             "isNaN|parseFloat|parseInt|"                                               +
             "JSON|Math|"                                                               + // Other
             "this|arguments|prototype|window|document"                                 , // Pseudo
@@ -899,7 +899,7 @@ var PgsqlHighlightRules = function() {
         "domain|double|drop|each|else|enable|encoding|encrypted|end|enum|escape|event|event_trigger|" +
         "except|exclude|excluding|exclusive|execute|exists|explain|extension|external|extract|false|" +
         "family|fdw_handler|fetch|first|float|float4|float8|following|for|force|foreign|forward|" +
-        "freeze|from|full|function|functions|global|grant|granted|greatest|group|gtsvector|handler|" +
+        "freeze|from|full|function|usecases|global|grant|granted|greatest|group|gtsvector|handler|" +
         "having|header|hold|hour|identity|if|ilike|immediate|immutable|implicit|in|including|" +
         "increment|index|indexes|inet|inherit|inherits|initially|inline|inner|inout|input|" +
         "insensitive|insert|instead|int|int2|int2vector|int4|int4range|int8|int8range|integer|" +

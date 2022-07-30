@@ -197,3 +197,36 @@ class RevenueReceivedItems(models.Model):
         verbose_name_plural = "Revenue Received Items"
 
 
+class ServicesReceivedDataset(models.Model):
+    def __str__(self):
+        return '%d' %self.id
+
+    department_name = models.CharField(max_length=255)
+    department_id = models.CharField(max_length=255)
+    patient_id = models.CharField(max_length=255)
+    gender = models.CharField(max_length=255)
+    date_of_birth = models.DateField(max_length=255)
+    med_svc_code = models.TextField()
+    service_date = models.DateField(max_length=255)
+    service_provider_ranking_id = models.CharField(max_length=255)
+    visit_type = models.CharField(max_length=255)
+    service_received_id = models.IntegerField(max_length=255)
+    confirmed_diagnosis = models.TextField()
+    differential_diagnosis = models.TextField()
+    provisional_diagnosis = models.TextField()
+    hdr_gender = models.CharField(max_length=255)
+    org_name = models.CharField(max_length=255)
+    cpt_code = models.CharField(max_length=255)
+    cpt_description = models.CharField(max_length=255)
+    cpt_category = models.CharField(max_length=255)
+    hdr_service_provider_rankings = models.CharField(max_length=255)
+    icd10_code = models.CharField(max_length=255)
+    icd10_code_description = models.CharField(max_length=255)
+    icd10_sub_category = models.CharField(max_length=255)
+    icd10_categories = models.CharField(max_length=255)
+    icd10_chapter = models.CharField(max_length=255)
+    district_council = models.CharField(max_length=255)
+    region = models.CharField(max_length=255)
+
+    class Meta:
+        db_table = 'ServicesReceivedDataset'

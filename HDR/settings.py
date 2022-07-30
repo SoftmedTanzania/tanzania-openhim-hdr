@@ -37,6 +37,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=lambda v: [
 
 # Application definition
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -191,8 +192,55 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
-LOG_FORMAT = None
-LOG_LEVEL = logging.DEBUG
-
 SESSION_EXPIRE_SECONDS = 900  # 900 seconds = 15 minutes
 SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
+
+JAZZMIN_SETTINGS = {
+    "site_title": "HDR",
+    "site_header": "HDR Admin",
+    "welcome_sign": "Welcome to the HDR Admin",
+    "copyright": "Ministry of Health",
+    "topmenu_links": [
+
+        # Url that gets reversed (Permissions can be added)
+        {"name": "Home", "url": "user_management:dashboard", "permissions": ["auth.view_user"]},
+
+        # external url that opens in a new window (Permissions can be added)
+        {"name": "Support", "url": "https://moh.go.tz", "new_window": True},
+
+        # model admin to link to (Permissions checked against model)
+        {"model": "auth.User"},
+
+    ],
+}
+
+# Django Logging Information
+LOGGING = {
+    # Define the logging version
+    'version': 1,
+    # Enable the existing loggers
+    'disable_existing_loggers': False,
+
+    # Define the handlers
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'HDR.log',
+        },
+
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+
+   # Define the loggers
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+
+        },
+    },
+}

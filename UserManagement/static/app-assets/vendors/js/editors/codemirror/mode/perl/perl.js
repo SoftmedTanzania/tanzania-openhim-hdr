@@ -253,7 +253,7 @@ CodeMirror.defineMode("perl",function(){
                 unless                          :[1,1],
                 'for'                           :[1,1],
                 foreach                         :[1,1],
-                                                //      PERL functions
+                                                //      PERL usecases
                 'abs'                           :1,     // - absolute value function
                 accept                          :1,     // - accept an incoming socket connect
                 alarm                           :1,     // - schedule a SIGALRM
@@ -395,7 +395,7 @@ CodeMirror.defineMode("perl",function(){
                 redo                            :1,     // - start this loop iteration over again
                 ref                             :1,     // - find out the type of thing being referenced
                 rename                          :1,     // - change a filename
-                require                         :1,     // - load in external functions from a library at runtime
+                require                         :1,     // - load in external usecases from a library at runtime
                 reset                           :1,     // - clear all variables of a given name
                 'return'                        :1,     // - get out of a function early
                 reverse                         :1,     // - flip a string or a list

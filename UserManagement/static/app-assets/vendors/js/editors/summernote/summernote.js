@@ -3169,7 +3169,7 @@ var TableResultAction = function (startPoint, where, action, domTable) {
     var _virtualTable = [];
     var _actionCellList = [];
     /// ///////////////////////////////////////////
-    // Private functions
+    // Private usecases
     /// ///////////////////////////////////////////
     /**
      * Set the startPoint of action.
@@ -3355,7 +3355,7 @@ var TableResultAction = function (startPoint, where, action, domTable) {
         createVirtualTable();
     }
     /// ///////////////////////////////////////////
-    // Public functions
+    // Public usecases
     /// ///////////////////////////////////////////
     /**
      * Recover array os what to do in table.

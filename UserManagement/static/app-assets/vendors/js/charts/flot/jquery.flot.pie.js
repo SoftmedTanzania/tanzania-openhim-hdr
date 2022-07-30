@@ -333,7 +333,7 @@ More detail and specific examples can be found in the included HTML file.
 				plot.insertLegend();
 			}
 
-			// we're actually done at this point, just defining internal functions at this point
+			// we're actually done at this point, just defining internal usecases at this point
 
 			function clear() {
 				ctx.clearRect(0, 0, canvasWidth, canvasHeight);
@@ -561,7 +561,7 @@ More detail and specific examples can be found in the included HTML file.
 			}
 		}
 
-		//-- Additional Interactive related functions --
+		//-- Additional Interactive related usecases --
 
 		function isPointInPoly(poly, pt) {
 			for(var c = false, i = -1, l = poly.length, j = l - 1; ++i < l; j = i)

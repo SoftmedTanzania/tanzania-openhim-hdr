@@ -108,7 +108,7 @@ CodeMirror.defineMode("pig", function(_config, parserConfig) {
         if (!stream.eat(")") && !stream.eat("."))
           return "keyword";
       }
-      // is it one of the builtin functions?
+      // is it one of the builtin usecases?
       if (builtins && builtins.propertyIsEnumerable(stream.current().toUpperCase()))
         return "variable-2";
       // is it one of the listed types?

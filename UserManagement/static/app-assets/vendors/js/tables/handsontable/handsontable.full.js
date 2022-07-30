@@ -5164,12 +5164,12 @@ var Hooks = function () {
      * Adds a listener (globally or locally) to a specified hook name.
      * If the `context` parameter is provided, the hook will be added only to the instance it references.
      * Otherwise, the callback will be used everytime the hook fires on any Handsontable instance.
-     * You can provide an array of callback functions as the `callback` argument, this way they will all be fired
+     * You can provide an array of callback usecases as the `callback` argument, this way they will all be fired
      * once the hook is triggered.
      *
      * @see Core#addHook
      * @param {String} key Hook name.
-     * @param {Function|Array} callback Callback function or an array of functions.
+     * @param {Function|Array} callback Callback function or an array of usecases.
      * @param {Object} [context=null] The context for the hook callback to be added - a Handsontable instance or leave empty.
      * @returns {Hooks} Instance of Hooks.
      *
@@ -5650,7 +5650,7 @@ function _getEditorInstance(name, hotInstance) {
   } else if (typeof name === 'string') {
     editor = getItem(name);
   } else {
-    throw Error('Only strings and functions can be passed as "editor" parameter');
+    throw Error('Only strings and usecases can be passed as "editor" parameter');
   }
 
   if (!editor) {
@@ -7402,10 +7402,10 @@ function debounce(func) {
 }
 
 /**
- * Creates the function that returns the result of calling the given functions. Result of the first function is passed to
+ * Creates the function that returns the result of calling the given usecases. Result of the first function is passed to
  * the second as an argument and so on. Only first function in the chain can handle multiple arguments.
  *
- * @param {Function} functions Functions to compose.
+ * @param {Function} usecases Functions to compose.
  * @returns {Function}
  */
 function pipe() {
@@ -7450,7 +7450,7 @@ function partial(func) {
 }
 
 /**
- * Creates the functions that returns the function with cached arguments. If count if passed arguments will be matched
+ * Creates the usecases that returns the function with cached arguments. If count if passed arguments will be matched
  * to the arguments defined in `func` then function will be invoked.
  * Arguments are added to the stack in direction from the left to the right.
  *
@@ -7497,7 +7497,7 @@ function curry(func) {
 }
 
 /**
- * Creates the functions that returns the function with cached arguments. If count if passed arguments will be matched
+ * Creates the usecases that returns the function with cached arguments. If count if passed arguments will be matched
  * to the arguments defined in `func` then function will be invoked.
  * Arguments are added to the stack in direction from the right to the left.
  *
@@ -17290,7 +17290,7 @@ function Core(rootElement, userSettings) {
   };
 
   /**
-   * Validates all cells using their validator functions and calls callback when finished.
+   * Validates all cells using their validator usecases and calls callback when finished.
    *
    * If one of the cells is invalid, the callback will be fired with `'valid'` arguments as `false` - otherwise it
    * would equal `true`.
@@ -17312,7 +17312,7 @@ function Core(rootElement, userSettings) {
   };
 
   /**
-   * Validates rows using their validator functions and calls callback when finished.
+   * Validates rows using their validator usecases and calls callback when finished.
    *
    * If one of the cells is invalid, the callback will be fired with `'valid'` arguments as `false` - otherwise it
    *  would equal `true`.
@@ -17338,7 +17338,7 @@ function Core(rootElement, userSettings) {
   };
 
   /**
-   * Validates columns using their validator functions and calls callback when finished.
+   * Validates columns using their validator usecases and calls callback when finished.
    *
    * If one of the cells is invalid, the callback will be fired with `'valid'` arguments as `false` - otherwise it
    *  would equal `true`.
@@ -17364,7 +17364,7 @@ function Core(rootElement, userSettings) {
   };
 
   /**
-   * Validates all cells using their validator functions and calls callback when finished.
+   * Validates all cells using their validator usecases and calls callback when finished.
    *
    * If one of the cells is invalid, the callback will be fired with `'valid'` arguments as `false` - otherwise it would equal `true`.
    *
@@ -18234,7 +18234,7 @@ function Core(rootElement, userSettings) {
    * @function addHook
    * @see Hooks#add
    * @param {String} key Hook name (see {@link Hooks}).
-   * @param {Function|Array} callback Function or array of functions.
+   * @param {Function|Array} callback Function or array of usecases.
    * @example
    * ```js
    * hot.addHook('beforeInit', myCallback);
@@ -18271,7 +18271,7 @@ function Core(rootElement, userSettings) {
    * @function addHookOnce
    * @see Hooks#once
    * @param {String} key Hook name (see {@link Hooks}).
-   * @param {Function|Array} callback Function or array of functions.
+   * @param {Function|Array} callback Function or array of usecases.
    * @example
    * ```js
    * hot.addHookOnce('beforeInit', myCallback);
@@ -26307,13 +26307,13 @@ var Settings = function () {
       fixedRowsBottom: 0,
       minSpareRows: 0,
 
-      // this must be array of functions: [function (row, TH) {}]
+      // this must be array of usecases: [function (row, TH) {}]
       rowHeaders: function rowHeaders() {
         return [];
       },
 
 
-      // this must be array of functions: [function (column, TH) {}]
+      // this must be array of usecases: [function (column, TH) {}]
       columnHeaders: function columnHeaders() {
         return [];
       },
@@ -39073,7 +39073,7 @@ exports.default = DateEditor;
     'use strict';
 
     /**
-     * feature detection and helper functions
+     * feature detection and helper usecases
      */
     var hasMoment = typeof moment === 'function',
 
@@ -39309,7 +39309,7 @@ exports.default = DateEditor;
 
 
     /**
-     * templating functions to abstract HTML rendering
+     * templating usecases to abstract HTML rendering
      */
     renderDayName = function(opts, day, abbr)
     {

@@ -120,7 +120,7 @@
         },
         processResults: function (data, params) {
           // parse the results into the format expected by Select2
-          // since we are using custom formatting functions we do not need to
+          // since we are using custom formatting usecases we do not need to
           // alter the remote JSON data, except to indicate that infinite
           // scrolling can be used
           params.page = params.page || 1;

@@ -2101,7 +2101,7 @@ var __module10__ = (function(__dependency1__, __dependency2__, __dependency3__, 
 
   __exports__.Compiler = Compiler;// the foundHelper register will disambiguate helper lookup from finding a
   // function in a context. This is necessary for mustache compatibility, which
-  // requires that context functions in blocks are evaluated by blockHelperMissing,
+  // requires that context usecases in blocks are evaluated by blockHelperMissing,
   // and then proceed as if the resulting value was provided to blockHelperMissing.
 
   Compiler.prototype = {
