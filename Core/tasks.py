@@ -464,7 +464,7 @@ def import_cpt_codes():
 
 def query_services_received():
     cursor = connection.cursor()
-
+    print(current_date)
     raw_query = '''SELECT * FROM
                 (SELECT ServiceReceivedItems.*,
                 GenderMapping.hdr_gender,
@@ -570,38 +570,40 @@ def query_services_received():
 
     return row
 
-@app.task()
-def load_services_received():
+# @app.task()
+def load_services_received(request):
     services_received = query_services_received()
+
+    print(services_received)
 
     for entry in services_received:
         instance = core_models.ServicesReceivedDataset()
 
-        instance.department_name = entry[0]
-        instance.department_id = entry[1]
-        instance.patient_id = entry[2]
-        instance.gender = entry[3]
-        instance.date_of_birth = entry[4]
-        instance.med_svc_code = entry[5]
-        instance.service_date = entry[6]
-        instance.service_provider_ranking_id = entry[7]
-        instance.visit_type = entry[8]
-        instance.service_received_id = entry[9]
-        instance.confirmed_diagnosis = entry[10]
-        instance.differential_diagnosis = entry[11]
-        instance.provisional_diagnosis = entry[11]
-        instance.hdr_gender = entry[12]
-        instance.org_name = entry[13]
-        instance.cpt_code = entry[14]
-        instance.cpt_description = entry[15]
-        instance.cpt_category = entry[16]
-        instance.hdr_service_provider_rankings = entry[17]
-        instance.icd10_code = entry[18]
-        instance.icd10_code_description = entry[19]
-        instance.icd10_sub_category = entry[20]
-        instance.icd10_categories = entry[21]
-        instance.icd10_chapter = entry[22]
-        instance.district_council = entry[23]
-        instance.region = entry[24]
+        instance.department_name = entry[1]
+        instance.department_id = entry[2]
+        instance.patient_id = entry[3]
+        instance.gender = entry[4]
+        instance.date_of_birth = entry[5]
+        instance.med_svc_code = entry[6]
+        instance.service_date = entry[7]
+        instance.service_provider_ranking_id = entry[8]
+        instance.visit_type = entry[9]
+        instance.service_received_id = entry[10]
+        instance.confirmed_diagnosis = entry[11]
+        instance.differential_diagnosis = entry[12]
+        instance.provisional_diagnosis = entry[13]
+        instance.hdr_gender = entry[14]
+        instance.org_name = entry[15]
+        instance.cpt_code = entry[16]
+        instance.cpt_description = entry[17]
+        instance.cpt_category = entry[18]
+        instance.hdr_service_provider_rankings = entry[19]
+        instance.icd10_code = entry[20]
+        instance.icd10_code_description = entry[21]
+        instance.icd10_sub_category = entry[22]
+        instance.icd10_categories = entry[23]
+        instance.icd10_chapter = entry[24]
+        instance.district_council = entry[25]
+        instance.region = entry[26]
 
         instance.save()
