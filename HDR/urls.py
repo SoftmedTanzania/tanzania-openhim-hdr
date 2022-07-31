@@ -38,6 +38,5 @@ urlpatterns = [
     path('create_death_payload', dhis_tasks.create_death_payload, name='create_death_payload'),
     path('save_payload_from_csv', core_tasks.save_payload_from_csv, name='save_payload_from_csv'),
     path('cleanup_uploaded_csv_files', core_tasks.cleanup_uploaded_csv_files, name='cleanup_uploaded_csv_files'),
-    path('load_services_received', core_tasks.load_services_received, name='load_services_received'),
 
 ]
