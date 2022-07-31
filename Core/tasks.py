@@ -570,11 +570,9 @@ def query_services_received():
 
     return row
 
-@app.task()
-def load_services_received():
+# @app.task()
+def load_services_received(request):
     services_received = query_services_received()
-
-    print(services_received)
 
     for entry in services_received:
         instance = core_models.ServicesReceivedDataset()
