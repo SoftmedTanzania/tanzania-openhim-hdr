@@ -14,6 +14,7 @@ class OrganisationUnit(models.Model):
 
     class Meta:
         db_table = "organisation_units"
+        verbose_name_plural = "1. Organization Units"
 
 
 class DataElement(models.Model):
@@ -69,6 +70,7 @@ class DataElement(models.Model):
 
     class Meta:
         db_table = "data_elements"
+        verbose_name_plural = "2. Data Elements"
 
 
 class CategoryOptionCombo(models.Model):
@@ -80,7 +82,8 @@ class CategoryOptionCombo(models.Model):
 
     class Meta:
         db_table = "category_option_combo"
-        verbose_name_plural = "Category Option Combo"
+        verbose_name_plural = "3. Category Option Combo"
+
 
 
 class CategoryOptionComboDataElementMapping(models.Model):
@@ -92,4 +95,4 @@ class CategoryOptionComboDataElementMapping(models.Model):
 
     class Meta:
         db_table = "category_option_combo_data_element_mapping"
-        verbose_name_plural = "Category Option Combo Data Element Mapping"
+        verbose_name_plural = "4. Category Option Combo Data Element Mapping"

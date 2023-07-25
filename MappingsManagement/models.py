@@ -14,6 +14,7 @@ class PlaceOfDeathMapping(models.Model):
 
     class Meta:
         db_table = "PlaceOfDeathMappings"
+        verbose_name_plural = "1. Place of Death Mappings"
 
 
 class ServiceProviderRankingMapping(models.Model):
@@ -27,6 +28,7 @@ class ServiceProviderRankingMapping(models.Model):
 
     class Meta:
         db_table = "ServiceProviderRankingMappings"
+        verbose_name_plural = "2. Service Provider Rankings Mappings"
 
 
 class GenderMapping(models.Model):
@@ -39,6 +41,7 @@ class GenderMapping(models.Model):
 
     class Meta:
         db_table = "GenderMappings"
+        verbose_name_plural = "3. Gender Mappings"
 
 
 class DepartmentMapping(models.Model):
@@ -52,6 +55,7 @@ class DepartmentMapping(models.Model):
 
     class Meta:
         db_table = "DepartmentMappings"
+        verbose_name_plural = "4. Department Mappings"
 
 
 class ExemptionMapping(models.Model):
@@ -65,6 +69,7 @@ class ExemptionMapping(models.Model):
 
     class Meta:
         db_table = "ExemptionMappings"
+        verbose_name_plural = "4. Exemption Mappings"
 
 
 class PayerMapping(models.Model):
@@ -78,3 +83,4 @@ class PayerMapping(models.Model):
 
     class Meta:
         db_table = "PayerMappings"
+        verbose_name_plural = "4. Payer Mappings"

@@ -570,6 +570,18 @@ def query_services_received():
 
     return row
 
+
+def query_revenue_received():
+    cursor = connection.cursor()
+
+    raw_query = ''' '''
+
+    cursor.execute(raw_query)
+
+    row = cursor.fetchall()
+
+    return row
+
 @app.task()
 def load_services_received():
     services_received = query_services_received()

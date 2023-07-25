@@ -10,6 +10,7 @@ class Zone(models.Model):
 
     class Meta:
         db_table = 'Zones'
+        verbose_name_plural = "1. Zones"
 
 
 class Region(models.Model):
@@ -21,6 +22,7 @@ class Region(models.Model):
 
     class Meta:
         db_table = 'Regions'
+        verbose_name_plural = "2. Regions"
 
 
 class DistrictCouncil(models.Model):
@@ -32,6 +34,7 @@ class DistrictCouncil(models.Model):
 
     class Meta:
         db_table = 'DistrictCouncils'
+        verbose_name_plural = "3. District Councils"
 
 
 class Facility(models.Model):
@@ -46,7 +49,7 @@ class Facility(models.Model):
 
     class Meta:
         db_table = 'Facility'
-        verbose_name_plural = "Facilities"
+        verbose_name_plural = "4. Facilities"
 
 
 class Payer(models.Model):
@@ -57,6 +60,7 @@ class Payer(models.Model):
 
     class Meta:
         db_table = 'Payers'
+        verbose_name_plural = "5. Payers"
 
 
 class Exemption(models.Model):
@@ -67,6 +71,7 @@ class Exemption(models.Model):
 
     class Meta:
         db_table = "Exemptions"
+        verbose_name_plural = "6. Exemptions"
 
 
 class Department(models.Model):
@@ -77,6 +82,7 @@ class Department(models.Model):
 
     class Meta:
         db_table = "Departments"
+        verbose_name_plural = "7. Departments"
 
 
 class Ward(models.Model):
@@ -92,6 +98,7 @@ class Ward(models.Model):
 
     class Meta:
         db_table = "Wards"
+        verbose_name_plural = "8. Wards"
 
 
 class Gender(models.Model):
@@ -102,6 +109,7 @@ class Gender(models.Model):
 
     class Meta:
         db_table = "Gender"
+        verbose_name_plural = "9. Gender"
 
 
 class ServiceProviderRanking(models.Model):
@@ -112,6 +120,7 @@ class ServiceProviderRanking(models.Model):
 
     class Meta:
         db_table = "ServiceProviderRankings"
+        verbose_name_plural = "10. Service Provider Rankings"
 
 
 class PlaceOfDeath(models.Model):
@@ -122,4 +131,4 @@ class PlaceOfDeath(models.Model):
 
     class Meta:
         db_table = "PlacesOfDeath"
-        verbose_name_plural = "Places Of Death"
+        verbose_name_plural = "11. Places Of Death"
