@@ -18,4 +18,4 @@ class Claims(models.Model):
 
     class Meta:
         db_table = "Claims"
-        verbose_name_plural = "1. Claims"
+        verbose_name_plural = "Claims"

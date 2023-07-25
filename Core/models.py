@@ -18,7 +18,7 @@ class ServiceReceived(models.Model):
 
     class Meta:
         db_table = 'ServiceReceived'
-        verbose_name_plural = '1. Services Received'
+        verbose_name_plural = 'Services Received'
 
 
 class ServiceReceivedItems(models.Model):
@@ -41,7 +41,7 @@ class ServiceReceivedItems(models.Model):
 
     class Meta:
         db_table = 'ServiceReceivedItems'
-        verbose_name_plural = '2. Services Received Items'
+        verbose_name_plural = 'Services Received Items'
 
 
 class DeathByDiseaseCaseAtFacility(models.Model):
@@ -55,7 +55,7 @@ class DeathByDiseaseCaseAtFacility(models.Model):
 
     class Meta:
         db_table = 'DeathByDiseaseCaseAtFacility'
-        verbose_name_plural = "3. Death by Disease Cases at Facility"
+        verbose_name_plural = "Death by Disease Cases at Facility"
 
 
 class DeathByDiseaseCaseAtFacilityItems(models.Model):
@@ -78,7 +78,7 @@ class DeathByDiseaseCaseAtFacilityItems(models.Model):
 
     class Meta:
         db_table = 'DeathByDiseaseCaseAtFacilityItems'
-        verbose_name_plural = "4. Death by Disease Cases at Facility Items"
+        verbose_name_plural = "Death by Disease Cases at Facility Items"
 
 
 class DeathByDiseaseCaseNotAtFacility(models.Model):
@@ -92,7 +92,7 @@ class DeathByDiseaseCaseNotAtFacility(models.Model):
 
     class Meta:
         db_table = 'DeathByDiseaseCaseNotAtFacility'
-        verbose_name_plural = "5. Death by Disease Cases Not at Facility"
+        verbose_name_plural = "Death by Disease Cases Not at Facility"
 
 
 class DeathByDiseaseCaseNotAtFacilityItems(models.Model):
@@ -111,7 +111,7 @@ class DeathByDiseaseCaseNotAtFacilityItems(models.Model):
 
     class Meta:
         db_table = 'DeathByDiseaseCaseNotAtFacilityItems'
-        verbose_name_plural = "6. Death by Disease Cases Not at Facility Items"
+        verbose_name_plural = "Death by Disease Cases Not at Facility Items"
 
 
 class BedOccupancy(models.Model):
@@ -126,7 +126,7 @@ class BedOccupancy(models.Model):
 
     class Meta:
         db_table = 'BedOccupancy'
-        verbose_name_plural = "7. Bed occupancy"
+        verbose_name_plural = "Bed occupancy"
 
 
 class BedOccupancyItems(models.Model):
@@ -142,7 +142,7 @@ class BedOccupancyItems(models.Model):
 
     class Meta:
         db_table = 'BedOccupancyItems'
-        verbose_name_plural = "8. Bed occupancy Items"
+        verbose_name_plural = "Bed occupancy Items"
 
 
 class BedOccupancyReport(models.Model):
@@ -159,7 +159,7 @@ class BedOccupancyReport(models.Model):
 
     class Meta:
         db_table = "BedOccupancyReport"
-        verbose_name_plural = "9. Bed occupancy Report"
+        verbose_name_plural = "Bed occupancy Report"
 
 
 class RevenueReceived(models.Model):
@@ -173,7 +173,7 @@ class RevenueReceived(models.Model):
 
     class Meta:
         db_table = 'RevenueReceived'
-        verbose_name_plural = "10. Revenue received"
+        verbose_name_plural = "Revenue received"
 
 
 class RevenueReceivedItems(models.Model):
@@ -195,7 +195,7 @@ class RevenueReceivedItems(models.Model):
 
     class Meta:
         db_table = 'RevenueReceivedItems'
-        verbose_name_plural = "11. Revenue Received Items"
+        verbose_name_plural = "Revenue Received Items"
 
 
 class ServicesReceivedDataset(models.Model):
@@ -231,4 +231,4 @@ class ServicesReceivedDataset(models.Model):
 
     class Meta:
         db_table = 'ServicesReceivedDataset'
-        verbose_name_plural = "12. Services Received Dataset"
+        verbose_name_plural = "Services Received Dataset"

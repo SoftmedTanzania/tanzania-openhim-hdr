@@ -7,7 +7,6 @@
     <list default="true" id="2419a3b0-632f-4237-a4f1-8add23126c2c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Core/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Core/tasks.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DHIS/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/DHIS/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HDR.log" beforeDir="false" afterPath="$PROJECT_DIR$/HDR.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MappingsManagement/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MappingsManagement/models.py" afterDir="false" />
@@ -519,7 +518,7 @@
       <workItem from="1688381660367" duration="295000" />
       <workItem from="1689670153977" duration="1637000" />
       <workItem from="1690145517403" duration="1820000" />
-      <workItem from="1690315556393" duration="643000" />
+      <workItem from="1690315556393" duration="1321000" />
     </task>
     <servers />
   </component>

@@ -10,7 +10,7 @@ class Zone(models.Model):
 
     class Meta:
         db_table = 'Zones'
-        verbose_name_plural = "1. Zones"
+        verbose_name_plural = "Zones"
 
 
 class Region(models.Model):
@@ -22,7 +22,7 @@ class Region(models.Model):
 
     class Meta:
         db_table = 'Regions'
-        verbose_name_plural = "2. Regions"
+        verbose_name_plural = "Regions"
 
 
 class DistrictCouncil(models.Model):
@@ -34,7 +34,7 @@ class DistrictCouncil(models.Model):
 
     class Meta:
         db_table = 'DistrictCouncils'
-        verbose_name_plural = "3. District Councils"
+        verbose_name_plural = "District Councils"
 
 
 class Facility(models.Model):
@@ -49,7 +49,7 @@ class Facility(models.Model):
 
     class Meta:
         db_table = 'Facility'
-        verbose_name_plural = "4. Facilities"
+        verbose_name_plural = "Facilities"
 
 
 class Payer(models.Model):
@@ -60,7 +60,7 @@ class Payer(models.Model):
 
     class Meta:
         db_table = 'Payers'
-        verbose_name_plural = "5. Payers"
+        verbose_name_plural = "Payers"
 
 
 class Exemption(models.Model):
@@ -71,7 +71,7 @@ class Exemption(models.Model):
 
     class Meta:
         db_table = "Exemptions"
-        verbose_name_plural = "6. Exemptions"
+        verbose_name_plural = "Exemptions"
 
 
 class Department(models.Model):
@@ -82,7 +82,7 @@ class Department(models.Model):
 
     class Meta:
         db_table = "Departments"
-        verbose_name_plural = "7. Departments"
+        verbose_name_plural = "Departments"
 
 
 class Ward(models.Model):
@@ -98,7 +98,7 @@ class Ward(models.Model):
 
     class Meta:
         db_table = "Wards"
-        verbose_name_plural = "8. Wards"
+        verbose_name_plural = "Wards"
 
 
 class Gender(models.Model):
@@ -109,7 +109,7 @@ class Gender(models.Model):
 
     class Meta:
         db_table = "Gender"
-        verbose_name_plural = "9. Gender"
+        verbose_name_plural = "Gender"
 
 
 class ServiceProviderRanking(models.Model):
@@ -120,7 +120,7 @@ class ServiceProviderRanking(models.Model):
 
     class Meta:
         db_table = "ServiceProviderRankings"
-        verbose_name_plural = "10. Service Provider Rankings"
+        verbose_name_plural = "Service Provider Rankings"
 
 
 class PlaceOfDeath(models.Model):
@@ -131,4 +131,4 @@ class PlaceOfDeath(models.Model):
 
     class Meta:
         db_table = "PlacesOfDeath"
-        verbose_name_plural = "11. Places Of Death"
+        verbose_name_plural = "Places Of Death"
